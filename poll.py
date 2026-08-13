@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import hashlib
+import html
 import json
 import os
 import re
@@ -61,6 +62,10 @@ def fetch_simplify():
     try:
         text = fetch(SIMPLIFY_URL)
         data = json.loads(text)
+        # The upstream JSON is ordered oldest-first (ascending date_posted);
+        # sort newest-first so entries are consistent with the other two
+        # sources and --limit N reflects the most recent postings.
+        data = sorted(data, key=lambda item: item.get("date_posted", 0), reverse=True)
         for item in data:
             if item.get("active") and item.get("is_visible"):
                 entries.append({
@@ -260,9 +265,31 @@ def keyword_filter(entries):
     return kept
 
 
+RATE_LIMIT_HEADER_CANDIDATES = [
+    "retry-after",
+    "x-ratelimit-reset-requests",
+    "x-ratelimit-reset-tokens",
+    "x-ratelimit-reset",
+]
+
+
+def _extract_rate_limit_info(resp):
+    """Best-effort extraction of reset/remaining info from response headers.
+    Header names are not guaranteed by GitHub Models; capture what's present."""
+    headers = {k.lower(): v for k, v in resp.headers.items()}
+    info = {}
+    for key in RATE_LIMIT_HEADER_CANDIDATES:
+        if key in headers:
+            info[key] = headers[key]
+    for key in ("x-ratelimit-remaining-requests", "x-ratelimit-remaining-tokens", "x-ratelimit-remaining"):
+        if key in headers:
+            info[key] = headers[key]
+    return info
+
+
 def llm_filter(entries, github_token):
     if not entries:
-        return entries, [], False
+        return entries, [], {"failed": False}
 
     jobs_payload = [{"id": e["id"], "company": e["company"], "title": e["title"]} for e in entries]
 
@@ -300,7 +327,20 @@ def llm_filter(entries, github_token):
             },
             timeout=60,
         )
+    except requests.exceptions.RequestException as e:
+        log(f"[LLM] network error: {e}")
+        return entries, [], {"failed": True, "reason": "network_error", "detail": str(e)}
+
+    if resp.status_code == 429:
+        rl_info = _extract_rate_limit_info(resp)
+        log(f"[LLM] rate limited (HTTP 429). headers: {rl_info}")
+        return entries, [], {"failed": True, "reason": "rate_limit", "rate_limit_info": rl_info}
+
+    try:
         resp.raise_for_status()
+        rl_info = _extract_rate_limit_info(resp)
+        if rl_info:
+            log(f"[LLM] rate limit headers: {rl_info}")
         data = resp.json()
         content = data["choices"][0]["message"]["content"].strip()
         content = re.sub(r"^```(json)?", "", content).strip()
@@ -311,10 +351,10 @@ def llm_filter(entries, github_token):
         kept = [e for e in entries if keep_map.get(e["id"], True)]
         skipped = [e for e in entries if not keep_map.get(e["id"], True)]
         log(f"[LLM] {len(kept)} kept / {len(skipped)} skipped")
-        return kept, skipped, False
+        return kept, skipped, {"failed": False}
     except Exception as e:
         log(f"[LLM] filter failed: {e}")
-        return entries, [], True
+        return entries, [], {"failed": True, "reason": "error", "detail": str(e)}
 
 
 def format_locations(locations):
@@ -342,12 +382,16 @@ def send_telegram_message(token, chat_id, text):
 
 
 def build_job_message(e):
-    lines = [f"🆕 <b>{e['company']}</b> — {e['title']}"]
+    company = html.escape(e["company"])
+    title = html.escape(e["title"])
+    source = html.escape(e["source"])
+    url = html.escape(e["url"], quote=True)
+    lines = [f"🆕 <b>{company}</b> — {title}"]
     loc_str = format_locations(e.get("locations") or [])
     if loc_str:
-        lines.append(f"📍 {loc_str}")
-    lines.append(f"🏷 {e['source']}")
-    lines.append(f'🔗 <a href="{e["url"]}">Apply</a>')
+        lines.append(f"📍 {html.escape(loc_str)}")
+    lines.append(f"🏷 {source}")
+    lines.append(f'🔗 <a href="{url}">Apply</a>')
     return "\n".join(lines)
 
 
@@ -393,17 +437,44 @@ def prune_skipped_log(records, now, window_hours=AUDIT_WINDOW_HOURS):
     return kept
 
 
+def parse_limit_arg(argv):
+    for i, arg in enumerate(argv):
+        if arg == "--limit" and i + 1 < len(argv):
+            try:
+                return int(argv[i + 1])
+            except ValueError:
+                return None
+        if arg.startswith("--limit="):
+            try:
+                return int(arg.split("=", 1)[1])
+            except ValueError:
+                return None
+    return None
+
+
 def main():
+    dry_run = "--dry-run" in sys.argv
+    limit = parse_limit_arg(sys.argv)
+
     telegram_token = os.environ.get("TELEGRAM_TOKEN")
     telegram_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
     github_token = os.environ.get("GITHUB_TOKEN")
 
-    if not telegram_token:
-        print("ERROR: TELEGRAM_TOKEN environment variable is required", file=sys.stderr)
-        sys.exit(1)
-    if not telegram_chat_id:
-        print("ERROR: TELEGRAM_CHAT_ID environment variable is required", file=sys.stderr)
-        sys.exit(1)
+    if not dry_run:
+        if not telegram_token:
+            print("ERROR: TELEGRAM_TOKEN environment variable is required", file=sys.stderr)
+            sys.exit(1)
+        if not telegram_chat_id:
+            print("ERROR: TELEGRAM_CHAT_ID environment variable is required", file=sys.stderr)
+            sys.exit(1)
+    else:
+        log("[DryRun] --dry-run set: Telegram credentials not required, no messages will be sent")
+
+    def notify(text):
+        if dry_run:
+            log(f"[DryRun] would send Telegram message:\n{text}")
+            return True
+        return send_telegram_message(telegram_token, telegram_chat_id, text)
 
     now = datetime.now(timezone.utc)
 
@@ -416,6 +487,10 @@ def main():
     all_entries.extend(fetch_jobright())
     log(f"[Fetch] total {len(all_entries)} entries across all sources")
 
+    if limit is not None:
+        all_entries = all_entries[:limit]
+        log(f"[Limit] --limit {limit} set: restricting to first {len(all_entries)} entries fetched")
+
     new_entries = [e for e in all_entries if e["id"] not in seen_ids]
     new_count = len(new_entries)
     log(f"[Fetch] {new_count} entries not in seen.json")
@@ -426,29 +501,60 @@ def main():
     prefiltered = keyword_filter(deduped)
     keyword_filtered_count = len(deduped) - len(prefiltered)
 
-    llm_filter_failed = False
+    llm_info = {"failed": False}
     llm_skipped = []
     if github_token:
-        final_jobs, llm_skipped, llm_filter_failed = llm_filter(prefiltered, github_token)
+        final_jobs, llm_skipped, llm_info = llm_filter(prefiltered, github_token)
     else:
         log("[LLM] GITHUB_TOKEN not set, skipping LLM stage")
         final_jobs = prefiltered
-        llm_filter_failed = True
+        llm_info = {"failed": True, "reason": "no_token"}
+
+    llm_filter_failed = llm_info["failed"]
 
     if llm_filter_failed:
-        send_telegram_message(
-            telegram_token,
-            telegram_chat_id,
-            f"⚠️ LLM filter unavailable this run (GitHub Models limit or error). "
-            f"Sending all {len(prefiltered)} unfiltered roles.",
-        )
+        reason = llm_info.get("reason")
+        stats_lines = [
+            "",
+            "<b>Run stats</b>",
+            f"New roles found: {new_count}",
+            f"Deduplicated away: {deduped_away_count}",
+            f"Filtered by keyword pre-filter: {keyword_filtered_count}",
+            f"Sent to LLM for classification: {len(prefiltered)}",
+            f"Sending all {len(prefiltered)} unfiltered roles",
+        ]
+
+        if reason == "rate_limit":
+            rl_info = llm_info.get("rate_limit_info") or {}
+            retry_after = rl_info.get("retry-after")
+            reset_line = None
+            if retry_after:
+                reset_line = f"Resets in: ~{retry_after}s (from Retry-After header)"
+            else:
+                reset_reqs = rl_info.get("x-ratelimit-reset-requests") or rl_info.get("x-ratelimit-reset")
+                if reset_reqs:
+                    reset_line = f"Resets in: {reset_reqs} (from rate limit header)"
+                else:
+                    reset_line = "Resets in: unknown (GitHub Models did not return a reset header)"
+            header_lines = [
+                "⚠️ <b>LLM rate limit hit</b> (GitHub Models HTTP 429)",
+                reset_line,
+            ]
+        elif reason == "no_token":
+            header_lines = ["⚠️ LLM filter skipped: GITHUB_TOKEN not set"]
+        elif reason == "network_error":
+            header_lines = [f"⚠️ LLM filter network error: {html.escape(str(llm_info.get('detail', ''))[:300])}"]
+        else:
+            header_lines = [f"⚠️ LLM filter error: {html.escape(str(llm_info.get('detail', 'unknown error'))[:300])}"]
+
+        notify("\n".join(header_lines + stats_lines))
 
     sent_count = 0
     for e in final_jobs:
         msg = build_job_message(e)
-        if send_telegram_message(telegram_token, telegram_chat_id, msg):
+        if notify(msg):
             sent_count += 1
-    log(f"[Telegram] sent {sent_count} messages")
+    log(f"[Telegram] sent {sent_count} messages" + (" (dry run)" if dry_run else ""))
 
     # mark all new entries (including deduped-away ones) as seen
     new_seen_ids = set(seen_ids)
@@ -483,7 +589,7 @@ def main():
             f"Filtered by LLM: {llm_skipped_count}\n"
             f"Sent to Telegram: {sent_count}"
         )
-        send_telegram_message(telegram_token, telegram_chat_id, summary)
+        notify(summary)
 
     # daily audit of LLM-skipped roles, sent once at AUDIT_HOUR_UTC
     if now.hour == AUDIT_HOUR_UTC:
@@ -500,22 +606,25 @@ def main():
         if recent_skips:
             lines = ["🔍 <b>LLM-skipped roles — last 24h</b>"]
             for r in recent_skips:
-                lines.append(f"• {r['company']} — {r['title']} ({r['source']})")
+                lines.append(
+                    f"• {html.escape(r['company'])} — {html.escape(r['title'])} "
+                    f"({html.escape(r['source'])})"
+                )
             audit_message = "\n".join(lines)
 
             # Telegram messages are capped at 4096 chars; chunk if needed
             MAX_LEN = 4000
             if len(audit_message) <= MAX_LEN:
-                send_telegram_message(telegram_token, telegram_chat_id, audit_message)
+                notify(audit_message)
             else:
                 chunk_lines = [lines[0]]
                 for line in lines[1:]:
                     if sum(len(l) + 1 for l in chunk_lines) + len(line) > MAX_LEN:
-                        send_telegram_message(telegram_token, telegram_chat_id, "\n".join(chunk_lines))
+                        notify("\n".join(chunk_lines))
                         chunk_lines = [lines[0]]
                     chunk_lines.append(line)
                 if len(chunk_lines) > 1:
-                    send_telegram_message(telegram_token, telegram_chat_id, "\n".join(chunk_lines))
+                    notify("\n".join(chunk_lines))
             log(f"[Audit] sent {len(recent_skips)} skipped roles for daily audit")
         else:
             log("[Audit] no LLM-skipped roles in the last 24h")
