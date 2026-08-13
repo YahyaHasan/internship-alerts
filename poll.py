@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import hashlib
 import html
 import json
 import os
@@ -11,24 +10,12 @@ from urllib.parse import urlparse
 import requests
 
 SIMPLIFY_URL = "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json"
-SPEEDYAPPLY_URLS = [
-    "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/README.md",
-    "https://raw.githubusercontent.com/speedyapply/2027-SWE-College-Jobs/main/INTERN_INTL.md",
-]
-JOBRIGHT_URL = "https://raw.githubusercontent.com/jobright-ai/2026-Software-Engineer-Internship/master/README.md"
 
 GITHUB_MODELS_URL = "https://models.github.ai/inference/chat/completions"
 SEEN_FILE = "seen.json"
 SKIPPED_LOG_FILE = "skipped_log.json"
 AUDIT_HOUR_UTC = 9
 AUDIT_WINDOW_HOURS = 24
-
-LINK_RE = re.compile(r"\[.*?\]\((https?://[^)]+)\)")
-MD_LINK_RE = re.compile(r"\[([^\]]*)\]\((https?://[^)]+)\)")
-HTML_A_RE = re.compile(r'<a\s+[^>]*href="(https?://[^"]+)"[^>]*>(.*?)</a>', re.IGNORECASE | re.DOTALL)
-HTML_TAG_RE = re.compile(r"<[^>]+>")
-IMG_APPLY_RE = re.compile(r'alt="Apply"', re.IGNORECASE)
-BOLD_RE = re.compile(r"\*\*")
 
 EXCLUDE_PATTERNS = [
     re.compile(r"\bfrontend\b|\bfront-end\b", re.IGNORECASE),
@@ -92,112 +79,6 @@ def fetch_simplify():
     except Exception as e:
         log(f"[Simplify] fetch failed: {e}")
     log(f"[Simplify] fetched {len(entries)} entries")
-    return entries
-
-
-def extract_links(cell):
-    """Return list of (text, url) for both markdown and HTML anchor links in a cell."""
-    links = []
-    for m in MD_LINK_RE.finditer(cell):
-        links.append((m.group(1), m.group(2)))
-    for m in HTML_A_RE.finditer(cell):
-        inner_text = HTML_TAG_RE.sub("", m.group(2)).strip()
-        links.append((inner_text, m.group(1)))
-    return links
-
-
-def cell_plain_text(cell):
-    """Strip markdown/HTML markup from a cell to get plain display text."""
-    links = extract_links(cell)
-    text = cell
-    for m in MD_LINK_RE.finditer(cell):
-        text = text.replace(m.group(0), m.group(1))
-    text = HTML_TAG_RE.sub("", text)
-    text = BOLD_RE.sub("", text)
-    text = text.strip()
-    if not text and links:
-        text = links[0][0]
-    return text
-
-
-def parse_markdown_table(text, source_name):
-    entries = []
-    for line in text.splitlines():
-        line = line.strip()
-        if not line.startswith("|"):
-            continue
-        if "---" in line or "----" in line:
-            continue
-        cells = [c.strip() for c in line.strip("|").split("|")]
-        if len(cells) < 2:
-            continue
-        if cells[0].strip().lower() == "company":
-            continue
-
-        company = cell_plain_text(cells[0])
-        title = cell_plain_text(cells[1])
-        if not company or not title:
-            continue
-
-        # Prefer an apply link found within the title cell (jobright style)
-        url = None
-        title_links = extract_links(cells[1])
-        if title_links:
-            url = title_links[-1][1]
-        else:
-            # Look for an anchor wrapping an "Apply" image across the row
-            apply_url = None
-            for cell in cells:
-                for m in HTML_A_RE.finditer(cell):
-                    if IMG_APPLY_RE.search(m.group(2)):
-                        apply_url = m.group(1)
-                        break
-                if apply_url:
-                    break
-            if apply_url:
-                url = apply_url
-            else:
-                # Fallback: last link anywhere in the row (first is usually company site)
-                row_links = extract_links(line)
-                if row_links:
-                    url = row_links[-1][1]
-
-        if not url:
-            continue
-
-        uid = hashlib.sha256((company + title + url).encode("utf-8")).hexdigest()[:16]
-        entries.append({
-            "id": uid,
-            "company": company,
-            "title": title,
-            "url": url,
-            "locations": [],
-            "source": source_name,
-        })
-    return entries
-
-
-def fetch_speedyapply():
-    entries = []
-    for url in SPEEDYAPPLY_URLS:
-        try:
-            text = fetch(url)
-            parsed = parse_markdown_table(text, "SpeedyApply")
-            entries.extend(parsed)
-        except Exception as e:
-            log(f"[SpeedyApply] fetch failed for {url}: {e}")
-    log(f"[SpeedyApply] fetched {len(entries)} entries")
-    return entries
-
-
-def fetch_jobright():
-    entries = []
-    try:
-        text = fetch(JOBRIGHT_URL)
-        entries = parse_markdown_table(text, "Jobright")
-    except Exception as e:
-        log(f"[Jobright] fetch failed: {e}")
-    log(f"[Jobright] fetched {len(entries)} entries")
     return entries
 
 
@@ -493,8 +374,6 @@ def main():
 
     all_entries = []
     all_entries.extend(fetch_simplify())
-    all_entries.extend(fetch_speedyapply())
-    all_entries.extend(fetch_jobright())
     log(f"[Fetch] total {len(all_entries)} entries across all sources")
 
     if limit is not None:
