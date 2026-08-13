@@ -23,32 +23,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      # --- TEMPORARY DEBUG INSTRUMENTATION (remove once root cause is confirmed) ---
-      - name: Debug - environment info
-        run: |
-          set -x
-          echo "Python version:"
-          python --version
-          echo "Env var names present (values hidden):"
-          env | cut -d= -f1 | sort
-          echo "TELEGRAM_TOKEN is set: $([ -n "$TELEGRAM_TOKEN" ] && echo yes || echo no)"
-          echo "TELEGRAM_CHAT_ID is set: $([ -n "$TELEGRAM_CHAT_ID" ] && echo yes || echo no)"
-          echo "GITHUB_TOKEN is set: $([ -n "$GITHUB_TOKEN" ] && echo yes || echo no)"
-        env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Install dependencies
-        run: |
-          set -x
-          pip install -r requirements.txt
-
-      - name: Debug - installed packages
-        run: |
-          set -x
-          pip list
-      # --- END TEMPORARY DEBUG INSTRUMENTATION ---
+        run: pip install -r requirements.txt
 
       - name: Run poller
         run: |
