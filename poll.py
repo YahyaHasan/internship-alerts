@@ -9,7 +9,6 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse
 
 import requests
-from rapidfuzz import fuzz
 
 SIMPLIFY_URL = "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json"
 SPEEDYAPPLY_URLS = [
@@ -41,10 +40,21 @@ EXCLUDE_PATTERNS = [
 DATA_ENGINEER_RE = re.compile(r"\bdata.*engineer\b", re.IGNORECASE)
 ML_EXCEPTION_RE = re.compile(r"\bML\b|machine learning|\bAI\b|pipeline for ML", re.IGNORECASE)
 
-YEAR_RE = re.compile(r"20\d{2}")
-SEASON_WORDS_RE = re.compile(r"\b(summer|fall|spring|winter|intern|internship)\b", re.IGNORECASE)
-NON_ALNUM_RE = re.compile(r"[^a-z0-9\s]")
-WHITESPACE_RE = re.compile(r"\s+")
+ALLOWED_TERMS = {"Summer 2027", "Spring 2027", "Fall 2027", "Winter 2027"}
+
+# Categories confidently in-scope for a UC Berkeley EECS sophomore's interests;
+# these skip the LLM call entirely (still pass through the keyword pre-filter).
+AUTO_KEEP_CATEGORIES = {"Software", "Software Engineering", "AI/ML/Data", "Data Science, AI & Machine Learning"}
+
+# Applies across all sources (not just Simplify's category field): any title that
+# mentions "software" or "AI" as a whole word is a confident keep, skipping the LLM.
+AUTO_KEEP_TITLE_RE = re.compile(r"\bsoftware\b|\bai\b", re.IGNORECASE)
+
+
+def is_auto_keep(e):
+    if e.get("category") in AUTO_KEEP_CATEGORIES:
+        return True
+    return bool(AUTO_KEEP_TITLE_RE.search(e["title"]))
 
 
 def log(msg):
@@ -67,15 +77,18 @@ def fetch_simplify():
         # sources and --limit N reflects the most recent postings.
         data = sorted(data, key=lambda item: item.get("date_posted", 0), reverse=True)
         for item in data:
-            if item.get("active") and item.get("is_visible"):
-                entries.append({
-                    "id": item.get("id"),
-                    "company": item.get("company_name", ""),
-                    "title": item.get("title", ""),
-                    "url": item.get("url", ""),
-                    "locations": item.get("locations", []) or [],
-                    "source": "Simplify",
-                })
+            if not (item.get("active") and item.get("is_visible")):
+                continue
+            entries.append({
+                "id": item.get("id"),
+                "company": item.get("company_name", ""),
+                "title": item.get("title", ""),
+                "url": item.get("url", ""),
+                "locations": item.get("locations", []) or [],
+                "source": "Simplify",
+                "category": item.get("category") or None,
+                "_terms": set(item.get("terms") or []),
+            })
     except Exception as e:
         log(f"[Simplify] fetch failed: {e}")
     log(f"[Simplify] fetched {len(entries)} entries")
@@ -197,17 +210,25 @@ def normalize_url(url):
         return url.lower()
 
 
-def normalize_text(s):
-    s = s.lower()
-    s = YEAR_RE.sub("", s)
-    s = SEASON_WORDS_RE.sub("", s)
-    s = NON_ALNUM_RE.sub("", s)
-    s = WHITESPACE_RE.sub(" ", s).strip()
-    return s
+def simplify_term_filter(entries):
+    """Only applies to Simplify entries (which carry a '_terms' set); other
+    sources pass through untouched. Runs on entries already filtered against
+    seen_ids, so term-excluded entries are never marked seen and keep getting
+    freshly re-evaluated every run in case the source updates the terms field."""
+    kept = []
+    excluded = 0
+    for e in entries:
+        if e.get("source") == "Simplify":
+            terms = e.get("_terms") or set()
+            if not terms & ALLOWED_TERMS:
+                excluded += 1
+                continue
+        kept.append(e)
+    log(f"[TermFilter] {len(entries)} -> {len(kept)} after Simplify term filter (excluded {excluded} not in {sorted(ALLOWED_TERMS)})")
+    return kept
 
 
 def dedup(entries):
-    # Step 1: URL dedup
     url_map = {}
     url_deduped = []
     for e in entries:
@@ -224,28 +245,7 @@ def dedup(entries):
             url_deduped.append(e)
 
     log(f"[Dedup] {len(entries)} -> {len(url_deduped)} after URL dedup")
-
-    # Step 2: fuzzy dedup on (company, title)
-    final = []
-    norm_cache = []
-    for e in url_deduped:
-        ncompany = normalize_text(e["company"])
-        ntitle = normalize_text(e["title"])
-        is_dup = False
-        for f_entry, f_company, f_title in norm_cache:
-            if ncompany == f_company and fuzz.ratio(ntitle, f_title) >= 88:
-                f_entry.setdefault("sources", [f_entry["source"]])
-                if e["source"] not in f_entry["sources"]:
-                    f_entry["sources"].append(e["source"])
-                f_entry.setdefault("_dup_ids", []).append(e["id"])
-                is_dup = True
-                break
-        if not is_dup:
-            norm_cache.append((e, ncompany, ntitle))
-            final.append(e)
-
-    log(f"[Dedup] {len(url_deduped)} -> {len(final)} after fuzzy dedup")
-    return final
+    return url_deduped
 
 
 def keyword_filter(entries):
@@ -291,7 +291,13 @@ def llm_filter(entries, github_token):
     if not entries:
         return entries, [], {"failed": False}
 
-    jobs_payload = [{"id": e["id"], "company": e["company"], "title": e["title"]} for e in entries]
+    jobs_payload = []
+    for e in entries:
+        job = {"id": e["id"], "company": e["company"], "title": e["title"]}
+        category = e.get("category")
+        if category:
+            job["category"] = category
+        jobs_payload.append(job)
 
     system_prompt = (
         "You are a job relevance classifier for a UC Berkeley EECS sophomore applying to "
@@ -299,6 +305,10 @@ def llm_filter(entries, github_token):
     )
     user_prompt = (
         "Classify each job as keep or skip based on interest alignment.\n\n"
+        "Each job has a title and, when available, a 'category' field from the source "
+        "listing (e.g. 'Software Engineering', 'Data Science', 'Hardware Engineering') — "
+        "no full job description is available, so weigh title and category together; "
+        "when neither gives a confident signal, default to KEEP per the rule below.\n\n"
         "KEEP if the role involves: agentic AI, NLP, LLMs, ML/AI applications (not just theory), "
         "backend systems, computer architecture, quantum computing, full-stack engineering, "
         "embedded systems, compilers, distributed systems, robotics, general software engineering "
@@ -491,9 +501,11 @@ def main():
         all_entries = all_entries[:limit]
         log(f"[Limit] --limit {limit} set: restricting to first {len(all_entries)} entries fetched")
 
-    new_entries = [e for e in all_entries if e["id"] not in seen_ids]
+    new_entries_raw = [e for e in all_entries if e["id"] not in seen_ids]
+    log(f"[Fetch] {len(new_entries_raw)} entries not in seen.json")
+
+    new_entries = simplify_term_filter(new_entries_raw)
     new_count = len(new_entries)
-    log(f"[Fetch] {new_count} entries not in seen.json")
 
     deduped = dedup(new_entries)
     deduped_away_count = new_count - len(deduped)
@@ -501,13 +513,20 @@ def main():
     prefiltered = keyword_filter(deduped)
     keyword_filtered_count = len(deduped) - len(prefiltered)
 
+    auto_keep = [e for e in prefiltered if is_auto_keep(e)]
+    needs_llm = [e for e in prefiltered if not is_auto_keep(e)]
+    log(f"[AutoKeep] {len(auto_keep)} auto-kept by category, {len(needs_llm)} need LLM classification")
+
     llm_info = {"failed": False}
     llm_skipped = []
-    if github_token:
-        final_jobs, llm_skipped, llm_info = llm_filter(prefiltered, github_token)
+    if not needs_llm:
+        final_jobs = auto_keep
+    elif github_token:
+        llm_kept, llm_skipped, llm_info = llm_filter(needs_llm, github_token)
+        final_jobs = auto_keep + llm_kept
     else:
         log("[LLM] GITHUB_TOKEN not set, skipping LLM stage")
-        final_jobs = prefiltered
+        final_jobs = auto_keep + needs_llm
         llm_info = {"failed": True, "reason": "no_token"}
 
     llm_filter_failed = llm_info["failed"]
@@ -520,8 +539,9 @@ def main():
             f"New roles found: {new_count}",
             f"Deduplicated away: {deduped_away_count}",
             f"Filtered by keyword pre-filter: {keyword_filtered_count}",
-            f"Sent to LLM for classification: {len(prefiltered)}",
-            f"Sending all {len(prefiltered)} unfiltered roles",
+            f"Auto-kept by category: {len(auto_keep)}",
+            f"Sent to LLM for classification: {len(needs_llm)}",
+            f"Sending all {len(needs_llm)} unfiltered roles (plus {len(auto_keep)} auto-kept)",
         ]
 
         if reason == "rate_limit":
@@ -556,9 +576,11 @@ def main():
             sent_count += 1
     log(f"[Telegram] sent {sent_count} messages" + (" (dry run)" if dry_run else ""))
 
-    # mark all new entries (including deduped-away ones) as seen
+    # mark every evaluated entry as seen (term-excluded, deduped-away, keyword-
+    # filtered, and LLM-skipped roles all get marked seen too, consistent with
+    # how every filter stage behaves — a rejected id is never re-evaluated)
     new_seen_ids = set(seen_ids)
-    for e in new_entries:
+    for e in new_entries_raw:
         new_seen_ids.add(e["id"])
         for dup_id in e.get("_dup_ids", []):
             new_seen_ids.add(dup_id)
@@ -586,6 +608,8 @@ def main():
             f"New roles found: {new_count}\n"
             f"Deduplicated away: {deduped_away_count}\n"
             f"Filtered by keyword pre-filter: {keyword_filtered_count}\n"
+            f"Auto-kept by category: {len(auto_keep)}\n"
+            f"Sent to LLM for classification: {len(needs_llm)}\n"
             f"Filtered by LLM: {llm_skipped_count}\n"
             f"Sent to Telegram: {sent_count}"
         )
