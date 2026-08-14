@@ -1,0 +1,55 @@
+name: Custom Sites Poller
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run without Telegram credentials (no messages sent, seen_custom.json/skipped_log_custom.json still updated)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: custom-sites-poller
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run custom sites poller
+        run: |
+          set -x
+          set +e
+          if [ "${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}" = "true" ]; then
+            python custom_sites/custom_poll.py --dry-run
+          else
+            python custom_sites/custom_poll.py
+          fi
+          exit_code=$?
+          set -e
+          echo "custom_poll.py exited with code $exit_code"
+          exit $exit_code
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+
+      - name: Commit seen_custom.json and skipped_log_custom.json
+        run: |
+          git config user.name "internship-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add custom_sites/seen_custom.json custom_sites/skipped_log_custom.json
+          git diff --staged --quiet || git commit -m "chore: update custom seen [skip ci]"
+          git push

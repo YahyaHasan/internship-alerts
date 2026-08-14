@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
-ATS poller: polls Greenhouse/Lever/Workday-hosted career boards for a fixed
-list of companies (see companies.py) and alerts on new internship postings
-via Telegram.
+Standalone-career-site poller: for companies whose job board isn't on a
+standard ATS (Greenhouse/Lever/Workday) and needs a bespoke adapter per site
+-- e.g. Google's careers site, which embeds job data in its own page format.
 
-Deliberately separate from the top-level poll.py (Simplify aggregator) --
-different data sources, different state files, different filtering needs
-(these boards list every open role, not just internships, so a title-based
-internship + term-year filter runs before anything else).
+Kept separate from ats_poller/ats_poll.py deliberately: these adapters do
+their own site-specific filtering to the intern/apprentice level server-side
+(each site's search facets differ, so there's no shared "title contains
+intern" heuristic that works across all of them, unlike the ATS-hosted
+boards which list every open role and need that filter client-side). Own
+state files, own workflow, own seen-id space -- never touches ats_poller's
+or poll.py's state.
 """
 import html
 import json
@@ -20,19 +23,14 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from adapters import greenhouse, lever, workday  # noqa: E402
-from companies import GREENHOUSE_COMPANIES, LEVER_COMPANIES, WORKDAY_COMPANIES  # noqa: E402
+from adapters import google_careers  # noqa: E402
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.1-8b-instant"
 
 BASE_DIR = Path(__file__).parent
-SEEN_FILE = BASE_DIR / "seen_ats.json"
-SKIPPED_LOG_FILE = BASE_DIR / "skipped_log_ats.json"
-
-# These boards list every open role at the company, not just internships, so
-# this filter (required) runs before anything else to cut the volume down.
-INTERN_TITLE_RE = re.compile(r"\bintern(ship)?\b", re.IGNORECASE)
+SEEN_FILE = BASE_DIR / "seen_custom.json"
+SKIPPED_LOG_FILE = BASE_DIR / "skipped_log_custom.json"
 
 # Explicit stale-year postings (leftover listings from a prior cycle) get
 # dropped; anything with no year mentioned, or a 2027/2028 mention, passes.
@@ -59,29 +57,16 @@ def term_filter_ok(title):
 
 def fetch_all():
     entries = []
-    for name, slug in GREENHOUSE_COMPANIES:
-        try:
-            got = greenhouse.fetch(name, slug)
-            log(f"[Greenhouse:{name}] fetched {len(got)} jobs")
-            entries.extend(got)
-        except Exception as e:
-            log(f"[Greenhouse:{name}] fetch failed: {e}")
 
-    for name, slug in LEVER_COMPANIES:
-        try:
-            got = lever.fetch(name, slug)
-            log(f"[Lever:{name}] fetched {len(got)} jobs")
-            entries.extend(got)
-        except Exception as e:
-            log(f"[Lever:{name}] fetch failed: {e}")
+    try:
+        got = google_careers.fetch()
+        log(f"[GoogleCareers] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[GoogleCareers] fetch failed: {e}")
 
-    for name, tenant, wd_host, site in WORKDAY_COMPANIES:
-        try:
-            got = workday.fetch(name, tenant, wd_host, site)
-            log(f"[Workday:{name}] fetched {len(got)} jobs")
-            entries.extend(got)
-        except Exception as e:
-            log(f"[Workday:{name}] fetch failed: {e}")
+    # Future standalone-site adapters (AWS, Apple, Meta, Microsoft, ...) get
+    # their own try/except block here, same pattern.
 
     return entries
 
@@ -90,14 +75,12 @@ def keyword_filter(entries):
     kept = []
     for e in entries:
         title = e["title"]
-        if not INTERN_TITLE_RE.search(title):
-            continue
         if not term_filter_ok(title):
             continue
         if any(pat.search(title) for pat in EXCLUDE_PATTERNS):
             continue
         kept.append(e)
-    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after intern/term/exclude filter")
+    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after term/exclude filter")
     return kept
 
 
@@ -250,14 +233,12 @@ def main():
     all_entries = [e for e in all_entries if e.get("title") and e.get("url")]
     if len(all_entries) != before:
         log(f"[Fetch] dropped {before - len(all_entries)} entries missing title/url")
-    log(f"[Fetch] total {len(all_entries)} raw entries across all companies")
+    log(f"[Fetch] total {len(all_entries)} raw entries across all standalone sites")
 
     new_entries_raw = [e for e in all_entries if e["id"] not in seen_ids]
-    log(f"[Fetch] {len(new_entries_raw)} entries not in seen_ats.json")
+    log(f"[Fetch] {len(new_entries_raw)} entries not in seen_custom.json")
 
-    intern_titled = [e for e in new_entries_raw if INTERN_TITLE_RE.search(e["title"])]
-    log(f"[InternFilter] {len(new_entries_raw)} -> {len(intern_titled)} mention intern/internship")
-    prefiltered = keyword_filter(intern_titled)
+    prefiltered = keyword_filter(new_entries_raw)
 
     llm_skipped = []
     if not prefiltered:
@@ -277,12 +258,12 @@ def main():
             sent_count += 1
     log(f"[Telegram] sent {sent_count} messages" + (" (dry run)" if dry_run else ""))
 
-    # Only ids that matched the intern-title check get locked into seen_ats.json.
-    # Non-intern roles are cheap to re-check (already fetched, just a regex) and
-    # are deliberately left out so a role later retitled/reposted as an
-    # internship still gets caught on a future run.
+    # Every fetched id (not just ones that survived filtering) gets marked
+    # seen here -- unlike ats_poll.py, these adapters already do their own
+    # intern-level filtering server-side, so there's no cheap client-side
+    # re-check to defer to on a future run.
     new_seen_ids = set(seen_ids)
-    for e in intern_titled:
+    for e in new_entries_raw:
         new_seen_ids.add(e["id"])
     save_seen(new_seen_ids)
     log(f"[Seen] wrote {len(new_seen_ids)} total seen ids")
@@ -297,8 +278,7 @@ def main():
         })
     save_skipped_log(skipped_records[-500:])  # keep log bounded
 
-    # No run-summary message: the poller should stay silent on runs that find
-    # nothing to send, and each found role already gets its own message above.
+    # No run-summary message: stay silent on runs that find nothing to send.
 
 
 if __name__ == "__main__":

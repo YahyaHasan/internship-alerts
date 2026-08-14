@@ -63,6 +63,11 @@ def fetch(timeout=30):
             if job_id in seen_ids:
                 continue
             seen_ids.add(job_id)
+            if not job[2]:
+                # A handful of listings (e.g. "Open Engineering Career
+                # Opportunities, CapitalG Portfolio Companies") are collection
+                # pages with no direct apply link -- not real postings.
+                continue
             company = job[7] if len(job) > 7 and job[7] else "Google"
             locations = [loc[0] for loc in (job[9] or [])] if len(job) > 9 else []
             entries.append({
