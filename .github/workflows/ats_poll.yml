@@ -52,4 +52,18 @@ jobs:
           git config user.email "bot@users.noreply.github.com"
           git add ats_poller/seen_ats.json ats_poller/skipped_log_ats.json
           git diff --staged --quiet || git commit -m "chore: update ats seen [skip ci]"
-          git push
+
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "push succeeded (attempt $attempt)"
+              break
+            fi
+            if [ "$attempt" -eq 5 ]; then
+              echo "push failed after $attempt attempts"
+              exit 1
+            fi
+            echo "push rejected (attempt $attempt), rebasing onto origin/main and retrying..."
+            git fetch origin main
+            git rebase origin/main
+            sleep $((attempt * 2))
+          done
