@@ -1,7 +1,11 @@
 name: Internship Poller
 on:
-  schedule:
-    - cron: '*/15 * * * *'
+  # schedule:
+  #   - cron: '*/15 * * * *'
+  # ^ disabled: polling is now triggered externally (cron-job.org) via
+  # workflow_dispatch every 5 min, since GitHub's own schedule trigger was
+  # unreliable at sub-hourly intervals. Kept here commented out in case we
+  # want to switch back to GitHub's native schedule later.
   workflow_dispatch:
     inputs:
       dry_run:
@@ -12,6 +16,10 @@ on:
 permissions:
   contents: write
   models: read
+
+concurrency:
+  group: internship-poller
+  cancel-in-progress: false
 
 jobs:
   poll:
