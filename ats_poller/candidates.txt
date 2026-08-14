@@ -1,0 +1,321 @@
+Figma
+Databricks
+Robinhood
+Ripple
+Airtable
+Notion
+Snowflake
+Palantir
+Airbnb
+Pinterest
+Reddit
+Discord
+Twitch
+Roblox
+Unity
+Epic Games
+Riot Games
+Valve
+Zoom
+Asana
+Atlassian
+Datadog
+MongoDB
+Elastic
+HashiCorp
+GitLab
+GitHub
+JetBrains
+Vercel
+Netlify
+Twilio
+SendGrid
+Segment
+Okta
+Auth0
+CrowdStrike
+Palo Alto Networks
+Fortinet
+Zscaler
+SentinelOne
+Rapid7
+Tenable
+Wiz
+Snyk
+1Password
+Cohere
+Mistral AI
+Hugging Face
+Scale AI
+Perplexity AI
+xAI
+DeepMind
+Character AI
+Inflection AI
+Runway
+Stability AI
+Adept AI
+Together AI
+Groq
+Cerebras
+SambaNova
+Graphcore
+Tenstorrent
+Rivos
+Ampere Computing
+Arm
+Qualcomm
+Intel
+AMD
+Texas Instruments
+Analog Devices
+Micron
+Western Digital
+Seagate
+Applied Materials
+KLA
+Lam Research
+ASML
+GlobalFoundries
+TSMC
+Marvell
+Synopsys
+Cadence
+Juniper Networks
+Arista Networks
+Ubiquiti
+Datto
+Rubrik
+Cohesity
+Pure Storage
+NetApp
+Nutanix
+VMware
+Red Hat
+Canonical
+SUSE
+Docker
+Confluent
+Redis
+Cockroach Labs
+PlanetScale
+Supabase
+Neon
+Fivetran
+dbt Labs
+Dagster
+Airbyte
+Temporal
+LaunchDarkly
+PagerDuty
+New Relic
+Grafana Labs
+Sentry
+Honeycomb
+Chronosphere
+Observe
+Samsara
+Motional
+Cruise
+Zoox
+Aurora Innovation
+Nuro
+Aptiv
+Argo AI
+Anduril
+SpaceX
+Blue Origin
+Relativity Space
+Rocket Lab
+Planet Labs
+Astranis
+Boom Supersonic
+Joby Aviation
+Archer Aviation
+Skydio
+Shield AI
+Palantir Technologies
+Applied Intuition
+Rivian
+Lucid Motors
+Zipline
+Boston Dynamics
+Figure AI
+Agility Robotics
+1X Technologies
+Physical Intelligence
+Covariant
+Fetch Robotics
+iRobot
+Chime
+Affirm
+Brex
+Ramp
+Mercury
+Wealthfront
+Betterment
+Robinhood Markets
+SoFi
+Marqeta
+Plaid
+Stripe
+Adyen
+Wise
+Revolut
+Klarna
+Square
+Visa
+Mastercard
+Fiserv
+FIS
+Jane Street
+Two Sigma
+Citadel
+Citadel Securities
+Jump Trading
+Hudson River Trading
+DRW
+Susquehanna International Group
+Optiver
+IMC Trading
+Akuna Capital
+Point72
+DE Shaw
+Renaissance Technologies
+Bridgewater Associates
+Instacart
+DoorDash
+Grubhub
+Lyft
+Uber Technologies
+Wayfair
+Chewy
+Etsy
+eBay
+Shopify
+Wix
+Squarespace
+Mailchimp
+Klaviyo
+HubSpot
+Zendesk
+Intercom
+Freshworks
+Gusto
+Rippling
+Deel
+Remote
+Checkr
+Vanta
+Drata
+Merge
+Ramp Financial
+Anrok
+Carta
+AngelList
+Y Combinator
+Andreessen Horowitz
+Sequoia Capital
+Samsung
+Sony
+LG Electronics
+Panasonic
+Dell Technologies
+HP Inc
+HPE
+Lenovo
+Xerox
+Western Union
+American Express
+Goldman Sachs
+Morgan Stanley
+JPMorgan Chase
+Bank of America
+Wells Fargo
+Citigroup
+Charles Schwab
+Fidelity Investments
+Vanguard
+BlackRock
+State Street
+Northrop Grumman
+Lockheed Martin
+Raytheon Technologies
+Boeing
+General Dynamics
+L3Harris
+Booz Allen Hamilton
+Leidos
+SAIC
+Palantir Government
+CACI
+ServiceNow
+Workday Inc
+SAP
+Oracle
+Autodesk
+Intuit
+Splunk Inc
+Zscaler Inc
+Qualys
+McAfee
+Symantec
+Trend Micro
+Check Point Software
+Cloudflare Inc
+Akamai
+Fastly
+Imperva
+F5 Networks
+Extreme Networks
+Ciena
+Infinera
+Corning
+Broadcom Inc
+Marvell Technology
+ON Semiconductor
+Skyworks Solutions
+Qorvo
+MaxLinear
+Silicon Labs
+Renesas Electronics
+STMicroelectronics
+NXP Semiconductors
+Infineon Technologies
+Rohm Semiconductor
+Bosch
+Continental
+Garmin
+GoPro
+Fitbit
+Peloton
+Whoop
+Oura
+Duolingo Inc
+Coursera
+Udemy
+Udacity
+Khan Academy
+Chegg
+Course Hero
+2U
+Pluralsight
+edX
+Quizlet
+Photomath
+Age of Learning
+IXL Learning
+Handshake
+Indeed
+ZipRecruiter
+LinkedIn
+Glassdoor
+Monster
+Dice
+Upwork
+Fiverr
+Toptal
+Turing
+Andela
+Wonolo
+Instawork

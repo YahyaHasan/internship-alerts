@@ -1,0 +1,55 @@
+name: ATS Poller
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Run without Telegram credentials (no messages sent, seen_ats.json/skipped_log_ats.json still updated)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ats-poller
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run ATS poller
+        run: |
+          set -x
+          set +e
+          if [ "${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}" = "true" ]; then
+            python ats_poller/ats_poll.py --dry-run
+          else
+            python ats_poller/ats_poll.py
+          fi
+          exit_code=$?
+          set -e
+          echo "ats_poll.py exited with code $exit_code"
+          exit $exit_code
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+
+      - name: Commit seen_ats.json and skipped_log_ats.json
+        run: |
+          git config user.name "internship-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add ats_poller/seen_ats.json ats_poller/skipped_log_ats.json
+          git diff --staged --quiet || git commit -m "chore: update ats seen [skip ci]"
+          git push
