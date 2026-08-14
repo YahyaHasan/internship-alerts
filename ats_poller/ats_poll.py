@@ -20,7 +20,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from adapters import greenhouse, lever, workday  # noqa: E402
+from adapters import greenhouse, lever, workday, google_careers  # noqa: E402
 from companies import GREENHOUSE_COMPANIES, LEVER_COMPANIES, WORKDAY_COMPANIES  # noqa: E402
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
@@ -293,16 +293,8 @@ def main():
         })
     save_skipped_log(skipped_records[-500:])  # keep log bounded
 
-    if new_entries_raw:
-        summary = (
-            "📊 <b>ATS poll run summary</b>\n"
-            f"Raw entries fetched: {len(all_entries)}\n"
-            f"New (not in seen): {len(new_entries_raw)}\n"
-            f"After intern/term/keyword filter: {len(prefiltered)}\n"
-            f"Filtered by LLM: {len(llm_skipped)}\n"
-            f"Sent to Telegram: {sent_count}"
-        )
-        notify(summary)
+    # No run-summary message: the poller should stay silent on runs that find
+    # nothing to send, and each found role already gets its own message above.
 
 
 if __name__ == "__main__":
