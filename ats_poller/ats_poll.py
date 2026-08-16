@@ -118,8 +118,8 @@ def llm_filter(entries, groq_api_key):
         "computer architecture, quantum computing, full-stack engineering, embedded systems, "
         "compilers, distributed systems, robotics, general software engineering.\n\n"
         "SKIP ONLY if clearly: pure frontend/UI dev with no backend, pure CRM/Salesforce admin, "
-        "pure digital marketing, non-technical roles, or a non-engineering internship "
-        "(sales, HR, finance, legal).\n\n"
+        "pure digital marketing or ads tech, pure media streaming infrastructure with no ML, "
+        "non-technical roles, or a non-engineering internship (sales, HR, finance, legal).\n\n"
         "When in doubt, KEEP.\n\n"
         f"Jobs: {json.dumps(jobs_payload)}\n\n"
         'Reply with: [{"id": "...", "keep": true/false}]'

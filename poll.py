@@ -11,7 +11,8 @@ import requests
 
 SIMPLIFY_URL = "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json"
 
-GITHUB_MODELS_URL = "https://models.github.ai/inference/chat/completions"
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+GROQ_MODEL = "llama-3.1-8b-instant"
 SEEN_FILE = "seen.json"
 SKIPPED_LOG_FILE = "skipped_log.json"
 AUDIT_HOUR_UTC = 9
@@ -168,7 +169,7 @@ def _extract_rate_limit_info(resp):
     return info
 
 
-def llm_filter(entries, github_token):
+def llm_filter(entries, groq_api_key):
     if not entries:
         return entries, [], {"failed": False}
 
@@ -196,7 +197,7 @@ def llm_filter(entries, github_token):
         "(SWE roles at any company are usually fine).\n\n"
         "SKIP ONLY if clearly: pure frontend/UI dev with no backend, pure CRM/Salesforce admin, "
         "pure digital marketing or ads tech, pure media streaming infrastructure with no ML, "
-        "non-technical roles.\n\n"
+        "non-technical roles, or a non-engineering internship (sales, HR, finance, legal).\n\n"
         "When in doubt, KEEP.\n\n"
         f"Jobs: {json.dumps(jobs_payload)}\n\n"
         'Reply with: [{"id": "...", "keep": true/false}]'
@@ -204,13 +205,13 @@ def llm_filter(entries, github_token):
 
     try:
         resp = requests.post(
-            GITHUB_MODELS_URL,
+            GROQ_URL,
             headers={
-                "Authorization": f"Bearer {github_token}",
+                "Authorization": f"Bearer {groq_api_key}",
                 "Content-Type": "application/json",
             },
             json={
-                "model": "openai/gpt-4o-mini",
+                "model": GROQ_MODEL,
                 "messages": [
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt},
@@ -349,7 +350,7 @@ def main():
 
     telegram_token = os.environ.get("TELEGRAM_TOKEN")
     telegram_chat_id = os.environ.get("TELEGRAM_CHAT_ID")
-    github_token = os.environ.get("GITHUB_TOKEN")
+    groq_api_key = os.environ.get("GROQ_API_KEY")
 
     if not dry_run:
         if not telegram_token:
@@ -400,11 +401,11 @@ def main():
     llm_skipped = []
     if not needs_llm:
         final_jobs = auto_keep
-    elif github_token:
-        llm_kept, llm_skipped, llm_info = llm_filter(needs_llm, github_token)
+    elif groq_api_key:
+        llm_kept, llm_skipped, llm_info = llm_filter(needs_llm, groq_api_key)
         final_jobs = auto_keep + llm_kept
     else:
-        log("[LLM] GITHUB_TOKEN not set, skipping LLM stage")
+        log("[LLM] GROQ_API_KEY not set, skipping LLM stage")
         final_jobs = auto_keep + needs_llm
         llm_info = {"failed": True, "reason": "no_token"}
 
@@ -434,13 +435,13 @@ def main():
                 if reset_reqs:
                     reset_line = f"Resets in: {reset_reqs} (from rate limit header)"
                 else:
-                    reset_line = "Resets in: unknown (GitHub Models did not return a reset header)"
+                    reset_line = "Resets in: unknown (Groq did not return a reset header)"
             header_lines = [
-                "⚠️ <b>LLM rate limit hit</b> (GitHub Models HTTP 429)",
+                "⚠️ <b>LLM rate limit hit</b> (Groq HTTP 429)",
                 reset_line,
             ]
         elif reason == "no_token":
-            header_lines = ["⚠️ LLM filter skipped: GITHUB_TOKEN not set"]
+            header_lines = ["⚠️ LLM filter skipped: GROQ_API_KEY not set"]
         elif reason == "network_error":
             header_lines = [f"⚠️ LLM filter network error: {html.escape(str(llm_info.get('detail', ''))[:300])}"]
         else:
