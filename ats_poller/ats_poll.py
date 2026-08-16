@@ -277,12 +277,13 @@ def main():
             sent_count += 1
     log(f"[Telegram] sent {sent_count} messages" + (" (dry run)" if dry_run else ""))
 
-    # Only ids that matched the intern-title check get locked into seen_ats.json.
-    # Non-intern roles are cheap to re-check (already fetched, just a regex) and
-    # are deliberately left out so a role later retitled/reposted as an
-    # internship still gets caught on a future run.
+    # Every fetched id (not just ones that survived filtering) gets marked
+    # seen here, same as custom_poll.py -- this trades away catching a role
+    # that gets retitled to add "intern" after its first appearance (rare)
+    # for not re-running the intern/term/exclude regex over the full
+    # multi-thousand-entry raw fetch on every single run.
     new_seen_ids = set(seen_ids)
-    for e in intern_titled:
+    for e in new_entries_raw:
         new_seen_ids.add(e["id"])
     save_seen(new_seen_ids)
     log(f"[Seen] wrote {len(new_seen_ids)} total seen ids")
