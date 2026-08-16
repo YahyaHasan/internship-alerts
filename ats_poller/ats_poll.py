@@ -20,8 +20,8 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from adapters import greenhouse, lever, workday  # noqa: E402
-from companies import GREENHOUSE_COMPANIES, LEVER_COMPANIES, WORKDAY_COMPANIES  # noqa: E402
+from adapters import ashby, greenhouse, lever, workday  # noqa: E402
+from companies import ASHBY_COMPANIES, GREENHOUSE_COMPANIES, LEVER_COMPANIES, WORKDAY_COMPANIES  # noqa: E402
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.1-8b-instant"
@@ -82,6 +82,14 @@ def fetch_all():
             entries.extend(got)
         except Exception as e:
             log(f"[Workday:{name}] fetch failed: {e}")
+
+    for name, slug in ASHBY_COMPANIES:
+        try:
+            got = ashby.fetch(name, slug)
+            log(f"[Ashby:{name}] fetched {len(got)} jobs")
+            entries.extend(got)
+        except Exception as e:
+            log(f"[Ashby:{name}] fetch failed: {e}")
 
     return entries
 
