@@ -2,7 +2,8 @@
 """
 Standalone-career-site poller: for companies whose job board isn't on a
 standard ATS (Greenhouse/Lever/Workday) and needs a bespoke adapter per site
--- e.g. Google's careers site, which embeds job data in its own page format.
+-- e.g. Google, Amazon, Apple, and Microsoft, each of which runs its own
+in-house careers site with its own data format.
 
 Kept separate from ats_poller/ats_poll.py deliberately: these adapters do
 their own site-specific filtering to the intern/apprentice level server-side
@@ -23,7 +24,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from adapters import google_careers  # noqa: E402
+from adapters import amazon_jobs, apple_careers, google_careers, microsoft_careers  # noqa: E402
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.1-8b-instant"
@@ -65,8 +66,29 @@ def fetch_all():
     except Exception as e:
         log(f"[GoogleCareers] fetch failed: {e}")
 
-    # Future standalone-site adapters (AWS, Apple, Meta, Microsoft, ...) get
-    # their own try/except block here, same pattern.
+    try:
+        got = amazon_jobs.fetch()
+        log(f"[Amazon] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Amazon] fetch failed: {e}")
+
+    try:
+        got = apple_careers.fetch()
+        log(f"[Apple] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Apple] fetch failed: {e}")
+
+    try:
+        got = microsoft_careers.fetch()
+        log(f"[Microsoft] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Microsoft] fetch failed: {e}")
+
+    # Future standalone-site adapters (Meta, Uber, ...) get their own
+    # try/except block here, same pattern.
 
     return entries
 
