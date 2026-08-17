@@ -267,21 +267,32 @@ eliminated" below for the running list.
 ### Adapters built and live (wired into `fetch_all()`)
 Google, Amazon, Apple, Microsoft, Salesforce, Cisco.
 
-### Built but NOT wired in — needs verification
-- **Tesla** (`custom_sites/adapters/tesla_careers.py`) — adapter is written
-  and its logic/schema is believed correct (verified the request shape and
-  a real response via the browser), but Tesla's `cua-api` endpoint is
-  behind Akamai bot-protection that returns 403 to plain `requests` even
-  with a full browser header set. It's untested from GitHub Actions, whose
-  network path/IP may not be blocked the same way. Before wiring it into
-  `custom_poll.py`'s `fetch_all()` (uncomment the import and add the
-  try/except block, following the existing pattern), verify it actually
-  gets a 200 from an Actions run.
+### Built but not wired in
+- **Tesla** (`custom_sites/adapters/tesla_careers.py`) — adapter logic/schema
+  is correct (verified the request shape and a real response via the
+  browser), but confirmed dead: Tesla's `cua-api` endpoint returns 403 to
+  plain `requests` both locally *and* from a GitHub Actions runner (tested
+  via a throwaway `workflow_dispatch` workflow, same 403 both places) — so
+  this is an Akamai bot-protection gate that isn't network/IP-specific, and
+  a different Actions runner won't get around it either. Kept in the repo
+  unwired in case a future non-`requests`-based approach (headless browser)
+  is ever worth the added weight; effectively in the same bucket as Meta/
+  Uber/TikTok/ByteDance below.
 
 ### Companies eliminated
-- **Meta, Uber** — Cloudflare-blocked at the CDN edge (same class of issue
-  as Tesla's Akamai block above).
+- **Tesla** — Akamai-blocked (see above; confirmed from GitHub Actions too,
+  not just local).
+- **Meta, Uber** — Cloudflare-blocked at the CDN edge (same class of issue).
 - **TikTok, ByteDance** — same bot-protection dead end.
+
+Bot-protected sites like these don't become scrapable by moving the poller
+to a different host/workflow — Cloudflare/Akamai/PerimeterX gate on
+TLS-fingerprint and behavioral signals that a plain HTTP client (wherever
+it runs) doesn't produce, not on source IP. The only way past this class of
+block is a real browser engine (headless Chromium via Playwright) actually
+rendering the page, which is a materially heavier adapter (browser binary +
+much slower/costlier poll cycle) — worth doing only if the user explicitly
+wants to invest in it for a specific company, not as a default fallback.
 
 ### Next companies to build (priority order, per user's stated interests:
 SWE/backend/AI-ML/systems/distributed systems/robotics)
