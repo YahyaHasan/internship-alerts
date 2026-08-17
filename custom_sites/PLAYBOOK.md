@@ -12,8 +12,9 @@ repo:
 - `poll.py` (repo root) — polls the SimplifyJobs community-maintained
   aggregator. **Do not touch.**
 - `ats_poller/ats_poll.py` — polls companies hosted on a standard ATS
-  (Greenhouse, Lever, Workday) via each platform's public JSON API. Company
-  list lives in `ats_poller/companies.py`. **Do not touch for this task.**
+  (Greenhouse, Lever, Ashby, Workday) via each platform's public JSON API.
+  Company list lives in `ats_poller/companies.py`. **Do not touch for this
+  task.**
 - `custom_sites/custom_poll.py` — **this is what you're extending.** For
   companies whose careers site is bespoke (not on a standard ATS), each
   needs its own hand-built adapter.
@@ -53,9 +54,9 @@ Requirements:
   drops these automatically (`main()` filters on `e.get("title") and
   e.get("url")`), but better to skip them in the adapter and log why.
 - Wrap all network calls in a `try/except` **in `fetch_all()`**, not inside
-  the adapter — see the existing Google entry in `custom_poll.py` for the
-  pattern. One company's site being down/blocked should never take down the
-  rest of the run.
+  the adapter — see any existing entry in `custom_poll.py` for the pattern.
+  One company's site being down/blocked should never take down the rest of
+  the run.
 
 Then register it in `custom_sites/custom_poll.py`'s `fetch_all()`:
 
@@ -68,8 +69,8 @@ except Exception as e:
     log(f"[YourCompany] fetch failed: {e}")
 ```
 
-And add the import at the top: `from adapters import google_careers,
-your_company  # noqa: E402`.
+And add the import at the top (alphabetical, in the existing `from adapters
+import (...)` block).
 
 ## Filtering: what the adapter should and shouldn't do
 
@@ -84,21 +85,30 @@ adapter's `fetch()` runs:
    systems/robotics/etc.) — same prompt as `ats_poller`.
 
 **What the adapter itself must do**: narrow the fetch to intern/entry-level
-roles using **the site's own facet/filter, not a title-keyword guess**.
-This matters a lot — do not assume titles contain the word "intern".
-Concrete example: Google's internship-tier roles are titled "Student
-Researcher, PhD", "Apprenticeship in ...", etc. and almost never say
-"intern" — the ATS-hosted companies (`ats_poller`) get away with a title
+roles using **the site's own facet/filter, not a title-keyword guess**, and
+to the **US locale using the site's own country facet/field**, not a
+substring guess. Concrete examples of why title-keyword filtering fails:
+Google's internship-tier roles are titled "Student Researcher, PhD",
+"Apprenticeship in ...", etc. and almost never say "intern"; Cisco's site
+splits internship-tier postings across two distinct facet values ("Intern"
+and "Internships, Apprenticeships, and Co-Ops") that both need to be
+selected. The ATS-hosted companies (`ats_poller`) get away with a title
 regex because Greenhouse/Lever/Workday companies overwhelmingly do title
 their internships literally, but that's not a safe assumption for a
-from-scratch site. Find the site's own experience-level/employment-type
-filter (see investigation steps below) and use that server-side, so the
-adapter only ever fetches roles that are actually intern-tier.
+from-scratch site.
+
+**If a site's postings encode a specific term/season in the title** (e.g.
+Tesla's `"... (Winter/Spring 2027)"`, `"... (Fall 2026)"`), and you only
+want specific upcoming terms rather than everything not-yet-stale: don't
+lean on the shared pipeline's generic `term_filter_ok()` alone (it only
+knows "stale year" vs "not"), write an adapter-local filter that extracts
+the year(s) from the title and matches against the exact target year(s) you
+want. See `custom_sites/adapters/tesla_careers.py`'s `_term_ok()` for the
+pattern: pull all 4-digit years out of the title, keep if the target year is
+present or if no year is present at all (absence of a year isn't evidence of
+staleness), drop otherwise.
 
 ## Investigation steps (do this before writing any code)
-
-This is the actual process used for the Google adapter
-(`custom_sites/adapters/google_careers.py`) — repeat it per company.
 
 1. **Check if the page is server-rendered.** `curl` the company's jobs/careers
    search URL with a normal browser `User-Agent` header. If the HTML back
@@ -112,64 +122,99 @@ This is the actual process used for the Google adapter
    ```
 
    If the response is empty/skeleton HTML (a `<div id="root"></div>` and a
-   pile of `<script>` tags), the data loads client-side — go to step 2.
+   pile of `<script>` tags), the data loads client-side — go to step 2. If
+   you get an Akamai/Cloudflare/PerimeterX "Access Denied" block page
+   instead of real HTML, see the **bot-protection dead ends** note below
+   before sinking more time in.
 
-2. **Use the browser tools to find the real data source.** Load the claude-in-chrome
-   tools (`ToolSearch` for `mcp__claude-in-chrome__*` if not already loaded),
-   navigate to the jobs page, then call `read_network_requests` (filtered by
-   a guess like the company domain or "api"/"jobs") to find the XHR/fetch
-   call that actually returns job data. Common patterns to look for:
+2. **Use the browser tools to find the real data source.** Load the
+   claude-in-chrome tools (`ToolSearch` for `mcp__claude-in-chrome__*` if
+   not already loaded), navigate to the jobs page, then check the page's
+   own `performance.getEntriesByType('resource')` list (the
+   `read_network_requests` tool frequently misses XHR/fetch calls issued
+   before it attaches, or blocks entries containing certain cookie/query
+   patterns — `javascript_tool` reading `performance` entries directly is
+   more reliable) for the real API call. Common patterns:
    - A dedicated `/api/jobs` or GraphQL endpoint returning clean JSON — best
      case, just hit it directly with `requests`.
+   - A static JSON blob on a CDN subdomain that the site's own JS fetches
+     client-side (e.g. Salesforce's `a.sfdcstatic.com/.../jobs_1.json`) —
+     just as good as a dedicated API, and often *doesn't* need any bot
+     -protection workaround since it's served from a plain CDN, not the
+     app's own protected domain.
    - Embedded JSON in the initial HTML via a framework-specific mechanism:
      `__NEXT_DATA__` (Next.js), `window.__INITIAL_STATE__` (many
-     React/Redux apps), `AF_initDataCallback` (Google/Wiz-based sites —
-     Google Careers, Google Flights, Search all use this), Apollo/GraphQL
-     `window.__APOLLO_STATE__`. If you find one of these, re-run the plain
-     `curl` from step 1 to confirm the *same* embedded data appears in the
-     server-rendered HTML — it very often does, meaning you *still* don't
-     need a headless browser, just a regex + `json.loads` to pull it out
-     (this is exactly what happened with Google: looked like it needed a
-     browser, turned out `curl` + a regex was enough).
-   - If genuinely nothing works without JS execution (data only appears
-     after client-side rendering with no embedded/XHR JSON anywhere), that
-     company needs a headless-browser adapter (Playwright, run in the GitHub
-     Actions job) — meaningfully heavier, flag this to the user before
-     building it, since it changes the workflow's dependencies and runtime.
+     React/Redux apps), `AF_initDataCallback` (Google/Wiz-based sites). If
+     you find one of these, re-run the plain `curl` from step 1 to confirm
+     the *same* embedded data appears in the server-rendered HTML — it very
+     often does, meaning you *still* don't need a headless browser, just a
+     regex + `json.loads`.
+   - A platform-specific search endpoint (e.g. Phenom People's
+     `/widgets` POST endpoint, used by Cisco and many other enterprise
+     careers sites) that expects a specific request-body shape mirroring
+     the site's facet state. Find the shape by hooking `window.fetch` /
+     `XMLHttpRequest.prototype.send` in the page via `javascript_tool`
+     *before* triggering the search/filter action, then read back what was
+     captured — this reveals the exact body (and any required headers) far
+     more reliably than guessing from bundle JS. Example hook:
+     ```js
+     window.__reqs = [];
+     const orig = window.fetch;
+     window.fetch = function(...args){
+       const p = orig.apply(this, args);
+       if (String(args[0]).includes('/your-endpoint')) {
+         p.then(r=>r.clone().text()).then(t=>window.__reqs.push({body:(args[1]||{}).body, resp:t}));
+       }
+       return p;
+     };
+     ```
+     Watch for **multiple different response shapes from the same
+     endpoint** if the page fires several widget calls to one shared URL —
+     match on the request body's distinguishing field (e.g. a `ddoKey` or
+     `widgetId`), not just the URL, to find the one actually carrying job
+     results. A response that looks like a failure (e.g.
+     `{"tokenAvailable": false}`) may just be a *different, unrelated*
+     widget on the page, not evidence the real search call needs auth.
+   - If genuinely nothing works without JS execution, that company needs a
+     headless-browser adapter (Playwright, run in the GitHub Actions job) —
+     meaningfully heavier, flag this to the user before building it.
 
-3. **Find the real intern/entry-level filter.** Use the site's own job-search
-   UI filters (checkboxes/dropdowns for "Experience level", "Employment
-   type", etc.) and watch how the URL or the request payload changes when
-   you toggle them — that's the param to replicate in the adapter, exactly
-   like `target_level=INTERN_AND_APPRENTICE` was reverse-engineered from
-   Google's "Intern & Apprentice" checkbox.
+3. **Find the real intern/entry-level filter AND the real US-location
+   filter.** Use the site's own job-search UI filters (checkboxes/dropdowns)
+   and watch how the URL, or the XHR request body/params, change when you
+   toggle them — that's what to replicate server-side in the adapter. Do
+   this for country/location too, not just experience level: some sites'
+   raw job-location strings carry no explicit country field at all (e.g.
+   Tesla's are bare `"City, Region"` strings), which means you need a
+   client-side allowlist (e.g. all 50 US state names + DC) rather than a
+   substring match — verify this by dumping the full set of distinct
+   location strings for intern-tier postings and checking whether any
+   country marker is present anywhere in the payload.
 
-4. **Confirm you can parse it in Python with no JS engine.** Save a real
-   response to a file and try `json.loads()` (or a small regex extraction
-   first, if it's embedded in a script tag) in a plain `python3` shell.
+4. **Confirm you can parse it in Python with no JS engine.** Try the exact
+   request (`requests.get`/`requests.post` with the discovered
+   params/body/headers) in a plain `python3` shell, standalone from any
+   browser session/cookies if possible — many of these endpoints turn out to
+   be fully stateless (no session cookie or auth token actually required)
+   even when the browser's own request happened to include one.
 
-5. **Figure out pagination.** Look for `page`/`offset`/`cursor` params and a
-   total-count field in the response so you know when to stop. Add a
-   `MAX_PAGES` safety cap regardless (see `workday.py` or
-   `google_careers.py` for the pattern) — never loop unbounded.
+5. **Figure out pagination.** Look for `from`/`start`/`page`/`offset`
+   params and a total-count field in the response so you know when to stop.
+   Add a `MAX_PAGES` safety cap regardless — never loop unbounded.
 
 6. **Sanity-check for edge-case entries.** Fetch a real page of results and
    check for entries with null/missing URLs, weird aggregate/collection
-   listings that aren't real individual postings (Google had a few "Open
-   Engineering Career Opportunities, CapitalG Portfolio Companies" rows with
-   no apply link — skip these at the source).
+   listings that aren't real individual postings — skip these at the
+   source.
 
-7. **Think about the blocking question honestly.** Nobody can guarantee a
-   site won't ever rate-limit or block a scraper. The real risk assessment:
-   is this a public-facing page meant for any visitor including logged-out
-   users and search crawlers (low risk, e.g. Google Careers), or something
-   that looks like an authenticated/internal API not meant for external
-   traffic (higher risk, treat cautiously, consider lower polling frequency
-   for that one adapter specifically if genuinely worried, or skip it)? A
-   single low-frequency GET per poll cycle (every 5-15 min) is a very
-   different risk profile than concurrent/high-frequency scraping — but
-   still not zero risk. Make sure `fetch_all()`'s try/except means one
-   blocked site fails that one adapter's log line, not the whole run.
+7. **Think about the blocking question honestly.** Is this a public-facing
+   page meant for any visitor including logged-out users and search crawlers
+   (low risk), or something that looks like an authenticated/internal API
+   not meant for external traffic (higher risk, treat cautiously)? A single
+   low-frequency GET per poll cycle (every 5-15 min) is a very different
+   risk profile than concurrent/high-frequency scraping — but still not zero
+   risk. Make sure `fetch_all()`'s try/except means one blocked site fails
+   that one adapter's log line, not the whole run.
 
 8. **Write and test the adapter standalone first**, before wiring it in:
 
@@ -200,22 +245,57 @@ This is the actual process used for the Google adapter
     right before merging, so the next *real* scheduled run only alerts on
     genuinely new postings going forward. Don't commit a `--dry-run` seed
     that includes postings from a much earlier test run, though — re-run it
-    fresh right before commit so you're not silently suppressing a
-    still-unnotified real posting (see git history around
-    `custom_sites/seen_custom.json` for why this matters in practice).
+    fresh right before commit.
 
-## Companies still needed (from the original interest list)
+### Bot-protection dead ends
 
-Not yet covered by `ats_poller` (Greenhouse/Lever/Workday) or
-`custom_sites` (Google done): **Splunk, Broadcom, Sandisk, Uber, Snap,
-Salesforce, Meta, Apple, Slack, OpenAI, Microsoft, Tesla, AWS, IBM, NASA,
-Cisco, TikTok, Bloomberg, Axiado, PayPal, Cloudera.**
+Some sites sit behind CDN-level bot protection (Cloudflare, Akamai,
+PerimeterX) that blocks plain `requests`/`curl` traffic *even for the site's
+own JSON API endpoints*, regardless of how browser-like the headers look —
+this is usually a TLS-fingerprint or behavioral gate, not a header check, so
+spoofing `User-Agent`/`Referer`/`sec-fetch-*` headers won't get past it. If
+you hit this: confirm it's really CDN-edge-level (the response is a generic
+"Access Denied" page from the CDN vendor itself, not the app), not just a
+missing header, then stop and flag it to the user rather than sinking
+further time in — don't build a headless-browser adapter to work around it
+without asking first, since that's a meaningfully heavier commitment
+(Playwright dependency + runtime cost on every poll cycle). See "Companies
+eliminated" below for the running list.
 
-Each needs the investigation process above run individually — assume
-roughly 15-30 minutes of real work per company, and expect a wide range of
-difficulty (some will be a `curl` + regex like Google; others will need
-headless-browser rendering or turn out to have real bot protection worth
-flagging back to the user before investing more time).
+## Status
+
+### Adapters built and live (wired into `fetch_all()`)
+Google, Amazon, Apple, Microsoft, Salesforce, Cisco.
+
+### Built but NOT wired in — needs verification
+- **Tesla** (`custom_sites/adapters/tesla_careers.py`) — adapter is written
+  and its logic/schema is believed correct (verified the request shape and
+  a real response via the browser), but Tesla's `cua-api` endpoint is
+  behind Akamai bot-protection that returns 403 to plain `requests` even
+  with a full browser header set. It's untested from GitHub Actions, whose
+  network path/IP may not be blocked the same way. Before wiring it into
+  `custom_poll.py`'s `fetch_all()` (uncomment the import and add the
+  try/except block, following the existing pattern), verify it actually
+  gets a 200 from an Actions run.
+
+### Companies eliminated
+- **Meta, Uber** — Cloudflare-blocked at the CDN edge (same class of issue
+  as Tesla's Akamai block above).
+- **TikTok, ByteDance** — same bot-protection dead end.
+
+### Next companies to build (priority order, per user's stated interests:
+SWE/backend/AI-ML/systems/distributed systems/robotics)
+1. Bloomberg
+2. PayPal
+3. Splunk
+4. IBM
+
+Lower priority / not yet investigated: Broadcom, Sandisk (hardware/semi,
+lower SWE-intern volume), Cloudera, NASA (govt site, likely low volume /
+harder to scrape), Axiado (small startup, low posting volume). **Slack** is
+owned by Salesforce and its careers page redirects into Salesforce's job
+site — not a separate scrape target, already covered by the Salesforce
+adapter.
 
 ## Known infra issue to be aware of
 

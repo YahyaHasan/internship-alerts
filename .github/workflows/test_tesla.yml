@@ -1,0 +1,28 @@
+name: Test Tesla Adapter
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tesla_careers adapter standalone
+        run: |
+          python3 -c "
+          import sys; sys.path.insert(0, 'custom_sites')
+          from adapters import tesla_careers
+          jobs = tesla_careers.fetch()
+          print(f'fetched {len(jobs)} jobs')
+          for j in jobs[:10]:
+              print(' -', j['title'], '|', j['locations'], '|', j['id'])
+          "

@@ -24,7 +24,23 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from adapters import amazon_jobs, apple_careers, google_careers, microsoft_careers  # noqa: E402
+from adapters import (  # noqa: E402
+    amazon_jobs,
+    apple_careers,
+    cisco_careers,
+    google_careers,
+    microsoft_careers,
+    salesforce_careers,
+)
+
+# tesla_careers is NOT wired in below: Tesla's cua-api is behind Akamai
+# bot-protection that blocks plain `requests` at the CDN edge (confirmed
+# with a full browser header set -- looks like a TLS-fingerprint gate, not
+# a header check), so it works from a real browser but not from this
+# poller's HTTP client. The adapter/schema logic is believed correct; it
+# needs to be verified from an actual GitHub Actions run before wiring it
+# into fetch_all() below -- Actions' network path/IP may not be blocked the
+# same way. See custom_sites/PLAYBOOK.md "Companies eliminated" section.
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama-3.1-8b-instant"
@@ -79,8 +95,19 @@ def fetch_all():
     except Exception as e:
         log(f"[Microsoft] fetch failed: {e}")
 
-    # Future standalone-site adapters (Meta, Uber, ...) get their own
-    # try/except block here, same pattern.
+    try:
+        got = salesforce_careers.fetch()
+        log(f"[Salesforce] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Salesforce] fetch failed: {e}")
+
+    try:
+        got = cisco_careers.fetch()
+        log(f"[Cisco] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Cisco] fetch failed: {e}")
 
     return entries
 
