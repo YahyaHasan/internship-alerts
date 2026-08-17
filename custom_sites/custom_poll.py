@@ -27,9 +27,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 from adapters import (  # noqa: E402
     amazon_jobs,
     apple_careers,
+    bloomberg_careers,
     cisco_careers,
     google_careers,
     microsoft_careers,
+    paypal_careers,
     salesforce_careers,
 )
 
@@ -108,6 +110,20 @@ def fetch_all():
         entries.extend(got)
     except Exception as e:
         log(f"[Cisco] fetch failed: {e}")
+
+    try:
+        got = bloomberg_careers.fetch()
+        log(f"[Bloomberg] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Bloomberg] fetch failed: {e}")
+
+    try:
+        got = paypal_careers.fetch()
+        log(f"[PayPal] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[PayPal] fetch failed: {e}")
 
     return entries
 

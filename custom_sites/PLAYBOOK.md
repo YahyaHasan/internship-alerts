@@ -265,7 +265,36 @@ eliminated" below for the running list.
 ## Status
 
 ### Adapters built and live (wired into `fetch_all()`)
-Google, Amazon, Apple, Microsoft, Salesforce, Cisco.
+Google, Amazon, Apple, Microsoft, Salesforce, Cisco, Bloomberg, PayPal.
+
+Notes on the last two:
+- **Bloomberg** (`bloomberg_careers.py`) — Avature-hosted, server-rendered,
+  plain `requests` works fine. Filtered server-side to the user's chosen
+  Experience Level (Early Careers, Internships) + Business Area (Data,
+  Engineering and CTO, Technology Support) facets via URL params; US is
+  filtered client-side on the rendered location string's `", US"` suffix
+  since there's no country-level location facet (only individual cities).
+- **PayPal** (`paypal_careers.py`) — Eightfold-hosted, hits the site's own
+  `/api/pcsx/search` GET endpoint (stateless, no auth needed). No
+  employment-type/experience-level facet is exposed for PayPal's instance,
+  so per the user's own filter choice this uses `query=intern` — **but
+  Eightfold's search does prefix/substring matching, so "intern" also
+  matches "Internal"** (real results seen: "Manager, Internal Controls",
+  "Sr Auditor, Internal Audit" — not internships). Client-side filters on a
+  word-boundary regex (`\bintern(s|ship|ships)?\b`) to drop those false
+  positives, plus a `standardizedLocations` suffix check for US. Worth
+  re-checking if PayPal's postings ever start reliably including "Intern"
+  as a distinct word in every real internship title.
+
+### Splunk is already covered — no separate adapter needed
+Splunk's careers page (`splunk.com/en_us/careers.html`) redirects straight
+to `careers.cisco.com/global/en/splunk`, and Splunk requisitions live in the
+same Cisco Workday/Phenom People pool the `cisco_careers.py` adapter already
+queries (confirmed: searching that pool for "splunk" returns live Splunk
+postings, e.g. "Account Executive - Splunk", with no separate brand/domain
+facet to distinguish them — they're just regular Cisco postings). Any
+Splunk internship that's Intern-faceted and US-located is already picked up
+by the existing Cisco adapter's fetch.
 
 ### Built but not wired in
 - **Tesla** (`custom_sites/adapters/tesla_careers.py`) — adapter logic/schema
@@ -296,17 +325,36 @@ wants to invest in it for a specific company, not as a default fallback.
 
 ### Next companies to build (priority order, per user's stated interests:
 SWE/backend/AI-ML/systems/distributed systems/robotics)
-1. Bloomberg
-2. PayPal
-3. Splunk
-4. IBM
+1. IBM
+2. Broadcom
+3. Sandisk
+4. Cloudera
 
-Lower priority / not yet investigated: Broadcom, Sandisk (hardware/semi,
-lower SWE-intern volume), Cloudera, NASA (govt site, likely low volume /
-harder to scrape), Axiado (small startup, low posting volume). **Slack** is
-owned by Salesforce and its careers page redirects into Salesforce's job
-site — not a separate scrape target, already covered by the Salesforce
-adapter.
+Lower priority / not yet investigated: NASA (govt site, likely low volume /
+harder to scrape), Axiado (small startup, low posting volume). **Slack**
+(covered by Salesforce adapter) and **Splunk** (covered by Cisco adapter)
+are already handled — see notes above, no separate adapter needed for
+either.
+
+### Planned: headless-browser (Playwright) adapters for Tesla, Uber, Meta
+The user intends to build these soon to get past the Cloudflare/Akamai
+blocks noted above. Brief pointers for whoever picks this up:
+- Add `playwright` to `requirements.txt`, and a `playwright install
+  chromium --with-deps` step to whichever GitHub Actions workflow runs
+  these adapters (confirmed free to run on Actions since this repo is
+  public — unlimited minutes regardless of job duration).
+- Adapter shape stays the same (`fetch()` returning the standard entry
+  dicts) — internally it launches headless Chromium, navigates to the
+  search URL with the right filters already applied via query params (like
+  every other adapter here), waits for the results to render, then reads
+  the DOM (or, better, re-hooks `page.on("response")` to grab whatever
+  underlying JSON/XHR call the rendered page itself makes, same as the
+  investigation approach used for Cisco/PayPal above — often still cleaner
+  than scraping the DOM even behind a real browser).
+- Expect meaningfully slower runs per adapter (browser launch + render, not
+  a fast HTTP call) — keep it as its own try/except in `fetch_all()` same as
+  every other adapter, so a slow/failing headless run never blocks the rest
+  of the poll cycle.
 
 ## Known infra issue to be aware of
 
