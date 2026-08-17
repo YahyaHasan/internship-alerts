@@ -39,14 +39,6 @@ INTERN_TITLE_RE = re.compile(r"\bintern(ship)?\b", re.IGNORECASE)
 STALE_YEAR_RE = re.compile(r"\b(2023|2024|2025|2026)\b")
 CURRENT_YEAR_RE = re.compile(r"\b(2027|2028)\b")
 
-EXCLUDE_PATTERNS = [
-    re.compile(r"\bfrontend\b|\bfront-end\b", re.IGNORECASE),
-    re.compile(r"\bUI\b.*\bengineer\b|\bUI/UX\b", re.IGNORECASE),
-    re.compile(r"\bSalesforce\b|\bCRM\b", re.IGNORECASE),
-    re.compile(r"\bdigital marketing\b|\bSEO\b", re.IGNORECASE),
-]
-
-
 def log(msg):
     print(msg, flush=True)
 
@@ -102,10 +94,8 @@ def keyword_filter(entries):
             continue
         if not term_filter_ok(title):
             continue
-        if any(pat.search(title) for pat in EXCLUDE_PATTERNS):
-            continue
         kept.append(e)
-    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after intern/term/exclude filter")
+    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after intern/term filter")
     return kept
 
 

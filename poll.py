@@ -18,20 +18,10 @@ SKIPPED_LOG_FILE = "skipped_log.json"
 AUDIT_HOUR_UTC = 9
 AUDIT_WINDOW_HOURS = 24
 
-EXCLUDE_PATTERNS = [
-    re.compile(r"\bfrontend\b|\bfront-end\b", re.IGNORECASE),
-    re.compile(r"\bUI\b.*\bengineer\b|\bUI/UX\b", re.IGNORECASE),
-    re.compile(r"\bSalesforce\b|\bCRM\b", re.IGNORECASE),
-    re.compile(r"\bdigital marketing\b|\bSEO\b|\bads?\b.*\btech\b", re.IGNORECASE),
-    re.compile(r"\bstreaming\b.*\binfrastructure\b|\bmedia.*platform\b", re.IGNORECASE),
-]
-DATA_ENGINEER_RE = re.compile(r"\bdata.*engineer\b", re.IGNORECASE)
-ML_EXCEPTION_RE = re.compile(r"\bML\b|machine learning|\bAI\b|pipeline for ML", re.IGNORECASE)
-
 ALLOWED_TERMS = {"Summer 2027", "Spring 2027", "Fall 2027", "Winter 2027"}
 
 # Categories confidently in-scope for a UC Berkeley EECS sophomore's interests;
-# these skip the LLM call entirely (still pass through the keyword pre-filter).
+# these skip the LLM call entirely.
 AUTO_KEEP_CATEGORIES = {"Software", "Software Engineering", "AI/ML/Data", "Data Science, AI & Machine Learning"}
 
 # Applies across all sources (not just Simplify's category field): any title that
@@ -128,23 +118,6 @@ def dedup(entries):
 
     log(f"[Dedup] {len(entries)} -> {len(url_deduped)} after URL dedup")
     return url_deduped
-
-
-def keyword_filter(entries):
-    kept = []
-    for e in entries:
-        title = e["title"]
-        excluded = False
-        for pat in EXCLUDE_PATTERNS:
-            if pat.search(title):
-                excluded = True
-                break
-        if not excluded and DATA_ENGINEER_RE.search(title) and not ML_EXCEPTION_RE.search(title):
-            excluded = True
-        if not excluded:
-            kept.append(e)
-    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after keyword pre-filter")
-    return kept
 
 
 RATE_LIMIT_HEADER_CANDIDATES = [
@@ -390,11 +363,8 @@ def main():
     deduped = dedup(new_entries)
     deduped_away_count = new_count - len(deduped)
 
-    prefiltered = keyword_filter(deduped)
-    keyword_filtered_count = len(deduped) - len(prefiltered)
-
-    auto_keep = [e for e in prefiltered if is_auto_keep(e)]
-    needs_llm = [e for e in prefiltered if not is_auto_keep(e)]
+    auto_keep = [e for e in deduped if is_auto_keep(e)]
+    needs_llm = [e for e in deduped if not is_auto_keep(e)]
     log(f"[AutoKeep] {len(auto_keep)} auto-kept by category, {len(needs_llm)} need LLM classification")
 
     llm_info = {"failed": False}
@@ -418,7 +388,6 @@ def main():
             "<b>Run stats</b>",
             f"New roles found: {new_count}",
             f"Deduplicated away: {deduped_away_count}",
-            f"Filtered by keyword pre-filter: {keyword_filtered_count}",
             f"Auto-kept by category: {len(auto_keep)}",
             f"Sent to LLM for classification: {len(needs_llm)}",
             f"Sending all {len(needs_llm)} unfiltered roles (plus {len(auto_keep)} auto-kept)",
@@ -487,7 +456,6 @@ def main():
             "📊 <b>Poll run summary</b>\n"
             f"New roles found: {new_count}\n"
             f"Deduplicated away: {deduped_away_count}\n"
-            f"Filtered by keyword pre-filter: {keyword_filtered_count}\n"
             f"Auto-kept by category: {len(auto_keep)}\n"
             f"Sent to LLM for classification: {len(needs_llm)}\n"
             f"Filtered by LLM: {llm_skipped_count}\n"
