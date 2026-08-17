@@ -31,8 +31,9 @@ MAX_PAGES = 10  # safety cap: 200 postings per run
 
 def fetch(timeout=30):
     """Returns a list of normalized entries from PayPal's Eightfold careers
-    search, filtered to US-located postings whose title actually contains
-    the word "intern" (not just a substring match on "Internal")."""
+    search, worldwide (no location filter), filtered to postings whose title
+    actually contains the word "intern" (not just a substring match on
+    "Internal")."""
     entries = []
     seen_ids = set()
 
@@ -66,10 +67,6 @@ def fetch(timeout=30):
             seen_ids.add(job_id)
 
             if not TITLE_INTERN_RE.search(title):
-                continue
-
-            standardized = pos.get("standardizedLocations") or []
-            if not any(loc.endswith(",US") for loc in standardized):
                 continue
 
             url = f"https://paypal.eightfold.ai{pos['positionUrl']}" if pos.get("positionUrl") else None

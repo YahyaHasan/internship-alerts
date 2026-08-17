@@ -271,9 +271,9 @@ Notes on the last two:
 - **Bloomberg** (`bloomberg_careers.py`) — Avature-hosted, server-rendered,
   plain `requests` works fine. Filtered server-side to the user's chosen
   Experience Level (Early Careers, Internships) + Business Area (Data,
-  Engineering and CTO, Technology Support) facets via URL params; US is
-  filtered client-side on the rendered location string's `", US"` suffix
-  since there's no country-level location facet (only individual cities).
+  Engineering and CTO, Technology Support) facets via URL params.
+  Deliberately **not** filtered to US — the user wants Bloomberg results
+  worldwide.
 - **PayPal** (`paypal_careers.py`) — Eightfold-hosted, hits the site's own
   `/api/pcsx/search` GET endpoint (stateless, no auth needed). No
   employment-type/experience-level facet is exposed for PayPal's instance,
@@ -282,9 +282,9 @@ Notes on the last two:
   matches "Internal"** (real results seen: "Manager, Internal Controls",
   "Sr Auditor, Internal Audit" — not internships). Client-side filters on a
   word-boundary regex (`\bintern(s|ship|ships)?\b`) to drop those false
-  positives, plus a `standardizedLocations` suffix check for US. Worth
-  re-checking if PayPal's postings ever start reliably including "Intern"
-  as a distinct word in every real internship title.
+  positives. Deliberately **not** filtered to US — worldwide, like
+  Bloomberg. Worth re-checking if PayPal's postings ever start reliably
+  including "Intern" as a distinct word in every real internship title.
 
 ### Splunk is already covered — no separate adapter needed
 Splunk's careers page (`splunk.com/en_us/careers.html`) redirects straight
