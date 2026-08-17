@@ -265,7 +265,28 @@ eliminated" below for the running list.
 ## Status
 
 ### Adapters built and live (wired into `fetch_all()`)
-Google, Amazon, Apple, Microsoft, Salesforce, Cisco, Bloomberg, PayPal.
+Google, Amazon, Apple, Microsoft, Salesforce, Cisco, Bloomberg, PayPal, IBM,
+Sandisk.
+
+- **IBM** (`ibm_careers.py`) — the search page (`www.ibm.com/careers/search`)
+  is a Next.js app whose facet widgets POST real Elasticsearch query DSL to
+  `www-api.ibm.com/search/api/v2` (found by hooking `XMLHttpRequest` in the
+  browser and toggling a filter checkbox -- the initial page-load request
+  fires too early to intercept normally, so a facet click was needed to
+  catch a *second* request with the hook already installed). Filtered
+  server-side to the user's exact three Career Areas + Internship + United
+  States, matching their URL's filters exactly. `careers.ibm.com` itself
+  (the underlying Avature-esque job-detail host) is behind an AWS WAF
+  bot-challenge, but this search API on `www-api.ibm.com` is not.
+- **Sandisk** (`sandisk_careers.py`) — SmartRecruiters-hosted, hits the
+  platform's public `api.smartrecruiters.com/v1/companies/Sandisk/postings`
+  directly, no auth needed. No employment-type facet reliably tags
+  "Intern" postings (found via WebSearch since Sandisk's own domain didn't
+  surface it — spun off from Western Digital, uses SmartRecruiters), so per
+  the user's choice this is a keyword search (word-boundary `\bintern\b` on
+  title) combined with a client-side filter to `location.city == "Milpitas"`
+  (the only location the user wants), using the API's own structured
+  location field rather than string matching.
 
 Notes on the last two:
 - **Bloomberg** (`bloomberg_careers.py`) — Avature-hosted, server-rendered,
@@ -325,16 +346,33 @@ wants to invest in it for a specific company, not as a default fallback.
 
 ### Next companies to build (priority order, per user's stated interests:
 SWE/backend/AI-ML/systems/distributed systems/robotics)
-1. IBM
-2. Broadcom
-3. Sandisk
-4. Cloudera
+1. Broadcom (see open question below — not yet built)
+2. Cloudera
 
 Lower priority / not yet investigated: NASA (govt site, likely low volume /
 harder to scrape), Axiado (small startup, low posting volume). **Slack**
 (covered by Salesforce adapter) and **Splunk** (covered by Cisco adapter)
 are already handled — see notes above, no separate adapter needed for
 either.
+
+### Open question: Broadcom's filter-availability problem
+Broadcom (Workday, `broadcom.wd1.myworkdayjobs.com/External_Career`) has a
+job-family-group facet the user wants to filter on (Information Technology
+is the only currently-relevant one, `jobFamilyGroup=5d531f3d0e8c416786d61a13b265af9e`
+in their example URL) -- but **Workday's facet list on this instance only
+shows values that currently have at least one open posting**. A facet like
+"Computer Science" could exist and simply not render in the UI right now if
+zero CS roles are open, meaning a hardcoded facet-id list captured today
+could silently miss a real category once Broadcom posts to it later. The
+user was unsure how to handle this and asked to think it through together --
+options to weigh when picking this up: (a) stick with just the
+currently-visible IT facet id, accepting it may need revisiting later if
+Broadcom starts posting under a different family; (b) query Workday's
+facet-options endpoint on every poll run (if one exists, capturing the
+current known-facets list without a hardcoded id) instead of hardcoding a
+single value, so new facets get picked up automatically; (c) skip
+facet-filtering entirely and use a broad keyword search instead, accepting
+more noise. Not resolved yet -- revisit with the user before building.
 
 ### Planned: headless-browser (Playwright) adapters for Tesla, Uber, Meta
 The user intends to build these soon to get past the Cloudflare/Akamai

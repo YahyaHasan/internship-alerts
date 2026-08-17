@@ -30,9 +30,11 @@ from adapters import (  # noqa: E402
     bloomberg_careers,
     cisco_careers,
     google_careers,
+    ibm_careers,
     microsoft_careers,
     paypal_careers,
     salesforce_careers,
+    sandisk_careers,
 )
 
 # tesla_careers is NOT wired in below: Tesla's cua-api is behind Akamai
@@ -124,6 +126,20 @@ def fetch_all():
         entries.extend(got)
     except Exception as e:
         log(f"[PayPal] fetch failed: {e}")
+
+    try:
+        got = ibm_careers.fetch()
+        log(f"[IBM] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[IBM] fetch failed: {e}")
+
+    try:
+        got = sandisk_careers.fetch()
+        log(f"[Sandisk] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Sandisk] fetch failed: {e}")
 
     return entries
 
