@@ -24,7 +24,7 @@ from adapters import ashby, greenhouse, lever, workday  # noqa: E402
 from companies import ASHBY_COMPANIES, GREENHOUSE_COMPANIES, LEVER_COMPANIES, WORKDAY_COMPANIES  # noqa: E402
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.1-8b-instant"
+GROQ_MODEL = "openai/gpt-oss-20b"
 
 BASE_DIR = Path(__file__).parent
 SEEN_FILE = BASE_DIR / "seen_ats.json"

@@ -12,7 +12,7 @@ import requests
 SIMPLIFY_URL = "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json"
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.1-8b-instant"
+GROQ_MODEL = "openai/gpt-oss-20b"
 SEEN_FILE = "seen.json"
 SKIPPED_LOG_FILE = "skipped_log.json"
 AUDIT_HOUR_UTC = 9

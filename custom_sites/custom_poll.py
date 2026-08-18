@@ -47,7 +47,7 @@ from adapters import (  # noqa: E402
 # same way. See custom_sites/PLAYBOOK.md "Companies eliminated" section.
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.1-8b-instant"
+GROQ_MODEL = "openai/gpt-oss-20b"
 
 BASE_DIR = Path(__file__).parent
 SEEN_FILE = BASE_DIR / "seen_custom.json"
