@@ -39,6 +39,29 @@ INTERN_TITLE_RE = re.compile(r"\bintern(ship)?\b", re.IGNORECASE)
 STALE_YEAR_RE = re.compile(r"\b(2023|2024|2025|2026)\b")
 CURRENT_YEAR_RE = re.compile(r"\b(2027|2028)\b")
 
+# We can't reliably enumerate every valid "US" location string (bare city
+# names, "Remote", full state names, "Bay Area", etc. all vary by ATS), so
+# an allowlist would silently drop legitimate US roles that don't happen to
+# match. Instead, blocklist locations that are unambiguously non-US; any
+# entry not matching this (including ones with no location data, or an
+# unrecognized location) is kept.
+NON_US_LOCATION_RE = re.compile(
+    r"\b(Singapore|India|China|Taiwan|Japan|Korea|Malaysia|Vietnam|Philippines|Thailand|Indonesia|"
+    r"Israel|United Kingdom|UK|England|Scotland|Ireland|Germany|France|Spain|Italy|Netherlands|"
+    r"Poland|Switzerland|Sweden|Norway|Denmark|Finland|Belgium|Austria|Portugal|"
+    r"Canada|Mexico|Brazil|Argentina|Chile|Colombia|"
+    r"Australia|New Zealand|"
+    r"Egypt|South Africa|Nigeria|Kenya|"
+    r"Hong Kong|Costa Rica|Romania|Czech(ia)?|Hungary|Ukraine|Russia)\b",
+    re.IGNORECASE,
+)
+
+
+def location_filter_ok(locations):
+    if not locations:
+        return True
+    return not any(NON_US_LOCATION_RE.search(loc) for loc in locations)
+
 def log(msg):
     print(msg, flush=True)
 
@@ -94,8 +117,10 @@ def keyword_filter(entries):
             continue
         if not term_filter_ok(title):
             continue
+        if not location_filter_ok(e.get("locations")):
+            continue
         kept.append(e)
-    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after intern/term filter")
+    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after intern/term/location filter")
     return kept
 
 
@@ -103,7 +128,10 @@ def llm_filter(entries, groq_api_key):
     if not entries:
         return entries, [], {"failed": False}
 
-    jobs_payload = [{"id": e["id"], "company": e["company"], "title": e["title"]} for e in entries]
+    jobs_payload = [
+        {"id": e["id"], "company": e["company"], "title": e["title"], "locations": e.get("locations") or []}
+        for e in entries
+    ]
 
     system_prompt = (
         "You are a job relevance classifier for a UC Berkeley EECS sophomore applying to "
@@ -117,7 +145,9 @@ def llm_filter(entries, groq_api_key):
         "compilers, distributed systems, robotics, general software engineering.\n\n"
         "SKIP ONLY if clearly: pure frontend/UI dev with no backend, pure CRM/Salesforce admin, "
         "pure digital marketing or ads tech, pure media streaming infrastructure with no ML, "
-        "non-technical roles, or a non-engineering internship (sales, HR, finance, legal).\n\n"
+        "non-technical roles, a non-engineering internship (sales, HR, finance, legal), or "
+        "fab/manufacturing operations roles (industrial engineering, process/equipment engineering, "
+        "AMHS, planning IE, fab facilities, supply chain/logistics) with no software component.\n\n"
         "When in doubt, KEEP.\n\n"
         f"Jobs: {json.dumps(jobs_payload)}\n\n"
         'Reply with: [{"id": "...", "keep": true/false}]'
