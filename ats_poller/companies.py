@@ -185,6 +185,7 @@ ASHBY_COMPANIES = [
     ("Speak", "speak"),
     ("Uncountable", "uncountable"),
     ("Vapi", "vapi"),
+    ("Giga", "gigaml"),
 ]
 
 WORKDAY_COMPANIES = [
@@ -207,7 +208,58 @@ WORKDAY_COMPANIES = [
     ("Ciena", "ciena", "wd5", "Careers"),
     ("Pluralsight", "pluralsight", "wd1", "Careers"),
     ("3M", "3m", "wd1", "Search"),
+    ("AES", "aes", "wd1", "AES_US"),
+    ("Amgen", "amgen", "wd1", "Careers"),
+    ("Applied Materials", "amat", "wd1", "External"),
+    ("Arrow Electronics", "arrow", "wd1", "AC"),
+    ("Bank of America", "ghr", "wd1", "Lateral-US"),
+    ("Becton Dickinson", "bdx", "wd1", "EXTERNAL_CAREER_SITE_USA"),
+    ("Biogen", "biibhr", "wd3", "external"),
+    ("Bristol-Myers Squibb", "bristolmyerssquibb", "wd5", "BMS"),
+    ("CDW", "cdw", "wd5", "Careers"),
+    ("Chevron", "chevron", "wd5", "jobs"),
+    ("Cigna", "cigna", "wd5", "cignacareers"),
+    ("Conagra Brands", "conagrabrands", "wd1", "Careers_US"),
+    ("ConocoPhillips", "conocophillips", "wd1", "eQuest"),
+    ("Duke Energy", "dukeenergy", "wd1", "Search"),
+    ("Expedia", "expedia", "wd108", "search"),
+    ("Fidelity", "fmr", "wd1", "FidelityCareers"),
+    ("Fiserv", "fiserv", "wd5", "EXT"),
+    ("General Motors", "generalmotors", "wd5", "Careers_GM"),
+    ("Gilead Sciences", "gilead", "wd1", "gileadcareers"),
+    ("KLA", "kla", "wd1", "Search"),
+    ("Mastercard", "mastercard", "wd1", "CorporateCareers"),
+    ("Merck", "msd", "wd5", "SearchJobs"),
+    ("Motorola Solutions", "motorolasolutions", "wd5", "Careers"),
+    ("Pfizer", "pfizer", "wd1", "PfizerCareers"),
+    ("Prudential Financial", "pru", "wd5", "Careers"),
+    ("RTX", "globalhr", "wd5", "REC_RTX_Ext_Gateway"),
+    ("Travelers", "travelers", "wd5", "External"),
+    ("Truist Financial", "truist", "wd1", "Careers"),
 ]
+
+# Not added, verified wrong or unresolvable when the user pasted a claimed
+# Workday company list on 2026-08-19 (see git history for the fork's full
+# verification report):
+# - Wrong platform entirely (no adapter for these here): AMD (iCIMS),
+#   Boston Scientific (Eightfold), Emerson Electric (Oracle Fusion), Ford
+#   (Oracle Fusion), Honeywell (Oracle Fusion), Lam Research (Eightfold),
+#   Texas Instruments (Oracle Fusion), United Airlines (Taleo -- the
+#   uaa.wd12 Workday tenant found is only their flight-school subsidiary).
+# - Not actually this company's board: Aflac (hit was Children's Healthcare
+#   of Atlanta's "Aflac Cancer Center"), Cintas (hit was Northrop Grumman's
+#   vendor board mentioning Cintas).
+# - Stale: Discover Financial (being retired into Capital One's board
+#   post-acquisition).
+# - No working tenant/site found within a reasonable search budget:
+#   Accenture, Abbott Laboratories (already covered separately via
+#   custom_sites/adapters/abbott_careers.py on jobs.abbott, a different
+#   site), Amphenol, Aramark, Archer Daniels Midland, Baker Hughes, Baxter
+#   International, BlackRock, Blackstone, Bunge, C.H. Robinson Worldwide,
+#   Capital One, CBRE, Citi, Comcast, Ecolab, Eli Lilly, Intuit, Jabil,
+#   Johnson & Johnson, Northrop Grumman, Palo Alto Networks, Procter &
+#   Gamble, Stryker, T-Mobile US, Thermo Fisher Scientific, UnitedHealth,
+#   Verizon, Wells Fargo -- revisit if worth the WebSearch time later.
 
 SMARTRECRUITERS_COMPANIES = [
     # display_name, company_identifier (as used in the API path)
