@@ -73,6 +73,33 @@ def fetch_simplify():
     return entries
 
 
+# We can't reliably enumerate every valid "US" location string (bare city
+# names, "Remote", full state names, "Bay Area", etc. all vary by source), so
+# an allowlist would silently drop legitimate US roles that don't happen to
+# match. Instead, blocklist locations that are unambiguously non-US; any
+# entry not matching this (including ones with no location data, or an
+# unrecognized location) is kept. Same list as ats_poller/ats_poll.py.
+NON_US_LOCATION_RE = re.compile(
+    r"\b(Singapore|India|China|Taiwan|Japan|Korea|Malaysia|Vietnam|Philippines|Thailand|Indonesia|"
+    r"Israel|United Kingdom|UK|England|Scotland|Ireland|Germany|France|Spain|Italy|Netherlands|"
+    r"Poland|Switzerland|Sweden|Norway|Denmark|Finland|Belgium|Austria|Portugal|"
+    r"Canada|Mexico|Brazil|Argentina|Chile|Colombia|"
+    r"Australia|New Zealand|"
+    r"Egypt|South Africa|Nigeria|Kenya|"
+    r"Hong Kong|Costa Rica|Romania|Czech(ia)?|Hungary|Ukraine|Russia)\b",
+    re.IGNORECASE,
+)
+
+
+def location_filter_ok(locations):
+    """A posting's 'locations' field is a list (a role can span multiple
+    offices), so this rejects the entry if ANY location in the list is
+    unambiguously non-US, not just the first one."""
+    if not locations:
+        return True
+    return not any(NON_US_LOCATION_RE.search(loc) for loc in locations)
+
+
 def normalize_url(url):
     try:
         p = urlparse(url.lower())
@@ -360,8 +387,11 @@ def main():
     new_entries = simplify_term_filter(new_entries_raw)
     new_count = len(new_entries)
 
-    deduped = dedup(new_entries)
-    deduped_away_count = new_count - len(deduped)
+    location_filtered = [e for e in new_entries if location_filter_ok(e.get("locations"))]
+    log(f"[LocationFilter] {len(new_entries)} -> {len(location_filtered)} after non-US filter")
+
+    deduped = dedup(location_filtered)
+    deduped_away_count = len(location_filtered) - len(deduped)
 
     auto_keep = [e for e in deduped if is_auto_keep(e)]
     needs_llm = [e for e in deduped if not is_auto_keep(e)]

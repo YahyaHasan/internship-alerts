@@ -20,8 +20,14 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from adapters import ashby, greenhouse, lever, workday  # noqa: E402
-from companies import ASHBY_COMPANIES, GREENHOUSE_COMPANIES, LEVER_COMPANIES, WORKDAY_COMPANIES  # noqa: E402
+from adapters import ashby, greenhouse, lever, smartrecruiters, workday  # noqa: E402
+from companies import (  # noqa: E402
+    ASHBY_COMPANIES,
+    GREENHOUSE_COMPANIES,
+    LEVER_COMPANIES,
+    SMARTRECRUITERS_COMPANIES,
+    WORKDAY_COMPANIES,
+)
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "openai/gpt-oss-20b"
@@ -105,6 +111,14 @@ def fetch_all():
             entries.extend(got)
         except Exception as e:
             log(f"[Ashby:{name}] fetch failed: {e}")
+
+    for name, slug in SMARTRECRUITERS_COMPANIES:
+        try:
+            got = smartrecruiters.fetch(name, slug)
+            log(f"[SmartRecruiters:{name}] fetched {len(got)} jobs")
+            entries.extend(got)
+        except Exception as e:
+            log(f"[SmartRecruiters:{name}] fetch failed: {e}")
 
     return entries
 

@@ -112,6 +112,9 @@ GREENHOUSE_COMPANIES = [
     ("Upwork", "upwork"),
     ("Turing", "turing"),
     ("Instawork", "instawork"),
+    ("Flex", "flex"),
+    ("Venture Global", "ventureglobal"),
+    ("Verkada", "verkada"),
 ]
 
 LEVER_COMPANIES = [
@@ -168,6 +171,20 @@ ASHBY_COMPANIES = [
     ("Physical Intelligence", "physicalintelligence"),
     ("Deel", "deel"),
     ("Convex", "convex-dev"),
+    ("AfterQuery", "afterquery"),
+    ("Agave", "agave"),
+    ("Airbyte", "airbyte"),
+    ("Anyscale", "anyscale"),
+    ("Ashby", "ashby"),
+    ("Auctor", "auctor"),
+    ("Bland AI", "bland"),
+    ("Circleback", "circleback"),
+    ("Letta", "letta"),
+    ("Modal", "modal"),
+    ("Retell AI", "retell-ai"),
+    ("Speak", "speak"),
+    ("Uncountable", "uncountable"),
+    ("Vapi", "vapi"),
 ]
 
 WORKDAY_COMPANIES = [
@@ -189,4 +206,27 @@ WORKDAY_COMPANIES = [
     ("Trend Micro", "trendmicro", "wd3", "External"),
     ("Ciena", "ciena", "wd5", "Careers"),
     ("Pluralsight", "pluralsight", "wd1", "Careers"),
+]
+
+SMARTRECRUITERS_COMPANIES = [
+    # display_name, company_identifier (as used in the API path)
+    ("AbbVie", "abbvie"),
+    ("Avery Dennison", "averydennison"),
+    ("Builders FirstSource", "buildersfirstsource"),
+    ("Celanese", "celanese"),
+    ("Cencora", "cencora"),
+    ("Freeport-McMoRan", "freeport-mcmoran"),
+    ("Glean", "glean"),
+    ("Henry Schein", "henryschein"),
+    ("Kenvue", "kenvue"),
+    ("Kimberly-Clark", "kimberlyclark"),
+    ("Land O'Lakes", "landolakes"),
+    ("Live Nation Entertainment", "livenationentertainment"),
+    ("MGM Resorts International", "mgmresortsinternational"),
+    ("Markel", "markel"),
+    ("News Corp.", "newscorp"),
+    ("Northwestern Mutual", "northwesternmutual"),
+    ("ServiceNow", "servicenow"),
+    ("Sonic Automotive", "sonicautomotive"),
+    ("Western Digital", "westerndigital"),
 ]

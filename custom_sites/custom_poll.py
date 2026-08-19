@@ -68,6 +68,35 @@ def term_filter_ok(title):
     return True
 
 
+# We can't reliably enumerate every valid "US" location string (bare city
+# names, "Remote", full state names, "Bay Area", etc. all vary by adapter),
+# so an allowlist would silently drop legitimate US roles that don't happen
+# to match. Instead, blocklist locations that are unambiguously non-US; any
+# entry not matching this (including ones with no location data, or an
+# unrecognized location) is kept. Same list as ats_poller/ats_poll.py.
+NON_US_LOCATION_RE = re.compile(
+    r"\b(Singapore|India|China|Taiwan|Japan|Korea|Malaysia|Vietnam|Philippines|Thailand|Indonesia|"
+    r"Israel|United Kingdom|UK|England|Scotland|Ireland|Germany|France|Spain|Italy|Netherlands|"
+    r"Poland|Switzerland|Sweden|Norway|Denmark|Finland|Belgium|Austria|Portugal|"
+    r"Canada|Mexico|Brazil|Argentina|Chile|Colombia|"
+    r"Australia|New Zealand|"
+    r"Egypt|South Africa|Nigeria|Kenya|"
+    r"Hong Kong|Costa Rica|Romania|Czech(ia)?|Hungary|Ukraine|Russia)\b",
+    re.IGNORECASE,
+)
+
+
+def location_filter_ok(locations):
+    """A posting's 'locations' field is a list (a role can span multiple
+    offices), so this rejects the entry if ANY location in the list is
+    unambiguously non-US, not just the first one. Applied uniformly across
+    every adapter, including Bloomberg and PayPal (previously deliberately
+    left unfiltered by country -- superseded by this change)."""
+    if not locations:
+        return True
+    return not any(NON_US_LOCATION_RE.search(loc) for loc in locations)
+
+
 def fetch_all():
     entries = []
 
@@ -150,8 +179,10 @@ def keyword_filter(entries):
         title = e["title"]
         if not term_filter_ok(title):
             continue
+        if not location_filter_ok(e.get("locations")):
+            continue
         kept.append(e)
-    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after term filter")
+    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after term/location filter")
     return kept
 
 
