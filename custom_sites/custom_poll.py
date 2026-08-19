@@ -27,9 +27,12 @@ sys.path.insert(0, str(Path(__file__).parent))
 from adapters import (  # noqa: E402
     amazon_jobs,
     apple_careers,
+    att_careers,
     bloomberg_careers,
     cisco_careers,
+    cloudera_careers,
     google_careers,
+    group1_careers,
     ibm_careers,
     microsoft_careers,
     paypal_careers,
@@ -170,6 +173,27 @@ def fetch_all():
         entries.extend(got)
     except Exception as e:
         log(f"[Sandisk] fetch failed: {e}")
+
+    try:
+        got = group1_careers.fetch()
+        log(f"[1 Automotive] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[1 Automotive] fetch failed: {e}")
+
+    try:
+        got = cloudera_careers.fetch()
+        log(f"[Cloudera] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Cloudera] fetch failed: {e}")
+
+    try:
+        got = att_careers.fetch()
+        log(f"[AT&T] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[AT&T] fetch failed: {e}")
 
     return entries
 
