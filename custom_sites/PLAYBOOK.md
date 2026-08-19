@@ -456,25 +456,38 @@ a broader net (Country=US + intern-keyword only), accepting more noise
 rather than risk silently missing postings. Same tradeoff would apply if
 Broadcom's IT-facet question is revisited later.
 
-### Planned: headless-browser (Playwright) adapters for Tesla, Uber, Meta
-The user intends to build these soon to get past the Cloudflare/Akamai
-blocks noted above. Brief pointers for whoever picks this up:
-- Add `playwright` to `requirements.txt`, and a `playwright install
-  chromium --with-deps` step to whichever GitHub Actions workflow runs
-  these adapters (confirmed free to run on Actions since this repo is
-  public — unlimited minutes regardless of job duration).
-- Adapter shape stays the same (`fetch()` returning the standard entry
-  dicts) — internally it launches headless Chromium, navigates to the
-  search URL with the right filters already applied via query params (like
-  every other adapter here), waits for the results to render, then reads
-  the DOM (or, better, re-hooks `page.on("response")` to grab whatever
-  underlying JSON/XHR call the rendered page itself makes, same as the
-  investigation approach used for Cisco/PayPal above — often still cleaner
-  than scraping the DOM even behind a real browser).
-- Expect meaningfully slower runs per adapter (browser launch + render, not
-  a fast HTTP call) — keep it as its own try/except in `fetch_all()` same as
-  every other adapter, so a slow/failing headless run never blocks the rest
-  of the poll cycle.
+### Tested and ruled out: headless-browser (Playwright) for Tesla -- doesn't work
+The user asked to actually test whether Playwright gets past Tesla's block
+before committing to building Uber/Meta versions too. Result: **it doesn't**,
+and the failure mode rules out the whole approach, not just this one attempt.
+
+What was tested: a real headless Chromium (via Playwright, not `requests`)
+hitting `tesla.com`, first locally, then confirmed via a real GitHub Actions
+`workflow_dispatch` run (the actual runner this repo's pollers use). Both
+got the identical Akamai edge `403 Access Denied` (`errors.edgesuite.net`),
+and critically **on the plain tesla.com homepage itself**, not just the
+careers API -- in ~1.5 seconds, too fast for a JS challenge or behavioral
+fingerprint check to have even run. Stealth measures (hiding
+`navigator.webdriver`, spoofing `navigator.plugins`/`languages`,
+`--disable-blink-features=AutomationControlled`) made no difference.
+
+Conclusion: this is edge-level IP/ASN-reputation blocking, not a
+browser/TLS-fingerprint gate. A real Chromium engine looks identical to any
+consumer browser at the TLS/fingerprint layer, so if that were the
+mechanism, a real headless Chromium should have gotten through where plain
+`requests` failed -- it didn't, on either this sandbox's IP or GitHub
+Actions' IP pool. That means **no browser automation approach (Playwright
+or otherwise) will get past this from either environment** -- the block
+happens before the browser's own behavior is ever evaluated. The only way
+around it would be routing traffic through a residential/non-datacenter IP,
+which is a materially different (and more questionable) approach, not a
+"heavier adapter" -- not pursued.
+
+Given Uber and Meta are documented above as "same class of issue"
+(Cloudflare-edge-blocked, not just Akamai), this result means the
+Uber/Meta Playwright builds are very likely dead ends too for the same
+reason, though each would need its own confirmation run rather than
+assuming from Tesla's result alone. Not built.
 
 ## Known infra issue to be aware of
 
