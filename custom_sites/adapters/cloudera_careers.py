@@ -9,27 +9,28 @@ import requests
 # as a bespoke adapter instead, same as the note in PLAYBOOK.md about
 # Broadcom needing per-company facet handling.
 #
-# Facet ids captured directly from a POST to the jobs endpoint with an empty
-# appliedFacets (see the facets[] array in that response) -- these are
-# Cloudera-specific instance ids, not portable to another Workday tenant:
-#   Business_Area "Engineering-Team"              = f853f08c27131022d118a7c835002927
-#   Business_Area "Info Systems/Technology-Team"   = f853f08c27131022d14c52ed753f292b
-#   locationCountry "United States of America"     = bc33aa3152ec42d4995f4791a106ed09
+# Facet id captured directly from a POST to the jobs endpoint with an empty
+# appliedFacets (see the facets[] array in that response) -- this is a
+# Cloudera-specific instance id, not portable to another Workday tenant:
+#   locationCountry "United States of America" = bc33aa3152ec42d4995f4791a106ed09
 #
-# NOTE: the user also asked for "Engineering Operations Team", but that value
-# does not currently appear in the Business_Area facet list at all -- Workday
-# only surfaces facet values that have at least one open posting right now
-# (same limitation flagged for Broadcom in PLAYBOOK.md), so there's no id to
-# capture for it yet. Flagged to the user; not included below.
+# NOTE: the user asked for Business_Area filtered to Engineering-Team, Info
+# Systems/Technology-Team, and Engineering Operations Team -- but Workday
+# only surfaces facet values that currently have at least one open posting
+# (same limitation flagged for Broadcom in PLAYBOOK.md), and "Engineering
+# Operations Team" has none right now, so there's no id to filter on for it.
+# Per the user's choice, this deliberately does NOT apply the Business_Area
+# facet at all (rather than hardcoding just the two visible ids) -- a wider
+# net that will pick up Engineering Operations Team postings the moment they
+# exist, at the cost of also surfacing intern roles from unrelated business
+# areas (Sales, Marketing, etc.) that the intern-keyword title filter below
+# doesn't otherwise exclude.
 JOBS_URL = "https://cloudera.wd5.myworkdayjobs.com/wday/cxs/cloudera/External_Career/jobs"
 JOB_BASE_URL = "https://cloudera.wd5.myworkdayjobs.com/External_Career"
 
-BUSINESS_AREA_ENGINEERING = "f853f08c27131022d118a7c835002927"
-BUSINESS_AREA_INFO_SYSTEMS_TECH = "f853f08c27131022d14c52ed753f292b"
 COUNTRY_USA = "bc33aa3152ec42d4995f4791a106ed09"
 
 APPLIED_FACETS = {
-    "Business_Area": [BUSINESS_AREA_ENGINEERING, BUSINESS_AREA_INFO_SYSTEMS_TECH],
     "locationCountry": [COUNTRY_USA],
 }
 
@@ -41,11 +42,11 @@ TITLE_INTERN_RE = re.compile(r"\bintern(s|ship|ships)?\b", re.IGNORECASE)
 
 def fetch(timeout=30):
     """Returns a list of normalized entries from Cloudera's Workday board,
-    filtered server-side to Business Area (Engineering-Team, Info
-    Systems/Technology-Team) and Country (United States), and client-side to
-    titles containing the word "intern" (Workday's searchText is
-    relevance-based, not a literal substring match, so this narrows further
-    the same way ats_poller's Workday adapter does)."""
+    filtered server-side to Country (United States) only -- no Business Area
+    facet, see note above -- and client-side to titles containing the word
+    "intern" (Workday's searchText is relevance-based, not a literal
+    substring match, so this narrows further the same way ats_poller's
+    Workday adapter does)."""
     entries = []
     offset = 0
 
