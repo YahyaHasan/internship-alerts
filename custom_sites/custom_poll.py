@@ -27,9 +27,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 from adapters import (  # noqa: E402
     abbott_careers,
     abm_careers,
+    aecom_careers,
     amazon_jobs,
     apple_careers,
     att_careers,
+    axiado_careers,
     bloomberg_careers,
     cisco_careers,
     cloudera_careers,
@@ -218,6 +220,20 @@ def fetch_all():
         entries.extend(got)
     except Exception as e:
         log(f"[ABM Industries] fetch failed: {e}")
+
+    try:
+        got = aecom_careers.fetch()
+        log(f"[AECOM] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[AECOM] fetch failed: {e}")
+
+    try:
+        got = axiado_careers.fetch()
+        log(f"[Axiado] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Axiado] fetch failed: {e}")
 
     return entries
 

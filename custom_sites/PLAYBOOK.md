@@ -266,7 +266,8 @@ eliminated" below for the running list.
 
 ### Adapters built and live (wired into `fetch_all()`)
 Google, Amazon, Apple, Microsoft, Salesforce, Cisco, Bloomberg, PayPal, IBM,
-Sandisk, 1 Automotive, Cloudera, AT&T, Netflix, Abbott, ABM Industries.
+Sandisk, 1 Automotive, Cloudera, AT&T, Netflix, Abbott, ABM Industries, AECOM,
+Axiado.
 
 - **1 Automotive** (`group1_careers.py`) — AutoFusion-hosted
   (`www.group1careers.com`), server-rendered HTML table, plain `requests`
@@ -310,6 +311,31 @@ Sandisk, 1 Automotive, Cloudera, AT&T, Netflix, Abbott, ABM Industries.
   (unlike the other three above), so this only adds the client-side
   word-boundary intern-title regex as a baseline, same as every other
   adapter, since Oracle's own search exposes no employment-type facet.
+- **AECOM** (`aecom_careers.py`) — Nuxt app (`aecom.jobs`) whose search page
+  calls a shared multi-tenant search API on `prod-search-api.jobsyn.org`
+  (the Jobsyn job-board network used by many corporate careers sites).
+  Plain `requests` GET works, but the API rejects requests without a custom
+  `x-origin: aecom.jobs` header — a normal `Origin` header isn't enough
+  ("Mismatched origin" even with `Origin: https://aecom.jobs` set); the
+  actual required header name/value was only found by pulling the site's
+  embedded `window.__NUXT__.config` blob out of the raw HTML, which has
+  `"x-origin":"aecom.jobs"` in its public config. Filtered server-side to
+  the user's chosen `location=usa` and `careerarea=digital-engineering-technology`
+  facets, matching the user's example URL. No `url` field in the API
+  response itself — the job detail URL is reconstructed client-side from
+  `city_exact` + `state_short_exact` + `title_slug` + `guid`
+  (`https://aecom.jobs/{city}-{state}/{title-slug}/{guid}/job/`), confirmed
+  against a real link on the rendered page.
+- **Axiado** (`axiado_careers.py`) — SmartRecruiters-hosted, same pattern as
+  Sandisk: hits `api.smartrecruiters.com/v1/companies/Axiado/postings`
+  directly, no auth needed. No employment-type facet reliably tags "Intern"
+  postings, so per the user's explicit "intern keyword" filter request this
+  fetches all postings and narrows client-side with a word-boundary regex on
+  the title (SmartRecruiters' own `q=` search is full-text, not title-only —
+  confirmed `q=intern` surfacing "Head of Legal" and "Vice President,
+  Finance"). No location filter requested for this company. Zero intern
+  postings open right now, but the fetch/filter mechanism is verified
+  working.
 
 - **Netflix** (`netflix_careers.py`) — Eightfold-hosted (same platform as
   PayPal), real API on `explore.jobs.netflix.net/api/apply/v2/jobs`, plain
