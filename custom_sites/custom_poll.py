@@ -88,13 +88,14 @@ NON_US_LOCATION_RE = re.compile(
 
 def location_filter_ok(locations):
     """A posting's 'locations' field is a list (a role can span multiple
-    offices), so this rejects the entry if ANY location in the list is
-    unambiguously non-US, not just the first one. Applied uniformly across
-    every adapter, including Bloomberg and PayPal (previously deliberately
-    left unfiltered by country -- superseded by this change)."""
+    offices). Reject only if EVERY listed location is unambiguously non-US --
+    a multi-location posting that includes a US site should survive even if
+    it also lists a foreign one. Applied uniformly across every adapter,
+    including Bloomberg and PayPal (previously deliberately left unfiltered
+    by country -- superseded by this change)."""
     if not locations:
         return True
-    return not any(NON_US_LOCATION_RE.search(loc) for loc in locations)
+    return any(not NON_US_LOCATION_RE.search(loc) for loc in locations)
 
 
 def fetch_all():

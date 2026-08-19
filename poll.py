@@ -93,11 +93,12 @@ NON_US_LOCATION_RE = re.compile(
 
 def location_filter_ok(locations):
     """A posting's 'locations' field is a list (a role can span multiple
-    offices), so this rejects the entry if ANY location in the list is
-    unambiguously non-US, not just the first one."""
+    offices). Reject only if EVERY listed location is unambiguously non-US --
+    a multi-location posting that includes a US site should survive even if
+    it also lists a foreign one."""
     if not locations:
         return True
-    return not any(NON_US_LOCATION_RE.search(loc) for loc in locations)
+    return any(not NON_US_LOCATION_RE.search(loc) for loc in locations)
 
 
 def normalize_url(url):
