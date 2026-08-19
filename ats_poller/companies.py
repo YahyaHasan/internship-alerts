@@ -206,6 +206,7 @@ WORKDAY_COMPANIES = [
     ("Trend Micro", "trendmicro", "wd3", "External"),
     ("Ciena", "ciena", "wd5", "Careers"),
     ("Pluralsight", "pluralsight", "wd1", "Careers"),
+    ("3M", "3m", "wd1", "Search"),
 ]
 
 SMARTRECRUITERS_COMPANIES = [

@@ -266,7 +266,70 @@ eliminated" below for the running list.
 
 ### Adapters built and live (wired into `fetch_all()`)
 Google, Amazon, Apple, Microsoft, Salesforce, Cisco, Bloomberg, PayPal, IBM,
-Sandisk.
+Sandisk, 1 Automotive, Cloudera, AT&T, Netflix, Abbott, ABM Industries.
+
+- **1 Automotive** (`group1_careers.py`) — AutoFusion-hosted
+  (`www.group1careers.com`), server-rendered HTML table, plain `requests`
+  works, no auth. Per the user's request, filtered to intern-keyword only
+  (no location/category filter). The site's own `keyword=intern` query does
+  a substring match (also returns "Internet Salesperson" roles), so narrowed
+  further client-side with a word-boundary regex on the title.
+- **Cloudera** (`cloudera_careers.py`) — actually Workday-hosted
+  (`cloudera.wd5.myworkdayjobs.com/External_Career`), but needs a
+  `Business_Area` facet the generic `ats_poller` Workday adapter doesn't
+  support, so built here instead (same situation as the open Broadcom
+  question below). User asked for Business_Area = Engineering-Team, Info
+  Systems/Technology-Team, and Engineering Operations Team, plus
+  Country = United States. Workday only lists facet values with at least one
+  currently-open posting, and "Engineering Operations Team" has none right
+  now, so there's no id to filter on for it — per the user's explicit choice
+  ("stick with a broader net"), this **does not apply the Business_Area
+  facet at all**, only `locationCountry` = United States (id
+  `bc33aa3152ec42d4995f4791a106ed09`), server-side, plus the standard
+  word-boundary intern-title filter client-side. Trades some noise from
+  unrelated business areas (Sales, Marketing, etc.) for not silently missing
+  Engineering Operations Team postings once they open.
+- **AT&T** (`att_careers.py`) — TalentBrew-hosted (`www.att.jobs`), server-
+  rendered search page whose facet checkboxes fire a stateless GET to
+  `/search-jobs/results` (no cookies needed — confirmed via plain `curl`
+  after capturing the exact param shape by hooking `fetch`/`XMLHttpRequest`
+  in the browser while clicking the real "Technology" category and "United
+  States" country checkboxes). Filtered server-side to
+  Category = Technology (facet id `36864`) and Country = United States
+  (facet id `6252001`), per the user's request. AT&T's own `Keywords=intern`
+  search is relevance-based, not literal (returned "Lead Cybersecurity -
+  Insider Risk Engineer" for that query), so narrowed further client-side
+  with a word-boundary regex on the title.
+- **ABM Industries** (`abm_careers.py`) — Oracle Fusion Recruiting Cloud
+  (ORC) hosted (`eiqg.fa.us2.oraclecloud.com`, site `CX_1001`). Client-side
+  rendered page, but backed by Oracle's standard public
+  `recruitingCEJobRequisitions` REST API, no auth needed. Filtered
+  server-side to Job Category (`AttributeChar8`) = Engineering, Information
+  Technology, and Location facet = United States (id `300000000289738`),
+  per the user's request — the user didn't ask for a keyword filter here
+  (unlike the other three above), so this only adds the client-side
+  word-boundary intern-title regex as a baseline, same as every other
+  adapter, since Oracle's own search exposes no employment-type facet.
+
+- **Netflix** (`netflix_careers.py`) — Eightfold-hosted (same platform as
+  PayPal), real API on `explore.jobs.netflix.net/api/apply/v2/jobs`, plain
+  stateless GET, no auth. Filtered server-side to the user's chosen Region
+  (`ucan`) and Teams (`Engineering`, `Engineering Operations`) facets,
+  discovered from the response's own `facets` block. Like PayPal's Eightfold
+  instance, `query=intern` substring-matches ("Internal Communications"), so
+  narrowed further client-side with a word-boundary regex on the title.
+  Pagination is fixed at 10 results per page regardless of the `num` param
+  (confirmed by testing `num=200` — still only 10 returned), so paginate via
+  `start` in increments of 10.
+- **Abbott** (`abbott_careers.py`) — Phenom People-hosted (same platform and
+  same `/widgets` POST endpoint as Cisco), plain `requests` works, no auth.
+  Filtered server-side to the user's chosen `country` facet
+  (`"United States"`, confirmed via the response's `aggregations` block).
+  Phenom's `keywords` search here does full-text matching against the whole
+  job description, not just the title (confirmed: results included titles
+  like "Test Technician I" with no "intern" substring anywhere in the title)
+  — even looser than the substring-on-title issue seen elsewhere, so this
+  also narrows client-side with a word-boundary regex on the title.
 
 - **IBM** (`ibm_careers.py`) — the search page (`www.ibm.com/careers/search`)
   is a Next.js app whose facet widgets POST real Elasticsearch query DSL to
@@ -344,10 +407,11 @@ rendering the page, which is a materially heavier adapter (browser binary +
 much slower/costlier poll cycle) — worth doing only if the user explicitly
 wants to invest in it for a specific company, not as a default fallback.
 
-### Next companies to build (priority order, per user's stated interests:
-SWE/backend/AI-ML/systems/distributed systems/robotics)
-1. Broadcom (see open question below — not yet built)
-2. Cloudera
+### Next companies to build
+Broadcom was removed from the queue by the user. Cloudera, 1 Automotive,
+AT&T, and ABM Industries (this session) plus Netflix and Abbott (built
+concurrently in another session) are done -- see "Adapters built and live"
+above. No standing queue right now; next picks TBD with the user.
 
 Lower priority / not yet investigated: NASA (govt site, likely low volume /
 harder to scrape), Axiado (small startup, low posting volume). **Slack**
@@ -355,24 +419,16 @@ harder to scrape), Axiado (small startup, low posting volume). **Slack**
 are already handled — see notes above, no separate adapter needed for
 either.
 
-### Open question: Broadcom's filter-availability problem
-Broadcom (Workday, `broadcom.wd1.myworkdayjobs.com/External_Career`) has a
-job-family-group facet the user wants to filter on (Information Technology
-is the only currently-relevant one, `jobFamilyGroup=5d531f3d0e8c416786d61a13b265af9e`
-in their example URL) -- but **Workday's facet list on this instance only
-shows values that currently have at least one open posting**. A facet like
-"Computer Science" could exist and simply not render in the UI right now if
-zero CS roles are open, meaning a hardcoded facet-id list captured today
-could silently miss a real category once Broadcom posts to it later. The
-user was unsure how to handle this and asked to think it through together --
-options to weigh when picking this up: (a) stick with just the
-currently-visible IT facet id, accepting it may need revisiting later if
-Broadcom starts posting under a different family; (b) query Workday's
-facet-options endpoint on every poll run (if one exists, capturing the
-current known-facets list without a hardcoded id) instead of hardcoding a
-single value, so new facets get picked up automatically; (c) skip
-facet-filtering entirely and use a broad keyword search instead, accepting
-more noise. Not resolved yet -- revisit with the user before building.
+### Resolved: the Broadcom/Cloudera facet-availability problem
+Broadcom and Cloudera (both Workday-hosted) each had a business-area/
+job-family facet the user wanted to filter on, where **Workday's facet list
+only shows values that currently have at least one open posting** -- a
+hardcoded facet-id list captured today could silently miss a real category
+once the company starts posting under it later. For Cloudera the user chose
+option (c) from the three considered here: skip that facet entirely and use
+a broader net (Country=US + intern-keyword only), accepting more noise
+rather than risk silently missing postings. Same tradeoff would apply if
+Broadcom's IT-facet question is revisited later.
 
 ### Planned: headless-browser (Playwright) adapters for Tesla, Uber, Meta
 The user intends to build these soon to get past the Cloudflare/Akamai

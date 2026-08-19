@@ -25,6 +25,8 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
 from adapters import (  # noqa: E402
+    abbott_careers,
+    abm_careers,
     amazon_jobs,
     apple_careers,
     att_careers,
@@ -35,6 +37,7 @@ from adapters import (  # noqa: E402
     group1_careers,
     ibm_careers,
     microsoft_careers,
+    netflix_careers,
     paypal_careers,
     salesforce_careers,
     sandisk_careers,
@@ -194,6 +197,27 @@ def fetch_all():
         entries.extend(got)
     except Exception as e:
         log(f"[AT&T] fetch failed: {e}")
+
+    try:
+        got = netflix_careers.fetch()
+        log(f"[Netflix] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Netflix] fetch failed: {e}")
+
+    try:
+        got = abbott_careers.fetch()
+        log(f"[Abbott] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Abbott] fetch failed: {e}")
+
+    try:
+        got = abm_careers.fetch()
+        log(f"[ABM Industries] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[ABM Industries] fetch failed: {e}")
 
     return entries
 
