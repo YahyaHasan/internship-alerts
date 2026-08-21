@@ -6,6 +6,7 @@ import re
 import sys
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -15,7 +16,9 @@ GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "openai/gpt-oss-20b"
 SEEN_FILE = "seen.json"
 SKIPPED_LOG_FILE = "skipped_log.json"
-AUDIT_HOUR_UTC = 9
+AUDIT_LAST_SENT_FILE = "audit_last_sent.json"
+AUDIT_TZ = ZoneInfo("America/Los_Angeles")
+AUDIT_HOUR_LOCAL = 12
 AUDIT_WINDOW_HOURS = 24
 
 ALLOWED_TERMS = {"Summer 2027", "Spring 2027", "Fall 2027", "Winter 2027"}
@@ -110,6 +113,25 @@ def normalize_url(url):
         return url.lower()
 
 
+SIMPLIFY_EXCLUDED_COMPANIES_RE = re.compile(
+    r"\b(RTX|Raytheon|TikTok|ByteDance)\b", re.IGNORECASE
+)
+
+
+def simplify_company_filter(entries):
+    """Only applies to Simplify entries; excludes roles from companies we
+    never want to see (RTX, TikTok, ByteDance) regardless of category/title."""
+    kept = []
+    excluded = 0
+    for e in entries:
+        if e.get("source") == "Simplify" and SIMPLIFY_EXCLUDED_COMPANIES_RE.search(e.get("company", "")):
+            excluded += 1
+            continue
+        kept.append(e)
+    log(f"[CompanyFilter] {len(entries)} -> {len(kept)} after Simplify company filter (excluded {excluded})")
+    return kept
+
+
 def simplify_term_filter(entries):
     """Only applies to Simplify entries (which carry a '_terms' set); other
     sources pass through untouched. Runs on entries already filtered against
@@ -170,9 +192,24 @@ def _extract_rate_limit_info(resp):
     return info
 
 
+PHD_PATTERN = re.compile(r"\bph\.?\s?d\.?\b|\bdoctoral\b|\bdoctorate\b", re.IGNORECASE)
+
+
+def is_phd_role(entry):
+    text = f"{entry.get('title', '')} {entry.get('category', '')}"
+    return bool(PHD_PATTERN.search(text))
+
+
 def llm_filter(entries, groq_api_key):
+    entries, phd_skipped = (
+        [e for e in entries if not is_phd_role(e)],
+        [e for e in entries if is_phd_role(e)],
+    )
+    if phd_skipped:
+        log(f"[PHD] {len(phd_skipped)} skipped: {[e['title'] for e in phd_skipped]}")
+
     if not entries:
-        return entries, [], {"failed": False}
+        return entries, phd_skipped, {"failed": False}
 
     jobs_payload = []
     for e in entries:
@@ -193,12 +230,13 @@ def llm_filter(entries, groq_api_key):
         "no full job description is available, so weigh title and category together; "
         "when neither gives a confident signal, default to KEEP per the rule below.\n\n"
         "KEEP if the role involves: agentic AI, NLP, LLMs, ML/AI applications (not just theory), "
-        "backend systems, computer architecture, quantum computing, full-stack engineering, "
-        "embedded systems, compilers, distributed systems, robotics, general software engineering "
-        "(SWE roles at any company are usually fine).\n\n"
+        "backend systems, computer architecture, full-stack engineering, distributed systems, "
+        "general software engineering (SWE roles at any company are usually fine).\n\n"
         "SKIP ONLY if clearly: pure frontend/UI dev with no backend, pure CRM/Salesforce admin, "
         "pure digital marketing or ads tech, pure media streaming infrastructure with no ML, "
-        "non-technical roles, or a non-engineering internship (sales, HR, finance, legal).\n\n"
+        "non-technical roles, a non-engineering internship (sales, HR, finance, legal), "
+        "quantum computing, embedded systems, compilers, robotics, or any fully hardware role "
+        "with no software component.\n\n"
         "When in doubt, KEEP.\n\n"
         f"Jobs: {json.dumps(jobs_payload)}\n\n"
         'Reply with: [{"id": "...", "keep": true/false}]'
@@ -222,12 +260,12 @@ def llm_filter(entries, groq_api_key):
         )
     except requests.exceptions.RequestException as e:
         log(f"[LLM] network error: {e}")
-        return entries, [], {"failed": True, "reason": "network_error", "detail": str(e)}
+        return entries, phd_skipped, {"failed": True, "reason": "network_error", "detail": str(e)}
 
     if resp.status_code == 429:
         rl_info = _extract_rate_limit_info(resp)
         log(f"[LLM] rate limited (HTTP 429). headers: {rl_info}")
-        return entries, [], {"failed": True, "reason": "rate_limit", "rate_limit_info": rl_info}
+        return entries, phd_skipped, {"failed": True, "reason": "rate_limit", "rate_limit_info": rl_info}
 
     try:
         resp.raise_for_status()
@@ -244,10 +282,10 @@ def llm_filter(entries, groq_api_key):
         kept = [e for e in entries if keep_map.get(e["id"], True)]
         skipped = [e for e in entries if not keep_map.get(e["id"], True)]
         log(f"[LLM] {len(kept)} kept / {len(skipped)} skipped")
-        return kept, skipped, {"failed": False}
+        return kept, skipped + phd_skipped, {"failed": False}
     except Exception as e:
         log(f"[LLM] filter failed: {e}")
-        return entries, [], {"failed": True, "reason": "error", "detail": str(e)}
+        return entries, phd_skipped, {"failed": True, "reason": "error", "detail": str(e)}
 
 
 def format_locations(locations):
@@ -330,6 +368,20 @@ def prune_skipped_log(records, now, window_hours=AUDIT_WINDOW_HOURS):
     return kept
 
 
+def load_audit_last_sent_date():
+    try:
+        with open(AUDIT_LAST_SENT_FILE, "r") as f:
+            return json.load(f).get("date")
+    except Exception:
+        return None
+
+
+def save_audit_last_sent_date(date_str):
+    with open(AUDIT_LAST_SENT_FILE, "w") as f:
+        json.dump({"date": date_str}, f, indent=2)
+        f.write("\n")
+
+
 def parse_limit_arg(argv):
     for i, arg in enumerate(argv):
         if arg == "--limit" and i + 1 < len(argv):
@@ -385,7 +437,7 @@ def main():
     new_entries_raw = [e for e in all_entries if e["id"] not in seen_ids]
     log(f"[Fetch] {len(new_entries_raw)} entries not in seen.json")
 
-    new_entries = simplify_term_filter(new_entries_raw)
+    new_entries = simplify_term_filter(simplify_company_filter(new_entries_raw))
     new_count = len(new_entries)
 
     location_filtered = [e for e in new_entries if location_filter_ok(e.get("locations"))]
@@ -494,8 +546,11 @@ def main():
         )
         notify(summary)
 
-    # daily audit of LLM-skipped roles, sent once at AUDIT_HOUR_UTC
-    if now.hour == AUDIT_HOUR_UTC:
+    # daily audit of LLM-skipped roles, sent once at AUDIT_HOUR_LOCAL (America/Los_Angeles)
+    now_local = now.astimezone(AUDIT_TZ)
+    today_local = now_local.date().isoformat()
+    if now_local.hour == AUDIT_HOUR_LOCAL and load_audit_last_sent_date() != today_local:
+        save_audit_last_sent_date(today_local)
         cutoff = now - timedelta(hours=AUDIT_WINDOW_HOURS)
         recent_skips = []
         for r in skipped_records:
