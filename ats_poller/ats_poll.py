@@ -38,7 +38,7 @@ SKIPPED_LOG_FILE = BASE_DIR / "skipped_log_ats.json"
 
 # These boards list every open role at the company, not just internships, so
 # this filter (required) runs before anything else to cut the volume down.
-INTERN_TITLE_RE = re.compile(r"\bintern(ship)?\b", re.IGNORECASE)
+INTERN_TITLE_RE = re.compile(r"\bintern(ship)?s?\b", re.IGNORECASE)
 
 # Explicit stale-year postings (leftover listings from a prior cycle) get
 # dropped; anything with no year mentioned, or a 2027/2028 mention, passes.

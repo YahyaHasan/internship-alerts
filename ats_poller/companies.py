@@ -195,7 +195,6 @@ WORKDAY_COMPANIES = [
     ("Intel", "intel", "wd1", "External"),
     ("Analog Devices", "analogdevices", "wd1", "External"),
     ("Micron", "micron", "wd1", "External"),
-    ("GlobalFoundries", "globalfoundries", "wd1", "External"),
     ("Cadence", "cadence", "wd1", "External_Careers"),
     ("Chewy", "chewy", "wd5", "External"),
     ("Vanguard", "vanguard", "wd5", "vanguard_External"),
