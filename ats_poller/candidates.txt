@@ -33,9 +33,7 @@ SendGrid
 Segment
 Okta
 Auth0
-CrowdStrike
 Palo Alto Networks
-Fortinet
 Zscaler
 SentinelOne
 Rapid7
@@ -64,22 +62,17 @@ Tenstorrent
 Rivos
 Ampere Computing
 Arm
-Qualcomm
 Intel
 AMD
 Texas Instruments
 Analog Devices
 Micron
 Western Digital
-Seagate
 Applied Materials
 KLA
 Lam Research
 ASML
 GlobalFoundries
-TSMC
-Marvell
-Synopsys
 Cadence
 Juniper Networks
 Arista Networks
@@ -216,76 +209,49 @@ AngelList
 Y Combinator
 Andreessen Horowitz
 Sequoia Capital
-Samsung
 Sony
 LG Electronics
 Panasonic
 Dell Technologies
 HP Inc
-HPE
 Lenovo
 Xerox
 Western Union
-American Express
-Goldman Sachs
 Morgan Stanley
-JPMorgan Chase
 Bank of America
 Wells Fargo
 Citigroup
-Charles Schwab
 Fidelity Investments
 Vanguard
 BlackRock
 State Street
 Northrop Grumman
-Lockheed Martin
 Raytheon Technologies
 Boeing
-General Dynamics
-L3Harris
-Booz Allen Hamilton
 Leidos
-SAIC
 Palantir Government
 CACI
 ServiceNow
 Workday Inc
-SAP
-Oracle
-Autodesk
 Intuit
-Splunk Inc
 Zscaler Inc
 Qualys
 McAfee
 Symantec
 Trend Micro
-Check Point Software
 Cloudflare Inc
-Akamai
 Fastly
 Imperva
-F5 Networks
 Extreme Networks
 Ciena
 Infinera
-Corning
-Broadcom Inc
-Marvell Technology
-ON Semiconductor
-Skyworks Solutions
 Qorvo
 MaxLinear
 Silicon Labs
 Renesas Electronics
-STMicroelectronics
-NXP Semiconductors
-Infineon Technologies
 Rohm Semiconductor
 Bosch
 Continental
-Garmin
 GoPro
 Fitbit
 Peloton
@@ -300,7 +266,6 @@ Chegg
 Course Hero
 2U
 Pluralsight
-edX
 Quizlet
 Photomath
 Age of Learning

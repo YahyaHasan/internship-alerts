@@ -218,6 +218,7 @@ WORKDAY_COMPANIES = [
     ("CDW", "cdw", "wd5", "Careers"),
     ("Chevron", "chevron", "wd5", "jobs"),
     ("Cigna", "cigna", "wd5", "cignacareers"),
+    ("CrowdStrike", "crowdstrike", "wd5", "crowdstrikecareers"),
     ("Conagra Brands", "conagrabrands", "wd1", "Careers_US"),
     ("ConocoPhillips", "conocophillips", "wd1", "eQuest"),
     ("Duke Energy", "dukeenergy", "wd1", "Search"),
@@ -235,6 +236,14 @@ WORKDAY_COMPANIES = [
     ("RTX", "globalhr", "wd5", "REC_RTX_Ext_Gateway"),
     ("Travelers", "travelers", "wd5", "External"),
     ("Truist Financial", "truist", "wd1", "Careers"),
+    ("NXP Semiconductors", "nxp", "wd3", "Careers"),
+    ("Broadcom", "broadcom", "wd1", "External_Career"),
+    ("Booz Allen Hamilton", "bah", "wd1", "BAH_Jobs"),
+    ("Samsung", "sec", "wd3", "Samsung_Careers"),
+    ("Autodesk", "autodesk", "wd1", "Ext"),
+    ("F5", "ffive", "wd5", "f5jobs"),
+    ("HPE", "hpe", "wd5", "Jobsathpe"),
+    ("Marvell", "marvell", "wd1", "MarvellCareers"),
 ]
 
 # Not added, verified wrong or unresolvable when the user pasted a claimed
@@ -259,6 +268,23 @@ WORKDAY_COMPANIES = [
 #   Johnson & Johnson, Northrop Grumman, Palo Alto Networks, Procter &
 #   Gamble, Stryker, T-Mobile US, Thermo Fisher Scientific, UnitedHealth,
 #   Verizon, Wells Fargo -- revisit if worth the WebSearch time later.
+#
+# Checked against candidates.txt on 2026-08-21 (see git history for the
+# fork's full verification report):
+# - Wrong platform / own careers portal: Qualcomm, TSMC, Seagate, Synopsys
+#   (Avature), ON Semiconductor, Skyworks Solutions, STMicroelectronics
+#   (Eightfold), Infineon Technologies, Corning, Fortinet, Check Point
+#   Software, Akamai, Lockheed Martin, General Dynamics, L3Harris, SAIC
+#   (Taleo), SAP, Oracle, Goldman Sachs, JPMorgan Chase, Charles Schwab
+#   (myworkdayjobs hit was unrelated "Les Schwab" tire company), Garmin,
+#   American Express.
+# - Acquired/consolidated, not standalone: Splunk (now part of Cisco's
+#   board).
+# - Already tracked elsewhere: edX (via 2U, Greenhouse).
+# - Real Workday tenant found but no working site guessed yet -- revisit:
+#   Dell Technologies (tenant resolves, 0 postings on guessed sites),
+#   Chegg (tenant osv-chegg.wd5 real, neither "Chegg" nor "USA" site
+#   guess returned data).
 
 SMARTRECRUITERS_COMPANIES = [
     # display_name, company_identifier (as used in the API path)
