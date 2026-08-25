@@ -18,6 +18,7 @@ import json
 import os
 import re
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -87,55 +88,37 @@ def term_filter_ok(title):
     return True
 
 
+FETCH_MAX_WORKERS = 20
+
+
 def fetch_all():
-    entries = []
+    tasks = []
     for name, slug in GREENHOUSE_COMPANIES:
-        try:
-            got = greenhouse.fetch(name, slug)
-            log(f"[Greenhouse:{name}] fetched {len(got)} jobs")
-            entries.extend(got)
-        except Exception as e:
-            log(f"[Greenhouse:{name}] fetch failed: {e}")
-
+        tasks.append((f"Greenhouse:{name}", greenhouse.fetch, (name, slug)))
     for name, slug in LEVER_COMPANIES:
-        try:
-            got = lever.fetch(name, slug)
-            log(f"[Lever:{name}] fetched {len(got)} jobs")
-            entries.extend(got)
-        except Exception as e:
-            log(f"[Lever:{name}] fetch failed: {e}")
-
+        tasks.append((f"Lever:{name}", lever.fetch, (name, slug)))
     for name, tenant, wd_host, site in WORKDAY_COMPANIES:
-        try:
-            got = workday.fetch(name, tenant, wd_host, site)
-            log(f"[Workday:{name}] fetched {len(got)} jobs")
-            entries.extend(got)
-        except Exception as e:
-            log(f"[Workday:{name}] fetch failed: {e}")
-
+        tasks.append((f"Workday:{name}", workday.fetch, (name, tenant, wd_host, site)))
     for name, slug in ASHBY_COMPANIES:
-        try:
-            got = ashby.fetch(name, slug)
-            log(f"[Ashby:{name}] fetched {len(got)} jobs")
-            entries.extend(got)
-        except Exception as e:
-            log(f"[Ashby:{name}] fetch failed: {e}")
-
+        tasks.append((f"Ashby:{name}", ashby.fetch, (name, slug)))
     for name, slug in SMARTRECRUITERS_COMPANIES:
-        try:
-            got = smartrecruiters.fetch(name, slug)
-            log(f"[SmartRecruiters:{name}] fetched {len(got)} jobs")
-            entries.extend(got)
-        except Exception as e:
-            log(f"[SmartRecruiters:{name}] fetch failed: {e}")
-
+        tasks.append((f"SmartRecruiters:{name}", smartrecruiters.fetch, (name, slug)))
     for name, account in WORKABLE_COMPANIES:
-        try:
-            got = workable.fetch(name, account)
-            log(f"[Workable:{name}] fetched {len(got)} jobs")
-            entries.extend(got)
-        except Exception as e:
-            log(f"[Workable:{name}] fetch failed: {e}")
+        tasks.append((f"Workable:{name}", workable.fetch, (name, account)))
+
+    entries = []
+    with ThreadPoolExecutor(max_workers=FETCH_MAX_WORKERS) as pool:
+        future_to_label = {
+            pool.submit(fetch_fn, *args): label for label, fetch_fn, args in tasks
+        }
+        for future in as_completed(future_to_label):
+            label = future_to_label[future]
+            try:
+                got = future.result()
+                log(f"[{label}] fetched {len(got)} jobs")
+                entries.extend(got)
+            except Exception as e:
+                log(f"[{label}] fetch failed: {e}")
 
     return entries
 
