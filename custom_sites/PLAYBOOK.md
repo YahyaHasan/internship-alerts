@@ -6,11 +6,14 @@ up one company and build a working adapter end to end.
 
 ## Where this fits
 
-`custom_sites/custom_poll.py` is one of three independent pollers in this
-repo:
+`custom_sites/custom_poll.py` is one of two independent pollers in this
+repo (a third, `poll.py` at the repo root, polled the SimplifyJobs
+community-maintained aggregator as a catch-all; it was retired on
+2026-08-24 once its highest-value companies were migrated into direct
+tracking — see `custom_sites/HANDOFF_SIMPLIFY_PRIORITY.md` for the
+highest-priority companies from that feed still needing an adapter here or
+a Workday tenant lookup):
 
-- `poll.py` (repo root) — polls the SimplifyJobs community-maintained
-  aggregator. **Do not touch.**
 - `ats_poller/ats_poll.py` — polls companies hosted on a standard ATS
   (Greenhouse, Lever, Ashby, Workday) via each platform's public JSON API.
   Company list lives in `ats_poller/companies.py`. **Do not touch for this
@@ -19,12 +22,12 @@ repo:
   companies whose careers site is bespoke (not on a standard ATS), each
   needs its own hand-built adapter.
 
-All three run on independent GitHub Actions workflows
-(`.github/workflows/{poll,ats_poll,custom_poll}.yml`), each triggered
+Both run on independent GitHub Actions workflows
+(`.github/workflows/{ats_poll,custom_poll}.yml`), each triggered
 externally via `workflow_dispatch` by a cron-job.org job hitting the GitHub
 API every 5-15 min (GitHub's own native `schedule:` trigger was found to be
-unreliable at sub-hourly intervals — see git history on `poll.yml` if
-curious). **Adding a new company to `custom_sites` does NOT require a new
+unreliable at sub-hourly intervals — see git history on the old `poll.yml`
+if curious). **Adding a new company to `custom_sites` does NOT require a new
 cron job** — it rides the existing `custom_poll.yml` schedule automatically,
 since `custom_poll.py`'s `fetch_all()` just loops over every registered
 adapter in one run.
@@ -265,9 +268,306 @@ eliminated" below for the running list.
 ## Status
 
 ### Adapters built and live (wired into `fetch_all()`)
-Google, Amazon, Apple, Microsoft, Salesforce, Cisco, Bloomberg, PayPal, IBM,
+Google, Amazon, Apple, Microsoft, Salesforce, Cisco, Bloomberg, PayPal,
 Sandisk, 1 Automotive, Cloudera, AT&T, Netflix, Abbott, ABM Industries, AECOM,
-Axiado.
+Axiado, Oracle, Dell Technologies, Palo Alto Networks, Qualcomm, Texas
+Instruments, Applied Materials, Lam Research, Intuit, Boston Scientific,
+HP, Honeywell, GitHub, Atlassian.
+
+- **Atlassian** (`atlassian_careers.py`) — also iCIMS-hosted (tenant
+  `globalcareers-atlassian`), but its own domain exposes a plain JSON GET
+  endpoint (`www.atlassian.com/endpoint/careers/listings`) returning every
+  open posting unpaginated, no auth. The user's example URL used
+  `team=Interns`, but the API's own `category` field (the closest
+  equivalent) has no "Interns" value right now -- zero open internship
+  postings currently, nothing live to confirm a stable value against.
+  Falls back to a client-side word-boundary "intern" title regex + a
+  substring check for "United States" in the (free-text) locations field.
+  0 US postings right now, matches the empty category.
+
+Unity (Workday: `unitytech`/`wd1`/`Unity`) and Docker (Ashby: `docker`)
+were both confirmed working via the generic adapters and added directly
+to `ats_poller/companies.py` -- no bespoke adapter needed for either.
+
+- **GitHub** (`github_careers.py`) — runs on iCIMS's "Jibe" platform
+  (tenant `githubinc`), but calls a plain JSON GET on GitHub's own domain
+  (`www.github.careers/api/jobs`), no auth needed. The user's example
+  URL's `/early-in-profession` path turned out to apply no server-side
+  filter of its own (confirmed: identical `totalCount` with/without it),
+  and the site's own Career Level filter (Director / Individual
+  Contributor / Senior Director / Senior Manager, at time of check) has no
+  "Intern" value at all -- zero internship postings open there right now,
+  so there's nothing live to confirm a stable facet id against. Falls back
+  to `keywords=intern` server-side + a client-side word-boundary title
+  regex + US country-code check, the "narrow further, don't trust keyword
+  alone" pattern used elsewhere. Currently 0 US postings, matches the live
+  site's own "0 Results" state.
+
+Hugging Face is **not** a `custom_sites` adapter -- it's on Workable, a
+platform this repo had zero adapter support for, so a new general-purpose
+`ats_poller/adapters/workable.py` was built (same shape as
+`ashby.py`/`greenhouse.py`: one unpaginated public JSON endpoint per
+company, `apply.workable.com/api/v1/widget/accounts/{account}`, no auth).
+Added to `ats_poller/companies.py`'s new `WORKABLE_COMPANIES` list as
+`("Hugging Face", "huggingface")`. 7 jobs fetched (none currently
+Intern-titled -- Hugging Face is a small company with few open roles right
+now -- but the shared `keyword_filter` in `ats_poll.py` will pick up any
+Intern-titled posting the moment one opens, same as every other
+ats_poller-hosted company). This adapter is now reusable for any other
+Workable-hosted company found in the future, not just Hugging Face.
+
+- **HP** (`hp_careers.py`) — Eightfold-hosted (`apply.hp.com`), but on a
+  shared generic host (`app.eightfold.ai`) rather than a company-specific
+  subdomain -- the earlier-guessed `hp.eightfold.ai` / `hp-sandbox.eightfold.ai`
+  hosts don't serve the real search API; `app.eightfold.ai` does, found via
+  the site's own embedded links. Matches the user's example URL: a real
+  `filter_seniority=internship` facet (lowercase, unlike Qualcomm/Applied
+  Materials' "Intern"), confirmed accurate -- all 33 global results genuine
+  internships, no false positives. Filtered to Seniority=internship +
+  Location=United States. 6 US postings live right now.
+- **Honeywell** (`honeywell_careers.py`) — Oracle Fusion Recruiting Cloud
+  (ORC), own host `ibqbjb.fa.ocs.oraclecloud.com` (a `.ocs.` region,
+  unlike the `.us2.` hosts seen elsewhere), siteNumber `CX_1`. The user's
+  example URL's keyword `"Intern (Bachelor's)"` looked promising (unlike
+  Oracle's own keyword param, which does nothing) -- page 1 genuinely
+  returns Intern-titled postings -- but this ORC instance's keyword search
+  turned out to be relevance-ranked, not a strict filter: by page 2+,
+  relevance degrades and non-intern titles ("Sr Account Manager", "Future
+  Finance Leaders") flood in, same degradation behavior already documented
+  for Workday's `searchText` in `ats_poller/adapters/workday.py`. Fixed the
+  same way: stop paginating once a page's postings no longer mention
+  "intern" in the title, rather than trusting `TotalJobsCount`. Filtered
+  client-side to `PrimaryLocationCountry == "US"` (same approach as
+  Dell/TI). Only 6 intern-titled postings exist globally right now (India
+  x4, Puerto Rico, Brazil) and none are US, so this currently returns 0 --
+  confirmed via a standalone script that walks the full paginated result
+  set, not just an assumption from the adapter's own output. Mechanism is
+  verified correct.
+
+### "Next 20" queue (2026-08-22) -- results
+Investigated all 20. Booz Allen Hamilton turned out to **already be fully
+covered** -- it's on Workday (`bah`/`wd1`/`BAH_Jobs`, already in
+`ats_poller/companies.py` from a prior session's Workday sweep), and the
+custom in-house portal at `careers.boozallen.com` I was stuck on
+yesterday is just a frontend over the same Workday data. Confirmed via a
+live `workday.fetch()` run -- 40 jobs, including the same
+"AI RAN Telecommunications Engineer Intern" seen in the browser
+yesterday. No adapter needed; the Booz Allen investigation from
+2026-08-22 (broken Country filter, no findable API) is now moot.
+
+Of the 20:
+- **Boston Scientific** -- Eightfold-hosted (`bostonscientific.eightfold.ai`),
+  same `filter_seniority=Intern` facet pattern as Qualcomm/Applied
+  Materials. Built as `bostonscientific_careers.py`. 1 US posting live
+  (an apprenticeship).
+- **Xylem, Otis Worldwide, GE Vernova, Stryker, IQVIA, Thermo Fisher
+  Scientific, Danaher, Illinois Tool Works** -- all turned out to be
+  Workday-hosted (found via each company's own careers page HTML, then
+  each verified with a live `workday.fetch()` run before adding). Added
+  directly to `ats_poller/companies.py`, no bespoke adapter needed for any
+  of them. Thermo Fisher and Danaher's own careers sites actually run a
+  Phenom People frontend (`jobs.thermofisher.com/widgets`,
+  `jobs.danaher.com/widgets`), but the job data underneath is Workday
+  (`applyUrl` fields point at `*.myworkdayjobs.com`) and the generic
+  Workday adapter's plain keyword search works fine against them directly
+  -- no need to reverse-engineer the Phenom widget facets for these two,
+  unlike Cisco/Abbott where Phenom actually is the primary data source.
+- **Zimmer Biomet** -- also Phenom-fronted (`careers.zimmerbiomet.com`),
+  but its `applyUrl` points at `career8.successfactors.com`
+  (SAP SuccessFactors), a platform this repo has no adapter for at all
+  (neither `ats_poller` nor `custom_sites`). Not built -- would need a new
+  SuccessFactors adapter from scratch, not just a companies.py entry.
+- **HP Inc.** -- Eightfold-hosted, but on an oddly-named host
+  (`hp-sandbox.eightfold.ai`, found in the site's own `/careers` links);
+  the standard `/api/pcsx/search` path 404s there, so this instance's real
+  endpoint shape hasn't been found yet. Not built.
+- **Corning, Parker-Hannifin** -- plain `curl` gets 403 on both; not yet
+  confirmed whether that's simple header/UA sensitivity or real bot
+  protection (didn't get to a browser check). Not built.
+- **Emerson Electric, Ford Motor** -- connections hang/time out under
+  plain `curl` even with a full browser `User-Agent` (Ford: TLS handshake
+  succeeds, then the server never responds -- classic slow-drip bot
+  gating). Earlier session notes already flagged both as Oracle Fusion
+  Recruiting Cloud-hosted; not re-confirmed this session, not built.
+- **Honeywell** -- confirmed Oracle Fusion-hosted (`oraclecloud` hit in
+  the page HTML) but the URL tried landed on a 404 error page rather than
+  the real search page; the working search URL/site number wasn't found
+  this session. Not built.
+- **GE Aerospace** -- "General Electric" as a single company no longer
+  exists (split in 2024 into GE Aerospace / GE Vernova / GE HealthCare);
+  `ge.com/careers` now redirects to `geaerospace.com/company/careers`, a
+  static page with no platform hint found in this session's pass. Not
+  built. (GE Vernova is done -- see above. GE HealthCare below.)
+- **GE HealthCare Technologies** -- both careers URLs tried 404'd; the
+  real careers URL wasn't found this session. Not built.
+
+Remaining unbuilt from this batch (Zimmer Biomet, HP Inc., Corning,
+Parker-Hannifin, Emerson Electric, Ford Motor, Honeywell, GE Aerospace, GE
+HealthCare) are candidates for a future session with more investigation
+budget -- none are ruled out/dead ends, just not yet resolved.
+
+- **Intuit** (`intuit_careers.py`) — TalentBrew-hosted, same platform as
+  AT&T/Palo Alto Networks, org id `27595`. Matches the intent of the user's
+  example URL: its "acm" param names three custom Job Category facet ids
+  for Intuit's student programs (`9205024`, `9205760`, `9205744`) --
+  confirmed via the site's own `/search-jobs/results` endpoint that passing
+  all three as `FacetFilters` (Category type) reproduces the same result.
+  Only `9205760` ("New College Grad") currently has any open postings --
+  the other two (presumably an Internship and a PhD/Grad program facet)
+  have zero right now and don't even appear in the site's own facet list
+  (same "only shows facet values with an open posting" situation as
+  Cloudera/Broadcom above), but all three ids are kept in the filter so
+  postings under them are picked up the moment they open. Combined with
+  Country = United States. 1 posting currently live.
+
+S&P Global is **not** a `custom_sites` adapter — it's Workday-hosted
+(`spgi.wd5.myworkdayjobs.com/SPGI_Careers`) and wasn't yet in
+`ats_poller/companies.py`; added
+`("S&P Global", "spgi", "wd5", "SPGI_Careers")` there instead of building a
+bespoke adapter. Verification hit a **platform-wide Workday outage**
+(`community.workday.com/maintenance-page` redirect) at the time this was
+checked — confirmed not tenant-specific by testing an already-working
+company (KLA) on a different pod (wd1) and getting the identical redirect,
+so this is Workday's own infrastructure being down, not a config issue.
+Should resolve on its own; the config is correct as entered.
+
+Mastercard is **not** a `custom_sites` adapter — it's already
+Workday-hosted and was in `ats_poller/companies.py` all along
+(`("Mastercard", "mastercard", "wd1", "CorporateCareers")`), just under a
+different site than the user's example URL (early-careers page maps to a
+separate `Campus` site on the same tenant). Added
+`("Mastercard Campus", "mastercard", "wd1", "Campus")` alongside it rather
+than building a bespoke adapter here. Both currently 303-redirect to
+`community.workday.com/maintenance-page` — confirmed this is a real
+Workday-side outage on this tenant's pod (not a config bug: the existing
+`CorporateCareers` entry, unchanged, hits the identical redirect), so
+nothing to fix; should resolve on its own.
+
+Rockwell Automation is **not** a `custom_sites` adapter either — Workday-
+hosted (`rockwellautomation.wd1.myworkdayjobs.com/en-US/External_Rockwell_Automation`,
+tenant/site confirmed by resolving the redirect from
+`rockwellautomation.com/en-us/company/careers.html`). Added
+`("Rockwell Automation", "rockwellautomation", "wd1", "External_Rockwell_Automation")`
+to `ats_poller/companies.py`. Same platform-wide Workday outage as above at
+verification time (identical `community.workday.com/maintenance-page`
+redirect) — config believed correct but **not actually fetch-tested end to
+end** (no successful `workday.fetch()` run happened for this one, unlike
+Mastercard/S&P Global which at least had their tenant/site pairs implied by
+the user's own URLs — this one was found via a web search + redirect
+trace, so slightly less certain).
+
+### Workday outage resolved, all four verified (2026-08-22)
+Workday's platform-wide outage cleared. Re-ran `workday.fetch()` directly
+against all four entries added during the outage and all returned real
+data (no more `maintenance-page` redirects):
+- Mastercard (`CorporateCareers`): 20 jobs fetched, e.g. "Lead Software
+  Engineer".
+- Mastercard Campus: 1184 jobs fetched (this is the much larger
+  early-careers/graduate-program tenant).
+- S&P Global: 40 jobs fetched, e.g. "Agribusiness Intern (Early Careers)".
+- Rockwell Automation: 40 jobs fetched, e.g. "Embedded Software, Intern"
+  (Katowice, Poland) — confirms the previously lower-confidence
+  redirect-inferred tenant/site was correct.
+
+All four are confirmed working end to end now; no further action needed
+on them.
+
+Also paused: Booz Allen (`careers.boozallen.com`) — investigated at length
+but not built. Confirmed its Country filter is broken even through the real
+UI (typing "United States" returns zero results despite the unfiltered
+list already being ~100% US postings), its keyword param is `search` (not
+`keywords`) and does fuzzy matching same as everywhere else, and no real
+JSON API could be found behind it despite extensive digging (custom
+in-house "portalpacks" React app, not Avature despite one stray HTML
+reference) — job data only ever showed up in the live-rendered DOM, never
+through plain `requests`. Building this would mean a headless-browser
+(Playwright) adapter, which per the user's standing instruction on Tesla
+needs to be flagged and confirmed before building, not attempted silently.
+Revisit together with the user once Workday work resumes.
+
+The "next 20 companies" list (Emerson Electric, Ford, Honeywell, GE,
+GE Vernova, GE HealthCare, HP Inc., HPE, Otis Worldwide, Parker-Hannifin,
+Stryker, Boston Scientific, IQVIA, Thermo Fisher Scientific, Corning,
+Wabtec, Xylem, Zimmer Biomet, Danaher, Illinois Tool Works) proposed
+2026-08-22 is also on hold until this session resumes.
+
+- **Qualcomm** (`qualcomm_careers.py`) — Eightfold-hosted, same platform as
+  PayPal/Netflix, but the real API lives on `qualcomm.eightfold.ai` (the
+  site's own `careers.qualcomm.com/api/apply/v2/jobs` 403s with "Not
+  authorized for PCSX"). Exposes a real `filter_seniority=Intern` facet
+  (matching the user's example URL) that's accurate server-side — confirmed
+  53 global results, every title a genuine internship, no
+  "Internal Auditor"-style false positives — so unlike PayPal/Netflix this
+  needs no keyword search or client-side regex at all. Filtered to
+  Seniority=Intern + Location=United States. 0 US postings open right now
+  (confirmed matches the live site's own "0 jobs" state), but the mechanism
+  is verified correct.
+- **Texas Instruments** (`ti_careers.py`) — Oracle Fusion Recruiting Cloud
+  (ORC), own host (`edbz.fa.us2.oraclecloud.com`), siteNumber `CX`. The
+  user's example URL was a static landing page, not a search page, so this
+  uses the real search endpoint instead. Filtered server-side to a genuine
+  Experience Level flex facet, value "Interns"
+  (`AttributeChar8|Interns`) — confirmed via the live UI, no false
+  positives in the results. No verified numeric "United States"
+  locations-facet id (TI's Work Locations facet only exposes city-level
+  values), so filters client-side on `PrimaryLocationCountry == "US"`, same
+  approach as Dell. Currently 7 real US intern postings live.
+- **Applied Materials** (`appliedmaterials_careers.py`) — Eightfold-hosted,
+  same platform/pattern as Qualcomm above (real API on
+  `appliedmaterials.eightfold.ai`, the site's own domain 403s the same
+  way). Matches the user's example URL exactly: a real
+  `filter_seniority=Intern` facet, confirmed accurate (10 global results,
+  all genuine internship/early-career titles, no false positives).
+  Filtered to Seniority=Intern + Location=United States — 5 real US
+  postings live right now.
+- **Lam Research** (`lamresearch_careers.py`) — Eightfold-hosted, same
+  platform (`lamresearch.eightfold.ai`). Matches the user's example URL's
+  two facets exactly: `filter_paygrade=intern/apprentice` (confirmed: 8
+  global results, all genuine Intern titles) and
+  `filter_rmk_country=united states` — combined, returns exactly the one
+  posting matching the user's own example URL's job id, confirming both
+  facet names/values. 1 US posting live right now.
+
+- **Oracle** (`oracle_careers.py`) — Oracle Fusion Recruiting Cloud (ORC),
+  same platform as ABM but a different site instance
+  (`eeho.fa.us2.oraclecloud.com`, siteNumber `CX_45001`). The user's example
+  URL's category facet + `keyword=Intern` turned out not to actually filter
+  to internships at all (verified live: identical `TotalJobsCount` with/
+  without the keyword param, and the category id resolved to "Technology
+  Operations" — all Director/Manager titles, no Intern facet exists under
+  Experience Level for the US). The real signal is a separate Job Type flex
+  facet, value "Student/Intern" (`AttributeChar4|Student/Intern`), confirmed
+  via the live UI filter — count matched the API response exactly. Filtered
+  server-side to that facet + Location = United States
+  (`300000000149325`). Currently returns Oracle's Veteran Internship
+  Program (OVIP) postings, including some real SWE roles (e.g. "OCI
+  Software Engineer Intern - OVIP") — the general (non-veteran) internship
+  cycle wasn't open on the day this was verified, but the facet mechanism
+  is confirmed correct.
+- **Dell Technologies** (`dell_careers.py`) — Oracle Fusion Recruiting Cloud
+  (ORC) hosted directly on Dell's own domain
+  (`enterpriseplatform.dell.com`), siteNumber `CX_1001`. The user's example
+  URL's `selectedTitlesFacet=INTERNS` job-function facet is accurate
+  (confirmed: UI count matched the API response exactly, no false
+  positives) — unlike `keyword=intern` on this same instance, which is
+  fuzzy/relevance-based and returns junk like "Legal Director, Regulatory
+  and Trade Compliance". No verified numeric US locations-facet id (the
+  Interns facet currently returns zero US postings — all international —
+  so there was nothing live to confirm an id against); filters client-side
+  on the response's own `PrimaryLocationCountry` field instead (a real
+  structured country code), which needs no unverified guess. Zero US intern
+  postings open right now (off-season), but the fetch/filter mechanism is
+  verified working, same situation as Axiado.
+- **Palo Alto Networks** (`paloaltonetworks_careers.py`) — TalentBrew-hosted
+  (`jobs.paloaltonetworks.com`), same platform as AT&T, org id `47263`.
+  Unlike AT&T, this instance exposes a real Category facet literally named
+  "Intern" (id `9246672`) rather than needing a keyword-search-plus-regex
+  workaround — confirmed via the response's own filter section. Filtered
+  server-side to Category = Intern + Country = United States (`6252001`,
+  a GeoNames id — confirmed portable across TalentBrew tenants since this
+  instance's other country facet ids, e.g. Canada `6251999`, also match
+  their real GeoNames ids). Only 1-2 intern postings open globally right
+  now, none in the US, but the fetch/filter mechanism is verified working.
 
 - **1 Automotive** (`group1_careers.py`) — AutoFusion-hosted
   (`www.group1careers.com`), server-rendered HTML table, plain `requests`
@@ -357,16 +657,6 @@ Axiado.
   — even looser than the substring-on-title issue seen elsewhere, so this
   also narrows client-side with a word-boundary regex on the title.
 
-- **IBM** (`ibm_careers.py`) — the search page (`www.ibm.com/careers/search`)
-  is a Next.js app whose facet widgets POST real Elasticsearch query DSL to
-  `www-api.ibm.com/search/api/v2` (found by hooking `XMLHttpRequest` in the
-  browser and toggling a filter checkbox -- the initial page-load request
-  fires too early to intercept normally, so a facet click was needed to
-  catch a *second* request with the hook already installed). Filtered
-  server-side to the user's exact three Career Areas + Internship + United
-  States, matching their URL's filters exactly. `careers.ibm.com` itself
-  (the underlying Avature-esque job-detail host) is behind an AWS WAF
-  bot-challenge, but this search API on `www-api.ibm.com` is not.
 - **Sandisk** (`sandisk_careers.py`) — SmartRecruiters-hosted, hits the
   platform's public `api.smartrecruiters.com/v1/companies/Sandisk/postings`
   directly, no auth needed. No employment-type facet reliably tags
@@ -437,7 +727,65 @@ wants to invest in it for a specific company, not as a default fallback.
 Broadcom was removed from the queue by the user. Cloudera, 1 Automotive,
 AT&T, and ABM Industries (this session) plus Netflix and Abbott (built
 concurrently in another session) are done -- see "Adapters built and live"
-above. No standing queue right now; next picks TBD with the user.
+above.
+
+Queue (2026-08-21), ranked by fit with the user's stated interests
+(SWE/backend/AI-ML/systems/distributed systems/robotics), sourced from a
+~470-company Fortune-500-scale candidate list the user provided (large
+caps not on a standard ATS -- same pool 1 Automotive/AT&T/Abbott/
+ABM/AECOM/Netflix were pulled from). Excludes Broadcom (removed from queue
+above) and Meta (Cloudflare-blocked, see "Companies eliminated"):
+
+1. ~~Oracle~~ — done, see "Adapters built and live" above
+2. ~~Intuit~~ — done, see "Adapters built and live" above
+3. ~~Dell Technologies~~ — done, see "Adapters built and live" above
+4. ~~Palo Alto Networks~~ — done, see "Adapters built and live" above
+5. ~~Qualcomm~~ — done, see "Adapters built and live" above
+6. ~~Texas Instruments~~ — done, see "Adapters built and live" above
+7. ~~Capital One~~ — dropped per user (2026-08-22)
+8. ~~Mastercard~~ — done, already Workday-hosted, added to
+   `ats_poller/companies.py` instead of here (see note above)
+9. ~~S&P Global~~ — done, already Workday-hosted, added to
+   `ats_poller/companies.py` instead of here (see note above)
+10. ~~Workday~~ (the company) — dropped per user (2026-08-22)
+11. ~~Applied Materials~~ — done, see "Adapters built and live" above
+12. ~~Lam Research~~ — done, see "Adapters built and live" above
+13. ~~KLA~~ — already covered, was already in `ats_poller/companies.py`
+    (Workday-hosted)
+14. Intuitive Surgical (surgical robotics) — **blocked**, see note below
+15. Rockwell Automation (industrial automation/robotics)
+16. ~~Northrop Grumman~~ — dropped per user, defense contractor
+    (2026-08-22)
+17. ~~Lockheed Martin~~ — dropped per user, defense contractor
+    (2026-08-22)
+18. ~~RTX~~ — dropped per user, defense contractor (2026-08-22)
+19. ~~L3Harris Technologies~~ — dropped per user, defense contractor
+    (2026-08-22)
+20. Booz Allen Hamilton — borderline defense-adjacent (government/military
+    consulting); confirm with user before building, given the above drops
+
+The user asked (2026-08-22) to drop Capital One, Workday, and all defense
+contractors (Northrop Grumman, RTX, Lockheed Martin, L3Harris, and any
+others) from this queue going forward.
+
+### Intuitive Surgical — blocked (Cloudflare, real browser required)
+`careers.intuitive.com` is Cloudflare-protected: plain `requests`/`curl`
+gets a "Just a moment..." JS-challenge page (403) even with a full browser
+`User-Agent`/`Accept`/`Accept-Language` header set, while a real Claude-in-
+Chrome browser session loads the page fine. All of the page's own requests
+stay on `careers.intuitive.com` itself (no visible third-party ATS
+domain/API to hit directly), so this would need a headless-browser adapter
+(Playwright) to scrape, same class of problem as Tesla -- which the
+Playbook's "Tested and ruled out" section already found doesn't reliably
+get past this kind of CDN-edge protection even from GitHub Actions. Per
+that precedent, flagging this to the user rather than building a headless
+adapter without asking first. Also currently 0 US intern postings live
+(confirmed via the real browser session), so even if unblocked there'd be
+nothing to alert on right now.
+
+Not yet investigated for ATS vs. custom-site status -- check each with the
+Investigation steps above before building. Order is a priority suggestion,
+not a commitment; confirm with the user before starting each one.
 
 Lower priority / not yet investigated: NASA (govt site, likely low volume /
 harder to scrape), Axiado (small startup, low posting volume). **Slack**
@@ -491,9 +839,9 @@ assuming from Tesla's result alone. Not built.
 
 ## Known infra issue to be aware of
 
-All three pollers (`poll.py`, `ats_poll.py`, `custom_poll.py`) commit and
+Both pollers (`ats_poll.py`, `custom_poll.py`) commit and
 push their `seen_*.json` state file directly to `main` at the end of every
-run. Because all three run frequently (every 5-15 min) on independent
+run. Because both run frequently (every 5-15 min) on independent
 schedules, two runs landing close together can race: the second one's
 `git push` gets rejected as non-fast-forward since the first already moved
 `main`. This shows up as the workflow's final "Commit ..." step failing

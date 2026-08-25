@@ -4,10 +4,10 @@ ATS poller: polls Greenhouse/Lever/Workday-hosted career boards for a fixed
 list of companies (see companies.py) and alerts on new internship postings
 via Telegram.
 
-Deliberately separate from the top-level poll.py (Simplify aggregator) --
-different data sources, different state files, different filtering needs
-(these boards list every open role, not just internships, so a title-based
-internship + term-year filter runs before anything else).
+Deliberately separate from custom_sites/custom_poll.py -- different data
+sources, different state files, different filtering needs (these boards
+list every open role, not just internships, so a title-based internship +
+term-year filter runs before anything else).
 """
 import html
 import json
@@ -20,12 +20,13 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
-from adapters import ashby, greenhouse, lever, smartrecruiters, workday  # noqa: E402
+from adapters import ashby, greenhouse, lever, smartrecruiters, workable, workday  # noqa: E402
 from companies import (  # noqa: E402
     ASHBY_COMPANIES,
     GREENHOUSE_COMPANIES,
     LEVER_COMPANIES,
     SMARTRECRUITERS_COMPANIES,
+    WORKABLE_COMPANIES,
     WORKDAY_COMPANIES,
 )
 
@@ -123,6 +124,14 @@ def fetch_all():
             entries.extend(got)
         except Exception as e:
             log(f"[SmartRecruiters:{name}] fetch failed: {e}")
+
+    for name, account in WORKABLE_COMPANIES:
+        try:
+            got = workable.fetch(name, account)
+            log(f"[Workable:{name}] fetched {len(got)} jobs")
+            entries.extend(got)
+        except Exception as e:
+            log(f"[Workable:{name}] fetch failed: {e}")
 
     return entries
 

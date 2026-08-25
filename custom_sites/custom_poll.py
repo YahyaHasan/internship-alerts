@@ -11,7 +11,7 @@ their own site-specific filtering to the intern/apprentice level server-side
 intern" heuristic that works across all of them, unlike the ATS-hosted
 boards which list every open role and need that filter client-side). Own
 state files, own workflow, own seen-id space -- never touches ats_poller's
-or poll.py's state.
+state.
 """
 import html
 import json
@@ -29,20 +29,32 @@ from adapters import (  # noqa: E402
     abm_careers,
     aecom_careers,
     amazon_jobs,
+    appliedmaterials_careers,
     apple_careers,
+    atlassian_careers,
     att_careers,
     axiado_careers,
     bloomberg_careers,
+    bostonscientific_careers,
     cisco_careers,
     cloudera_careers,
+    dell_careers,
+    github_careers,
     google_careers,
     group1_careers,
-    ibm_careers,
+    honeywell_careers,
+    hp_careers,
+    intuit_careers,
+    lamresearch_careers,
     microsoft_careers,
     netflix_careers,
+    oracle_careers,
+    paloaltonetworks_careers,
     paypal_careers,
+    qualcomm_careers,
     salesforce_careers,
     sandisk_careers,
+    ti_careers,
 )
 
 # tesla_careers is NOT wired in below: Tesla's cua-api is behind Akamai
@@ -166,13 +178,6 @@ def fetch_all():
         log(f"[PayPal] fetch failed: {e}")
 
     try:
-        got = ibm_careers.fetch()
-        log(f"[IBM] fetched {len(got)} jobs")
-        entries.extend(got)
-    except Exception as e:
-        log(f"[IBM] fetch failed: {e}")
-
-    try:
         got = sandisk_careers.fetch()
         log(f"[Sandisk] fetched {len(got)} jobs")
         entries.extend(got)
@@ -234,6 +239,97 @@ def fetch_all():
         entries.extend(got)
     except Exception as e:
         log(f"[Axiado] fetch failed: {e}")
+
+    try:
+        got = oracle_careers.fetch()
+        log(f"[Oracle] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Oracle] fetch failed: {e}")
+
+    try:
+        got = dell_careers.fetch()
+        log(f"[Dell Technologies] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Dell Technologies] fetch failed: {e}")
+
+    try:
+        got = paloaltonetworks_careers.fetch()
+        log(f"[Palo Alto Networks] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Palo Alto Networks] fetch failed: {e}")
+
+    try:
+        got = qualcomm_careers.fetch()
+        log(f"[Qualcomm] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Qualcomm] fetch failed: {e}")
+
+    try:
+        got = ti_careers.fetch()
+        log(f"[Texas Instruments] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Texas Instruments] fetch failed: {e}")
+
+    try:
+        got = appliedmaterials_careers.fetch()
+        log(f"[Applied Materials] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Applied Materials] fetch failed: {e}")
+
+    try:
+        got = lamresearch_careers.fetch()
+        log(f"[Lam Research] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Lam Research] fetch failed: {e}")
+
+    try:
+        got = intuit_careers.fetch()
+        log(f"[Intuit] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Intuit] fetch failed: {e}")
+
+    try:
+        got = bostonscientific_careers.fetch()
+        log(f"[Boston Scientific] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Boston Scientific] fetch failed: {e}")
+
+    try:
+        got = hp_careers.fetch()
+        log(f"[HP] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[HP] fetch failed: {e}")
+
+    try:
+        got = honeywell_careers.fetch()
+        log(f"[Honeywell] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Honeywell] fetch failed: {e}")
+
+    try:
+        got = github_careers.fetch()
+        log(f"[GitHub] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[GitHub] fetch failed: {e}")
+
+    try:
+        got = atlassian_careers.fetch()
+        log(f"[Atlassian] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Atlassian] fetch failed: {e}")
 
     return entries
 
