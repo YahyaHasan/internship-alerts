@@ -6,6 +6,15 @@ whatever identifier that platform's API needs to look it up. Verified by
 hitting the platform's public JSON API directly (see PR/commit history) --
 don't add an entry here without confirming the API actually returns data
 for that slug/tenant.
+
+IMPORTANT: after adding one or more companies here, run
+`python3 ats_poller/backfill_seen.py` and commit the resulting
+seen_ats.json change IN THE SAME COMMIT, before pushing. Without it, the
+next real poll run treats every one of the new company's current open
+postings as brand new and alerts on its entire backlog at once (this
+happened on 2026-08-25 with a 185-company batch: 400+ unwanted Telegram
+messages went out from two overlapping production runs before seen_ats.json
+caught up -- see backfill_seen.py's docstring for the full story).
 """
 
 GREENHOUSE_COMPANIES = [

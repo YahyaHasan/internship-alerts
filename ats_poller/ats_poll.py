@@ -8,6 +8,10 @@ Deliberately separate from custom_sites/custom_poll.py -- different data
 sources, different state files, different filtering needs (these boards
 list every open role, not just internships, so a title-based internship +
 term-year filter runs before anything else).
+
+IMPORTANT: adding a company to companies.py? Run
+`python3 ats_poller/backfill_seen.py` first -- see companies.py's docstring
+and backfill_seen.py's docstring for why.
 """
 import html
 import json
