@@ -78,6 +78,16 @@ SKIPPED_LOG_FILE = BASE_DIR / "skipped_log_custom.json"
 STALE_YEAR_RE = re.compile(r"\b(2023|2024|2025|2026)\b")
 CURRENT_YEAR_RE = re.compile(r"\b(2027|2028)\b")
 
+# Titles clearly outside our interest area get dropped before the LLM step.
+# Same list as ats_poller/ats_poll.py.
+DENY_TITLE_RE = re.compile(
+    r"\b(Sales|Marketing|Recruiting|Recruiter|Manufacturing|CAD|Mechanical|Electrical|Cyber|Mobile|"
+    r"Quant|Analog|Trader|Trading|Robotics?|Supply Chain|Help Desk|Service Desk|Facilities|"
+    r"Human Resources|Accounting|Actuarial|Legal|Purchasing|Executive Assistant|Real Estate|"
+    r"SkillBridge|Avionics|Propulsion|Structures|Biologics|Chemical|Materials)\b",
+    re.IGNORECASE,
+)
+
 def log(msg):
     print(msg, flush=True)
 
@@ -338,12 +348,14 @@ def keyword_filter(entries):
     kept = []
     for e in entries:
         title = e["title"]
+        if DENY_TITLE_RE.search(title):
+            continue
         if not term_filter_ok(title):
             continue
         if not location_filter_ok(e.get("locations")):
             continue
         kept.append(e)
-    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after term/location filter")
+    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after deny/term/location filter")
     return kept
 
 

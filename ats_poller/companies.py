@@ -204,7 +204,6 @@ GREENHOUSE_COMPANIES = [
 
 LEVER_COMPANIES = [
     # display_name, company_slug
-    ("Palantir", "palantir"),
     ("Neon", "neon"),
     ("Zoox", "zoox"),
     ("Shield AI", "shieldai"),
@@ -376,8 +375,6 @@ WORKDAY_COMPANIES = [
     ("Vanguard", "vanguard", "wd5", "vanguard_External"),
     ("State Street", "statestreet", "wd1", "Global"),
     ("Boeing", "boeing", "wd1", "External_Careers"),
-    ("Leidos", "leidos", "wd5", "External"),
-    ("CACI", "caci", "wd1", "External"),
     ("Qualys", "qualys", "wd5", "Careers"),
     ("Trend Micro", "trendmicro", "wd3", "External"),
     ("Ciena", "ciena", "wd5", "Careers"),
@@ -412,12 +409,10 @@ WORKDAY_COMPANIES = [
     ("Rockwell Automation", "rockwellautomation", "wd1", "External_Rockwell_Automation"),
     ("S&P Global", "spgi", "wd5", "SPGI_Careers"),
     ("Prudential Financial", "pru", "wd5", "Careers"),
-    ("RTX", "globalhr", "wd5", "REC_RTX_Ext_Gateway"),
     ("Travelers", "travelers", "wd5", "External"),
     ("Truist Financial", "truist", "wd1", "Careers"),
     ("NXP Semiconductors", "nxp", "wd3", "Careers"),
     ("Broadcom", "broadcom", "wd1", "External_Career"),
-    ("Booz Allen Hamilton", "bah", "wd1", "BAH_Jobs"),
     ("Samsung", "sec", "wd3", "Samsung_Careers"),
     ("Autodesk", "autodesk", "wd1", "Ext"),
     ("F5", "ffive", "wd5", "f5jobs"),

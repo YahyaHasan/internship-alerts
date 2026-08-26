@@ -51,6 +51,16 @@ INTERN_TITLE_RE = re.compile(r"\bintern(ship)?s?\b", re.IGNORECASE)
 STALE_YEAR_RE = re.compile(r"\b(2023|2024|2025|2026)\b")
 CURRENT_YEAR_RE = re.compile(r"\b(2027|2028)\b")
 
+# Titles clearly outside our interest area get dropped before the LLM step
+# (cheaper, and avoids relying on the LLM to catch obvious non-matches).
+DENY_TITLE_RE = re.compile(
+    r"\b(Sales|Marketing|Recruiting|Recruiter|Manufacturing|CAD|Mechanical|Electrical|Cyber|Mobile|"
+    r"Quant|Analog|Trader|Trading|Robotics?|Supply Chain|Help Desk|Service Desk|Facilities|"
+    r"Human Resources|Accounting|Actuarial|Legal|Purchasing|Executive Assistant|Real Estate|"
+    r"SkillBridge|Avionics|Propulsion|Structures|Biologics|Chemical|Materials)\b",
+    re.IGNORECASE,
+)
+
 # We can't reliably enumerate every valid "US" location string (bare city
 # names, "Remote", full state names, "Bay Area", etc. all vary by ATS), so
 # an allowlist would silently drop legitimate US roles that don't happen to
@@ -129,12 +139,14 @@ def keyword_filter(entries):
         title = e["title"]
         if not INTERN_TITLE_RE.search(title):
             continue
+        if DENY_TITLE_RE.search(title):
+            continue
         if not term_filter_ok(title):
             continue
         if not location_filter_ok(e.get("locations")):
             continue
         kept.append(e)
-    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after intern/term/location filter")
+    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after intern/deny/term/location filter")
     return kept
 
 
