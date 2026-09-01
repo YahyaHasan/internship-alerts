@@ -272,7 +272,7 @@ Google, Amazon, Apple, Microsoft, Salesforce, Cisco, Bloomberg, PayPal,
 Sandisk, 1 Automotive, Cloudera, AT&T, Netflix, Abbott, ABM Industries, AECOM,
 Axiado, Oracle, Dell Technologies, Palo Alto Networks, Qualcomm, Texas
 Instruments, Applied Materials, Lam Research, Intuit, Boston Scientific,
-HP, Honeywell, GitHub, Atlassian.
+HP, Honeywell, GitHub, Atlassian, Charles Schwab.
 
 - **Atlassian** (`atlassian_careers.py`) — also iCIMS-hosted (tenant
   `globalcareers-atlassian`), but its own domain exposes a plain JSON GET
@@ -325,6 +325,20 @@ Workable-hosted company found in the future, not just Hugging Face.
   Materials' "Intern"), confirmed accurate -- all 33 global results genuine
   internships, no false positives. Filtered to Seniority=internship +
   Location=United States. 6 US postings live right now.
+- **Charles Schwab** (`schwab_careers.py`) -- Radancy (formerly TMP
+  Worldwide) platform on its own domain (`www.schwabjobs.com`). No JSON job
+  API exists: the site's `/search-jobs/results` endpoint returns JSON whose
+  `results` field is an HTML fragment of the results list, parsed with a
+  regex. Stateless (no cookies/token). Uses Schwab's own Category=Internship
+  (facet type 1, id 8230432) + Country=United States (facet type 2, id
+  6252001) facets, plus a second `Keywords=intern` pass narrowed by a
+  word-boundary title regex, to catch any internship a recruiter filed under
+  a different category. The keyword pass alone is not trustworthy on its own
+  -- it matches job *descriptions* too (it returns e.g. a senior "Java
+  Software Engineer" whose text mentions interns), which is why the title
+  regex gates it. 12 US internship postings live right now (all 2027-term
+  Financial Service & Support / Business Operations roles; Schwab currently
+  has no SWE-titled internship open).
 - **Honeywell** (`honeywell_careers.py`) — Oracle Fusion Recruiting Cloud
   (ORC), own host `ibqbjb.fa.ocs.oraclecloud.com` (a `.ocs.` region,
   unlike the `.us2.` hosts seen elsewhere), siteNumber `CX_1`. The user's

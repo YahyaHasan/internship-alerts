@@ -54,6 +54,7 @@ from adapters import (  # noqa: E402
     qualcomm_careers,
     salesforce_careers,
     sandisk_careers,
+    schwab_careers,
     ti_careers,
 )
 
@@ -84,7 +85,8 @@ DENY_TITLE_RE = re.compile(
     r"\b(Sales|Marketing|Recruiting|Recruiter|Manufacturing|CAD|Mechanical|Electrical|Cyber|Mobile|"
     r"Quant|Analog|Trader|Trading|Robotics?|Supply Chain|Help Desk|Service Desk|Facilities|"
     r"Human Resources|Accounting|Actuarial|Legal|Purchasing|Executive Assistant|Real Estate|"
-    r"SkillBridge|Avionics|Propulsion|Structures|Biologics|Chemical|Materials)\b",
+    r"SkillBridge|Avionics|Propulsion|Structures|Biologics|Chemical|Materials|"
+    r"Hardware|Data Scien(ce|tist)s?)\b",
     re.IGNORECASE,
 )
 
@@ -340,6 +342,13 @@ def fetch_all():
         entries.extend(got)
     except Exception as e:
         log(f"[Atlassian] fetch failed: {e}")
+
+    try:
+        got = schwab_careers.fetch()
+        log(f"[Charles Schwab] fetched {len(got)} jobs")
+        entries.extend(got)
+    except Exception as e:
+        log(f"[Charles Schwab] fetch failed: {e}")
 
     return entries
 

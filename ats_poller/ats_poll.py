@@ -57,7 +57,8 @@ DENY_TITLE_RE = re.compile(
     r"\b(Sales|Marketing|Recruiting|Recruiter|Manufacturing|CAD|Mechanical|Electrical|Cyber|Mobile|"
     r"Quant|Analog|Trader|Trading|Robotics?|Supply Chain|Help Desk|Service Desk|Facilities|"
     r"Human Resources|Accounting|Actuarial|Legal|Purchasing|Executive Assistant|Real Estate|"
-    r"SkillBridge|Avionics|Propulsion|Structures|Biologics|Chemical|Materials)\b",
+    r"SkillBridge|Avionics|Propulsion|Structures|Biologics|Chemical|Materials|"
+    r"Hardware|Data Scien(ce|tist)s?)\b",
     re.IGNORECASE,
 )
 

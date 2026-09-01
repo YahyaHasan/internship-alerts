@@ -461,7 +461,8 @@ WORKDAY_COMPANIES = [
 #   (Eightfold), Infineon Technologies, Corning, Fortinet, Check Point
 #   Software, Akamai, Lockheed Martin, General Dynamics, L3Harris, SAIC
 #   (Taleo), SAP, Oracle, Goldman Sachs, JPMorgan Chase, Charles Schwab
-#   (myworkdayjobs hit was unrelated "Les Schwab" tire company), Garmin,
+#   (myworkdayjobs hit was unrelated "Les Schwab" tire company; now tracked
+#   via custom_sites/adapters/schwab_careers.py instead), Garmin,
 #   American Express.
 # - Acquired/consolidated, not standalone: Splunk (now part of Cisco's
 #   board).
