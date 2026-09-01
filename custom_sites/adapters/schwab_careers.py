@@ -11,11 +11,13 @@ import requests
 RESULTS_URL = "https://www.schwabjobs.com/search-jobs/results"
 BASE_URL = "https://www.schwabjobs.com"
 
-# Schwab's own facets (read off the search page's filter checkboxes), not a
-# title-keyword guess: Category "Internship" (facet type 1) and Country
-# "United States" (facet type 2).
-INTERNSHIP_CATEGORY_ID = "8230432"
-US_COUNTRY_ID = "6252001"
+# Schwab's own facets, read off the search page's filter checkboxes rather
+# than guessed. Category "Engineering & Software Development" (facet type 1)
+# and Region "California" (facet type 3) -- the region facet is scoped to a
+# US state directly, so no separate Country facet is needed; its id embeds
+# the country ("6252001-" is the United States prefix).
+ENGINEERING_CATEGORY_ID = "8421664"
+CALIFORNIA_REGION_ID = "6252001-5332921"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -26,12 +28,12 @@ HEADERS = {
 PAGE_SIZE = 100
 MAX_PAGES = 5  # safety cap: 500 postings per query
 
-# Schwab's Category facet is assigned per-posting by its recruiters, so an
-# internship filed under e.g. "Engineering & Software Development" instead of
-# "Internship" would be missed by the facet alone. A second keyword=intern
-# pass catches those; its hits are then narrowed by this word-boundary title
-# regex, since the keyword search also matches job *descriptions* (it returns
-# non-intern roles like "Java Software Engineer" whose text mentions interns).
+# The Engineering category facet returns roles at every level (the live set
+# is mostly senior/director titles), so this word-boundary title regex is
+# what narrows it to internship-tier postings. custom_poll.py's shared
+# keyword_filter does NOT require "intern" in the title -- adapters are
+# expected to narrow to intern-tier at the source -- so without this gate
+# the adapter would alert on senior roles.
 TITLE_RE = re.compile(r"\b(intern|internship|co-?op)\b", re.I)
 
 JOB_RE = re.compile(
@@ -107,34 +109,29 @@ def _search(keywords, facets, timeout):
 
 def fetch(timeout=30):
     """Returns a list of normalized entries from Charles Schwab's careers
-    site, filtered to US-located internship postings."""
+    site, filtered to California-located Engineering & Software Development
+    internship postings."""
     entries = []
     seen_ids = set()
 
-    queries = [
-        # Category=Internship + Country=United States.
-        ("", (
-            (INTERNSHIP_CATEGORY_ID, 1, "Internship"),
-            (US_COUNTRY_ID, 2, "United States"),
-        ), False),
-        # Safety net: keyword search, US only, narrowed by title regex.
-        ("intern", ((US_COUNTRY_ID, 2, "United States"),), True),
-    ]
+    facets = (
+        (ENGINEERING_CATEGORY_ID, 1, "Engineering & Software Development"),
+        (CALIFORNIA_REGION_ID, 3, "California, United States"),
+    )
 
-    for keywords, facets, title_filter in queries:
-        for job_id, title, url, locations in _search(keywords, facets, timeout):
-            if job_id in seen_ids:
-                continue
-            if title_filter and not TITLE_RE.search(title):
-                continue
-            seen_ids.add(job_id)
-            entries.append({
-                "id": f"schwab_{job_id}",
-                "company": "Charles Schwab",
-                "title": title,
-                "url": url,
-                "locations": locations,
-                "source": "Charles Schwab",
-            })
+    for job_id, title, url, locations in _search("", facets, timeout):
+        if job_id in seen_ids:
+            continue
+        if not TITLE_RE.search(title):
+            continue
+        seen_ids.add(job_id)
+        entries.append({
+            "id": f"schwab_{job_id}",
+            "company": "Charles Schwab",
+            "title": title,
+            "url": url,
+            "locations": locations,
+            "source": "Charles Schwab",
+        })
 
     return entries
