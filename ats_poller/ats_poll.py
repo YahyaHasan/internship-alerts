@@ -58,7 +58,39 @@ DENY_TITLE_RE = re.compile(
     r"Quant|Analog|Trader|Trading|Robotics?|Supply Chain|Help Desk|Service Desk|Facilities|"
     r"Human Resources|Accounting|Actuarial|Legal|Purchasing|Executive Assistant|Real Estate|"
     r"SkillBridge|Avionics|Propulsion|Structures|Biologics|Chemical|Materials|"
-    r"Hardware|Data Scien(ce|tist)s?)\b",
+    r"Hardware|Data Scien(ce|tist)s?|"
+    # Non-technical business functions.
+    r"Finance|Financial|FP&A|Treasury|Tax|Audit|MBA|Investment|Procurement|Sourcing|"
+    r"Business Development|Account Development|SDR|Leadership Development|Consulting|Strategy|"
+    r"Public Policy|Public Affairs|Customer Service|Customer Support|Technical Support|"
+    # Operations / EHS / warehouse-floor management.
+    r"Operations|Area Manager|Environmental|Sustainability|Safety|"
+    # Fab & manufacturing engineering -- the LLM prompt already says to skip
+    # these, so denying them up front just saves the call.
+    r"Process (Development|Integration|Engineer)|Industrial Engineer|Quality|QA|"
+    r"Validation|Test Engineer|Clinical|Pharmaceutical)\b",
+    re.IGNORECASE,
+)
+
+# Escape hatch for DENY_TITLE_RE: a title matching this is kept even if it
+# also matches a denied term, since these words identify the role as one we
+# want regardless of what else the title says. Without it a genuinely
+# relevant posting is lost outright -- the Groq classifier runs *after* the
+# keyword filter, so it never sees a denied title and can't rescue one.
+# Real examples this saves: "FY27 Engineering Intern - Hardware, Software &
+# Systems" (denied by Hardware) and "Internship - Product Engineering (Data
+# Science: Machine Learning Analyst)" (denied by Data Science).
+#
+# Deliberately narrow and high-precision: every term here must be one that
+# can't plausibly appear in a role we don't want, or it silently undoes the
+# deny list. Bare "AI" is excluded for exactly that reason -- it shows up in
+# titles like "AI & Strategic Marketing Intern" and "Digital Marketing Intern
+# - Technical AI & Automation". Bare "Agent" is safe by contrast: all 7
+# Agent-matching titles across both pollers' live corpus are genuine agentic
+# -AI/software roles.
+ALLOW_TITLE_RE = re.compile(
+    r"\b(Software|Agentic|Agents?|Machine Learning|AI/ML|ML|LLMs?|NLP|Generative AI|"
+    r"Compilers?|Distributed Systems|Back[- ]?end|Full[- ]?Stack|Embedded|Quantum)\b",
     re.IGNORECASE,
 )
 
@@ -140,14 +172,14 @@ def keyword_filter(entries):
         title = e["title"]
         if not INTERN_TITLE_RE.search(title):
             continue
-        if DENY_TITLE_RE.search(title):
+        if DENY_TITLE_RE.search(title) and not ALLOW_TITLE_RE.search(title):
             continue
         if not term_filter_ok(title):
             continue
         if not location_filter_ok(e.get("locations")):
             continue
         kept.append(e)
-    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after intern/deny/term/location filter")
+    log(f"[KeywordFilter] {len(entries)} -> {len(kept)} after intern/deny(+allow)/term/location filter")
     return kept
 
 
