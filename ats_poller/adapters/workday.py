@@ -15,6 +15,7 @@ def fetch(company_name, tenant, wd_host, site, timeout=30):
     ".../Some-Title_JR2021695"), which is stable per requisition.
     """
     entries = []
+    seen_paths = set()
     url = JOBS_URL.format(tenant=tenant, wd_host=wd_host, site=site)
     base = JOB_BASE_URL.format(tenant=tenant, wd_host=wd_host, site=site)
 
@@ -32,8 +33,16 @@ def fetch(company_name, tenant, wd_host, site, timeout=30):
         if not postings:
             break
 
+        new_on_page = 0
         for job in postings:
             path = job.get("externalPath", "")
+            # Some tenants ignore `offset` once it passes the result count and
+            # just replay the first page forever, so a path we've already taken
+            # is our signal that pagination has stopped advancing.
+            if path in seen_paths:
+                continue
+            seen_paths.add(path)
+            new_on_page += 1
             entries.append({
                 "id": f"wd_{tenant}_{path}",
                 "company": company_name,
@@ -42,6 +51,9 @@ def fetch(company_name, tenant, wd_host, site, timeout=30):
                 "locations": [job.get("locationsText", "")] if job.get("locationsText") else [],
                 "source": f"Workday:{company_name}",
             })
+
+        if new_on_page == 0:
+            break
 
         offset += PAGE_SIZE
         # Workday's searchText relevance ranking degrades after the first

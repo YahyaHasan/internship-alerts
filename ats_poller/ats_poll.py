@@ -306,6 +306,21 @@ def main():
         log(f"[Fetch] dropped {before - len(all_entries)} entries missing title/url")
     log(f"[Fetch] total {len(all_entries)} raw entries across all companies")
 
+    # Belt-and-braces against an adapter handing back the same posting twice
+    # (a paginated board replaying a page, or two configured boards on the
+    # same tenant sharing a requisition). Without this, one posting turns into
+    # one Telegram message per copy.
+    deduped = []
+    seen_this_run = set()
+    for e in all_entries:
+        if e["id"] in seen_this_run:
+            continue
+        seen_this_run.add(e["id"])
+        deduped.append(e)
+    if len(deduped) != len(all_entries):
+        log(f"[Fetch] dropped {len(all_entries) - len(deduped)} duplicate ids within this run")
+    all_entries = deduped
+
     new_entries_raw = [e for e in all_entries if e["id"] not in seen_ids]
     log(f"[Fetch] {len(new_entries_raw)} entries not in seen_ats.json")
 
