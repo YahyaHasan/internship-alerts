@@ -28,7 +28,7 @@ CURRENT_YEAR_RE = re.compile(r"\b(2027|2028)\b")
 DENY_TITLE_RE = re.compile(
     r"\b(Sales|Marketing|Recruiting|Recruiter|Manufacturing|CAD|Mechanical|Electrical|Cyber|Mobile|"
     r"Quant|Analog|Trader|Trading|Robotics?|Supply Chain|Help Desk|Service Desk|Facilities|"
-    r"Human Resources|Accounting|Actuarial|Legal|Purchasing|Executive Assistant|Real Estate|"
+    r"Human Resources|HR|Accounting|Actuarial|Legal|Purchasing|Executive Assistant|Real Estate|"
     r"SkillBridge|Avionics|Propulsion|Structures|Biologics|Chemical|Materials|"
     r"Hardware|Data Scien(ce|tist)s?|"
     # Non-technical business functions.
@@ -224,18 +224,62 @@ def format_locations(locations):
     return text
 
 
-def build_job_message(e):
+def build_job_message(e, bullet=True):
     company = html.escape(e["company"])
     title = html.escape(e["title"])
     source = html.escape(e["source"])
     url = html.escape(e["url"], quote=True)
-    lines = [f"🆕 <b>{company}</b> — {title}"]
+    prefix = "🆕 " if bullet else ""
+    lines = [f"{prefix}<b>{company}</b> — {title}"]
     loc_str = format_locations(e.get("locations") or [])
     if loc_str:
         lines.append(f"📍 {html.escape(loc_str)}")
     lines.append(f"🏷 {source}")
     lines.append(f'🔗 <a href="{url}">Apply</a>')
     return "\n".join(lines)
+
+
+TELEGRAM_MAX_MESSAGE_LEN = 4096
+BATCH_SEPARATOR = "\n\n───\n\n"
+
+
+def build_batch_messages(entries, max_len=TELEGRAM_MAX_MESSAGE_LEN):
+    """Compiles all of a run's postings into as few Telegram messages as
+    possible (one, unless the batch is too long to fit Telegram's 4096-char
+    limit, in which case it splits into "part i/n" chunks) instead of one
+    message per posting."""
+    if not entries:
+        return []
+
+    blocks = [build_job_message(e, bullet=False) for e in entries]
+
+    chunks = []
+    current = []
+    current_len = 0
+    # Reserve room for the header line each chunk gets below.
+    header_reserve = 80
+    for block in blocks:
+        add_len = len(block) + (len(BATCH_SEPARATOR) if current else 0)
+        if current and current_len + add_len > max_len - header_reserve:
+            chunks.append(current)
+            current = []
+            current_len = 0
+            add_len = len(block)
+        current.append(block)
+        current_len += add_len
+    if current:
+        chunks.append(current)
+
+    count = len(entries)
+    noun = "internship" if count == 1 else "internships"
+    total_parts = len(chunks)
+    messages = []
+    for i, chunk_blocks in enumerate(chunks, start=1):
+        header = f"🆕 {count} new {noun}"
+        if total_parts > 1:
+            header += f" (part {i}/{total_parts})"
+        messages.append(header + "\n\n" + BATCH_SEPARATOR.join(chunk_blocks))
+    return messages
 
 
 def send_telegram_message(token, chat_id, text, log=lambda msg: None):

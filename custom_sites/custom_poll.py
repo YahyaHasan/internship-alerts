@@ -28,7 +28,7 @@ from shared_filters import (  # noqa: E402
     ALLOW_TITLE_RE,
     DEGREE_GATE_RE,
     DENY_TITLE_RE,
-    build_job_message,
+    build_batch_messages,
     llm_filter,
     load_seen,
     load_skipped_log,
@@ -383,10 +383,10 @@ def main():
         final_jobs = prefiltered
 
     sent_count = 0
-    for e in final_jobs:
-        if notify(build_job_message(e)):
+    for text in build_batch_messages(final_jobs):
+        if notify(text):
             sent_count += 1
-    log(f"[Telegram] sent {sent_count} messages" + (" (dry run)" if dry_run else ""))
+    log(f"[Telegram] sent {len(final_jobs)} postings in {sent_count} message(s)" + (" (dry run)" if dry_run else ""))
 
     # Every fetched id (not just ones that survived filtering) gets marked
     # seen here -- unlike ats_poll.py, these adapters already do their own
