@@ -1,11 +1,15 @@
 """
-Title/location keyword filters, and the Groq LLM classification step, shared
-by ats_poller/ats_poll.py and custom_sites/custom_poll.py. Both pollers
-filter the same way (same deny/allow terms, same stale-year and non-US-
-location rules, same LLM prompt) even though they pull from different
-sources -- keeping one copy here means a filtering change doesn't need to be
-made twice and can't drift between the two pollers.
+Filtering, LLM classification, messaging, and state-persistence helpers
+shared by ats_poller/ats_poll.py and custom_sites/custom_poll.py. Both
+pollers behave the same way in all of this (same deny/allow terms, same
+stale-year and non-US-location rules, same LLM prompt, same Telegram message
+format, same seen/skipped-log file shape) even though they pull from
+different sources -- keeping one copy here means a change doesn't need to be
+made twice and can't drift between the two pollers. Each poller still owns
+its own state files (seen_ats.json vs seen_custom.json, etc.) and passes its
+own path into the load/save helpers below.
 """
+import html
 import json
 import re
 
@@ -208,3 +212,69 @@ def llm_filter(entries, groq_api_key, log=lambda msg: None):
     except Exception as e:
         log(f"[LLM] filter failed: {e}")
         return entries, [], {"failed": True, "reason": str(e)}
+
+
+def format_locations(locations):
+    if not locations:
+        return None
+    shown = locations[:3]
+    text = " | ".join(shown)
+    if len(locations) > 3:
+        text += f" + {len(locations) - 3} more"
+    return text
+
+
+def build_job_message(e):
+    company = html.escape(e["company"])
+    title = html.escape(e["title"])
+    source = html.escape(e["source"])
+    url = html.escape(e["url"], quote=True)
+    lines = [f"🆕 <b>{company}</b> — {title}"]
+    loc_str = format_locations(e.get("locations") or [])
+    if loc_str:
+        lines.append(f"📍 {html.escape(loc_str)}")
+    lines.append(f"🏷 {source}")
+    lines.append(f'🔗 <a href="{url}">Apply</a>')
+    return "\n".join(lines)
+
+
+def send_telegram_message(token, chat_id, text, log=lambda msg: None):
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    resp = requests.post(url, json={
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": True,
+    }, timeout=30)
+    if not resp.ok:
+        log(f"[Telegram] error sending message: {resp.status_code} {resp.text}")
+        return False
+    return True
+
+
+def load_seen(seen_file):
+    try:
+        with open(seen_file, "r") as f:
+            return set(str(x) for x in json.load(f))
+    except Exception:
+        return set()
+
+
+def save_seen(seen_ids, seen_file):
+    with open(seen_file, "w") as f:
+        json.dump(sorted(seen_ids), f, indent=2)
+        f.write("\n")
+
+
+def load_skipped_log(skipped_log_file):
+    try:
+        with open(skipped_log_file, "r") as f:
+            return json.load(f)
+    except Exception:
+        return []
+
+
+def save_skipped_log(records, skipped_log_file):
+    with open(skipped_log_file, "w") as f:
+        json.dump(records, f, indent=2)
+        f.write("\n")

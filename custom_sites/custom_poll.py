@@ -13,7 +13,6 @@ boards which list every open role and need that filter client-side). Own
 state files, own workflow, own seen-id space -- never touches ats_poller's
 state.
 """
-import html
 import json
 import os
 import re
@@ -29,8 +28,14 @@ from shared_filters import (  # noqa: E402
     ALLOW_TITLE_RE,
     DEGREE_GATE_RE,
     DENY_TITLE_RE,
+    build_job_message,
     llm_filter,
+    load_seen,
+    load_skipped_log,
     location_filter_ok,
+    save_seen,
+    save_skipped_log,
+    send_telegram_message,
     term_filter_ok,
 )
 from adapters import (  # noqa: E402
@@ -328,72 +333,6 @@ def keyword_filter(entries):
     return kept
 
 
-def format_locations(locations):
-    if not locations:
-        return None
-    shown = locations[:3]
-    text = " | ".join(shown)
-    if len(locations) > 3:
-        text += f" + {len(locations) - 3} more"
-    return text
-
-
-def build_job_message(e):
-    company = html.escape(e["company"])
-    title = html.escape(e["title"])
-    source = html.escape(e["source"])
-    url = html.escape(e["url"], quote=True)
-    lines = [f"🆕 <b>{company}</b> — {title}"]
-    loc_str = format_locations(e.get("locations") or [])
-    if loc_str:
-        lines.append(f"📍 {html.escape(loc_str)}")
-    lines.append(f"🏷 {source}")
-    lines.append(f'🔗 <a href="{url}">Apply</a>')
-    return "\n".join(lines)
-
-
-def send_telegram_message(token, chat_id, text):
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    resp = requests.post(url, json={
-        "chat_id": chat_id,
-        "text": text,
-        "parse_mode": "HTML",
-        "disable_web_page_preview": True,
-    }, timeout=30)
-    if not resp.ok:
-        log(f"[Telegram] error sending message: {resp.status_code} {resp.text}")
-        return False
-    return True
-
-
-def load_seen():
-    try:
-        with open(SEEN_FILE, "r") as f:
-            return set(str(x) for x in json.load(f))
-    except Exception:
-        return set()
-
-
-def save_seen(seen_ids):
-    with open(SEEN_FILE, "w") as f:
-        json.dump(sorted(seen_ids), f, indent=2)
-        f.write("\n")
-
-
-def load_skipped_log():
-    try:
-        with open(SKIPPED_LOG_FILE, "r") as f:
-            return json.load(f)
-    except Exception:
-        return []
-
-
-def save_skipped_log(records):
-    with open(SKIPPED_LOG_FILE, "w") as f:
-        json.dump(records, f, indent=2)
-        f.write("\n")
-
-
 def main():
     dry_run = "--dry-run" in sys.argv
 
@@ -412,11 +351,11 @@ def main():
         if dry_run:
             log(f"[DryRun] would send Telegram message:\n{text}")
             return True
-        return send_telegram_message(telegram_token, telegram_chat_id, text)
+        return send_telegram_message(telegram_token, telegram_chat_id, text, log=log)
 
     now = datetime.now(timezone.utc)
 
-    seen_ids = load_seen()
+    seen_ids = load_seen(SEEN_FILE)
     log(f"[Seen] loaded {len(seen_ids)} previously seen ids")
 
     all_entries = fetch_all()
@@ -456,10 +395,10 @@ def main():
     new_seen_ids = set(seen_ids)
     for e in new_entries_raw:
         new_seen_ids.add(e["id"])
-    save_seen(new_seen_ids)
+    save_seen(new_seen_ids, SEEN_FILE)
     log(f"[Seen] wrote {len(new_seen_ids)} total seen ids")
 
-    skipped_records = load_skipped_log()
+    skipped_records = load_skipped_log(SKIPPED_LOG_FILE)
     for e in llm_skipped:
         skipped_records.append({
             "company": e["company"],
@@ -467,7 +406,7 @@ def main():
             "source": e["source"],
             "timestamp": now.isoformat(),
         })
-    save_skipped_log(skipped_records[-500:])  # keep log bounded
+    save_skipped_log(skipped_records[-500:], SKIPPED_LOG_FILE)  # keep log bounded
 
     # No run-summary message: stay silent on runs that find nothing to send.
 
