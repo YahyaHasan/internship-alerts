@@ -25,6 +25,7 @@ from pathlib import Path
 import requests
 
 sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 from adapters import ashby, greenhouse, lever, smartrecruiters, workable, workday  # noqa: E402
 from companies import (  # noqa: E402
     ASHBY_COMPANIES,
@@ -34,9 +35,14 @@ from companies import (  # noqa: E402
     WORKABLE_COMPANIES,
     WORKDAY_COMPANIES,
 )
-
-GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "openai/gpt-oss-20b"
+from shared_filters import (  # noqa: E402
+    ALLOW_TITLE_RE,
+    DEGREE_GATE_RE,
+    DENY_TITLE_RE,
+    llm_filter,
+    location_filter_ok,
+    term_filter_ok,
+)
 
 BASE_DIR = Path(__file__).parent
 SEEN_FILE = BASE_DIR / "seen_ats.json"
@@ -46,89 +52,12 @@ SKIPPED_LOG_FILE = BASE_DIR / "skipped_log_ats.json"
 # this filter (required) runs before anything else to cut the volume down.
 INTERN_TITLE_RE = re.compile(r"\bintern(ship)?s?\b", re.IGNORECASE)
 
-# Explicit stale-year postings (leftover listings from a prior cycle) get
-# dropped; anything with no year mentioned, or a 2027/2028 mention, passes.
-STALE_YEAR_RE = re.compile(r"\b(2023|2024|2025|2026)\b")
-CURRENT_YEAR_RE = re.compile(r"\b(2027|2028)\b")
+# Deny/allow keyword lists and stale-year/location filters live in
+# shared_filters.py -- kept in sync with custom_sites/custom_poll.py there.
 
-# Titles clearly outside our interest area get dropped before the LLM step
-# (cheaper, and avoids relying on the LLM to catch obvious non-matches).
-DENY_TITLE_RE = re.compile(
-    r"\b(Sales|Marketing|Recruiting|Recruiter|Manufacturing|CAD|Mechanical|Electrical|Cyber|Mobile|"
-    r"Quant|Analog|Trader|Trading|Robotics?|Supply Chain|Help Desk|Service Desk|Facilities|"
-    r"Human Resources|Accounting|Actuarial|Legal|Purchasing|Executive Assistant|Real Estate|"
-    r"SkillBridge|Avionics|Propulsion|Structures|Biologics|Chemical|Materials|"
-    r"Hardware|Data Scien(ce|tist)s?|"
-    # Non-technical business functions.
-    r"Finance|Financial|FP&A|Treasury|Tax|Audit|MBA|Investment|Procurement|Sourcing|"
-    r"Business Development|Account Development|SDR|Leadership Development|Consulting|Strategy|"
-    r"Public Policy|Public Affairs|Customer Service|Customer Support|Technical Support|"
-    # Operations / EHS / warehouse-floor management.
-    r"Operations|Area Manager|Environmental|Sustainability|Safety|"
-    # Fab & manufacturing engineering -- the LLM prompt already says to skip
-    # these, so denying them up front just saves the call.
-    r"Process (Development|Integration|Engineer)|Industrial Engineer|Quality|QA|"
-    r"Validation|Test Engineer|Clinical|Pharmaceutical)\b",
-    re.IGNORECASE,
-)
-
-# Escape hatch for DENY_TITLE_RE: a title matching this is kept even if it
-# also matches a denied term, since these words identify the role as one we
-# want regardless of what else the title says. Without it a genuinely
-# relevant posting is lost outright -- the Groq classifier runs *after* the
-# keyword filter, so it never sees a denied title and can't rescue one.
-# Real examples this saves: "FY27 Engineering Intern - Hardware, Software &
-# Systems" (denied by Hardware) and "Internship - Product Engineering (Data
-# Science: Machine Learning Analyst)" (denied by Data Science).
-#
-# Deliberately narrow and high-precision: every term here must be one that
-# can't plausibly appear in a role we don't want, or it silently undoes the
-# deny list. Bare "AI" is excluded for exactly that reason -- it shows up in
-# titles like "AI & Strategic Marketing Intern" and "Digital Marketing Intern
-# - Technical AI & Automation". Bare "Agent" is safe by contrast: all 7
-# Agent-matching titles across both pollers' live corpus are genuine agentic
-# -AI/software roles.
-ALLOW_TITLE_RE = re.compile(
-    r"\b(Software|Agentic|Agents?|Machine Learning|AI/ML|ML|LLMs?|NLP|Generative AI|"
-    r"Compilers?|Distributed Systems|Back[- ]?end|Full[- ]?Stack|Embedded|Quantum)\b",
-    re.IGNORECASE,
-)
-
-# We can't reliably enumerate every valid "US" location string (bare city
-# names, "Remote", full state names, "Bay Area", etc. all vary by ATS), so
-# an allowlist would silently drop legitimate US roles that don't happen to
-# match. Instead, blocklist locations that are unambiguously non-US; any
-# entry not matching this (including ones with no location data, or an
-# unrecognized location) is kept.
-NON_US_LOCATION_RE = re.compile(
-    r"\b(Singapore|India|China|Taiwan|Japan|Korea|Malaysia|Vietnam|Philippines|Thailand|Indonesia|"
-    r"Israel|United Kingdom|UK|England|Scotland|Ireland|Germany|France|Spain|Italy|Netherlands|"
-    r"Poland|Switzerland|Sweden|Norway|Denmark|Finland|Belgium|Austria|Portugal|"
-    r"Canada|Mexico|Brazil|Argentina|Chile|Colombia|"
-    r"Australia|New Zealand|"
-    r"Egypt|South Africa|Nigeria|Kenya|"
-    r"Hong Kong|Costa Rica|Romania|Czech(ia)?|Hungary|Ukraine|Russia)\b",
-    re.IGNORECASE,
-)
-
-
-def location_filter_ok(locations):
-    """A posting's 'locations' field is a list (a role can span multiple
-    offices). Reject only if EVERY listed location is unambiguously non-US --
-    a multi-location posting that includes a US site should survive even if
-    it also lists a foreign one."""
-    if not locations:
-        return True
-    return any(not NON_US_LOCATION_RE.search(loc) for loc in locations)
 
 def log(msg):
     print(msg, flush=True)
-
-
-def term_filter_ok(title):
-    if STALE_YEAR_RE.search(title) and not CURRENT_YEAR_RE.search(title):
-        return False
-    return True
 
 
 FETCH_MAX_WORKERS = 20
@@ -172,6 +101,8 @@ def keyword_filter(entries):
         title = e["title"]
         if not INTERN_TITLE_RE.search(title):
             continue
+        if DEGREE_GATE_RE.search(title):
+            continue
         if DENY_TITLE_RE.search(title) and not ALLOW_TITLE_RE.search(title):
             continue
         if not term_filter_ok(title):
@@ -183,62 +114,41 @@ def keyword_filter(entries):
     return kept
 
 
-def llm_filter(entries, groq_api_key):
-    if not entries:
-        return entries, [], {"failed": False}
+WORKDAY_COUNTRY_MAX_WORKERS = 20
 
-    jobs_payload = [
-        {"id": e["id"], "company": e["company"], "title": e["title"], "locations": e.get("locations") or []}
-        for e in entries
-    ]
 
-    system_prompt = (
-        "You are a job relevance classifier for a UC Berkeley EECS sophomore applying to "
-        "internships. Reply ONLY with a JSON array, no other text, no markdown fences."
-    )
-    user_prompt = (
-        "Classify each internship posting as keep or skip based on interest alignment. "
-        "Only a title and company are available, no full description.\n\n"
-        "KEEP if the role involves: agentic AI, NLP, LLMs, ML/AI applications, backend systems, "
-        "computer architecture, quantum computing, full-stack engineering, embedded systems, "
-        "compilers, distributed systems, robotics, general software engineering.\n\n"
-        "SKIP ONLY if clearly: pure frontend/UI dev with no backend, pure CRM/Salesforce admin, "
-        "pure digital marketing or ads tech, pure media streaming infrastructure with no ML, "
-        "non-technical roles, a non-engineering internship (sales, HR, finance, legal), or "
-        "fab/manufacturing operations roles (industrial engineering, process/equipment engineering, "
-        "AMHS, planning IE, fab facilities, supply chain/logistics) with no software component.\n\n"
-        "When in doubt, KEEP.\n\n"
-        f"Jobs: {json.dumps(jobs_payload)}\n\n"
-        'Reply with: [{"id": "...", "keep": true/false}]'
-    )
+def workday_country_filter(entries):
+    """Backstops location_filter_ok() for Workday entries specifically:
+    Workday's search-result 'locationsText' is often a bare city/region with
+    no country name (e.g. "Waterford City", "Dunboyne", "2 Locations"), which
+    NON_US_LOCATION_RE can't catch by pattern-matching alone. This does one
+    detail-page lookup per surviving entry (workday.country_alpha2) to get
+    Workday's structured country code instead. Only runs post-keyword_filter,
+    so the extra requests are bounded to the small surviving set, not every
+    posting fetched.
+    """
+    workday_entries = [e for e in entries if e.get("_wd_detail_url")]
+    if not workday_entries:
+        return entries
 
-    try:
-        resp = requests.post(
-            GROQ_URL,
-            headers={"Authorization": f"Bearer {groq_api_key}", "Content-Type": "application/json"},
-            json={
-                "model": GROQ_MODEL,
-                "messages": [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt},
-                ],
-            },
-            timeout=60,
-        )
-        resp.raise_for_status()
-        content = resp.json()["choices"][0]["message"]["content"].strip()
-        content = re.sub(r"^```(json)?", "", content).strip()
-        content = re.sub(r"```$", "", content).strip()
-        results = json.loads(content)
-        keep_map = {r["id"]: bool(r.get("keep", True)) for r in results}
+    reject_ids = set()
+    with ThreadPoolExecutor(max_workers=WORKDAY_COUNTRY_MAX_WORKERS) as pool:
+        future_to_entry = {
+            pool.submit(workday.country_alpha2, e): e for e in workday_entries
+        }
+        for future in as_completed(future_to_entry):
+            e = future_to_entry[future]
+            try:
+                code = future.result()
+            except Exception:
+                code = None  # fail open, same policy as the free-text filter
+            if code and code != "US":
+                reject_ids.add(e["id"])
 
-        kept = [e for e in entries if keep_map.get(e["id"], True)]
-        skipped = [e for e in entries if not keep_map.get(e["id"], True)]
-        log(f"[LLM] {len(kept)} kept / {len(skipped)} skipped")
-        return kept, skipped, {"failed": False}
-    except Exception as e:
-        log(f"[LLM] filter failed: {e}")
-        return entries, [], {"failed": True, "reason": str(e)}
+    kept = [e for e in entries if e["id"] not in reject_ids]
+    if reject_ids:
+        log(f"[WorkdayCountryFilter] {len(entries)} -> {len(kept)} after country lookup")
+    return kept
 
 
 def format_locations(locations):
@@ -360,12 +270,13 @@ def main():
     intern_titled = [e for e in new_entries_raw if INTERN_TITLE_RE.search(e["title"])]
     log(f"[InternFilter] {len(new_entries_raw)} -> {len(intern_titled)} mention intern/internship")
     prefiltered = keyword_filter(intern_titled)
+    prefiltered = workday_country_filter(prefiltered)
 
     llm_skipped = []
     if not prefiltered:
         final_jobs = []
     elif groq_api_key:
-        final_jobs, llm_skipped, llm_info = llm_filter(prefiltered, groq_api_key)
+        final_jobs, llm_skipped, llm_info = llm_filter(prefiltered, groq_api_key, log=log)
         if llm_info["failed"]:
             log(f"[LLM] failed ({llm_info.get('reason')}), sending all {len(prefiltered)} unfiltered")
             final_jobs = prefiltered
