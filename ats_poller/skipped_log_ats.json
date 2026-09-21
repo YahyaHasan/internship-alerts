@@ -1,11 +1,5 @@
 [
   {
-    "company": "RTX",
-    "title": "Finance Intern \u2013 1st shift \u2013 On site - Aeroestructuras",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-24T15:20:16.699938+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - EDE Thin Films Equipment Engineering",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Digital IC Design Intern, BS - Summer 2027",
     "source": "Workday:Marvell",
     "timestamp": "2026-09-21T16:20:17.060966+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Woodland Hills, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T16:25:15.733620+00:00"
   }
 ]
