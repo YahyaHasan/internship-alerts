@@ -1,23 +1,5 @@
 [
   {
-    "company": "GlobalFoundries",
-    "title": "Environmental Health & Safety Intern (Summer 2027)",
-    "source": "Workday:GlobalFoundries",
-    "timestamp": "2026-08-14T17:45:17.290530+00:00"
-  },
-  {
-    "company": "Snowflake",
-    "title": "EMEA Communications Intern",
-    "source": "Ashby:Snowflake",
-    "timestamp": "2026-08-16T03:55:13.510565+00:00"
-  },
-  {
-    "company": "Snowflake",
-    "title": "SDR Intern - Munich ",
-    "source": "Ashby:Snowflake",
-    "timestamp": "2026-08-16T03:55:13.510565+00:00"
-  },
-  {
     "company": "Snowflake",
     "title": "Partner Marketing Intern - Paris (French Speaking ",
     "source": "Ashby:Snowflake",
@@ -2998,5 +2980,23 @@
     "title": "Intern, Investor Center - Novi, MI",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T04:00:24.816473+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Summer 2027 Undergraduate Internship - Client Relations, Albuquerque",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T12:20:21.781998+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Summer 2027 Undergraduate Internship - Client Relations",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T12:20:21.781998+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Summer 2027 Undergraduate Internship - Corporate Services Support",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T12:20:21.781998+00:00"
   }
 ]
