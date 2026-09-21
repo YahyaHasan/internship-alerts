@@ -1,11 +1,5 @@
 [
   {
-    "company": "Avery Dennison",
-    "title": "Operations Intern - Summer 2027",
-    "source": "SmartRecruiters:Avery Dennison",
-    "timestamp": "2026-08-20T12:25:15.760441+00:00"
-  },
-  {
     "company": "GlobalFoundries",
     "title": "Production Control Engineering Intern",
     "source": "Workday:GlobalFoundries",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Investor Center - Highland Park, IL",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:00:27.672137+00:00"
+  },
+  {
+    "company": "Sezzle",
+    "title": "Product Data Intern ",
+    "source": "Greenhouse:Sezzle",
+    "timestamp": "2026-09-21T14:10:20.053440+00:00"
   }
 ]
