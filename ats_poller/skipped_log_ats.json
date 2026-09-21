@@ -1,29 +1,5 @@
 [
   {
-    "company": "Cadence",
-    "title": "AI & Strategic Marketing Intern",
-    "source": "Workday:Cadence",
-    "timestamp": "2026-08-21T00:25:12.879681+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Yield Technology Equipment",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-21T02:05:13.999744+00:00"
-  },
-  {
-    "company": "GlobalFoundries",
-    "title": "\u2022\tEngineer Quality QMS Intern (Jan-Jun 2027)",
-    "source": "Workday:GlobalFoundries",
-    "timestamp": "2026-08-21T06:50:27.160795+00:00"
-  },
-  {
-    "company": "Analog Devices",
-    "title": "Process Sustaining Engineering Intern",
-    "source": "Workday:Analog Devices",
-    "timestamp": "2026-08-21T12:50:23.942198+00:00"
-  },
-  {
     "company": "Merck",
     "title": "Intern Finance",
     "source": "Workday:Merck",
@@ -2998,5 +2974,29 @@
     "title": "Intern, Investor Center - Raleigh, NC",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:30:20.857669+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Lexington, KY",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:50:21.743317+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - South Bend, IN",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:50:21.743317+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Indianapolis, IN",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:50:21.743317+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Alexandria, VA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:50:21.743317+00:00"
   }
 ]
