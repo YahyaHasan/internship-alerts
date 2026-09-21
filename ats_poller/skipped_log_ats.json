@@ -1,24 +1,6 @@
 [
   {
     "company": "Amgen",
-    "title": "MBA Intern \u2013 Finance & Strategy Leadership Development Program (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-08-28T15:45:19.573285+00:00"
-  },
-  {
-    "company": "Duke Energy",
-    "title": "Economic Development Summer Internship 2026-2027",
-    "source": "Workday:Duke Energy",
-    "timestamp": "2026-08-28T15:45:19.573285+00:00"
-  },
-  {
-    "company": "Amgen",
-    "title": "MBA Intern \u2013 Commercial Leadership Program (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-08-28T15:55:13.079671+00:00"
-  },
-  {
-    "company": "Amgen",
     "title": "Undergrad intern - U.S. Value & Access (Summer 2027)",
     "source": "Workday:Amgen",
     "timestamp": "2026-08-28T16:05:13.805894+00:00"
@@ -2998,5 +2980,23 @@
     "title": "Intern, Investor Center - Irving, TX",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T19:55:17.648676+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Probe Equipment Engineer",
+    "source": "Workday:Micron",
+    "timestamp": "2026-09-21T20:30:24.305008+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "2027 Summer Intern - Digital Product: Embedded and Systems Engineering",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-09-21T20:30:24.305008+00:00"
+  },
+  {
+    "company": "Otis Worldwide",
+    "title": "Communications & Visual Storytelling Intern (Part-Time)",
+    "source": "Workday:Otis Worldwide",
+    "timestamp": "2026-09-21T20:30:24.305008+00:00"
   }
 ]
