@@ -1,17 +1,5 @@
 [
   {
-    "company": "Instawork",
-    "title": "Trainer Intern",
-    "source": "Greenhouse:Instawork",
-    "timestamp": "2026-08-14T09:40:24.206150+00:00"
-  },
-  {
-    "company": "GlobalFoundries",
-    "title": "Finance Project Management Analyst Intern (Summer 2027)",
-    "source": "Workday:GlobalFoundries",
-    "timestamp": "2026-08-14T16:05:14.259890+00:00"
-  },
-  {
     "company": "GlobalFoundries",
     "title": "Environmental Health & Safety Intern (Summer 2027)",
     "source": "Workday:GlobalFoundries",
@@ -2998,5 +2986,17 @@
     "title": "Associate IT Systems Administrator Intern - 2027",
     "source": "SmartRecruiters:RRS Group",
     "timestamp": "2026-09-19T16:50:16.405019+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Grand Rapids, MI",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T04:00:24.816473+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Novi, MI",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T04:00:24.816473+00:00"
   }
 ]
