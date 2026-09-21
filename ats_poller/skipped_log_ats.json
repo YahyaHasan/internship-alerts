@@ -1,35 +1,5 @@
 [
   {
-    "company": "Illinois Tool Works",
-    "title": "Marketing Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-08-25T14:37:20.701775+00:00"
-  },
-  {
-    "company": "Illinois Tool Works",
-    "title": "Manufacturing Engineer Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-08-25T14:37:20.701775+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Superviseur COOP- Hiver 2027 | Internship -  COOP supervisor \u2013 Winter 2027 (Mirabel)",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-25T15:22:56.752127+00:00"
-  },
-  {
-    "company": "Cigna",
-    "title": "Internal Audit SOC-1 Reporting Intern",
-    "source": "Workday:Cigna",
-    "timestamp": "2026-08-25T16:36:50.286393+00:00"
-  },
-  {
-    "company": "Eulerity",
-    "title": "Digital Marketing Intern - Technical AI & Automation",
-    "source": "Greenhouse:Eulerity",
-    "timestamp": "2026-08-25T18:20:49.543786+00:00"
-  },
-  {
     "company": "RTX",
     "title": "Stage - Hiver 2027 - Analyste en intelligence d\u2019affaires et gouvernance / Internship - Winter 2027 - Business Intelligence and Governance Analyst",
     "source": "Workday:RTX",
@@ -2998,5 +2968,35 @@
     "title": "Intern, Investor Center - Tampa, FL",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T16:55:17.051117+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Del Mar, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:00:24.249368+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - San Diego, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:00:24.249368+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Mission Viejo, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:00:24.249368+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Winter Park, FL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:00:24.249368+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center -   Boca Raton, FL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:00:24.249368+00:00"
   }
 ]
