@@ -1,18 +1,6 @@
 [
   {
     "company": "RTX",
-    "title": "Stagiaire Hiver 2027 Performance Moteurs / Internship Winter 2027 Engine Performance",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-26T15:47:07.240901+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Projet Fabrication Additive / Internship - Winter 2027 - Additive manufacturing project",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-26T15:47:07.240901+00:00"
-  },
-  {
-    "company": "RTX",
     "title": "Stage - Hiver 2027 - Analyste m\u00e9canique Multi-disciplinaire / Internship - Winter 2027 - Multidisciplinary Mechanical Analyst",
     "source": "Workday:RTX",
     "timestamp": "2026-08-26T15:47:07.240901+00:00"
@@ -2998,5 +2986,17 @@
     "title": "Intern, Investor Center - Morristown, NJ",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T17:45:21.300577+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Design Engineer, HBM",
+    "source": "Workday:Micron",
+    "timestamp": "2026-09-21T18:20:19.253937+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center -  Bethesda, MD",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T18:20:19.253937+00:00"
   }
 ]
