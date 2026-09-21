@@ -1,30 +1,6 @@
 [
   {
     "company": "RTX",
-    "title": "Stage - Planificateur de production (Hiver 2027) | Internship \u2013 Production Planner Winter 2027",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T16:15:18.109429+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Industrialisation \u00a0/ Internship - Winter 2027 - Industrialization Production Readiness",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T16:25:13.219582+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stagiaire en logistique d'entreposage - Hiver 2027 | Operations Logistics Internship \u2013 Winter 2027",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T16:40:15.624751+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 -  Gestionnaire de projets et am\u00e9lioration continue |  Internship - Winter 2027 - Project Management and Continuous improvement",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T16:40:15.624751+00:00"
-  },
-  {
-    "company": "RTX",
     "title": "Stage en formation technique- hiver 2027 | Internship Technical Training - Winter 2027",
     "source": "Workday:RTX",
     "timestamp": "2026-08-21T16:40:15.624751+00:00"
@@ -2998,5 +2974,29 @@
     "title": "Intern, Investor Center - Louisville, KY",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:55:15.157049+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Reston, VA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:00:22.731594+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Naples., SL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:00:22.731594+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Perrysburg, OH",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:00:22.731594+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Columbus, OH",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:00:22.731594+00:00"
   }
 ]
