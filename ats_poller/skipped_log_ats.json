@@ -1,59 +1,5 @@
 [
   {
-    "company": "RTX",
-    "title": "Stage -Superviseur COOP-Hiver 2027 | Internship - COOP supervisor \u2013 Winter 2027",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-20T13:50:18.061024+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Gestion de Projet - Bureau de Transformation Mondiale / Internship - Winter 2027 -  Project Management \u2013 Global Transformation Office (GTO)",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-20T15:30:21.107723+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - YE Physical Failure Analysis Engineer",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-20T15:45:17.859043+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Photomask Wet Process Engineering",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-20T20:50:15.734988+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Wet Process Fab 4 EDE",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-20T21:05:24.444401+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Internship - Winter 2027 - Model-based Definition (MBD) Computer-aided Design (CAD) Digital Technologies (MISSISSAUGA)",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-20T23:25:14.400469+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Analyste financier en ing\u00e9nierie (Power BI) / Internship - Winter 2027 - Engineering Finance Analyst (Power BI)",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-20T23:45:18.883312+00:00"
-  },
-  {
-    "company": "AbbVie",
-    "title": "2027 Pharmaceutical Sales Intern (Undergraduate)",
-    "source": "SmartRecruiters:AbbVie",
-    "timestamp": "2026-08-20T23:45:18.883312+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage Hiver 2027 - Analyste financier - Tr\u00e9sorerie / Internship Winter 2027 - Finance Analyst - Treasury",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T00:05:14.486571+00:00"
-  },
-  {
     "company": "Cadence",
     "title": "AI & Strategic Marketing Intern",
     "source": "Workday:Cadence",
@@ -2998,5 +2944,59 @@
     "title": "Lean and Process Optimization Program Management internship \u2013 2027",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-09-21T14:25:16.599515+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Alpharetta, GA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:30:20.857669+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Greensboro, NC",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:30:20.857669+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Atlanta, GA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:30:20.857669+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Dunwoody, GA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:30:20.857669+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - The Woodlands, TX",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:30:20.857669+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Midlothian, VA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:30:20.857669+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Cary, NC",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:30:20.857669+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Charlotte, NC",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:30:20.857669+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Raleigh, NC",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:30:20.857669+00:00"
   }
 ]
