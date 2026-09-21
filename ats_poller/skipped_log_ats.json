@@ -294,18 +294,6 @@
     "timestamp": "2026-08-28T16:55:12.960847+00:00"
   },
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2986,17 @@
     "title": "Intern, IT Specialist",
     "source": "Greenhouse:Bot Auto",
     "timestamp": "2026-09-21T22:55:15.575720+00:00"
+  },
+  {
+    "company": "Astranis",
+    "title": "Assembly, Integration, and Test Intern (Summer 2027)",
+    "source": "Greenhouse:Astranis",
+    "timestamp": "2026-09-21T23:35:18.445732+00:00"
+  },
+  {
+    "company": "Astranis",
+    "title": "Assembly, Integration, and Test Intern (Winter 2027)",
+    "source": "Greenhouse:Astranis",
+    "timestamp": "2026-09-21T23:35:18.445732+00:00"
   }
 ]
