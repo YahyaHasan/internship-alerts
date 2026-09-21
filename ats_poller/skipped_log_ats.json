@@ -1,11 +1,5 @@
 [
   {
-    "company": "RTX",
-    "title": "Stage - Superviseur COOP (St-Hubert )- Hiver 2027 | Internship \u2013 COOP Supervisor (St-Hubert) \u2013 Winter 2027",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-24T14:00:25.455208+00:00"
-  },
-  {
     "company": "Cigna",
     "title": "Cigna Investment Management Internship",
     "source": "Workday:Cigna",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Investor Center \u2013 Roseville, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T16:10:21.220404+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Santa Monica, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T16:15:17.580030+00:00"
   }
 ]
