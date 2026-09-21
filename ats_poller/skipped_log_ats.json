@@ -1,29 +1,5 @@
 [
   {
-    "company": "Conagra Brands",
-    "title": "FP&A Internship - Summer 2027",
-    "source": "Workday:Conagra Brands",
-    "timestamp": "2026-08-19T15:50:19.552023+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Etudiant en droit / Internship - Winter 2027 - Legal student",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-19T16:05:14.176836+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Bureau de la R\u00e8glementation sur les Produits | Internship  Winter 2027 - Global Chemical Regulations Office",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-19T19:10:18.503722+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Customer Service Intern",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-20T00:10:16.795628+00:00"
-  },
-  {
     "company": "GlobalFoundries",
     "title": "Global Asset Management Intern (Jan-Jun 2027)",
     "source": "Workday:GlobalFoundries",
@@ -2998,5 +2974,29 @@
     "title": "Intern, Investor Center -   Washington, DC",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T13:50:20.154817+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Schaumburg, IL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T13:55:18.404535+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Naperville, IL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T13:55:18.404535+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Deer Park, IL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T13:55:18.404535+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Oak Brook, IL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T13:55:18.404535+00:00"
   }
 ]
