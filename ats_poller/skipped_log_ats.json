@@ -1,30 +1,6 @@
 [
   {
     "company": "RTX",
-    "title": "Stage - Hiver 2027 - Analyste en intelligence d\u2019affaires et gouvernance / Internship - Winter 2027 - Business Intelligence and Governance Analyst",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-25T18:20:49.543786+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Finance cha\u00eene d'approvisionnement / Internship - Winter 2027 - Supply Chain Finance",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-25T18:20:49.543786+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Gestion de la Cha\u00eene d\u2019approvisionnement / Internship - Winter 2027 - Supply Chain Management",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-25T21:15:15.931073+00:00"
-  },
-  {
-    "company": "DV Trading",
-    "title": "Futures & Options Trading Analyst Intern - Summer 2027",
-    "source": "Greenhouse:DV Trading",
-    "timestamp": "2026-08-25T21:30:23.048711+00:00"
-  },
-  {
-    "company": "RTX",
     "title": "Stage - Hiver 2027 - Sp\u00e9cialiste en ing\u00e9nierie du support technique aux ateliers MRO / Internship - Winter 2027 - Specialist, MRO Engineering Overhaul Support Services",
     "source": "Workday:RTX",
     "timestamp": "2026-08-25T21:55:15.294873+00:00"
@@ -2998,5 +2974,29 @@
     "title": "Intern, Investor Center -   Boca Raton, FL",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T17:00:24.249368+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Charleston, SC",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:10:17.844057+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Seattle, WA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:10:17.844057+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Vancouver, WA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:10:17.844057+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Boise, ID",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:10:17.844057+00:00"
   }
 ]
