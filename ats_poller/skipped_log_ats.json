@@ -1,11 +1,5 @@
 [
   {
-    "company": "GlobalFoundries",
-    "title": "Production Control Engineering Intern",
-    "source": "Workday:GlobalFoundries",
-    "timestamp": "2026-08-20T12:50:27.928201+00:00"
-  },
-  {
     "company": "RTX",
     "title": "Stage -Superviseur COOP-Hiver 2027 | Internship - COOP supervisor \u2013 Winter 2027",
     "source": "Workday:RTX",
@@ -2998,5 +2992,11 @@
     "title": "Product Data Intern ",
     "source": "Greenhouse:Sezzle",
     "timestamp": "2026-09-21T14:10:20.053440+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "Lean and Process Optimization Program Management internship \u2013 2027",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-09-21T14:25:16.599515+00:00"
   }
 ]
