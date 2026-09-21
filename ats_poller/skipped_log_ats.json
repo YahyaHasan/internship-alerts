@@ -1,17 +1,5 @@
 [
   {
-    "company": "Cigna",
-    "title": "Cigna Investment Management Internship",
-    "source": "Workday:Cigna",
-    "timestamp": "2026-08-24T14:10:21.539467+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Soutien client\u00e8le aviation g\u00e9n\u00e9rale / Internship - Winter 2027 -  General Aviation Customer Support",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-24T14:50:15.807565+00:00"
-  },
-  {
     "company": "RTX",
     "title": "Finance Intern \u2013 1st shift \u2013 On site - Aeroestructuras",
     "source": "Workday:RTX",
@@ -2998,5 +2986,17 @@
     "title": "Intern, Investor Center - Santa Monica, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T16:15:17.580030+00:00"
+  },
+  {
+    "company": "Marvell",
+    "title": "Digital IC Design Intern, MS - Summer 2027",
+    "source": "Workday:Marvell",
+    "timestamp": "2026-09-21T16:20:17.060966+00:00"
+  },
+  {
+    "company": "Marvell",
+    "title": "Digital IC Design Intern, BS - Summer 2027",
+    "source": "Workday:Marvell",
+    "timestamp": "2026-09-21T16:20:17.060966+00:00"
   }
 ]
