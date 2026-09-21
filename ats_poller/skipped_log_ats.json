@@ -1,17 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "2027 Summer Intern: Advanced Spectroscopy and Nanoscale Materials Characterization",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-24T15:45:17.972403+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Process Development Engineer, 3D DRAM Photo",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-24T15:55:19.953008+00:00"
-  },
-  {
     "company": "RTX",
     "title": "Stage - Hiver 2027 - Centre Priorit\u00e9 Clients / Internship - Winter 2027 - Customer First Centre, Technical helpdesk",
     "source": "Workday:RTX",
@@ -2998,5 +2986,17 @@
     "title": "Intern, Investor Center \u2013 Dublin, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T16:30:21.197607+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Chesterfield, MO",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T16:35:14.797658+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center \u2013 Los Gatos, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T16:35:14.797658+00:00"
   }
 ]
