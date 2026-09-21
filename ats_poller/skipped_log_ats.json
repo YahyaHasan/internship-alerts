@@ -1,12 +1,6 @@
 [
   {
     "company": "Samsara",
-    "title": "Account Development Representative Intern - Atlanta",
-    "source": "Greenhouse:Samsara",
-    "timestamp": "2026-08-21T20:35:15.525436+00:00"
-  },
-  {
-    "company": "Samsara",
     "title": "Account Development Representative Intern - Phoenix",
     "source": "Greenhouse:Samsara",
     "timestamp": "2026-08-21T20:55:13.083607+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern, Investor Center - Pasadena, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T15:40:21.965056+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center \u2013 San Francisco, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:50:21.660278+00:00"
   }
 ]
