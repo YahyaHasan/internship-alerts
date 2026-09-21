@@ -1,35 +1,5 @@
 [
   {
-    "company": "Merck",
-    "title": "Intern Finance",
-    "source": "Workday:Merck",
-    "timestamp": "2026-08-21T14:10:20.110009+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Analyste en assurance qualit\u00e9 / Intern - Winter 2027 - Quality Assurance Analyst",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T15:20:18.153662+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "\u00a0Stage - Hiver 2027 \u2013 Ing\u00e9nieur Qualit\u00e9 | Internship - Winter 2027 - Quality Engineer",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T15:50:16.550569+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - G\u00e9nie de la fabrication, am\u00e9lioration continue - Hiver 2027 |  Internship - Winter 2027 - \u00a0Manufacturing engineering, improvement focus",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T16:05:12.986187+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stagiaire - Analyste logistique Atelier MED-Hiver 2027/ Internship- MED Shop logistics Analyst - Winter 2027",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T16:05:12.986187+00:00"
-  },
-  {
     "company": "RTX",
     "title": "Stage - Planificateur de production (Hiver 2027) | Internship \u2013 Production Planner Winter 2027",
     "source": "Workday:RTX",
@@ -2998,5 +2968,35 @@
     "title": "Intern, Investor Center - Alexandria, VA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:50:21.743317+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Cranberry Township, PA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:55:15.157049+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Cleveland East, OH",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:55:15.157049+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Scottsdale, AZ",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:55:15.157049+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Cleveland West, OH",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:55:15.157049+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Louisville, KY",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:55:15.157049+00:00"
   }
 ]
