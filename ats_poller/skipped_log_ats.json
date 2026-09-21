@@ -1,41 +1,5 @@
 [
   {
-    "company": "CALSTART",
-    "title": "Sustainability Intern",
-    "source": "Lever:CALSTART",
-    "timestamp": "2026-08-26T22:10:19.342741+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - ADV DRAM Process Integration Engineer",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-27T00:05:17.441985+00:00"
-  },
-  {
-    "company": "GE Vernova",
-    "title": "Material Specialist - Internship",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-08-27T09:55:16.461462+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Process Quality Engineering",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-27T15:55:15.733577+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Global Communications/Policy Comms",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-27T16:45:19.148579+00:00"
-  },
-  {
-    "company": "Avery Dennison",
-    "title": "Environmental Health & Safety Intern - Summer 2027",
-    "source": "SmartRecruiters:Avery Dennison",
-    "timestamp": "2026-08-27T18:50:21.465032+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova WIND Project Management - Internship 2027",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2962,41 @@
     "title": "Intern, Investor Center - Knoxville, TN",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T18:50:18.137338+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Plano, TX",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T19:50:17.896911+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Fort Worth, TX",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T19:50:17.896911+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Katy, TX",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T19:50:17.896911+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Sugar Land, TX",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T19:50:17.896911+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Houston, TX (Memorial)",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T19:50:17.896911+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Oklahoma City, OK",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T19:50:17.896911+00:00"
   }
 ]
