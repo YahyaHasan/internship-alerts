@@ -1,11 +1,5 @@
 [
   {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Analyste en comptabilit\u00e9 financi\u00e8re\u00a0/ Internship - Winter 2027 - Financial Accounting Analyst\u00a0",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-21T19:35:14.652710+00:00"
-  },
-  {
     "company": "Samsara",
     "title": "Account Development Representative Intern - Atlanta",
     "source": "Greenhouse:Samsara",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Investor Center -Oakdale, MN",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T15:20:19.371687+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Pasadena, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:40:21.965056+00:00"
   }
 ]
