@@ -1,29 +1,5 @@
 [
   {
-    "company": "Samsara",
-    "title": "Account Development Representative Intern - Phoenix",
-    "source": "Greenhouse:Samsara",
-    "timestamp": "2026-08-21T20:55:13.083607+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Metrology Process Development Engineer",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-22T01:05:13.445991+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - TD Site Industrial Engineer",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-23T17:45:13.712986+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Facilities Intern",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-24T06:55:16.022784+00:00"
-  },
-  {
     "company": "NXP Semiconductors",
     "title": "Internship: Marketing and Business Development (m/f/d)",
     "source": "Workday:NXP Semiconductors",
@@ -2998,5 +2974,29 @@
     "title": "Intern, Investor Center \u2013 San Francisco, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T15:50:21.660278+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Chandler, AZ",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:55:17.147163+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center \u2013 Palo Alto, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:55:17.147163+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - San Antonio, TX",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:55:17.147163+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center \u2013 Burlingame, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T15:55:17.147163+00:00"
   }
 ]
