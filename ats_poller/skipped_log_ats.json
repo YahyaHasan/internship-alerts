@@ -330,12 +330,6 @@
     "timestamp": "2026-08-28T16:55:12.960847+00:00"
   },
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Investor Center - Biltmore, AZ",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T21:00:22.644557+00:00"
+  },
+  {
+    "company": "3M",
+    "title": "Internship - Spring 2027 / Fall 2027 Packaging Solutions Co-op",
+    "source": "Workday:3M",
+    "timestamp": "2026-09-21T21:05:16.593207+00:00"
   }
 ]
