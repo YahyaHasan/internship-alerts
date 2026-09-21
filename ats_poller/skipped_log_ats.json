@@ -1,17 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "GE Vernova WIND Project Management - Internship 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-08-28T13:20:18.544665+00:00"
-  },
-  {
-    "company": "AbbVie",
-    "title": "2027 Commercial Leader Program Intern - Therapeutics (MBA)",
-    "source": "SmartRecruiters:AbbVie",
-    "timestamp": "2026-08-28T13:50:25.423849+00:00"
-  },
-  {
     "company": "Amgen",
     "title": "MBA Intern \u2013 Finance & Strategy Leadership Development Program (Summer 2027)",
     "source": "Workday:Amgen",
@@ -2998,5 +2986,17 @@
     "title": "Intern, Investor Center - Oklahoma City, OK",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T19:50:17.896911+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Dallas, TX",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T19:55:17.648676+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Irving, TX",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T19:55:17.648676+00:00"
   }
 ]
