@@ -1,12 +1,6 @@
 [
   {
     "company": "Snowflake",
-    "title": "Partner Marketing Intern - Paris (French Speaking ",
-    "source": "Ashby:Snowflake",
-    "timestamp": "2026-08-16T03:55:13.510565+00:00"
-  },
-  {
-    "company": "Snowflake",
     "title": "SDR Intern - London",
     "source": "Ashby:Snowflake",
     "timestamp": "2026-08-16T03:55:13.510565+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Undergraduate Internship - Corporate Services Support",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T12:20:21.781998+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "2027 Programmatic Interns - Client Relations",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T12:50:18.222780+00:00"
   }
 ]
