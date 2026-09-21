@@ -1,36 +1,6 @@
 [
   {
     "company": "RTX",
-    "title": "Supply Chain Intern",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-26T03:30:18.743671+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Internship - Winter 2027 - Structural Analyst",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-26T13:50:19.227467+00:00"
-  },
-  {
-    "company": "Acceldata",
-    "title": "Finance Intern",
-    "source": "Lever:Acceldata",
-    "timestamp": "2026-08-26T14:15:16.415577+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Membre Equipe des Engrenages de Transmission / Internship - Winter 2027 - Member of the Transmission Gear Team",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-26T14:25:16.647866+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage - Hiver 2027 - Ing\u00e9nierie de projets - Programmes turbopropulseurs r\u00e9gionaux (LONGUEUIL OU MISSISSAUGA) / Internship - Winter 2027 - Project Engineering - Regional engine programs (LONGUEUIL OR MISSISSAUGA)",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-26T14:35:21.329641+00:00"
-  },
-  {
-    "company": "RTX",
     "title": "Stage \u2013 Hiver 2027 - Coordination des projets de recherche collaboratifs et amelioration du processus de gestion des technologies / Internship \u2013 Winter 2027 - Collaborative Research Projects Coordination & Technology Management Process Improvement",
     "source": "Workday:RTX",
     "timestamp": "2026-08-26T14:40:18.149598+00:00"
@@ -2998,5 +2968,35 @@
     "title": "Intern, Investor Center - Ponte Vedra Beach, FL",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T17:30:20.167840+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Albany, NY",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:40:19.260539+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Marlton, NJ",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:40:19.260539+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Bridgewater, NJ",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:40:19.260539+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Rochester, NY",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:40:19.260539+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Jacksonville, FL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:40:19.260539+00:00"
   }
 ]
