@@ -1,11 +1,5 @@
 [
   {
-    "company": "Amgen",
-    "title": "Undergrad intern - U.S. Value & Access (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-08-28T16:05:13.805894+00:00"
-  },
-  {
     "company": "Mastercard Campus",
     "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
     "source": "Workday:Mastercard Campus",
@@ -2998,5 +2992,11 @@
     "title": "Communications & Visual Storytelling Intern (Part-Time)",
     "source": "Workday:Otis Worldwide",
     "timestamp": "2026-09-21T20:30:24.305008+00:00"
+  },
+  {
+    "company": "Stryker",
+    "title": "Summer 2027 Internship - Project Management - California",
+    "source": "Workday:Stryker",
+    "timestamp": "2026-09-21T20:35:18.457947+00:00"
   }
 ]
