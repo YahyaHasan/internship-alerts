@@ -1,11 +1,5 @@
 [
   {
-    "company": "IQVIA",
-    "title": "HRBP Intern-KunTuo",
-    "source": "Workday:IQVIA",
-    "timestamp": "2026-08-26T02:50:17.286760+00:00"
-  },
-  {
     "company": "RTX",
     "title": "Supply Chain Intern",
     "source": "Workday:RTX",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Investor Center - Lakewood, CO",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T17:25:18.767007+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Ponte Vedra Beach, FL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T17:30:20.167840+00:00"
   }
 ]
