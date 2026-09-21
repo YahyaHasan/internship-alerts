@@ -1,35 +1,5 @@
 [
   {
-    "company": "RTX",
-    "title": "Internship \u2013 Winter \u2013 Draftsperson, Product Definition",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-26T18:00:26.035743+00:00"
-  },
-  {
-    "company": "Motorola Solutions",
-    "title": "Indirect Procurement Internship - Summer 2027 (Hybrid)",
-    "source": "Workday:Motorola Solutions",
-    "timestamp": "2026-08-26T18:15:18.277188+00:00"
-  },
-  {
-    "company": "General Matter",
-    "title": "Summer 2027 Internship - Environmental, Health & Safety (EHS)",
-    "source": "Greenhouse:General Matter",
-    "timestamp": "2026-08-26T20:11:25.593890+00:00"
-  },
-  {
-    "company": "General Matter",
-    "title": "Summer 2027 Internship - Architectural Engineering",
-    "source": "Greenhouse:General Matter",
-    "timestamp": "2026-08-26T20:15:15.919860+00:00"
-  },
-  {
-    "company": "Human Computer Lab",
-    "title": "Intern - Industrial Designer",
-    "source": "Ashby:Human Computer Lab",
-    "timestamp": "2026-08-26T20:55:15.059684+00:00"
-  },
-  {
     "company": "CALSTART",
     "title": "Sustainability Intern",
     "source": "Lever:CALSTART",
@@ -2998,5 +2968,35 @@
     "title": "Intern, Investor Center - Seal Beach, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T18:45:19.851959+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Irvine, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T18:50:18.137338+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Century City, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T18:50:18.137338+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Birmingham, AL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T18:50:18.137338+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Franklin, TN",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T18:50:18.137338+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Knoxville, TN",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T18:50:18.137338+00:00"
   }
 ]
