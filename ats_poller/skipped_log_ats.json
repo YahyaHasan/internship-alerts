@@ -1,11 +1,5 @@
 [
   {
-    "company": "GlobalFoundries",
-    "title": "Global Asset Management Intern (Jan-Jun 2027)",
-    "source": "Workday:GlobalFoundries",
-    "timestamp": "2026-08-20T00:40:16.169362+00:00"
-  },
-  {
     "company": "Avery Dennison",
     "title": "Operations Intern - Summer 2027",
     "source": "SmartRecruiters:Avery Dennison",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Investor Center - Oak Brook, IL",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T13:55:18.404535+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Highland Park, IL",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T14:00:27.672137+00:00"
   }
 ]
