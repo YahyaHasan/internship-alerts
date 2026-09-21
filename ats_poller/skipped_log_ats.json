@@ -1,29 +1,5 @@
 [
   {
-    "company": "GlobalFoundries",
-    "title": "Supply Chain Materials Management Intern (Jan-Jun 2027)",
-    "source": "Workday:GlobalFoundries",
-    "timestamp": "2026-08-19T01:50:15.230577+00:00"
-  },
-  {
-    "company": "GlobalFoundries",
-    "title": "Environmental & Sustainability Intern",
-    "source": "Workday:GlobalFoundries",
-    "timestamp": "2026-08-19T03:40:13.803186+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Advanced DRAM Process Integration",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-19T06:50:15.463198+00:00"
-  },
-  {
-    "company": "Cigna",
-    "title": "Health Service Leadership Development Program Summer Associate (Intern)",
-    "source": "Workday:Cigna",
-    "timestamp": "2026-08-19T13:25:16.981678+00:00"
-  },
-  {
     "company": "Conagra Brands",
     "title": "FP&A Internship - Summer 2027",
     "source": "Workday:Conagra Brands",
@@ -2998,5 +2974,29 @@
     "title": "Intern, Investor Center - Philadelphia, PA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T13:45:18.679951+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center -  Bethesda, MD",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T13:50:20.154817+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center -  Annapolis, MD",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T13:50:20.154817+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center -  Towson, MD",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T13:50:20.154817+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center -   Washington, DC",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T13:50:20.154817+00:00"
   }
 ]
