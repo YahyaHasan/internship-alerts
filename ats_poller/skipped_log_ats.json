@@ -1,29 +1,5 @@
 [
   {
-    "company": "Intel",
-    "title": "Process Integration and Yield Engineer PhD Intern",
-    "source": "Workday:Intel",
-    "timestamp": "2026-08-24T10:05:16.780931+00:00"
-  },
-  {
-    "company": "Cigna",
-    "title": "Legal Research Intern",
-    "source": "Workday:Cigna",
-    "timestamp": "2026-08-24T13:20:27.474381+00:00"
-  },
-  {
-    "company": "Cigna",
-    "title": "Healthcare Policy & Regulated Markets Intern",
-    "source": "Workday:Cigna",
-    "timestamp": "2026-08-24T13:40:15.901420+00:00"
-  },
-  {
-    "company": "RTX",
-    "title": "Stage en gestion des processus d\u2019affaires (BPM)- Hiver 2027 | Internship- Business Process Management (BPM) - Winter 2027",
-    "source": "Workday:RTX",
-    "timestamp": "2026-08-24T13:40:15.901420+00:00"
-  },
-  {
     "company": "RTX",
     "title": "Stage - Superviseur COOP (St-Hubert )- Hiver 2027 | Internship \u2013 COOP Supervisor (St-Hubert) \u2013 Winter 2027",
     "source": "Workday:RTX",
@@ -2998,5 +2974,29 @@
     "title": "Intern, Investor Center \u2013 Berkeley, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T16:05:17.651066+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Campbell, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T16:10:21.220404+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center \u2013 Mountain View, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T16:10:21.220404+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center \u2013 Sunnyvale, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T16:10:21.220404+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center \u2013 Roseville, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-21T16:10:21.220404+00:00"
   }
 ]
