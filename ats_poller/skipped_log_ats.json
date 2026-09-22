@@ -216,12 +216,6 @@
     "timestamp": "2026-08-28T16:55:12.960847+00:00"
   },
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "Build Reliability Engineering Intern - Spring/Summer 2027",
     "source": "Lever:Hermeus",
     "timestamp": "2026-09-22T15:25:21.096341+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Torrance, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-22T15:55:16.075325+00:00"
   }
 ]
