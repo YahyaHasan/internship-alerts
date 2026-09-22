@@ -258,12 +258,6 @@
     "timestamp": "2026-08-28T16:55:12.960847+00:00"
   },
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "Verification Engineer Intern (Spring 2027)",
     "source": "Workday:Ciena",
     "timestamp": "2026-09-22T13:45:17.759399+00:00"
+  },
+  {
+    "company": "DV Trading",
+    "title": "Security Engineer Intern - Summer 2027",
+    "source": "Greenhouse:DV Trading",
+    "timestamp": "2026-09-22T13:55:15.652122+00:00"
   }
 ]
