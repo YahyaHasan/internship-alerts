@@ -180,12 +180,6 @@
     "timestamp": "2026-08-28T16:55:12.960847+00:00"
   },
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "Business Systems Analyst Internship Summer 2027",
     "source": "Workday:Motorola Solutions",
     "timestamp": "2026-09-22T22:25:15.166404+00:00"
+  },
+  {
+    "company": "Astranis",
+    "title": "Guidance, Navigation, and Control Intern (Summer 2027)",
+    "source": "Greenhouse:Astranis",
+    "timestamp": "2026-09-22T22:35:14.741646+00:00"
   }
 ]
