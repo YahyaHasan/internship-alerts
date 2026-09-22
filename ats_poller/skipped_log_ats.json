@@ -240,18 +240,6 @@
     "timestamp": "2026-08-28T16:55:12.960847+00:00"
   },
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2986,17 @@
     "title": "Summer 2027 Internship - Advanced Support Tools - Indiana",
     "source": "Workday:Stryker",
     "timestamp": "2026-09-22T14:05:18.950851+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Ashburn, VA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-22T14:10:20.279161+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - Santa Barbara, CA",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-09-22T14:10:20.279161+00:00"
   }
 ]
