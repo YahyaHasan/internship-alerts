@@ -132,12 +132,6 @@
     "timestamp": "2026-08-28T16:55:12.960847+00:00"
   },
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "Antenna Intern (Winter 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-23T04:10:16.606773+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - ID1 Equipment Engineer",
+    "source": "Workday:Micron",
+    "timestamp": "2026-09-23T14:20:19.773390+00:00"
   }
 ]
