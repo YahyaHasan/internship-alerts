@@ -84,12 +84,6 @@
     "timestamp": "2026-08-28T16:55:12.960847+00:00"
   },
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern \u2013 Lean Material Strategies / Warehouse Management Systems",
     "source": "Workday:General Motors",
     "timestamp": "2026-09-23T18:50:19.970264+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "VLSI Engineer Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-09-23T19:30:22.479735+00:00"
   }
 ]
