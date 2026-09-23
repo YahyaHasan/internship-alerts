@@ -102,12 +102,6 @@
     "timestamp": "2026-08-28T16:55:12.960847+00:00"
   },
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "Technical Program Manager 1 - Former Intern",
     "source": "Workday:F5",
     "timestamp": "2026-09-23T17:35:18.426225+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Category Supplier Management",
+    "source": "Workday:Micron",
+    "timestamp": "2026-09-23T17:45:21.697311+00:00"
   }
 ]
