@@ -1,11 +1,5 @@
 [
   {
-    "company": "Mastercard Campus",
-    "title": "Enterprise Operations Intern, Summer 2027 \u2013 St. Louis, MO, US",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-08-28T16:55:12.960847+00:00"
-  },
-  {
     "company": "HPE",
     "title": "Product Management Intern (Master's/MBA)",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Investor Center - Dayton, OH",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-24T15:25:15.785509+00:00"
+  },
+  {
+    "company": "Wabtec",
+    "title": "Corporate Communications Intern",
+    "source": "SmartRecruiters:Wabtec",
+    "timestamp": "2026-09-24T16:35:15.141157+00:00"
   }
 ]
