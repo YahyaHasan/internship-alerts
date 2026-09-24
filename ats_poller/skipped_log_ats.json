@@ -1,29 +1,5 @@
 [
   {
-    "company": "AbbVie",
-    "title": "2027 Commercial Leader Program Intern - Aesthetics (MBA)",
-    "source": "SmartRecruiters:AbbVie",
-    "timestamp": "2026-08-28T19:40:20.588544+00:00"
-  },
-  {
-    "company": "Amgen",
-    "title": "Undergrad Intern - Operations \u2013 West Greenwich, RI (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-08-28T20:35:13.421636+00:00"
-  },
-  {
-    "company": "Amgen",
-    "title": "Undergrad Intern - Operations \u2013 Holly Springs, NC (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-08-28T20:35:13.421636+00:00"
-  },
-  {
-    "company": "Amgen",
-    "title": "Undergrad Intern - Operations \u2013 Cambridge, MA (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-08-28T20:45:16.537487+00:00"
-  },
-  {
     "company": "Amgen",
     "title": "Undergrad Intern - Operations \u2013 Process Development (Summer 2027)",
     "source": "Workday:Amgen",
@@ -2998,5 +2974,29 @@
     "title": "Systems Integration Engineering Intern (Summer 2027)",
     "source": "Workday:Motorola Solutions",
     "timestamp": "2026-09-24T21:25:14.909980+00:00"
+  },
+  {
+    "company": "Astranis",
+    "title": "Harness Design Engineer Intern (Summer 2027)",
+    "source": "Greenhouse:Astranis",
+    "timestamp": "2026-09-24T21:30:19.707299+00:00"
+  },
+  {
+    "company": "Astranis",
+    "title": "Harness Design Engineer Intern (Winter 2027)",
+    "source": "Greenhouse:Astranis",
+    "timestamp": "2026-09-24T21:30:19.707299+00:00"
+  },
+  {
+    "company": "Astranis",
+    "title": "Thermal Intern (Summer 2027)",
+    "source": "Greenhouse:Astranis",
+    "timestamp": "2026-09-24T21:30:19.707299+00:00"
+  },
+  {
+    "company": "Astranis",
+    "title": "Thermal Intern (Winter 2027)",
+    "source": "Greenhouse:Astranis",
+    "timestamp": "2026-09-24T21:30:19.707299+00:00"
   }
 ]
