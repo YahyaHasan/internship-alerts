@@ -1,12 +1,6 @@
 [
   {
     "company": "Amgen",
-    "title": "Undergrad Intern - Operations \u2013 Process Development (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-08-28T20:45:16.537487+00:00"
-  },
-  {
-    "company": "Amgen",
     "title": "Grad Intern - Operations \u2013 Process Development (Summer 2027)",
     "source": "Workday:Amgen",
     "timestamp": "2026-08-28T20:45:16.537487+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Thermal Intern (Winter 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-24T21:30:19.707299+00:00"
+  },
+  {
+    "company": "Rocket Lab",
+    "title": "Test Engineering Intern Summer 2027",
+    "source": "Greenhouse:Rocket Lab",
+    "timestamp": "2026-09-24T23:00:28.547716+00:00"
   }
 ]
