@@ -1,11 +1,5 @@
 [
   {
-    "company": "Amgen",
-    "title": "Grad Intern - Operations \u2013 Process Development (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-08-28T20:45:16.537487+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova Product Management Intern \u2013 Controls Lifecare Services - Summer 2027",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "Test Engineering Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-24T23:00:28.547716+00:00"
+  },
+  {
+    "company": "Rocket Lab",
+    "title": "Test Engineering Intern Spring 2027",
+    "source": "Greenhouse:Rocket Lab",
+    "timestamp": "2026-09-24T23:10:17.208888+00:00"
   }
 ]
