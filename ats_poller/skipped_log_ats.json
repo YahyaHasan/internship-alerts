@@ -1,11 +1,5 @@
 [
   {
-    "company": "Stryker",
-    "title": "Summer 2027 Internship \u2013 Finance \u2013 California",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-08-31T07:55:21.946175+00:00"
-  },
-  {
     "company": "NXP Semiconductors",
     "title": "HR Internship Student",
     "source": "Workday:NXP Semiconductors",
@@ -2998,5 +2992,11 @@
     "title": "Claim Professional Development Program Internship (CPDP Intern)",
     "source": "Workday:Travelers",
     "timestamp": "2026-09-25T17:40:17.242355+00:00"
+  },
+  {
+    "company": "Mach Industries",
+    "title": "Summer 2027 Engineering Internship, Aerospace",
+    "source": "Greenhouse:Mach Industries",
+    "timestamp": "2026-09-25T18:15:19.853336+00:00"
   }
 ]
