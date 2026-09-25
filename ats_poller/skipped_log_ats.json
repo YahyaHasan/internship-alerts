@@ -1,11 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "GE Vernova Product Management Intern \u2013 Controls Lifecare Services - Summer 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-08-30T18:20:26.162018+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - Government and Public Affairs",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Test Engineering Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-24T23:10:17.208888+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Applications Engineering  Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-09-25T07:00:59.538250+00:00"
   }
 ]
