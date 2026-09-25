@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Government and Public Affairs",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-30T21:30:20.202351+00:00"
-  },
-  {
     "company": "Eulerity",
     "title": "Internship, Finance",
     "source": "Greenhouse:Eulerity",
@@ -2998,5 +2992,11 @@
     "title": "Applications Engineering  Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-09-25T07:00:59.538250+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Claim Professional Development Program Internship (CPDP Intern)",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-09-25T14:50:20.075540+00:00"
   }
 ]
