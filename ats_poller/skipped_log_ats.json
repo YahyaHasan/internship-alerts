@@ -1,17 +1,5 @@
 [
   {
-    "company": "Prudential Financial",
-    "title": "Prudential: 2027 U.S. Businesses, Leadership Development Internship Program",
-    "source": "Workday:Prudential Financial",
-    "timestamp": "2026-08-31T04:00:24.280492+00:00"
-  },
-  {
-    "company": "IQVIA",
-    "title": "CRA Intern-KunTuo",
-    "source": "Workday:IQVIA",
-    "timestamp": "2026-08-31T04:05:16.608675+00:00"
-  },
-  {
     "company": "Stryker",
     "title": "Summer 2027 Internship - Finance - Michigan",
     "source": "Workday:Stryker",
@@ -2998,5 +2986,17 @@
     "title": "2027 Business Technology Solutions Intern - Cybersecurity (Undergraduate)",
     "source": "SmartRecruiters:AbbVie",
     "timestamp": "2026-09-25T15:40:16.616239+00:00"
+  },
+  {
+    "company": "AbbVie",
+    "title": "2027 Business Technology Solutions Intern - Cloud Engineering (Undergraduate)",
+    "source": "SmartRecruiters:AbbVie",
+    "timestamp": "2026-09-25T17:35:15.964449+00:00"
+  },
+  {
+    "company": "AbbVie",
+    "title": "2027 Business Technology Solutions Intern - Cloud Engineering (Undergraduate)",
+    "source": "SmartRecruiters:AbbVie",
+    "timestamp": "2026-09-25T17:35:15.964449+00:00"
   }
 ]
