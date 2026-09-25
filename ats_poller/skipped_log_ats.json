@@ -1,12 +1,6 @@
 [
   {
     "company": "Stryker",
-    "title": "Summer 2027 Internship - Medical Education - Michigan",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-08-31T13:25:17.395048+00:00"
-  },
-  {
-    "company": "Stryker",
     "title": "Summer 2027 Internship - Customer Success - Michigan",
     "source": "Workday:Stryker",
     "timestamp": "2026-08-31T13:25:17.395048+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - Research - Drug Metabolism - AI",
     "source": "Workday:Gilead Sciences",
     "timestamp": "2026-09-25T21:35:15.345002+00:00"
+  },
+  {
+    "company": "Gilead Sciences",
+    "title": "Intern -\u00a0Research\u00a0-\u00a0Discovery Sciences and Technologies - AI",
+    "source": "Workday:Gilead Sciences",
+    "timestamp": "2026-09-25T23:15:16.538611+00:00"
   }
 ]
