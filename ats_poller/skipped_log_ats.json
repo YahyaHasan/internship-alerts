@@ -1,17 +1,5 @@
 [
   {
-    "company": "Eulerity",
-    "title": "Internship, Finance",
-    "source": "Greenhouse:Eulerity",
-    "timestamp": "2026-08-30T23:40:15.289397+00:00"
-  },
-  {
-    "company": "Prudential Financial",
-    "title": "PGIM: 2027 Operations, Internship Program",
-    "source": "Workday:Prudential Financial",
-    "timestamp": "2026-08-31T04:00:24.280492+00:00"
-  },
-  {
     "company": "Prudential Financial",
     "title": "PGIM: 2027 Product and Institutional Client, Internship Program",
     "source": "Workday:Prudential Financial",
@@ -2998,5 +2986,17 @@
     "title": "Claim Professional Development Program Internship (CPDP Intern)",
     "source": "Workday:Travelers",
     "timestamp": "2026-09-25T14:50:20.075540+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "DOW SkillsBridge Intern \u2013 Semiconductor Equipment Technician",
+    "source": "Workday:Micron",
+    "timestamp": "2026-09-25T14:55:16.998938+00:00"
+  },
+  {
+    "company": "Meshy",
+    "title": "GTM Intern",
+    "source": "Ashby:Meshy",
+    "timestamp": "2026-09-25T14:55:16.998938+00:00"
   }
 ]
