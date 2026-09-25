@@ -1,12 +1,6 @@
 [
   {
     "company": "Prudential Financial",
-    "title": "PGIM: 2027 Product and Institutional Client, Internship Program",
-    "source": "Workday:Prudential Financial",
-    "timestamp": "2026-08-31T04:00:24.280492+00:00"
-  },
-  {
-    "company": "Prudential Financial",
     "title": "Prudential: 2027 U.S. Businesses, Leadership Development Internship Program",
     "source": "Workday:Prudential Financial",
     "timestamp": "2026-08-31T04:00:24.280492+00:00"
@@ -2998,5 +2992,11 @@
     "title": "GTM Intern",
     "source": "Ashby:Meshy",
     "timestamp": "2026-09-25T14:55:16.998938+00:00"
+  },
+  {
+    "company": "AbbVie",
+    "title": "2027 Business Technology Solutions Intern - Cybersecurity (Undergraduate)",
+    "source": "SmartRecruiters:AbbVie",
+    "timestamp": "2026-09-25T15:40:16.616239+00:00"
   }
 ]
