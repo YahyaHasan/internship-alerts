@@ -1,12 +1,6 @@
 [
   {
     "company": "Stryker",
-    "title": "Summer 2027 Internship - Finance - Michigan",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-08-31T05:05:15.955562+00:00"
-  },
-  {
-    "company": "Stryker",
     "title": "Summer 2027 Internship \u2013 Finance \u2013 California",
     "source": "Workday:Stryker",
     "timestamp": "2026-08-31T07:55:21.946175+00:00"
@@ -2998,5 +2992,11 @@
     "title": "2027 Business Technology Solutions Intern - Cloud Engineering (Undergraduate)",
     "source": "SmartRecruiters:AbbVie",
     "timestamp": "2026-09-25T17:35:15.964449+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Claim Professional Development Program Internship (CPDP Intern)",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-09-25T17:40:17.242355+00:00"
   }
 ]
