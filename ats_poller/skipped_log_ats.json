@@ -1,11 +1,5 @@
 [
   {
-    "company": "NXP Semiconductors",
-    "title": "HR Internship Student",
-    "source": "Workday:NXP Semiconductors",
-    "timestamp": "2026-08-31T10:10:17.800415+00:00"
-  },
-  {
     "company": "Stryker",
     "title": "Summer 2027 Internship - Medical Education - Michigan",
     "source": "Workday:Stryker",
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Engineering Internship, Aerospace",
     "source": "Greenhouse:Mach Industries",
     "timestamp": "2026-09-25T18:15:19.853336+00:00"
+  },
+  {
+    "company": "Gilead Sciences",
+    "title": "Intern - Research - Drug Metabolism - AI",
+    "source": "Workday:Gilead Sciences",
+    "timestamp": "2026-09-25T21:35:15.345002+00:00"
   }
 ]
