@@ -1,11 +1,5 @@
 [
   {
-    "company": "Stryker",
-    "title": "Summer 2027 Internship - Customer Success - Michigan",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-08-31T13:25:17.395048+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova Operations Intern - Customer Data Management 2027",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "Intern -\u00a0Research\u00a0-\u00a0Discovery Sciences and Technologies - AI",
     "source": "Workday:Gilead Sciences",
     "timestamp": "2026-09-25T23:15:16.538611+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "Aero New Units Commercial Internship 2027",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-09-27T20:55:13.983815+00:00"
   }
 ]
