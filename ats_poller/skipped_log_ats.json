@@ -1,12 +1,6 @@
 [
   {
     "company": "Stryker",
-    "title": "Summer 2027 Internship - Quality Engineering - Michigan",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-08-31T17:05:18.072818+00:00"
-  },
-  {
-    "company": "Stryker",
     "title": "Summer 2027 Internship - Quality Engineering - California",
     "source": "Workday:Stryker",
     "timestamp": "2026-08-31T17:15:18.855768+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Bond & Specialty Insurance Underwriting Professional Development Program (BSI UPDP Intern)",
     "source": "Workday:Travelers",
     "timestamp": "2026-09-28T19:35:16.405887+00:00"
+  },
+  {
+    "company": "Marvell",
+    "title": "Architecture Intern, MS - Summer 2027",
+    "source": "Workday:Marvell",
+    "timestamp": "2026-09-28T19:40:18.478637+00:00"
   }
 ]
