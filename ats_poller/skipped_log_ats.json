@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Mask Technology",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-31T16:00:20.828287+00:00"
-  },
-  {
     "company": "Motorola Solutions",
     "title": "Pricing and Profitability Intern (2027 Summer Internship)",
     "source": "Workday:Motorola Solutions",
@@ -2998,5 +2992,11 @@
     "title": "Cybersecurity Ops & Intelligence Intern",
     "source": "Workday:Otis Worldwide",
     "timestamp": "2026-09-28T19:10:18.220355+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern \u2013 Memory Systems Architecture & AI",
+    "source": "Workday:Micron",
+    "timestamp": "2026-09-28T19:25:17.301368+00:00"
   }
 ]
