@@ -1,11 +1,5 @@
 [
   {
-    "company": "3M",
-    "title": "Internship - 2027 Undergraduate IT Intern",
-    "source": "Workday:3M",
-    "timestamp": "2026-08-31T18:35:13.841014+00:00"
-  },
-  {
     "company": "Epic Games",
     "title": "Frontend Programmer Intern",
     "source": "Greenhouse:Epic Games",
@@ -2998,5 +2992,11 @@
     "title": "Intern -  HBM Design Development Technical Leadership (DDTL)",
     "source": "Workday:Micron",
     "timestamp": "2026-09-28T20:45:16.776802+00:00"
+  },
+  {
+    "company": "Lyft",
+    "title": "Applied Scientist Intern (Summer 2027)",
+    "source": "Greenhouse:Lyft",
+    "timestamp": "2026-09-28T21:45:18.757681+00:00"
   }
 ]
