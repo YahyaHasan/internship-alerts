@@ -1,17 +1,5 @@
 [
   {
-    "company": "Duke Energy",
-    "title": "Project Controls Internship - Summer 2027",
-    "source": "Workday:Duke Energy",
-    "timestamp": "2026-08-31T16:45:17.806474+00:00"
-  },
-  {
-    "company": "Duke Energy",
-    "title": "Project Management Internship - Summer 2027",
-    "source": "Workday:Duke Energy",
-    "timestamp": "2026-08-31T16:55:17.075764+00:00"
-  },
-  {
     "company": "Stryker",
     "title": "Summer 2027 Internship - Quality Engineering - Michigan",
     "source": "Workday:Stryker",
@@ -2998,5 +2986,17 @@
     "title": "Culture & Inclusion Intern",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-09-28T19:30:22.103563+00:00"
+  },
+  {
+    "company": "Waymo",
+    "title": "2027 Summer Intern, BS, Depot Automation",
+    "source": "Greenhouse:Waymo",
+    "timestamp": "2026-09-28T19:35:16.405887+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Bond & Specialty Insurance Underwriting Professional Development Program (BSI UPDP Intern)",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-09-28T19:35:16.405887+00:00"
   }
 ]
