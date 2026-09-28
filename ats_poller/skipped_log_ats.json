@@ -1,12 +1,6 @@
 [
   {
     "company": "Stryker",
-    "title": "Summer 2027 Internship - RA/QA - Quality Assurance - California",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-08-31T17:15:18.855768+00:00"
-  },
-  {
-    "company": "Stryker",
     "title": "Summer 2027 Internship - RA/QA - Regulatory Affairs - Michigan",
     "source": "Workday:Stryker",
     "timestamp": "2026-08-31T17:15:18.855768+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Technical Writing Intern",
     "source": "Workday:Illinois Tool Works",
     "timestamp": "2026-09-28T20:05:13.992647+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Signal Integrity",
+    "source": "Workday:Micron",
+    "timestamp": "2026-09-28T20:40:16.380239+00:00"
   }
 ]
