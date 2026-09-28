@@ -1,11 +1,5 @@
 [
   {
-    "company": "Epic Games",
-    "title": "Frontend Programmer Intern",
-    "source": "Greenhouse:Epic Games",
-    "timestamp": "2026-08-31T19:10:20.929788+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - RDA/Metrology-Process Shift Engineer, TD",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Applied Scientist Intern (Summer 2027)",
     "source": "Greenhouse:Lyft",
     "timestamp": "2026-09-28T21:45:18.757681+00:00"
+  },
+  {
+    "company": "Merck",
+    "title": "2027 Future Talent Program - Value & Implementation - Outcomes Research Intern",
+    "source": "Workday:Merck",
+    "timestamp": "2026-09-28T22:10:19.318701+00:00"
   }
 ]
