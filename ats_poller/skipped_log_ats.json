@@ -1,12 +1,6 @@
 [
   {
     "company": "Stryker",
-    "title": "Summer 2027 Internship - Quality Engineering - California",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-08-31T17:15:18.855768+00:00"
-  },
-  {
-    "company": "Stryker",
     "title": "Summer 2027 Internship - Clinical Affairs - New Jersey",
     "source": "Workday:Stryker",
     "timestamp": "2026-08-31T17:15:18.855768+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Architecture Intern, MS - Summer 2027",
     "source": "Workday:Marvell",
     "timestamp": "2026-09-28T19:40:18.478637+00:00"
+  },
+  {
+    "company": "Western Digital",
+    "title": "Winter 2027 Intern/Co-op Development Engineer ",
+    "source": "SmartRecruiters:Western Digital",
+    "timestamp": "2026-09-28T19:50:17.756255+00:00"
   }
 ]
