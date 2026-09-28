@@ -1,12 +1,6 @@
 [
   {
     "company": "Duke Energy",
-    "title": "Change Management Summer Internship - 2027",
-    "source": "Workday:Duke Energy",
-    "timestamp": "2026-08-31T15:25:16.088188+00:00"
-  },
-  {
-    "company": "Duke Energy",
     "title": "Substation / Line Tech Internship (Carolinas) - Summer 2027",
     "source": "Workday:Duke Energy",
     "timestamp": "2026-08-31T15:25:16.088188+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Corporate Functions Intern, Summer 2027 - United States",
     "source": "Workday:Mastercard Campus",
     "timestamp": "2026-09-28T15:35:15.956823+00:00"
+  },
+  {
+    "company": "Human Computer Lab",
+    "title": "Chief of Staff Intern",
+    "source": "Ashby:Human Computer Lab",
+    "timestamp": "2026-09-28T15:55:15.300955+00:00"
   }
 ]
