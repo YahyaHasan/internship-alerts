@@ -1,11 +1,5 @@
 [
   {
-    "company": "Motorola Solutions",
-    "title": "Pricing and Profitability Intern (2027 Summer Internship)",
-    "source": "Workday:Motorola Solutions",
-    "timestamp": "2026-08-31T16:15:23.437678+00:00"
-  },
-  {
     "company": "Duke Energy",
     "title": "Project Controls Internship - Summer 2027",
     "source": "Workday:Duke Energy",
@@ -2998,5 +2992,11 @@
     "title": "Intern \u2013 Memory Systems Architecture & AI",
     "source": "Workday:Micron",
     "timestamp": "2026-09-28T19:25:17.301368+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "Culture & Inclusion Intern",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-09-28T19:30:22.103563+00:00"
   }
 ]
