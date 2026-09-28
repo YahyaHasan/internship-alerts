@@ -1,11 +1,5 @@
 [
   {
-    "company": "Stryker",
-    "title": "Summer 2027 Internship - RA/QA - Regulatory Affairs - Michigan",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-08-31T17:15:18.855768+00:00"
-  },
-  {
     "company": "3M",
     "title": "Internship - 2027 Undergraduate IT Intern",
     "source": "Workday:3M",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Signal Integrity",
     "source": "Workday:Micron",
     "timestamp": "2026-09-28T20:40:16.380239+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern -  HBM Design Development Technical Leadership (DDTL)",
+    "source": "Workday:Micron",
+    "timestamp": "2026-09-28T20:45:16.776802+00:00"
   }
 ]
