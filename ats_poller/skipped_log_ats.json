@@ -1,11 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "GE Vernova Operations Intern - Customer Data Management 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-08-31T15:15:22.246625+00:00"
-  },
-  {
     "company": "Duke Energy",
     "title": "Environmental Health & Safety Internship - Summer 2027",
     "source": "Workday:Duke Energy",
@@ -2998,5 +2992,11 @@
     "title": "Aero New Units Commercial Internship 2027",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-09-27T20:55:13.983815+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Presales Systems Engineer - 2027 Internship",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-09-28T15:25:15.220371+00:00"
   }
 ]
