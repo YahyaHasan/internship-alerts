@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - EDE Thin Films Equipment Engineering",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-31T20:00:25.451824+00:00"
-  },
-  {
     "company": "Vanguard",
     "title": "Intern - C2C Business Leadership",
     "source": "Workday:Vanguard",
@@ -2998,5 +2992,11 @@
     "title": "GE Vernova GridOS  Project Engineer - Co-Op/Intern - January 2027-June 2027",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-09-29T12:50:18.555286+00:00"
+  },
+  {
+    "company": "Duke Energy",
+    "title": "Construction Management Summer Internship 2027 (OH)",
+    "source": "Workday:Duke Energy",
+    "timestamp": "2026-09-29T14:25:18.679592+00:00"
   }
 ]
