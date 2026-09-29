@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern - Environmental Engineer",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-08-31T20:30:19.514138+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - DRAM Process Integration",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Social Media Intern",
     "source": "Greenhouse:Nuro",
     "timestamp": "2026-09-29T19:15:27.145789+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Jr Product Owner - 2027 Summer Internship (Chicago Hybrid)",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-09-29T19:45:16.399516+00:00"
   }
 ]
