@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Dry Etch Equipment Development Engineering",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-31T19:55:16.921734+00:00"
-  },
-  {
     "company": "Motorola Solutions",
     "title": "Supplier Development Engineering Intern",
     "source": "Workday:Motorola Solutions",
@@ -2998,5 +2992,11 @@
     "title": "GMC Customer Advocacy & Engagement Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-09-29T01:45:24.446843+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "GMC Global Communications Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-09-29T02:55:25.070402+00:00"
   }
 ]
