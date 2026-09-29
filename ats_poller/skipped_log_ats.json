@@ -1,11 +1,5 @@
 [
   {
-    "company": "Vanguard",
-    "title": "Intern - C2C Business Leadership",
-    "source": "Workday:Vanguard",
-    "timestamp": "2026-08-31T20:25:15.026529+00:00"
-  },
-  {
     "company": "General Motors",
     "title": "2027 Summer Intern - Environmental Engineer",
     "source": "Workday:General Motors",
@@ -2998,5 +2992,11 @@
     "title": "Construction Management Summer Internship 2027 (OH)",
     "source": "Workday:Duke Energy",
     "timestamp": "2026-09-29T14:25:18.679592+00:00"
+  },
+  {
+    "company": "Nuro",
+    "title": "Social Media Intern",
+    "source": "Greenhouse:Nuro",
+    "timestamp": "2026-09-29T19:15:27.145789+00:00"
   }
 ]
