@@ -1,12 +1,6 @@
 [
   {
     "company": "Micron",
-    "title": "Intern - RDA/Metrology-Process Shift Engineer, TD",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-31T19:35:15.096225+00:00"
-  },
-  {
-    "company": "Micron",
     "title": "Intern - Dry Etch Equipment Development Engineering",
     "source": "Workday:Micron",
     "timestamp": "2026-08-31T19:55:16.921734+00:00"
@@ -2998,5 +2992,11 @@
     "title": "2027 Future Talent Program - Value & Implementation - Outcomes Research Intern",
     "source": "Workday:Merck",
     "timestamp": "2026-09-28T22:10:19.318701+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "GMC Customer Advocacy & Engagement Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-09-29T01:45:24.446843+00:00"
   }
 ]
