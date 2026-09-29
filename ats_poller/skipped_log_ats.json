@@ -1,11 +1,5 @@
 [
   {
-    "company": "Motorola Solutions",
-    "title": "Supplier Development Engineering Intern",
-    "source": "Workday:Motorola Solutions",
-    "timestamp": "2026-08-31T19:55:16.921734+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - EDE Thin Films Equipment Engineering",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "GMC Global Communications Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-09-29T02:55:25.070402+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "GE Vernova GridOS  Project Engineer - Co-Op/Intern - January 2027-June 2027",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-09-29T12:50:18.555286+00:00"
   }
 ]
