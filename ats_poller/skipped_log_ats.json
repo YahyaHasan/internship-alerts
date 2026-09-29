@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - DRAM Process Integration",
-    "source": "Workday:Micron",
-    "timestamp": "2026-08-31T20:45:20.699846+00:00"
-  },
-  {
     "company": "Rocket Lab",
     "title": "Inventory Specialist Intern",
     "source": "Greenhouse:Rocket Lab",
@@ -2998,5 +2992,11 @@
     "title": "Jr Product Owner - 2027 Summer Internship (Chicago Hybrid)",
     "source": "Workday:Motorola Solutions",
     "timestamp": "2026-09-29T19:45:16.399516+00:00"
+  },
+  {
+    "company": "Rockwell Automation",
+    "title": "Intern, Customer Success Professional",
+    "source": "Workday:Rockwell Automation",
+    "timestamp": "2026-09-29T20:05:18.337932+00:00"
   }
 ]
