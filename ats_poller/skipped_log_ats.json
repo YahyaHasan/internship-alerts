@@ -1,12 +1,6 @@
 [
   {
     "company": "Vanguard",
-    "title": "College to Corporate Internship - Finance",
-    "source": "Workday:Vanguard",
-    "timestamp": "2026-08-31T21:05:19.532602+00:00"
-  },
-  {
-    "company": "Vanguard",
     "title": "MBA Internship \u2013 General Management:",
     "source": "Workday:Vanguard",
     "timestamp": "2026-09-01T04:00:22.261531+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern, Compliance Engineering - Spring 2027",
     "source": "Ashby:Heron Power",
     "timestamp": "2026-09-29T21:55:16.843855+00:00"
+  },
+  {
+    "company": "Gilead Sciences",
+    "title": "Intern - Research - Medicinal Chemistry/ Structural Biology & Chemistry - AI",
+    "source": "Workday:Gilead Sciences",
+    "timestamp": "2026-09-30T05:00:23.447926+00:00"
   }
 ]
