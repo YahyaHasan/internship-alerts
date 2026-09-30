@@ -1,11 +1,5 @@
 [
   {
-    "company": "Amgen",
-    "title": "Undergrad Intern - Operations - New Albany, OH (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-09-01T15:00:31.612159+00:00"
-  },
-  {
     "company": "Waymo",
     "title": "2027 Summer Intern, MBA, Operations Planning",
     "source": "Greenhouse:Waymo",
@@ -2998,5 +2992,11 @@
     "title": "Applied Scientist Intern",
     "source": "Ashby:Ramp",
     "timestamp": "2026-09-30T18:55:15.626094+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Presales Systems Engineer - 2027 Internship",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-09-30T19:25:13.868649+00:00"
   }
 ]
