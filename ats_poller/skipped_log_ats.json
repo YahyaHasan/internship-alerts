@@ -1,17 +1,5 @@
 [
   {
-    "company": "Waymo",
-    "title": "2027 Summer Intern, MBA, Operations Planning",
-    "source": "Greenhouse:Waymo",
-    "timestamp": "2026-09-01T16:20:17.905097+00:00"
-  },
-  {
-    "company": "Stryker",
-    "title": "Summer 2027 Internship - Regulatory Affairs - Arizona",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-01T16:25:16.449208+00:00"
-  },
-  {
     "company": "Stryker",
     "title": "Summer 2027 Internship - Regulatory Affairs - California",
     "source": "Workday:Stryker",
@@ -2998,5 +2986,17 @@
     "title": "Presales Systems Engineer - 2027 Internship",
     "source": "Workday:Motorola Solutions",
     "timestamp": "2026-09-30T19:25:13.868649+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Mechatronics Engineering Internship",
+    "source": "Workday:KLA",
+    "timestamp": "2026-09-30T20:00:22.450598+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Mechatronics/Systems Engineering Internship",
+    "source": "Workday:KLA",
+    "timestamp": "2026-09-30T20:00:22.450598+00:00"
   }
 ]
