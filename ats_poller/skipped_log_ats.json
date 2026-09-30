@@ -1,12 +1,6 @@
 [
   {
     "company": "Travelers",
-    "title": "Operations Leadership Development Program (OLDP) Intern - Alpharetta, GA",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-01T04:00:22.261531+00:00"
-  },
-  {
-    "company": "Travelers",
     "title": "Operations Leadership Development Program (OLDP) Intern - Hartford, CT",
     "source": "Workday:Travelers",
     "timestamp": "2026-09-01T04:00:22.261531+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Social Media Intern - China",
     "source": "Ashby:Speak",
     "timestamp": "2026-09-30T05:45:17.459815+00:00"
+  },
+  {
+    "company": "Graphcore",
+    "title": "Digital Twin Engineering Intern",
+    "source": "Greenhouse:Graphcore",
+    "timestamp": "2026-09-30T08:45:18.215047+00:00"
   }
 ]
