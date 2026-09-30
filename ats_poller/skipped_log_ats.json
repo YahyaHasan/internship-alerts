@@ -1,11 +1,5 @@
 [
   {
-    "company": "AlixPartners",
-    "title": "Turnaround & Restructuring - MBA Intern",
-    "source": "Greenhouse:AlixPartners",
-    "timestamp": "2026-09-01T14:15:17.506414+00:00"
-  },
-  {
     "company": "Amgen",
     "title": "Undergrad Intern \u2013 Finance (Summer 2027)",
     "source": "Workday:Amgen",
@@ -2998,5 +2992,11 @@
     "title": "Product Engineer Intern, BS - Summer 2027",
     "source": "Workday:Marvell",
     "timestamp": "2026-09-30T17:45:18.589862+00:00"
+  },
+  {
+    "company": "Marvell",
+    "title": "Test Engineering Intern, MS - Summer 2027",
+    "source": "Workday:Marvell",
+    "timestamp": "2026-09-30T18:20:18.878377+00:00"
   }
 ]
