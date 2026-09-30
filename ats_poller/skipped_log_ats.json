@@ -1,12 +1,6 @@
 [
   {
     "company": "Amgen",
-    "title": "Undergrad Intern \u2013 Finance (Summer 2027)",
-    "source": "Workday:Amgen",
-    "timestamp": "2026-09-01T15:00:31.612159+00:00"
-  },
-  {
-    "company": "Amgen",
     "title": "Undergrad Intern - Operations - New Albany, OH (Summer 2027)",
     "source": "Workday:Amgen",
     "timestamp": "2026-09-01T15:00:31.612159+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Test Engineering Intern, MS - Summer 2027",
     "source": "Workday:Marvell",
     "timestamp": "2026-09-30T18:20:18.878377+00:00"
+  },
+  {
+    "company": "Ramp",
+    "title": "Applied Scientist Intern",
+    "source": "Ashby:Ramp",
+    "timestamp": "2026-09-30T18:55:15.626094+00:00"
   }
 ]
