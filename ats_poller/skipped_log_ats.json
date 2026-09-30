@@ -1,12 +1,6 @@
 [
   {
     "company": "Stryker",
-    "title": "Industrial Design Intern - Portage, MI",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-01T17:35:19.973193+00:00"
-  },
-  {
-    "company": "Stryker",
     "title": "Post Market Quality Engineering Intern",
     "source": "Workday:Stryker",
     "timestamp": "2026-09-01T17:55:18.349080+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Aero Fulfillment Project Management Internship - 2027",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-09-30T20:45:21.712990+00:00"
+  },
+  {
+    "company": "Rockwell Automation",
+    "title": "Intern, Digital Client",
+    "source": "Workday:Rockwell Automation",
+    "timestamp": "2026-09-30T21:45:16.664255+00:00"
   }
 ]
