@@ -1,11 +1,5 @@
 [
   {
-    "company": "Artisan Partners",
-    "title": "Total Rewards Intern",
-    "source": "Greenhouse:Artisan Partners",
-    "timestamp": "2026-09-01T18:15:17.015239+00:00"
-  },
-  {
     "company": "Vanguard",
     "title": "MBA Internship - Investment Management",
     "source": "Workday:Vanguard",
@@ -2998,5 +2992,11 @@
     "title": "Automation & Controls Engineering Intern (Winter 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-30T22:50:16.354787+00:00"
+  },
+  {
+    "company": "Astranis",
+    "title": "Radiation Effects Engineer Intern (Winter 2027)",
+    "source": "Greenhouse:Astranis",
+    "timestamp": "2026-09-30T23:20:15.886081+00:00"
   }
 ]
