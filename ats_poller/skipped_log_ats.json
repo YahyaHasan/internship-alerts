@@ -1,12 +1,6 @@
 [
   {
     "company": "Travelers",
-    "title": "Operations Leadership Development Program (OLDP) Intern - Richardson, TX",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-01T05:02:26.667077+00:00"
-  },
-  {
-    "company": "Travelers",
     "title": "Operations Leadership Development Program (OLDP) Intern- St. Paul, MN",
     "source": "Workday:Travelers",
     "timestamp": "2026-09-01T05:02:26.667077+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Knowledge Management and Training Project Intern",
     "source": "Greenhouse:Graphcore",
     "timestamp": "2026-09-30T08:50:17.292624+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Optical Engineer Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-09-30T14:10:21.605516+00:00"
   }
 ]
