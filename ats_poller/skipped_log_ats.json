@@ -1,17 +1,5 @@
 [
   {
-    "company": "Travelers",
-    "title": "Operations Leadership Development Program (OLDP) Intern - Centennial, CO",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-01T06:00:26.398926+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - EUV Lithography",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-01T06:10:18.666031+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "Grid Financial Planning & Analysis Intern",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2986,17 @@
     "title": "Product Development Engineering Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-09-30T14:20:18.125474+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Product Development Engineer Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-09-30T14:30:24.112269+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Product Development Engineer Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-09-30T14:30:24.112269+00:00"
   }
 ]
