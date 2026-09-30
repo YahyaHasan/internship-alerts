@@ -1,11 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "Sourcing Intern",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-01T10:00:37.080440+00:00"
-  },
-  {
     "company": "Truist Financial",
     "title": "2027 Wealth Internship Program",
     "source": "Workday:Truist Financial",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Electronics Design Engineer, Spring 2027",
     "source": "Ashby:Heron Power",
     "timestamp": "2026-09-30T15:10:34.525502+00:00"
+  },
+  {
+    "company": "Heron Power",
+    "title": "Intern, Medium Voltage Test Engineering",
+    "source": "Ashby:Heron Power",
+    "timestamp": "2026-09-30T16:00:27.240148+00:00"
   }
 ]
