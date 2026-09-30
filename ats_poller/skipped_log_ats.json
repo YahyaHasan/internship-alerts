@@ -1,12 +1,6 @@
 [
   {
     "company": "AlixPartners",
-    "title": "Strategy & Analysis - MBA Intern",
-    "source": "Greenhouse:AlixPartners",
-    "timestamp": "2026-09-01T14:10:22.042193+00:00"
-  },
-  {
-    "company": "AlixPartners",
     "title": "Turnaround & Restructuring - MBA Intern",
     "source": "Greenhouse:AlixPartners",
     "timestamp": "2026-09-01T14:15:17.506414+00:00"
@@ -2998,5 +2992,11 @@
     "title": "GE Vernova Internship \u2013 2027 Project Management Office",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-09-30T17:40:23.428975+00:00"
+  },
+  {
+    "company": "Marvell",
+    "title": "Product Engineer Intern, BS - Summer 2027",
+    "source": "Workday:Marvell",
+    "timestamp": "2026-09-30T17:45:18.589862+00:00"
   }
 ]
