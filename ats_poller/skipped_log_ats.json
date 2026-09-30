@@ -1,11 +1,5 @@
 [
   {
-    "company": "Prudential Financial",
-    "title": "Prudential: 2027 Corporate, Finance Internship Program (FIP)",
-    "source": "Workday:Prudential Financial",
-    "timestamp": "2026-09-01T04:00:22.261531+00:00"
-  },
-  {
     "company": "Travelers",
     "title": "Product Management Development Program (PMDP) Intern",
     "source": "Workday:Travelers",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Research - Medicinal Chemistry/ Structural Biology & Chemistry - AI",
     "source": "Workday:Gilead Sciences",
     "timestamp": "2026-09-30T05:10:18.087207+00:00"
+  },
+  {
+    "company": "Gilead Sciences",
+    "title": "Intern - Research - Medicinal Chemistry/ Structural Biology & Chemistry - AI",
+    "source": "Workday:Gilead Sciences",
+    "timestamp": "2026-09-30T05:20:17.993394+00:00"
   }
 ]
