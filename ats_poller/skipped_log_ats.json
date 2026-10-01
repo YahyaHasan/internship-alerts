@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern- Equipment Technician",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-03T14:30:22.809710+00:00"
-  },
-  {
     "company": "Stryker",
     "title": "Packaging Engineering Intern",
     "source": "Workday:Stryker",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Compute System Compatibility Engineer",
     "source": "Workday:Micron",
     "timestamp": "2026-10-01T20:25:16.649047+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Photolithography Process",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-01T21:25:15.877358+00:00"
   }
 ]
