@@ -1,11 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "GE Vernova Hitachi - Nuclear Licensing Intern - Summer 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-02T12:15:17.865703+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - Advanced DRAM Cell & Device Technology",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "PGO Cybersecurity Summer 2027 Internship",
     "source": "Workday:Duke Energy",
     "timestamp": "2026-10-01T13:40:18.919865+00:00"
+  },
+  {
+    "company": "Sezzle",
+    "title": "Compliance Intern ",
+    "source": "Greenhouse:Sezzle",
+    "timestamp": "2026-10-01T14:30:22.422841+00:00"
   }
 ]
