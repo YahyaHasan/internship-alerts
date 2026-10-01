@@ -1,12 +1,6 @@
 [
   {
     "company": "Stryker",
-    "title": "Summer 2027 Internship - Market Development - Michigan",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-01T23:25:22.442048+00:00"
-  },
-  {
-    "company": "Stryker",
     "title": "2027 Summer Intern - R&D Process & Technology Development",
     "source": "Workday:Stryker",
     "timestamp": "2026-09-01T23:30:20.219017+00:00"
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern - Program Management",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-01T04:35:12.817737+00:00"
+  },
+  {
+    "company": "Varda Space",
+    "title": "Thermal Engineering Internship - Summer 2027",
+    "source": "Greenhouse:Varda Space",
+    "timestamp": "2026-10-01T05:55:16.146059+00:00"
   }
 ]
