@@ -1,11 +1,5 @@
 [
   {
-    "company": "NXP Semiconductors",
-    "title": "Internship: Measurement Equipment and Laboratory Coordinator (m/f/d)\u00a0",
-    "source": "Workday:NXP Semiconductors",
-    "timestamp": "2026-09-02T08:30:27.368032+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova - Aeroderivative Industrialization Internship - Spring and Summer 2027",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "Formulation Science Internship - Summer 2027",
     "source": "Greenhouse:Varda Space",
     "timestamp": "2026-10-01T06:05:14.693039+00:00"
+  },
+  {
+    "company": "Varda Space",
+    "title": "Cybersecurity Internship - Summer 2027",
+    "source": "Greenhouse:Varda Space",
+    "timestamp": "2026-10-01T06:10:17.065576+00:00"
   }
 ]
