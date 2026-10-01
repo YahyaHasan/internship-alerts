@@ -1,11 +1,5 @@
 [
   {
-    "company": "Roblox",
-    "title": "[Summer 2027] Product Management Intern",
-    "source": "Greenhouse:Roblox",
-    "timestamp": "2026-09-02T16:45:15.509660+00:00"
-  },
-  {
     "company": "General Matter",
     "title": "Summer 2027 Internship - Civil Engineering",
     "source": "Greenhouse:General Matter",
@@ -2998,5 +2992,11 @@
     "title": "Industrial Engineering Co-Op Intern",
     "source": "Workday:Illinois Tool Works",
     "timestamp": "2026-10-01T15:40:19.974913+00:00"
+  },
+  {
+    "company": "CrowdStrike",
+    "title": "Professional Services Explorer Intern - Summer 2027 (Arlington, VA)",
+    "source": "Workday:CrowdStrike",
+    "timestamp": "2026-10-01T16:10:20.615158+00:00"
   }
 ]
