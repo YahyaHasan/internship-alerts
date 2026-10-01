@@ -1,12 +1,6 @@
 [
   {
     "company": "GE Vernova",
-    "title": "GE Vernova - Aeroderivative Industrialization Internship - Spring and Summer 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-02T11:40:18.865998+00:00"
-  },
-  {
-    "company": "GE Vernova",
     "title": "GE Vernova Hitachi - Nuclear Licensing Intern - Summer 2027",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-09-02T12:15:17.865703+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Cybersecurity Internship - Summer 2027",
     "source": "Greenhouse:Varda Space",
     "timestamp": "2026-10-01T06:10:17.065576+00:00"
+  },
+  {
+    "company": "Duke Energy",
+    "title": "PGO Cybersecurity Summer 2027 Internship",
+    "source": "Workday:Duke Energy",
+    "timestamp": "2026-10-01T13:40:18.919865+00:00"
   }
 ]
