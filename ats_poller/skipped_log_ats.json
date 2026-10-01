@@ -1,11 +1,5 @@
 [
   {
-    "company": "KLA",
-    "title": "Human Resource Intern",
-    "source": "Workday:KLA",
-    "timestamp": "2026-09-03T13:15:16.983447+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern- Equipment Technician",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Product Analytics Summer Intern - Start Date: May 24, 2027",
     "source": "Workday:Cigna",
     "timestamp": "2026-10-01T19:00:27.005985+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Compute System Compatibility Engineer",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-01T20:25:16.649047+00:00"
   }
 ]
