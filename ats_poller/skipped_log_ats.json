@@ -1,11 +1,5 @@
 [
   {
-    "company": "Formlabs",
-    "title": "Industrial Design Intern (Winter/Spring 2027)",
-    "source": "Greenhouse:Formlabs",
-    "timestamp": "2026-09-02T00:00:25.581858+00:00"
-  },
-  {
     "company": "NXP Semiconductors",
     "title": "Internship: Measurement Equipment and Laboratory Coordinator (m/f/d)\u00a0",
     "source": "Workday:NXP Semiconductors",
@@ -2998,5 +2992,11 @@
     "title": "Vehicle Integration & Test Internship - Summer 2027",
     "source": "Greenhouse:Varda Space",
     "timestamp": "2026-10-01T06:00:23.944813+00:00"
+  },
+  {
+    "company": "Varda Space",
+    "title": "Formulation Science Internship - Summer 2027",
+    "source": "Greenhouse:Varda Space",
+    "timestamp": "2026-10-01T06:05:14.693039+00:00"
   }
 ]
