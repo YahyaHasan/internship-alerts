@@ -1,11 +1,5 @@
 [
   {
-    "company": "Vanguard",
-    "title": "MBA Internship - Investment Management",
-    "source": "Workday:Vanguard",
-    "timestamp": "2026-09-01T18:35:17.370447+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova Global Projects Transformation Intern 2027",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "Radiation Effects Engineer Intern (Winter 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-30T23:20:15.886081+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Bond & Specialty Insurance Underwriting Professional Development Program (BSI UPDP) Internship",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-01T01:45:17.030494+00:00"
   }
 ]
