@@ -1,11 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "Logistics Intern",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-03T12:05:18.537237+00:00"
-  },
-  {
     "company": "KLA",
     "title": "Human Resource Intern",
     "source": "Workday:KLA",
@@ -2998,5 +2992,11 @@
     "title": "Photolithography Equipment Intern - Summer 2027",
     "source": "Workday:NXP Semiconductors",
     "timestamp": "2026-10-01T18:00:31.587209+00:00"
+  },
+  {
+    "company": "Cigna",
+    "title": "Product Analytics Summer Intern - Start Date: May 24, 2027",
+    "source": "Workday:Cigna",
+    "timestamp": "2026-10-01T19:00:27.005985+00:00"
   }
 ]
