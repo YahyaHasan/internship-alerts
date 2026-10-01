@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Matter",
-    "title": "Summer 2027 Internship - Civil Engineering",
-    "source": "Greenhouse:General Matter",
-    "timestamp": "2026-09-02T19:55:15.788412+00:00"
-  },
-  {
     "company": "Cohere",
     "title": "Early Careers & Interns Specialist",
     "source": "Ashby:Cohere",
@@ -2998,5 +2992,11 @@
     "title": "Professional Services Explorer Intern - Summer 2027 (Arlington, VA)",
     "source": "Workday:CrowdStrike",
     "timestamp": "2026-10-01T16:10:20.615158+00:00"
+  },
+  {
+    "company": "Varda Space",
+    "title": "Aerodynamics & Analysis Engineering Internship - Summer 2027",
+    "source": "Greenhouse:Varda Space",
+    "timestamp": "2026-10-01T16:30:22.845687+00:00"
   }
 ]
