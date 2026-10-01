@@ -1,17 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Advanced DRAM Cell & Device Technology",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-02T16:00:25.848170+00:00"
-  },
-  {
-    "company": "Xylem",
-    "title": "Internal Communications Intern",
-    "source": "Workday:Xylem",
-    "timestamp": "2026-09-02T16:30:20.496060+00:00"
-  },
-  {
     "company": "Roblox",
     "title": "[Summer 2027] Product Design Intern",
     "source": "Greenhouse:Roblox",
@@ -2998,5 +2986,17 @@
     "title": "Compliance Intern ",
     "source": "Greenhouse:Sezzle",
     "timestamp": "2026-10-01T14:30:22.422841+00:00"
+  },
+  {
+    "company": "Stripe",
+    "title": "Data Analyst, Intern",
+    "source": "Greenhouse:Stripe",
+    "timestamp": "2026-10-01T15:10:23.291171+00:00"
+  },
+  {
+    "company": "Stripe",
+    "title": "Data Analyst, Intern",
+    "source": "Greenhouse:Stripe",
+    "timestamp": "2026-10-01T15:10:23.291171+00:00"
   }
 ]
