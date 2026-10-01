@@ -1,11 +1,5 @@
 [
   {
-    "company": "Hermeus",
-    "title": "Environmental, Health, and Safety (EHS) Intern - 2027",
-    "source": "Lever:Hermeus",
-    "timestamp": "2026-09-01T18:55:15.861835+00:00"
-  },
-  {
     "company": "Stryker",
     "title": "Summer 2027 Internship - Market Development - Michigan",
     "source": "Workday:Stryker",
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Intern - Computational Design Intern",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-01T04:00:23.802938+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "2027 Summer Intern - Program Management",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-10-01T04:35:12.817737+00:00"
   }
 ]
