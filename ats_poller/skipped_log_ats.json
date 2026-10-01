@@ -1,12 +1,6 @@
 [
   {
     "company": "Roblox",
-    "title": "[Summer 2027] Product Design Intern",
-    "source": "Greenhouse:Roblox",
-    "timestamp": "2026-09-02T16:45:15.509660+00:00"
-  },
-  {
-    "company": "Roblox",
     "title": "[Summer 2027] Product Management Intern",
     "source": "Greenhouse:Roblox",
     "timestamp": "2026-09-02T16:45:15.509660+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Data Analyst, Intern",
     "source": "Greenhouse:Stripe",
     "timestamp": "2026-10-01T15:10:23.291171+00:00"
+  },
+  {
+    "company": "Illinois Tool Works",
+    "title": "Industrial Engineering Co-Op Intern",
+    "source": "Workday:Illinois Tool Works",
+    "timestamp": "2026-10-01T15:40:19.974913+00:00"
   }
 ]
