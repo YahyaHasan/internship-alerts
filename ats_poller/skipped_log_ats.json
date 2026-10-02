@@ -1,29 +1,5 @@
 [
   {
-    "company": "NXP Semiconductors",
-    "title": "Internship - Understanding the reliability of advanced laminate-based electronic packages at NXP",
-    "source": "Workday:NXP Semiconductors",
-    "timestamp": "2026-09-04T14:40:16.004270+00:00"
-  },
-  {
-    "company": "GE Vernova",
-    "title": "GE Vernova - Advanced Nuclear Project Management Intern - Summer 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-04T15:00:24.035122+00:00"
-  },
-  {
-    "company": "Thermo Fisher Scientific",
-    "title": "TMF Support Coordinator Intern with English",
-    "source": "Workday:Thermo Fisher Scientific",
-    "timestamp": "2026-09-04T15:25:17.244749+00:00"
-  },
-  {
-    "company": "Stryker",
-    "title": "Product Interaction Design Intern - Portage, MI",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-04T15:45:18.617476+00:00"
-  },
-  {
     "company": "Stryker",
     "title": "Packaging Engineer - Intern",
     "source": "Workday:Stryker",
@@ -2998,5 +2974,29 @@
     "title": "ASIC Engineering Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-02T16:55:16.983654+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Business Insurance Underwriting Professional Development Program (BI UPDP) Internship",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-02T20:05:20.601222+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Business Insurance Underwriting Professional Development Program (BI UPDP) Internship",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-02T20:05:20.601222+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Bond & Specialty Underwriting Professional Development Program (BSI UPDP) Internship",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-02T20:05:20.601222+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Bond & Specialty Insurance Underwriting Professional Development Program (BSI UPDP) Internship",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-02T20:05:20.601222+00:00"
   }
 ]
