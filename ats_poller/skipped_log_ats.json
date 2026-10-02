@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Photomask Yield Enhancement",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-04T18:25:13.326102+00:00"
-  },
-  {
     "company": "Duke Energy",
     "title": "Vehicle Maintenance Technician Internship - 2027",
     "source": "Workday:Duke Energy",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern, Perception - Perception Data Foundations",
     "source": "Greenhouse:Waymo",
     "timestamp": "2026-10-02T21:25:14.778104+00:00"
+  },
+  {
+    "company": "Dryft",
+    "title": "Founder\u2019s Associate Intern",
+    "source": "Ashby:Dryft",
+    "timestamp": "2026-10-02T22:25:13.863418+00:00"
   }
 ]
