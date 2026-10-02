@@ -1,17 +1,5 @@
 [
   {
-    "company": "Otis Worldwide",
-    "title": "Logistics Analyst Intern",
-    "source": "Workday:Otis Worldwide",
-    "timestamp": "2026-09-04T14:15:16.998429+00:00"
-  },
-  {
-    "company": "GE Vernova",
-    "title": "GE Vernova Advanced Research Fellow Intern - Power Systems, Electric Machines & High Voltage - Summer 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-04T14:20:23.864271+00:00"
-  },
-  {
     "company": "NXP Semiconductors",
     "title": "Internship - Understanding the reliability of advanced laminate-based electronic packages at NXP",
     "source": "Workday:NXP Semiconductors",
@@ -2998,5 +2986,17 @@
     "title": "RRE Engineering Internship & Co-op Program - Summer 2027",
     "source": "Workday:Duke Energy",
     "timestamp": "2026-10-02T16:45:19.554745+00:00"
+  },
+  {
+    "company": "Duke Energy",
+    "title": "UX Design Internship \u2013 Summer 2027",
+    "source": "Workday:Duke Energy",
+    "timestamp": "2026-10-02T16:55:16.983654+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "ASIC Engineering Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-02T16:55:16.983654+00:00"
   }
 ]
