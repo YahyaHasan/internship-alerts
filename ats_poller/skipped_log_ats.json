@@ -1,11 +1,5 @@
 [
   {
-    "company": "Stryker",
-    "title": "Packaging Engineer - Intern",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-04T18:05:18.503709+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - Photomask Yield Enhancement",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Bond & Specialty Insurance Underwriting Professional Development Program (BSI UPDP) Internship",
     "source": "Workday:Travelers",
     "timestamp": "2026-10-02T20:05:20.601222+00:00"
+  },
+  {
+    "company": "Waymo",
+    "title": "2027 Summer Intern, Perception - Perception Data Foundations",
+    "source": "Greenhouse:Waymo",
+    "timestamp": "2026-10-02T21:25:14.778104+00:00"
   }
 ]
