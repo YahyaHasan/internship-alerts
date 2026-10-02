@@ -1,11 +1,5 @@
 [
   {
-    "company": "Stryker",
-    "title": "Packaging Engineering Intern",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-03T23:55:15.620787+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova Nuclear Engineering Intern - Summer 2027",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Photolithography Process",
     "source": "Workday:Micron",
     "timestamp": "2026-10-01T21:25:15.877358+00:00"
+  },
+  {
+    "company": "Squarepoint Capital",
+    "title": "Equities Analyst Summer Internship Program",
+    "source": "Greenhouse:Squarepoint Capital",
+    "timestamp": "2026-10-02T04:00:23.031715+00:00"
   }
 ]
