@@ -1,12 +1,6 @@
 [
   {
     "company": "Otis Worldwide",
-    "title": "Global Internal Controls PMO Intern",
-    "source": "Workday:Otis Worldwide",
-    "timestamp": "2026-09-04T13:05:14.213114+00:00"
-  },
-  {
-    "company": "Otis Worldwide",
     "title": "Project Management Intern - Product Development",
     "source": "Workday:Otis Worldwide",
     "timestamp": "2026-09-04T13:25:24.535055+00:00"
@@ -2998,5 +2992,11 @@
     "title": "College to Corporate IT Internship-Risk & Security-Engineer (NC)",
     "source": "Workday:Vanguard",
     "timestamp": "2026-10-02T14:35:18.130232+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "2027 Summer Intern - Systems/Calibration Engineer, ADAS Drive",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-10-02T15:25:14.611678+00:00"
   }
 ]
