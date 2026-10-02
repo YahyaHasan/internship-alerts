@@ -1,17 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "GE Vernova Nuclear Engineering Intern - Summer 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-04T12:15:20.190765+00:00"
-  },
-  {
-    "company": "GE Vernova",
-    "title": "GE Vernova Contract Management Internship - Summer2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-04T12:35:17.176529+00:00"
-  },
-  {
     "company": "Otis Worldwide",
     "title": "Global Internal Controls PMO Intern",
     "source": "Workday:Otis Worldwide",
@@ -2998,5 +2986,17 @@
     "title": "Equities Analyst Summer Internship Program",
     "source": "Greenhouse:Squarepoint Capital",
     "timestamp": "2026-10-02T04:00:23.031715+00:00"
+  },
+  {
+    "company": "Vanguard",
+    "title": "College to Corporate IT Internship-Risk & Security Engineer (PA)",
+    "source": "Workday:Vanguard",
+    "timestamp": "2026-10-02T14:35:18.130232+00:00"
+  },
+  {
+    "company": "Vanguard",
+    "title": "College to Corporate IT Internship-Risk & Security-Engineer (NC)",
+    "source": "Workday:Vanguard",
+    "timestamp": "2026-10-02T14:35:18.130232+00:00"
   }
 ]
