@@ -1,12 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "2027 Future Talent Program \u2013 Discovery Oncology \u2013 Intern (South San Francisco, CA)",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-08T07:45:17.602072+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "2027 Future Talent Program \u2013 Global Healthcare Leader \u2013 Intern",
     "source": "Workday:Merck",
     "timestamp": "2026-09-08T07:45:17.602072+00:00"
@@ -2998,5 +2992,11 @@
     "title": "RF Engineering Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-10-05T16:30:21.130014+00:00"
+  },
+  {
+    "company": "Rockwell Automation",
+    "title": "Intern, Application Engineer",
+    "source": "Workday:Rockwell Automation",
+    "timestamp": "2026-10-05T17:25:16.539057+00:00"
   }
 ]
