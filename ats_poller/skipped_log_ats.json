@@ -1,11 +1,5 @@
 [
   {
-    "company": "Thermo Fisher Scientific",
-    "title": "Microbiology Intern",
-    "source": "Workday:Thermo Fisher Scientific",
-    "timestamp": "2026-09-08T06:00:22.539752+00:00"
-  },
-  {
     "company": "Merck",
     "title": "2027 Future Talent Program - Analytical Chemistry Research - Intern",
     "source": "Workday:Merck",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Next-Generation HBM Architecture",
     "source": "Workday:Micron",
     "timestamp": "2026-10-05T16:10:18.492908+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Next Gen HBM Platform Arch",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-05T16:15:22.470696+00:00"
   }
 ]
