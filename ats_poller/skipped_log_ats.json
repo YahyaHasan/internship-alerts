@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "2027 Semester Internship",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-07T03:35:14.822215+00:00"
-  },
-  {
     "company": "General Motors",
     "title": "Packaging Engineering Intern",
     "source": "Workday:General Motors",
@@ -2998,5 +2992,11 @@
     "title": "People Care HR AI Agent - Process Improvement Project Management Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-05T02:35:15.682163+00:00"
+  },
+  {
+    "company": "Wabtec",
+    "title": "Corporate Communications Intern",
+    "source": "SmartRecruiters:Wabtec",
+    "timestamp": "2026-10-05T13:40:19.137749+00:00"
   }
 ]
