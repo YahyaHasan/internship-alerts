@@ -1,17 +1,5 @@
 [
   {
-    "company": "Applied Materials",
-    "title": "Summer 2027 Industrial Engineering Intern- Bachelor's (Santa Clara, CA)",
-    "source": "Workday:Applied Materials",
-    "timestamp": "2026-09-04T22:40:15.738816+00:00"
-  },
-  {
-    "company": "Marvell",
-    "title": "Advanced Packaging Intern, MS - Summer 2027",
-    "source": "Workday:Marvell",
-    "timestamp": "2026-09-05T22:00:22.920777+00:00"
-  },
-  {
     "company": "Micron",
     "title": "2027 Semester Internship",
     "source": "Workday:Micron",
@@ -2998,5 +2986,17 @@
     "title": "Intern - Memory Design Engineer, HBM",
     "source": "Workday:Micron",
     "timestamp": "2026-10-05T00:35:14.281031+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "VLSI Design Verification Internship",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-05T02:35:15.682163+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "People Care HR AI Agent - Process Improvement Project Management Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-05T02:35:15.682163+00:00"
   }
 ]
