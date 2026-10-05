@@ -1,18 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "2027 Future Talent Program - Vaccines Process R&D Downstream -  Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-07T04:55:14.565564+00:00"
-  },
-  {
-    "company": "Merck",
-    "title": "2027 Future Talent Program - Vaccines Process R&D Upstream - Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-07T04:55:14.565564+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "Graduate Program - Medical & Scientific Affairs Intern",
     "source": "Workday:Merck",
     "timestamp": "2026-09-07T14:10:18.723357+00:00"
@@ -2998,5 +2986,17 @@
     "title": "Summer 2027 Intern - Industrial Design",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-05T14:05:18.967121+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "TSE R&D Equipment Project Manager (Intern)",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-05T14:20:25.725064+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Prototype Engineer Intern - Summer 2027",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-10-05T14:20:25.725064+00:00"
   }
 ]
