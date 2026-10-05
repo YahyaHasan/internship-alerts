@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "Packaging Engineering Intern",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-07T04:20:15.409658+00:00"
-  },
-  {
     "company": "Merck",
     "title": "2027 Future Talent Program - Vaccines Process R&D Downstream -  Intern",
     "source": "Workday:Merck",
@@ -2998,5 +2992,11 @@
     "title": "Corporate Communications Intern",
     "source": "SmartRecruiters:Wabtec",
     "timestamp": "2026-10-05T13:40:19.137749+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "Summer 2027 Intern - Industrial Design",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-10-05T14:05:18.967121+00:00"
   }
 ]
