@@ -1,11 +1,5 @@
 [
   {
-    "company": "Cigna",
-    "title": "Pharmacy Underwriting Summer Internship Program",
-    "source": "Workday:Cigna",
-    "timestamp": "2026-09-08T04:40:18.323270+00:00"
-  },
-  {
     "company": "Thermo Fisher Scientific",
     "title": "Microbiology Intern",
     "source": "Workday:Thermo Fisher Scientific",
@@ -2998,5 +2992,11 @@
     "title": "Intern - SSD Architecture Modeling",
     "source": "Workday:Micron",
     "timestamp": "2026-10-05T15:35:16.078891+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Next-Generation HBM Architecture",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-05T16:10:18.492908+00:00"
   }
 ]
