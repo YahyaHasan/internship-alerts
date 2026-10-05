@@ -1,11 +1,5 @@
 [
   {
-    "company": "Merck",
-    "title": "Graduate Program - Medical & Scientific Affairs Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-07T14:10:18.723357+00:00"
-  },
-  {
     "company": "Cigna",
     "title": "Pharmacy Underwriting Summer Internship Program",
     "source": "Workday:Cigna",
@@ -2998,5 +2992,11 @@
     "title": "Prototype Engineer Intern - Summer 2027",
     "source": "Workday:Motorola Solutions",
     "timestamp": "2026-10-05T14:20:25.725064+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - SSD Architecture Modeling",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-05T15:35:16.078891+00:00"
   }
 ]
