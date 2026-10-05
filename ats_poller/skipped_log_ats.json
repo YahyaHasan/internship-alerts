@@ -1,11 +1,5 @@
 [
   {
-    "company": "Red Hat",
-    "title": "Business Analyst Intern",
-    "source": "Workday:Red Hat",
-    "timestamp": "2026-09-08T13:20:16.190611+00:00"
-  },
-  {
     "company": "Truist Financial",
     "title": "2027 Corporate Banking - Summer Analyst Program (Internship) \u2013 Atlanta, GA",
     "source": "Workday:Truist Financial",
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Intern - Project Management (Creative Design)",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-05T21:14:59.875711+00:00"
+  },
+  {
+    "company": "Heron Power",
+    "title": "Intern, Graphic Design ",
+    "source": "Ashby:Heron Power",
+    "timestamp": "2026-10-05T21:40:18.088136+00:00"
   }
 ]
