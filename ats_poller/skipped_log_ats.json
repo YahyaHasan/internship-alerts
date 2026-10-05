@@ -1,23 +1,5 @@
 [
   {
-    "company": "RRS Group",
-    "title": "I-O Psychology \u2013 Talent Assessment Graduate Intern (Summer 2027)",
-    "source": "SmartRecruiters:RRS Group",
-    "timestamp": "2026-09-08T09:35:13.017876+00:00"
-  },
-  {
-    "company": "Travelers",
-    "title": "Claim Professional Development Program (CPDP) Intern",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-08T12:45:15.483828+00:00"
-  },
-  {
-    "company": "Travelers",
-    "title": "Claim Professional Development Program (CPDP) Intern",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-08T12:45:15.483828+00:00"
-  },
-  {
     "company": "Red Hat",
     "title": "Business Analyst Intern",
     "source": "Workday:Red Hat",
@@ -2998,5 +2980,23 @@
     "title": "Intern - Design Architecture, HBM",
     "source": "Workday:Micron",
     "timestamp": "2026-10-05T18:40:22.811175+00:00"
+  },
+  {
+    "company": "Duolingo",
+    "title": "Illustrator, Intern",
+    "source": "Greenhouse:Duolingo",
+    "timestamp": "2026-10-05T21:14:59.875711+00:00"
+  },
+  {
+    "company": "General Matter",
+    "title": "Summer 2027 Internship - Information Technology",
+    "source": "Greenhouse:General Matter",
+    "timestamp": "2026-10-05T21:14:59.875711+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "Summer 2027 Intern - Project Management (Creative Design)",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-10-05T21:14:59.875711+00:00"
   }
 ]
