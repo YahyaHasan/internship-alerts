@@ -1,12 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "2027 Future Talent Program - Protein & Structural Chemistry - Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-08T07:45:17.602072+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "2027 Future Talent Program - Quantitative Biosciences, Cellular Pharmacology & Lead Discovery - Intern",
     "source": "Workday:Merck",
     "timestamp": "2026-09-08T07:45:17.602072+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - Engineer, HIG HBM DTPCO",
     "source": "Workday:Micron",
     "timestamp": "2026-10-05T17:30:34.782056+00:00"
+  },
+  {
+    "company": "Adobe",
+    "title": "2027 Intern - Applied and Research Scientist/Engineer",
+    "source": "Workday:Adobe",
+    "timestamp": "2026-10-05T17:50:18.761333+00:00"
   }
 ]
