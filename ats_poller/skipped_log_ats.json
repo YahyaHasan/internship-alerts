@@ -1,17 +1,5 @@
 [
   {
-    "company": "Coinbase",
-    "title": "Policy Intern",
-    "source": "Greenhouse:Coinbase",
-    "timestamp": "2026-09-09T00:10:17.491621+00:00"
-  },
-  {
-    "company": "Marvell",
-    "title": "Advanced Packaging Intern, BS - Summer 2027",
-    "source": "Workday:Marvell",
-    "timestamp": "2026-09-09T00:25:12.758878+00:00"
-  },
-  {
     "company": "Conagra Brands",
     "title": "Summer 2027 - Brand Management Internship",
     "source": "Workday:Conagra Brands",
@@ -2998,5 +2986,17 @@
     "title": "Summer 2027 Internship - Project Management - California",
     "source": "Workday:Stryker",
     "timestamp": "2026-10-06T19:20:20.681733+00:00"
+  },
+  {
+    "company": "Nvidia",
+    "title": "PCIe Design Verification Intern - Spring 2027",
+    "source": "Workday:Nvidia",
+    "timestamp": "2026-10-06T19:40:21.957363+00:00"
+  },
+  {
+    "company": "Nvidia",
+    "title": "PCIe Design Verification Intern - Summer 2027",
+    "source": "Workday:Nvidia",
+    "timestamp": "2026-10-06T19:40:21.957363+00:00"
   }
 ]
