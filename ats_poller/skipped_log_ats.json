@@ -1,12 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "2027 Future Talent Program - Process/Project Engineer - Global Engineering Solutions Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-09T14:10:17.713069+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "2027 Future Talent Program - Wilson Packaging Site Summer Internship",
     "source": "Workday:Merck",
     "timestamp": "2026-09-09T14:10:17.713069+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Security Engineer Intern [Winter 2027]",
     "source": "Greenhouse:Figure AI",
     "timestamp": "2026-10-06T23:00:22.798154+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "GE Vernova Battery Engineering & Technology Intern - Summer 2027",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-10-06T23:25:16.027464+00:00"
   }
 ]
