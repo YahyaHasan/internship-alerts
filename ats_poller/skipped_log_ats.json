@@ -1,11 +1,5 @@
 [
   {
-    "company": "Stryker",
-    "title": "Summer 2027 Internship - Interaction Design - Washington",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-08T15:20:18.867335+00:00"
-  },
-  {
     "company": "Syska Hennessy Group",
     "title": "Plumbing Engineering Summer Intern",
     "source": "Greenhouse:Syska Hennessy Group",
@@ -2998,5 +2992,11 @@
     "title": "Technology Risk Management Intern, Summer 2027 \u2013 St. Louis, MO, US",
     "source": "Workday:Mastercard Campus",
     "timestamp": "2026-10-06T00:15:19.735178+00:00"
+  },
+  {
+    "company": "Dryft",
+    "title": "Founders Associate Intern",
+    "source": "Ashby:Dryft",
+    "timestamp": "2026-10-06T00:20:19.617512+00:00"
   }
 ]
