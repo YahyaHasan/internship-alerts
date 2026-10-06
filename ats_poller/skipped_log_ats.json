@@ -1,11 +1,5 @@
 [
   {
-    "company": "Applied Materials",
-    "title": "Chemist Intern (Bachelors/Masters - Santa Clara, CA)",
-    "source": "Workday:Applied Materials",
-    "timestamp": "2026-09-08T23:55:13.678004+00:00"
-  },
-  {
     "company": "Coinbase",
     "title": "Policy Intern",
     "source": "Greenhouse:Coinbase",
@@ -2998,5 +2992,11 @@
     "title": "Local IT Support Internship (Huntersville, NC) - Summer 2027",
     "source": "Workday:Duke Energy",
     "timestamp": "2026-10-06T19:15:18.627930+00:00"
+  },
+  {
+    "company": "Stryker",
+    "title": "Summer 2027 Internship - Project Management - California",
+    "source": "Workday:Stryker",
+    "timestamp": "2026-10-06T19:20:20.681733+00:00"
   }
 ]
