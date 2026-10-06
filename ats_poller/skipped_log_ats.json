@@ -1,12 +1,6 @@
 [
   {
     "company": "Coinbase",
-    "title": "User Research Intern",
-    "source": "Greenhouse:Coinbase",
-    "timestamp": "2026-09-08T22:20:18.726184+00:00"
-  },
-  {
-    "company": "Coinbase",
     "title": "Employee and Workplace Experience Intern",
     "source": "Greenhouse:Coinbase",
     "timestamp": "2026-09-08T22:25:14.514923+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Equipment Engineer Intern - Summer 2027",
     "source": "Workday:NXP Semiconductors",
     "timestamp": "2026-10-06T17:10:19.078032+00:00"
+  },
+  {
+    "company": "NXP Semiconductors",
+    "title": "Project Engineer / Project Management Intern - Summer 2027",
+    "source": "Workday:NXP Semiconductors",
+    "timestamp": "2026-10-06T17:20:19.804873+00:00"
   }
 ]
