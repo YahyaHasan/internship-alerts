@@ -1,11 +1,5 @@
 [
   {
-    "company": "Syska Hennessy Group",
-    "title": "Plumbing Engineering Summer Intern",
-    "source": "Greenhouse:Syska Hennessy Group",
-    "timestamp": "2026-09-08T15:45:16.833857+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "Intern \u2013 Hot Gas Path Value Engineering & Project Management",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "Founders Associate Intern",
     "source": "Ashby:Dryft",
     "timestamp": "2026-10-06T00:20:19.617512+00:00"
+  },
+  {
+    "company": "Mastercard Campus",
+    "title": "Security Engineering & Enablement Intern, Summer 2027 \u2013 St. Louis, MO, US",
+    "source": "Workday:Mastercard Campus",
+    "timestamp": "2026-10-06T01:30:24.272718+00:00"
   }
 ]
