@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern \u2013 OnStar Super Cruise Monetization Intern\u00a0",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-08T22:40:53.031077+00:00"
-  },
-  {
     "company": "Coinbase",
     "title": "Learning & Development Intern",
     "source": "Greenhouse:Coinbase",
@@ -2998,5 +2992,11 @@
     "title": "PLM BI & Analytics Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-10-06T18:15:18.525293+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Digital Twin Eng Apps Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-10-06T18:25:16.074351+00:00"
   }
 ]
