@@ -1,11 +1,5 @@
 [
   {
-    "company": "Intel",
-    "title": "Module Engineering PhD Intern - Wet Etch",
-    "source": "Workday:Intel",
-    "timestamp": "2026-09-10T15:35:14.934861+00:00"
-  },
-  {
     "company": "Illinois Tool Works",
     "title": "Project Engineer Intern",
     "source": "Workday:Illinois Tool Works",
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Quantitative Research Intern",
     "source": "Greenhouse:PDT Partners",
     "timestamp": "2026-10-07T20:20:17.908885+00:00"
+  },
+  {
+    "company": "Human Computer Lab",
+    "title": "Intern - Mechatronics Engineer",
+    "source": "Ashby:Human Computer Lab",
+    "timestamp": "2026-10-07T21:20:25.939109+00:00"
   }
 ]
