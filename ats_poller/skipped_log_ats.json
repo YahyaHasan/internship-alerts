@@ -1,11 +1,5 @@
 [
   {
-    "company": "Merck",
-    "title": "2027 Future Talent Program \u2013 Biocatalysis Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-09T22:10:17.229849+00:00"
-  },
-  {
     "company": "Rocket Lab",
     "title": "Fluid Component Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
@@ -2998,5 +2992,11 @@
     "title": "Security Infrastructure Engineering & Architecture Intern, Summer 2027 \u2013 Arlington, VA, US",
     "source": "Workday:Mastercard Campus",
     "timestamp": "2026-10-07T14:40:17.856500+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "2027 Summer Intern, Systems Engineer, ASD",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-10-07T15:35:16.456143+00:00"
   }
 ]
