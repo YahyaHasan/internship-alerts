@@ -1,11 +1,5 @@
 [
   {
-    "company": "Epic Games",
-    "title": "UI Programmer Intern",
-    "source": "Greenhouse:Epic Games",
-    "timestamp": "2026-09-10T00:25:16.313814+00:00"
-  },
-  {
     "company": "Red Hat",
     "title": "Commercial Programs Analyst Intern",
     "source": "Workday:Red Hat",
@@ -2998,5 +2992,11 @@
     "title": "Business Process Mining & Intelligence Analyst Intern, BS - Summer 2027",
     "source": "Workday:Marvell",
     "timestamp": "2026-10-07T18:00:29.906190+00:00"
+  },
+  {
+    "company": "Analog Devices",
+    "title": "Process Sustaining Engineering Intern",
+    "source": "Workday:Analog Devices",
+    "timestamp": "2026-10-07T19:45:19.819352+00:00"
   }
 ]
