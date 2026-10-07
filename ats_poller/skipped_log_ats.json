@@ -1,12 +1,6 @@
 [
   {
     "company": "Rocket Lab",
-    "title": "Fluid Component Intern Summer 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-09T22:55:17.568012+00:00"
-  },
-  {
-    "company": "Rocket Lab",
     "title": "Fluid Systems Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-09T22:55:17.568012+00:00"
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern, Systems Engineer, ASD",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-07T15:35:16.456143+00:00"
+  },
+  {
+    "company": "Merck",
+    "title": "2027 Future Talent Program - Global Communications - Intern",
+    "source": "Workday:Merck",
+    "timestamp": "2026-10-07T16:10:17.978589+00:00"
   }
 ]
