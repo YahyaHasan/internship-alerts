@@ -1,11 +1,5 @@
 [
   {
-    "company": "Thermo Fisher Scientific",
-    "title": "Supplier Relations Intern",
-    "source": "Workday:Thermo Fisher Scientific",
-    "timestamp": "2026-09-09T15:30:24.936963+00:00"
-  },
-  {
     "company": "Otis Worldwide",
     "title": "Field Project Management Interns",
     "source": "Workday:Otis Worldwide",
@@ -2998,5 +2992,11 @@
     "title": "Designer/Drafter Intern",
     "source": "Workday:Illinois Tool Works",
     "timestamp": "2026-10-07T00:10:16.050323+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "Optical Engineering Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-07T01:35:15.453002+00:00"
   }
 ]
