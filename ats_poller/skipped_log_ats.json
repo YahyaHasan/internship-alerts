@@ -1,11 +1,5 @@
 [
   {
-    "company": "Motorola Solutions",
-    "title": "Supply Planning Intern",
-    "source": "Workday:Motorola Solutions",
-    "timestamp": "2026-09-09T16:30:19.602353+00:00"
-  },
-  {
     "company": "Gilead Sciences",
     "title": "Intern - Kite - Corporate Operational Excellence",
     "source": "Workday:Gilead Sciences",
@@ -2998,5 +2992,11 @@
     "title": "PCB Layout Automation Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-07T02:05:21.520255+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Business Insurance Underwriting Professional Development Program (BI UPDP) Internship",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-07T13:05:17.512183+00:00"
   }
 ]
