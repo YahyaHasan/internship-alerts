@@ -1,17 +1,5 @@
 [
   {
-    "company": "Red Hat",
-    "title": "Commercial Programs Analyst Intern",
-    "source": "Workday:Red Hat",
-    "timestamp": "2026-09-10T14:10:28.000030+00:00"
-  },
-  {
-    "company": "Merck",
-    "title": "2027 Future Talent Program - Discovery, Preclinical and Translational Medicine - Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-10T14:10:28.000030+00:00"
-  },
-  {
     "company": "Wabtec",
     "title": "Drafting Intern",
     "source": "SmartRecruiters:Wabtec",
@@ -2998,5 +2986,17 @@
     "title": "Process Sustaining Engineering Intern",
     "source": "Workday:Analog Devices",
     "timestamp": "2026-10-07T19:45:19.819352+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "Networking (Power) Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-07T20:05:16.623788+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "ASIC Design Engineer Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-07T20:05:16.623788+00:00"
   }
 ]
