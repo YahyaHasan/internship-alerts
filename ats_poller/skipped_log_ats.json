@@ -1,11 +1,5 @@
 [
   {
-    "company": "Astera Labs",
-    "title": "Talent Management Intern",
-    "source": "Greenhouse:Astera Labs",
-    "timestamp": "2026-09-09T19:25:14.495048+00:00"
-  },
-  {
     "company": "Merck",
     "title": "2027 Future Talent Program \u2013 Biocatalysis Intern",
     "source": "Workday:Merck",
@@ -2998,5 +2992,11 @@
     "title": "AI Solution Architect - Undergraduate Intern",
     "source": "Workday:Intel",
     "timestamp": "2026-10-07T14:00:27.099833+00:00"
+  },
+  {
+    "company": "Mastercard Campus",
+    "title": "Security Infrastructure Engineering & Architecture Intern, Summer 2027 \u2013 Arlington, VA, US",
+    "source": "Workday:Mastercard Campus",
+    "timestamp": "2026-10-07T14:40:17.856500+00:00"
   }
 ]
