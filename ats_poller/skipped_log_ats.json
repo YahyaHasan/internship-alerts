@@ -1,11 +1,5 @@
 [
   {
-    "company": "Rocket Lab",
-    "title": "Turbomachinery Intern Summer 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-09T23:50:14.842139+00:00"
-  },
-  {
     "company": "Epic Games",
     "title": "UI Programmer Intern",
     "source": "Greenhouse:Epic Games",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern \u2013 AV Sensor Design, Release and Integration",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-07T16:21:58.738102+00:00"
+  },
+  {
+    "company": "Marvell",
+    "title": "Business Process Mining & Intelligence Analyst Intern, BS - Summer 2027",
+    "source": "Workday:Marvell",
+    "timestamp": "2026-10-07T18:00:29.906190+00:00"
   }
 ]
