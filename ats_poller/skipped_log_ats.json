@@ -1,11 +1,5 @@
 [
   {
-    "company": "Wabtec",
-    "title": "Drafting Intern",
-    "source": "SmartRecruiters:Wabtec",
-    "timestamp": "2026-09-10T14:45:16.996843+00:00"
-  },
-  {
     "company": "Intel",
     "title": "Module Engineering PhD Intern - Wet Etch",
     "source": "Workday:Intel",
@@ -2998,5 +2992,11 @@
     "title": "ASIC Design Engineer Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-07T20:05:16.623788+00:00"
+  },
+  {
+    "company": "PDT Partners",
+    "title": "Summer 2027 Quantitative Research Intern",
+    "source": "Greenhouse:PDT Partners",
+    "timestamp": "2026-10-07T20:20:17.908885+00:00"
   }
 ]
