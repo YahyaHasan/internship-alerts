@@ -1,11 +1,5 @@
 [
   {
-    "company": "Illinois Tool Works",
-    "title": "Project Engineer Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-09-10T15:40:18.443043+00:00"
-  },
-  {
     "company": "Rocket Lab",
     "title": "Combustion Devices Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
@@ -2998,5 +2992,11 @@
     "title": "Product Development Applications Engineer Intern  (Broadband Plasma Division)",
     "source": "Workday:KLA",
     "timestamp": "2026-10-07T23:05:17.923252+00:00"
+  },
+  {
+    "company": "AlixPartners",
+    "title": "AI & Data \u2013 Intern",
+    "source": "Greenhouse:AlixPartners",
+    "timestamp": "2026-10-08T10:05:17.836735+00:00"
   }
 ]
