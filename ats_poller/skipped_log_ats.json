@@ -1,11 +1,5 @@
 [
   {
-    "company": "Applied Materials",
-    "title": "Intern / Working Student (m/f/d) for PVD Display Engineering in Alzenau",
-    "source": "Workday:Applied Materials",
-    "timestamp": "2026-09-11T15:35:16.220600+00:00"
-  },
-  {
     "company": "AES",
     "title": "Transmission Planning Engineer Intern (Summer 2027)",
     "source": "Workday:AES",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Internship Product Development",
     "source": "Workday:Bristol-Myers Squibb",
     "timestamp": "2026-10-08T22:10:18.084683+00:00"
+  },
+  {
+    "company": "Nvidia",
+    "title": "Research Intern, Spatial Intelligence - Summer 2027",
+    "source": "Workday:Nvidia",
+    "timestamp": "2026-10-08T23:40:51.622648+00:00"
   }
 ]
