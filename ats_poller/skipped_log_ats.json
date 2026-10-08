@@ -1,12 +1,6 @@
 [
   {
     "company": "Rocket Lab",
-    "title": "Logistics Intern Spring 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-11T13:40:24.661710+00:00"
-  },
-  {
-    "company": "Rocket Lab",
     "title": "Structural Analysis Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-11T13:40:24.661710+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Solutions Engineer Intern 2027 (USA)",
     "source": "Greenhouse:Pinterest",
     "timestamp": "2026-10-08T20:10:15.844869+00:00"
+  },
+  {
+    "company": "Gilead Sciences",
+    "title": "Intern - CFO - IT (Cell Therapy: Kite)",
+    "source": "Workday:Gilead Sciences",
+    "timestamp": "2026-10-08T20:20:16.194369+00:00"
   }
 ]
