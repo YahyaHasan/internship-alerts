@@ -1,12 +1,6 @@
 [
   {
     "company": "Rocket Lab",
-    "title": "Structural Analysis Intern Spring 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-11T13:40:24.661710+00:00"
-  },
-  {
-    "company": "Rocket Lab",
     "title": "Structural Analysis Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-11T13:40:24.661710+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - CFO - IT (Cell Therapy: Kite)",
     "source": "Workday:Gilead Sciences",
     "timestamp": "2026-10-08T20:20:16.194369+00:00"
+  },
+  {
+    "company": "Becton Dickinson",
+    "title": "Engineering Intern",
+    "source": "Workday:Becton Dickinson",
+    "timestamp": "2026-10-08T21:35:14.410726+00:00"
   }
 ]
