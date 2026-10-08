@@ -1,11 +1,5 @@
 [
   {
-    "company": "Boeing",
-    "title": "Government Affairs Intern- 12 Months Placement",
-    "source": "Workday:Boeing",
-    "timestamp": "2026-09-10T23:00:23.364268+00:00"
-  },
-  {
     "company": "Rocket Lab",
     "title": "Logistics Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
@@ -2998,5 +2992,11 @@
     "title": "Controls Engineering Intern",
     "source": "SmartRecruiters:Wabtec",
     "timestamp": "2026-10-08T20:00:22.898670+00:00"
+  },
+  {
+    "company": "Pinterest",
+    "title": "Solutions Engineer Intern 2027 (USA)",
+    "source": "Greenhouse:Pinterest",
+    "timestamp": "2026-10-08T20:10:15.844869+00:00"
   }
 ]
