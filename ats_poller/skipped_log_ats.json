@@ -1,17 +1,5 @@
 [
   {
-    "company": "Marvell",
-    "title": "Ph.D. Intern - Advanced Packaging & Physical Integration",
-    "source": "Workday:Marvell",
-    "timestamp": "2026-09-10T19:55:17.130274+00:00"
-  },
-  {
-    "company": "Stryker",
-    "title": "Summer 2027 Internship-Medical Education-New Jersey",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-10T20:20:22.647173+00:00"
-  },
-  {
     "company": "Thermo Fisher Scientific",
     "title": "HR Intern",
     "source": "Workday:Thermo Fisher Scientific",
@@ -2998,5 +2986,17 @@
     "title": "CST Application Engineer Intern - Physical Systems",
     "source": "Workday:Cadence",
     "timestamp": "2026-10-08T18:40:14.997239+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Business Insurance Intern: Underwriting Professional Development Program (UPDP)",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-08T18:55:12.990208+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Business Insurance Intern: Underwriting Professional Development Program (UPDP)",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-08T18:55:12.990208+00:00"
   }
 ]
