@@ -1,11 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "GE Vernova Hitachi - Licensing Intern - Summer 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-11T14:55:14.809923+00:00"
-  },
-  {
     "company": "Applied Materials",
     "title": "Intern / Working Student (m/f/d) for PVD Display Engineering in Alzenau",
     "source": "Workday:Applied Materials",
@@ -2998,5 +2992,11 @@
     "title": "AMT Intern",
     "source": "Workday:Conagra Brands",
     "timestamp": "2026-10-08T22:00:20.859347+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "2027 Summer Internship Product Development",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-10-08T22:10:18.084683+00:00"
   }
 ]
