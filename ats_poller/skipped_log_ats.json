@@ -1,11 +1,5 @@
 [
   {
-    "company": "Merck",
-    "title": "2027 Future Talent Program \u2013 Bioanalytical Sciences \u2013 Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-10T18:10:19.279016+00:00"
-  },
-  {
     "company": "Cigna",
     "title": "Government Affairs Intern",
     "source": "Workday:Cigna",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern, Fleet Reliability & Test Engineering, ASD",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-08T16:05:17.364566+00:00"
+  },
+  {
+    "company": "Merck",
+    "title": "2027 Future Talent Program - International Pricing Analytics - Intern",
+    "source": "Workday:Merck",
+    "timestamp": "2026-10-08T16:10:21.141404+00:00"
   }
 ]
