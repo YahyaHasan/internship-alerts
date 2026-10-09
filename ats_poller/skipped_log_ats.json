@@ -1,17 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern- Technician, Process",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-12T05:35:13.629324+00:00"
-  },
-  {
-    "company": "Merck",
-    "title": "Analytical Development and Commercialisation (ADC) Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-12T23:35:13.237785+00:00"
-  },
-  {
     "company": "Merck",
     "title": "Business Excellence Internship",
     "source": "Workday:Merck",
@@ -2998,5 +2986,17 @@
     "title": "Business Insurance Underwriting Professional Development Program Internship (BI UPDP Intern)",
     "source": "Workday:Travelers",
     "timestamp": "2026-10-09T15:45:17.949084+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Intern, Customer Engagement Center (Summer 2027)",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-10-09T15:50:17.223467+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "GE Vernova - Energy Technology Analyst Intern - Summer 2027",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-10-09T15:50:17.223467+00:00"
   }
 ]
