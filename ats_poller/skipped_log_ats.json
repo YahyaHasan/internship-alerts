@@ -1,12 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "Medical Affairs Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-12T23:35:13.237785+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "PMO Internship - Biotech",
     "source": "Workday:Merck",
     "timestamp": "2026-09-12T23:35:13.237785+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Claim Professional Development Program Intern",
     "source": "Workday:Travelers",
     "timestamp": "2026-10-09T19:15:17.332511+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - SSD Firmware - CICD",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-09T19:30:18.852088+00:00"
   }
 ]
