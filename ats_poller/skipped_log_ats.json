@@ -1,11 +1,5 @@
 [
   {
-    "company": "AES",
-    "title": "Intern - Substation Engineer - Engineering Services (Summer 2027)",
-    "source": "Workday:AES",
-    "timestamp": "2026-09-11T19:00:25.370761+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova Gas Power Engineering Internship - Spring 2027",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "ASIC Verification/Design Engineering Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-09T01:55:12.672379+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Fab Equipment Maintenance Technician",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-09T13:35:15.536559+00:00"
   }
 ]
