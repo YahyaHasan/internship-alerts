@@ -1,12 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "Global Talent Acquisition Internship",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-12T23:35:13.237785+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "Health Policy Internship",
     "source": "Workday:Merck",
     "timestamp": "2026-09-12T23:35:13.237785+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Government Relations Intern (Part-time)",
     "source": "Workday:Otis Worldwide",
     "timestamp": "2026-10-09T18:05:16.009251+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Business Insurance Intern: Underwriting Professional Development Program (UPDP)",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-09T18:35:13.396598+00:00"
   }
 ]
