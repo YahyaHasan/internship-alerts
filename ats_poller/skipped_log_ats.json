@@ -1,12 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "Business Excellence Internship",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-12T23:35:13.237785+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "Scientist/Chemistry Internship - Ballydine",
     "source": "Workday:Merck",
     "timestamp": "2026-09-12T23:35:13.237785+00:00"
@@ -2998,5 +2992,11 @@
     "title": "GE Vernova - Energy Technology Analyst Intern - Summer 2027",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-10-09T15:50:17.223467+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "2027 Summer Intern, Onboard Autonomy, Embodied AI",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-10-09T17:35:14.179757+00:00"
   }
 ]
