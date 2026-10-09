@@ -1,24 +1,6 @@
 [
   {
     "company": "AES",
-    "title": "Transmission Planning Engineer Intern (Summer 2027)",
-    "source": "Workday:AES",
-    "timestamp": "2026-09-11T17:30:22.593583+00:00"
-  },
-  {
-    "company": "AES",
-    "title": "Transmission Planning Engineer - Intern (Summer 2027)",
-    "source": "Workday:AES",
-    "timestamp": "2026-09-11T18:15:16.576987+00:00"
-  },
-  {
-    "company": "AES",
-    "title": "Intern- Transmission Engineering Services - (Summer 2027)",
-    "source": "Workday:AES",
-    "timestamp": "2026-09-11T18:50:17.441037+00:00"
-  },
-  {
-    "company": "AES",
     "title": "Intern - Substation Engineer - Engineering Services (Summer 2027)",
     "source": "Workday:AES",
     "timestamp": "2026-09-11T19:00:25.370761+00:00"
@@ -2998,5 +2980,23 @@
     "title": "Research Intern, Spatial Intelligence - Summer 2027",
     "source": "Workday:Nvidia",
     "timestamp": "2026-10-08T23:40:51.622648+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "Wireless Networking Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-09T01:55:12.672379+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "Thermal Engineering Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-09T01:55:12.672379+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "ASIC Verification/Design Engineering Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-09T01:55:12.672379+00:00"
   }
 ]
