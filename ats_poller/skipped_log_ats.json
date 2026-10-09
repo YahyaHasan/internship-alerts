@@ -1,12 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "Internship, Process Sciences",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-12T23:35:13.237785+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "Learning and Development Intern",
     "source": "Workday:Merck",
     "timestamp": "2026-09-12T23:35:13.237785+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Bond and Specialty Insurance Intern: Underwriting Professional Development Program (UPDP)",
     "source": "Workday:Travelers",
     "timestamp": "2026-10-09T18:45:15.865159+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "ASIC Engineer Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-09T19:05:34.925559+00:00"
   }
 ]
