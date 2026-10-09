@@ -1,12 +1,6 @@
 [
   {
     "company": "GE Vernova",
-    "title": "GE Vernova Gas Power Engineering Internship - Spring 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-11T19:05:17.103778+00:00"
-  },
-  {
-    "company": "GE Vernova",
     "title": "GE Vernova Gas Power Engineering - Fall 2027 Intern",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-09-11T19:05:17.103778+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - Fab Equipment Maintenance Technician",
     "source": "Workday:Micron",
     "timestamp": "2026-10-09T13:35:15.536559+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "GE Vernova GSI Engineering Intern - Summer 2027",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-10-09T14:00:23.484749+00:00"
   }
 ]
