@@ -1,12 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "QC Bioanalytical Internship",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-12T23:35:13.237785+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "QC Internship",
     "source": "Workday:Merck",
     "timestamp": "2026-09-12T23:35:13.237785+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Bond and Specialty Insurance Intern: Underwriting Professional Development Program",
     "source": "Workday:Travelers",
     "timestamp": "2026-10-09T21:45:13.793922+00:00"
+  },
+  {
+    "company": "Affirm",
+    "title": "IT Engineer Intern (Early Careers Summer 2027)",
+    "source": "Greenhouse:Affirm",
+    "timestamp": "2026-10-09T21:50:17.156223+00:00"
   }
 ]
