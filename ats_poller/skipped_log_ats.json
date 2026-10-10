@@ -1,12 +1,6 @@
 [
   {
     "company": "Merck",
-    "title": "QC Microbiology Lab Internship",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-12T23:35:13.237785+00:00"
-  },
-  {
-    "company": "Merck",
     "title": "Supplier Management Internship",
     "source": "Workday:Merck",
     "timestamp": "2026-09-12T23:35:13.237785+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Evergreen  - Product Design Intern (2027 Start)",
     "source": "Greenhouse:Databricks",
     "timestamp": "2026-10-09T23:10:18.123185+00:00"
+  },
+  {
+    "company": "Helsing",
+    "title": "Communications Intern",
+    "source": "Greenhouse:Helsing",
+    "timestamp": "2026-10-10T14:00:20.999410+00:00"
   }
 ]
