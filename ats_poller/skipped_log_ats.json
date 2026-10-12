@@ -1,12 +1,6 @@
 [
   {
     "company": "General Motors",
-    "title": "2027 Summer Intern - Digital Sculpting",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-14T17:30:19.207639+00:00"
-  },
-  {
-    "company": "General Motors",
     "title": "2027 Summer Intern - Clay Sculpting",
     "source": "Workday:General Motors",
     "timestamp": "2026-09-14T17:30:19.207639+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - CFO - IT (Commercial Data & AICOE)",
     "source": "Workday:Gilead Sciences",
     "timestamp": "2026-10-12T17:15:17.329818+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Equipment Engineering Intern \u2013 Summer 2027",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-10-12T17:30:18.746805+00:00"
   }
 ]
