@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern - Clay Sculpting",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-14T17:30:19.207639+00:00"
-  },
-  {
     "company": "Figma",
     "title": "Brand Design Intern (Summer 2027)",
     "source": "Greenhouse:Figma",
@@ -2998,5 +2992,11 @@
     "title": "Equipment Engineering Intern \u2013 Summer 2027",
     "source": "Workday:Bristol-Myers Squibb",
     "timestamp": "2026-10-12T17:30:18.746805+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Regulatory Affairs Intern",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-10-12T17:50:16.296050+00:00"
   }
 ]
