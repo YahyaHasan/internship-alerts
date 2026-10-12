@@ -1,11 +1,5 @@
 [
   {
-    "company": "Merck",
-    "title": "2027 Future Talent Program - Discovery Sample Management Analytical Chemistry - Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-14T18:10:18.448860+00:00"
-  },
-  {
     "company": "Truist Financial",
     "title": "2027 Truist Internship- Risk Management Program",
     "source": "Workday:Truist Financial",
@@ -2998,5 +2992,11 @@
     "title": "HPC/AI System Admin HW/SW Service Engineer Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-12T19:15:16.982837+00:00"
+  },
+  {
+    "company": "Rocket Lab",
+    "title": "Export Compliance Intern Spring 2027",
+    "source": "Greenhouse:Rocket Lab",
+    "timestamp": "2026-10-12T19:25:14.848189+00:00"
   }
 ]
