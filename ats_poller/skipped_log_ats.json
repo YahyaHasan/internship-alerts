@@ -1,11 +1,5 @@
 [
   {
-    "company": "Fidelity",
-    "title": "Summer 2027 Equity Research Associate Intern - London",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-14T13:25:15.894549+00:00"
-  },
-  {
     "company": "Intel",
     "title": "Packaging Technology Development Graduate Intern",
     "source": "Workday:Intel",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern - Research and Development - Defense Lab Modeling and Simulation",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-12T15:35:13.444566+00:00"
+  },
+  {
+    "company": "Figure AI",
+    "title": "Deployment Engineering Intern",
+    "source": "Greenhouse:Figure AI",
+    "timestamp": "2026-10-12T17:10:24.510662+00:00"
   }
 ]
