@@ -1,11 +1,5 @@
 [
   {
-    "company": "Figma",
-    "title": "Product Design Intern (2027)",
-    "source": "Greenhouse:Figma",
-    "timestamp": "2026-09-14T17:40:17.102681+00:00"
-  },
-  {
     "company": "General Motors",
     "title": "2027 Summer Intern - Human Interface Design",
     "source": "Workday:General Motors",
@@ -2998,5 +2992,11 @@
     "title": "Data Center Engineer Intern - Summer 2027",
     "source": "Greenhouse:DV Trading",
     "timestamp": "2026-10-12T18:35:16.443387+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "2027 Summer Intern \u2013 Program Management, GM Defense ,",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-10-12T19:05:14.058001+00:00"
   }
 ]
