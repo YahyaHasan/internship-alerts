@@ -1,11 +1,5 @@
 [
   {
-    "company": "Intel",
-    "title": "Packaging Technology Development Graduate Intern",
-    "source": "Workday:Intel",
-    "timestamp": "2026-09-14T16:25:24.027009+00:00"
-  },
-  {
     "company": "General Motors",
     "title": "2027 Summer Intern - Digital Sculpting",
     "source": "Workday:General Motors",
@@ -2998,5 +2992,11 @@
     "title": "Deployment Engineering Intern",
     "source": "Greenhouse:Figure AI",
     "timestamp": "2026-10-12T17:10:24.510662+00:00"
+  },
+  {
+    "company": "Gilead Sciences",
+    "title": "Intern - CFO - IT (Commercial Data & AICOE)",
+    "source": "Workday:Gilead Sciences",
+    "timestamp": "2026-10-12T17:15:17.329818+00:00"
   }
 ]
