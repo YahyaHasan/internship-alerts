@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern - Student Corps Program Specialist Intern",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-14T05:20:16.783593+00:00"
-  },
-  {
     "company": "Dmg Media",
     "title": "Product Design Intern ",
     "source": "Greenhouse:Dmg Media",
@@ -2998,5 +2992,11 @@
     "title": "Venture Capital Intern (Part-time, Fall/Winter)",
     "source": "Greenhouse:Tower Research Capital",
     "timestamp": "2026-10-12T13:45:15.318356+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Claim Professional Development Program (CPDP) Internship",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-12T14:05:15.669663+00:00"
   }
 ]
