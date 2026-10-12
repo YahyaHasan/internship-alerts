@@ -1,11 +1,5 @@
 [
   {
-    "company": "Truist Financial",
-    "title": "2027 Truist Internship Program - Consumer & Small Business Banking",
-    "source": "Workday:Truist Financial",
-    "timestamp": "2026-09-14T19:50:17.459034+00:00"
-  },
-  {
     "company": "Gilead Sciences",
     "title": "Intern - Development - Regulatory Affairs",
     "source": "Workday:Gilead Sciences",
@@ -2998,5 +2992,11 @@
     "title": "Intern - ID1 ATE PI Engineer",
     "source": "Workday:Micron",
     "timestamp": "2026-10-12T21:05:14.647804+00:00"
+  },
+  {
+    "company": "Expedia",
+    "title": "Security Engineering Intern - 2027 - Seattle",
+    "source": "Workday:Expedia",
+    "timestamp": "2026-10-12T22:15:17.237546+00:00"
   }
 ]
