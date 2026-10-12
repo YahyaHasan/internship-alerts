@@ -1,17 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern - Human Interface Design",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-14T17:40:17.102681+00:00"
-  },
-  {
-    "company": "Marvell",
-    "title": "Technical Writer Intern, BS/BA - Summer 2027",
-    "source": "Workday:Marvell",
-    "timestamp": "2026-09-14T18:05:16.120305+00:00"
-  },
-  {
     "company": "Merck",
     "title": "2027 Future Talent Program - Discovery Sample Management Analytical Chemistry - Intern",
     "source": "Workday:Merck",
@@ -2998,5 +2986,17 @@
     "title": "2027 Summer Intern \u2013 Program Management, GM Defense ,",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-12T19:05:14.058001+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "HPC/AI Systems Service Process Improvement Engineer Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-12T19:15:16.982837+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "HPC/AI System Admin HW/SW Service Engineer Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-12T19:15:16.982837+00:00"
   }
 ]
