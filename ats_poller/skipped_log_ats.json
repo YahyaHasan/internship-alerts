@@ -1,11 +1,5 @@
 [
   {
-    "company": "Merck",
-    "title": "Supplier Management Internship",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-12T23:35:13.237785+00:00"
-  },
-  {
     "company": "General Motors",
     "title": "2027 Summer Intern - Student Corps Program Specialist Intern",
     "source": "Workday:General Motors",
@@ -2998,5 +2992,11 @@
     "title": "Communications Intern",
     "source": "Greenhouse:Helsing",
     "timestamp": "2026-10-10T14:00:20.999410+00:00"
+  },
+  {
+    "company": "Tower Research Capital",
+    "title": "Venture Capital Intern (Part-time, Fall/Winter)",
+    "source": "Greenhouse:Tower Research Capital",
+    "timestamp": "2026-10-12T13:45:15.318356+00:00"
   }
 ]
