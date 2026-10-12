@@ -1,11 +1,5 @@
 [
   {
-    "company": "Gilead Sciences",
-    "title": "Intern - Kite Research - Viral Vector Core",
-    "source": "Workday:Gilead Sciences",
-    "timestamp": "2026-09-14T18:45:18.412473+00:00"
-  },
-  {
     "company": "Truist Financial",
     "title": "2027 Truist Internship Program - Consumer & Small Business Banking",
     "source": "Workday:Truist Financial",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Yield Enhancement  Engineer",
     "source": "Workday:Micron",
     "timestamp": "2026-10-12T20:55:14.327910+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - ID1 ATE PI Engineer",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-12T21:05:14.647804+00:00"
   }
 ]
