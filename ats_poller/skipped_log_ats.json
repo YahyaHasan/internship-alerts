@@ -1,11 +1,5 @@
 [
   {
-    "company": "Truist Financial",
-    "title": "2027 Truist Internship- Risk Management Program",
-    "source": "Workday:Truist Financial",
-    "timestamp": "2026-09-14T18:30:24.465050+00:00"
-  },
-  {
     "company": "Gilead Sciences",
     "title": "Intern - Kite Research - Viral Vector Core",
     "source": "Workday:Gilead Sciences",
@@ -2998,5 +2992,11 @@
     "title": "Export Compliance Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-10-12T19:25:14.848189+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Yield Enhancement  Engineer",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-12T20:55:14.327910+00:00"
   }
 ]
