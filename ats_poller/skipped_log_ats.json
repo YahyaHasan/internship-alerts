@@ -1,18 +1,6 @@
 [
   {
     "company": "General Motors",
-    "title": "2027 Summer Intern \u2013 Performance Analysis",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-14T21:30:21.480001+00:00"
-  },
-  {
-    "company": "General Motors",
-    "title": "2027\u00a0Summer Intern \u2013\u00a0Motorsports Aerodynamics",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-14T21:30:21.480001+00:00"
-  },
-  {
-    "company": "General Motors",
     "title": "2027 Summer Intern \u2013 IndyCar Trackside Engineering",
     "source": "Workday:General Motors",
     "timestamp": "2026-09-14T21:30:21.480001+00:00"
@@ -2998,5 +2986,17 @@
     "title": "Ground Systems Engineering Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-10-13T00:45:16.106741+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "VLSI Logic Design Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-13T01:35:14.426825+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "ASIC Verification Engineering Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-13T01:35:14.426825+00:00"
   }
 ]
