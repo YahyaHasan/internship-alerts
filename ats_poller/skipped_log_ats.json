@@ -1,12 +1,6 @@
 [
   {
     "company": "General Motors",
-    "title": "2027 Summer Intern \u2013 IndyCar Trackside Engineering",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-14T21:30:21.480001+00:00"
-  },
-  {
-    "company": "General Motors",
     "title": "2027 Summer Intern \u2013 Motorsports Aero-Thermal Engineering",
     "source": "Workday:General Motors",
     "timestamp": "2026-09-14T21:30:21.480001+00:00"
@@ -2998,5 +2992,11 @@
     "title": "ASIC Verification Engineering Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-13T01:35:14.426825+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "VLSI Design Verification Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-13T01:45:14.169686+00:00"
   }
 ]
