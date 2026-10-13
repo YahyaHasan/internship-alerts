@@ -1,17 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern \u2013 Motorsports Aero-Thermal Engineering",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-14T21:30:21.480001+00:00"
-  },
-  {
-    "company": "Epic Games",
-    "title": "Communications Intern",
-    "source": "Greenhouse:Epic Games",
-    "timestamp": "2026-09-14T22:55:16.496608+00:00"
-  },
-  {
     "company": "Epic Games",
     "title": "Level Design Intern",
     "source": "Greenhouse:Epic Games",
@@ -2998,5 +2986,17 @@
     "title": "VLSI Design Verification Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-13T01:45:14.169686+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "ASIC Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-13T01:55:13.415363+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "VLSI Logic Design Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-13T01:55:13.415363+00:00"
   }
 ]
