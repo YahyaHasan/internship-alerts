@@ -1,11 +1,5 @@
 [
   {
-    "company": "Interco",
-    "title": "Paid Internship -- Software Development -- React ",
-    "source": "SmartRecruiters:Interco",
-    "timestamp": "2026-09-15T12:35:13.773671+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova Commercial Internship \u2013 US \u2013 Summer 2027-1",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "Equipment Engineer Intern - SHPE",
     "source": "Workday:Micron",
     "timestamp": "2026-10-13T13:35:15.522870+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Precision Motion Control Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-10-13T14:00:23.243484+00:00"
   }
 ]
