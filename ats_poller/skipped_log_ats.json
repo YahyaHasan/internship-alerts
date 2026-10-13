@@ -1,11 +1,5 @@
 [
   {
-    "company": "Epic Games",
-    "title": "Level Design Intern",
-    "source": "Greenhouse:Epic Games",
-    "timestamp": "2026-09-14T23:05:13.964654+00:00"
-  },
-  {
     "company": "Base Power",
     "title": "Material Planning Intern ",
     "source": "Ashby:Base Power",
@@ -2998,5 +2992,11 @@
     "title": "VLSI Logic Design Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-13T01:55:13.415363+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Equipment Engineer Intern - SHPE",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-13T13:30:21.303735+00:00"
   }
 ]
