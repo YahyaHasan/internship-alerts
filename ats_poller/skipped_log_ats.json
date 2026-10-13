@@ -1,11 +1,5 @@
 [
   {
-    "company": "Illinois Tool Works",
-    "title": "Social Media Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-09-15T16:20:16.891942+00:00"
-  },
-  {
     "company": "Base Power",
     "title": "Organic Social Content Intern",
     "source": "Ashby:Base Power",
@@ -2998,5 +2992,11 @@
     "title": "Research Scientist Intern - Coating Characterization",
     "source": "Workday:KLA",
     "timestamp": "2026-10-13T18:50:15.927796+00:00"
+  },
+  {
+    "company": "Solid Power",
+    "title": "Product Development Intern",
+    "source": "Greenhouse:Solid Power",
+    "timestamp": "2026-10-13T19:15:17.952028+00:00"
   }
 ]
