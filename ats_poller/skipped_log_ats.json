@@ -1,12 +1,6 @@
 [
   {
     "company": "General Motors",
-    "title": "2027 Summer Intern - Creative Design (Interior/Exterior)",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-14T21:00:21.754579+00:00"
-  },
-  {
-    "company": "General Motors",
     "title": "2027 Summer Intern \u2013 Performance Analysis",
     "source": "Workday:General Motors",
     "timestamp": "2026-09-14T21:30:21.480001+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Differentiable Simulation Research Intern - Summer 2027",
     "source": "Workday:Nvidia",
     "timestamp": "2026-10-12T23:35:16.118067+00:00"
+  },
+  {
+    "company": "Rocket Lab",
+    "title": "Ground Systems Engineering Intern Spring 2027",
+    "source": "Greenhouse:Rocket Lab",
+    "timestamp": "2026-10-13T00:45:16.106741+00:00"
   }
 ]
