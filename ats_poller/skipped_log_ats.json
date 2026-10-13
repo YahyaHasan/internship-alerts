@@ -1,11 +1,5 @@
 [
   {
-    "company": "Illinois Tool Works",
-    "title": "Product Management Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-09-16T04:55:17.034545+00:00"
-  },
-  {
     "company": "Travelers",
     "title": "Claim Professional Development Program Internship (CPDP Intern)",
     "source": "Workday:Travelers",
@@ -2998,5 +2992,11 @@
     "title": "Fire Investigative Internship",
     "source": "Workday:Travelers",
     "timestamp": "2026-10-13T19:25:12.727273+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Equipment Engineer",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-13T20:05:20.483006+00:00"
   }
 ]
