@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Category Supply Management",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-15T15:25:16.359139+00:00"
-  },
-  {
     "company": "Wabtec",
     "title": "Summer 2027 Field Services Internship",
     "source": "SmartRecruiters:Wabtec",
@@ -2998,5 +2992,11 @@
     "title": "Business Insurance Underwriting Professional Development Program (BI UPDP) Internship",
     "source": "Workday:Travelers",
     "timestamp": "2026-10-13T17:25:14.225012+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "SPRING INTERN CORES AND CASTINGS - SPRING-1",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-10-13T18:15:18.333585+00:00"
   }
 ]
