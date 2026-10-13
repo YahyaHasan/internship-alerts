@@ -1,11 +1,5 @@
 [
   {
-    "company": "Robinhood",
-    "title": "Security Risk Management Intern (Summer 2027)",
-    "source": "Greenhouse:Robinhood",
-    "timestamp": "2026-09-16T15:00:22.805479+00:00"
-  },
-  {
     "company": "Avery Dennison",
     "title": "RFID New Product Development Engineering Intern Summer 2027",
     "source": "SmartRecruiters:Avery Dennison",
@@ -2998,5 +2992,11 @@
     "title": "Product Development Intern - Electron Beam Instrumentation",
     "source": "Workday:KLA",
     "timestamp": "2026-10-13T20:40:16.850891+00:00"
+  },
+  {
+    "company": "Fidelity",
+    "title": "Intern, Investor Center - St. Louis, MO",
+    "source": "Workday:Fidelity",
+    "timestamp": "2026-10-13T21:15:16.241959+00:00"
   }
 ]
