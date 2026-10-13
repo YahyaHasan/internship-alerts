@@ -1,11 +1,5 @@
 [
   {
-    "company": "Base Power",
-    "title": "Content Intern",
-    "source": "Ashby:Base Power",
-    "timestamp": "2026-09-15T15:15:17.546061+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - Category Supply Management",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Business Insurance Underwriting Professional Development Program (BI UPDP) Internship",
     "source": "Workday:Travelers",
     "timestamp": "2026-10-13T16:25:13.313198+00:00"
+  },
+  {
+    "company": "Travelers",
+    "title": "Business Insurance Underwriting Professional Development Program (BI UPDP) Internship",
+    "source": "Workday:Travelers",
+    "timestamp": "2026-10-13T17:25:14.225012+00:00"
   }
 ]
