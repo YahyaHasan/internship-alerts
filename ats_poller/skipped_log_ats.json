@@ -1,11 +1,5 @@
 [
   {
-    "company": "HPE",
-    "title": "HR Performance Management Intern",
-    "source": "Workday:HPE",
-    "timestamp": "2026-09-16T19:35:16.155544+00:00"
-  },
-  {
     "company": "Rocket Lab",
     "title": "Security Analyst Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
@@ -2998,5 +2992,11 @@
     "title": "2027 Future Talent Program - Global Communications Intern (AI focus) - Intern",
     "source": "Workday:Merck",
     "timestamp": "2026-10-14T16:10:20.244376+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "GE Vernova - SCS Product Design Internship \u2013 Summer 2027",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-10-14T17:10:18.946471+00:00"
   }
 ]
