@@ -7,12 +7,6 @@
   },
   {
     "company": "Rocket Lab",
-    "title": "Security Analyst Intern Spring 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-16T20:45:18.816853+00:00"
-  },
-  {
-    "company": "Rocket Lab",
     "title": "Security Analyst Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-16T20:45:18.816853+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Textile Engineer Intern",
     "source": "Workday:Illinois Tool Works",
     "timestamp": "2026-10-14T18:45:19.353513+00:00"
+  },
+  {
+    "company": "Cadence",
+    "title": "CST Application Engineer Intern - Systems ATX",
+    "source": "Workday:Cadence",
+    "timestamp": "2026-10-14T18:55:14.887484+00:00"
   }
 ]
