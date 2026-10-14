@@ -1,17 +1,5 @@
 [
   {
-    "company": "Gilead Sciences",
-    "title": "Intern -\u00a0Kite Research\u00a0-\u00a0Project Management",
-    "source": "Workday:Gilead Sciences",
-    "timestamp": "2026-09-16T16:25:13.951428+00:00"
-  },
-  {
-    "company": "HPE",
-    "title": "HR Compensation Intern",
-    "source": "Workday:HPE",
-    "timestamp": "2026-09-16T19:25:14.728050+00:00"
-  },
-  {
     "company": "HPE",
     "title": "HR Performance Management Intern",
     "source": "Workday:HPE",
@@ -2998,5 +2986,17 @@
     "title": "2027 Summer Internship - Sector Analyst, Proprietary Research",
     "source": "Greenhouse:Point72",
     "timestamp": "2026-10-14T14:20:18.920440+00:00"
+  },
+  {
+    "company": "Merck",
+    "title": "2027 Future Talent Program - Global Lung Medical Affairs - Intern",
+    "source": "Workday:Merck",
+    "timestamp": "2026-10-14T16:10:20.244376+00:00"
+  },
+  {
+    "company": "Merck",
+    "title": "2027 Future Talent Program - Global Communications Intern (AI focus) - Intern",
+    "source": "Workday:Merck",
+    "timestamp": "2026-10-14T16:10:20.244376+00:00"
   }
 ]
