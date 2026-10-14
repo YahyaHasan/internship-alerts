@@ -1,17 +1,5 @@
 [
   {
-    "company": "Avery Dennison",
-    "title": "RFID New Product Development Engineering Intern Summer 2027",
-    "source": "SmartRecruiters:Avery Dennison",
-    "timestamp": "2026-09-16T15:15:18.482776+00:00"
-  },
-  {
-    "company": "Rocket Lab",
-    "title": "RF Engineering Intern",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-16T16:05:16.208898+00:00"
-  },
-  {
     "company": "Gilead Sciences",
     "title": "Intern -\u00a0Kite Research\u00a0-\u00a0Project Management",
     "source": "Workday:Gilead Sciences",
@@ -2998,5 +2986,17 @@
     "title": "Intern, Investor Center - St. Louis, MO",
     "source": "Workday:Fidelity",
     "timestamp": "2026-10-13T21:15:16.241959+00:00"
+  },
+  {
+    "company": "Point72",
+    "title": "2027 Summer Internship - Fundamental Researcher, Canvas",
+    "source": "Greenhouse:Point72",
+    "timestamp": "2026-10-14T14:20:18.920440+00:00"
+  },
+  {
+    "company": "Point72",
+    "title": "2027 Summer Internship - Sector Analyst, Proprietary Research",
+    "source": "Greenhouse:Point72",
+    "timestamp": "2026-10-14T14:20:18.920440+00:00"
   }
 ]
