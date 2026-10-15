@@ -1,11 +1,5 @@
 [
   {
-    "company": "Rocket Lab",
-    "title": "Security Analyst Intern Summer 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-16T23:30:26.202784+00:00"
-  },
-  {
     "company": "Physical Intelligence",
     "title": "Mechatronics Intern",
     "source": "Ashby:Physical Intelligence",
@@ -2998,5 +2992,11 @@
     "title": "Presales Systems Engineer - 2027 Internship",
     "source": "Workday:Motorola Solutions",
     "timestamp": "2026-10-15T15:20:18.576674+00:00"
+  },
+  {
+    "company": "Cigna",
+    "title": "Healthcare Analytics Summer Intern - Morris Plains, NJ - Start Date: May 24, 2027",
+    "source": "Workday:Cigna",
+    "timestamp": "2026-10-15T18:00:22.432508+00:00"
   }
 ]
