@@ -1,11 +1,5 @@
 [
   {
-    "company": "Marvell",
-    "title": "Design For Test Intern, MS - Summer 2027",
-    "source": "Workday:Marvell",
-    "timestamp": "2026-09-17T15:35:16.484173+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - Operation Improvement Scheduling",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Internship - Information Security Engineer",
     "source": "Greenhouse:General Matter",
     "timestamp": "2026-10-15T18:30:20.296576+00:00"
+  },
+  {
+    "company": "Abridge",
+    "title": "Member of Technical Staff, Intern",
+    "source": "Ashby:Abridge",
+    "timestamp": "2026-10-15T22:25:13.466406+00:00"
   }
 ]
