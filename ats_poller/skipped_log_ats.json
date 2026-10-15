@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Operation Improvement Scheduling",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-17T17:15:18.208655+00:00"
-  },
-  {
     "company": "Marvell",
     "title": "SRAM Circuit Design Intern, MS - Summer 2027",
     "source": "Workday:Marvell",
@@ -2998,5 +2992,11 @@
     "title": "Member of Technical Staff, Intern",
     "source": "Ashby:Abridge",
     "timestamp": "2026-10-15T22:25:13.466406+00:00"
+  },
+  {
+    "company": "NewsBreak",
+    "title": "Short Drama Creative Editor Intern",
+    "source": "Greenhouse:NewsBreak",
+    "timestamp": "2026-10-15T23:15:17.464312+00:00"
   }
 ]
