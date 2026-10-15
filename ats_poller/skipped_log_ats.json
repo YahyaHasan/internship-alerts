@@ -1,12 +1,6 @@
 [
   {
     "company": "Rocket Lab",
-    "title": "Security Analyst Intern Summer 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-16T20:45:18.816853+00:00"
-  },
-  {
-    "company": "Rocket Lab",
     "title": "Security Analyst Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-16T23:25:13.888495+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern, Field Service (LCS)",
     "source": "Workday:Rockwell Automation",
     "timestamp": "2026-10-14T22:35:13.975189+00:00"
+  },
+  {
+    "company": "Mistral AI",
+    "title": "IP & Licensing - Intern",
+    "source": "Ashby:Mistral AI",
+    "timestamp": "2026-10-15T10:35:14.443295+00:00"
   }
 ]
