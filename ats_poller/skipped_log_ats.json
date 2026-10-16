@@ -1,12 +1,6 @@
 [
   {
     "company": "Rocket Lab",
-    "title": "Test Engineering Intern Spring 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-17T18:20:19.359883+00:00"
-  },
-  {
-    "company": "Rocket Lab",
     "title": "Test Engineering Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-17T18:20:19.359883+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - Memory Design Engineer, HBM",
     "source": "Workday:Micron",
     "timestamp": "2026-10-16T17:00:20.942430+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Commercialization Intern (Summer 2027)",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-10-16T19:30:19.500969+00:00"
   }
 ]
