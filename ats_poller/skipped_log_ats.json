@@ -1,11 +1,5 @@
 [
   {
-    "company": "AES",
-    "title": "Summer Intern - Wind Development",
-    "source": "Workday:AES",
-    "timestamp": "2026-09-17T18:55:13.695160+00:00"
-  },
-  {
     "company": "Rocket Lab",
     "title": "People & Culture Intern Spring 2027",
     "source": "Greenhouse:Rocket Lab",
@@ -2998,5 +2992,11 @@
     "title": "Research Engineer Intern, Frontier Speculative Decoding (Winter 2027)",
     "source": "Greenhouse:Together AI",
     "timestamp": "2026-10-16T22:50:17.260432+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Design Engineer, HBM",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-19T16:00:24.078909+00:00"
   }
 ]
