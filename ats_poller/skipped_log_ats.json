@@ -1,12 +1,6 @@
 [
   {
     "company": "Rocket Lab",
-    "title": "People & Culture Intern Spring 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-17T20:55:13.748743+00:00"
-  },
-  {
-    "company": "Rocket Lab",
     "title": "Systems Engineering Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-17T21:00:25.003964+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - Design Engineer, HBM",
     "source": "Workday:Micron",
     "timestamp": "2026-10-19T16:00:24.078909+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Design Engineer, HBM",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-19T16:05:14.590621+00:00"
   }
 ]
