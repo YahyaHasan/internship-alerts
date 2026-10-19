@@ -1,12 +1,6 @@
 [
   {
     "company": "Rocket Lab",
-    "title": "R&D Engineering Intern Spring 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-17T23:25:12.754776+00:00"
-  },
-  {
-    "company": "Rocket Lab",
     "title": "R&D Engineering Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-17T23:25:12.754776+00:00"
@@ -2998,5 +2992,11 @@
     "title": "GE Vernova - Gas Power Field Engineering Intern - Summer 2027",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-10-19T18:40:18.533833+00:00"
+  },
+  {
+    "company": "Four Hands",
+    "title": "CGI Artist Intern",
+    "source": "Greenhouse:Four Hands",
+    "timestamp": "2026-10-19T20:40:17.899501+00:00"
   }
 ]
