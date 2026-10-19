@@ -1,11 +1,5 @@
 [
   {
-    "company": "Rocket Lab",
-    "title": "Systems Engineering Intern Summer 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-17T21:00:25.003964+00:00"
-  },
-  {
     "company": "RRS Group",
     "title": "2027 Government Affairs Internship Program ",
     "source": "SmartRecruiters:RRS Group",
@@ -2998,5 +2992,11 @@
     "title": "2027 Intern - Experience Researcher",
     "source": "Workday:Adobe",
     "timestamp": "2026-10-19T16:40:17.152769+00:00"
+  },
+  {
+    "company": "Adobe",
+    "title": "2027 Intern - Data, AI & Innovation",
+    "source": "Workday:Adobe",
+    "timestamp": "2026-10-19T16:50:17.212989+00:00"
   }
 ]
