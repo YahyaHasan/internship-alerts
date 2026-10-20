@@ -1,12 +1,6 @@
 [
   {
     "company": "Together AI",
-    "title": "Research Intern, Inference (Summer 2027)",
-    "source": "Greenhouse:Together AI",
-    "timestamp": "2026-09-18T15:45:18.020932+00:00"
-  },
-  {
-    "company": "Together AI",
     "title": "Research Intern, Inference (Winter 2027)",
     "source": "Greenhouse:Together AI",
     "timestamp": "2026-09-18T15:45:18.020932+00:00"
@@ -2998,5 +2992,11 @@
     "title": "GE Vernova Nuclear - Field Services Internship Spring 2027",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-10-20T16:00:22.125990+00:00"
+  },
+  {
+    "company": "Rockwell Automation",
+    "title": "Intern - Embedded Controls Engineering",
+    "source": "Workday:Rockwell Automation",
+    "timestamp": "2026-10-20T16:25:14.037071+00:00"
   }
 ]
