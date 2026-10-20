@@ -1,11 +1,5 @@
 [
   {
-    "company": "Together AI",
-    "title": "Research Intern, Frontier Agents (Summer 2027)",
-    "source": "Greenhouse:Together AI",
-    "timestamp": "2026-09-18T18:45:15.600038+00:00"
-  },
-  {
     "company": "Mistral AI",
     "title": "Applied Scientist (Internship in Paris or London)",
     "source": "Ashby:Mistral AI",
@@ -2998,5 +2992,11 @@
     "title": "Presale Systems Engineer - Summer 2027 Internship",
     "source": "Workday:Motorola Solutions",
     "timestamp": "2026-10-20T20:20:16.470168+00:00"
+  },
+  {
+    "company": "Rockwell Automation",
+    "title": "Development Technician Student Intern",
+    "source": "Workday:Rockwell Automation",
+    "timestamp": "2026-10-20T20:35:14.282828+00:00"
   }
 ]
