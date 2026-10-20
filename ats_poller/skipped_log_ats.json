@@ -1,11 +1,5 @@
 [
   {
-    "company": "Biogen",
-    "title": "2027 Intern, Information Technology",
-    "source": "Workday:Biogen",
-    "timestamp": "2026-09-18T16:00:24.065274+00:00"
-  },
-  {
     "company": "Merck",
     "title": "2027 Future Talent Program - Payer and Health Systems - Intern",
     "source": "Workday:Merck",
@@ -2998,5 +2992,11 @@
     "title": "Intern - SSD Firmware",
     "source": "Workday:Micron",
     "timestamp": "2026-10-20T19:05:14.509681+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Semiconductor Global Category Supplier Management",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-20T19:15:16.947814+00:00"
   }
 ]
