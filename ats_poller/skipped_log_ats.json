@@ -1,11 +1,5 @@
 [
   {
-    "company": "Merck",
-    "title": "2027 Future Talent Program - Payer and Health Systems - Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-18T16:15:17.374648+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - Category Supplier Management",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Semiconductor Global Category Supplier Management",
     "source": "Workday:Micron",
     "timestamp": "2026-10-20T19:15:16.947814+00:00"
+  },
+  {
+    "company": "Adobe",
+    "title": "2027 Intern - Security Engineer",
+    "source": "Workday:Adobe",
+    "timestamp": "2026-10-20T19:20:17.878145+00:00"
   }
 ]
