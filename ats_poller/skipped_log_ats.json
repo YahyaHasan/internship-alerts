@@ -1,12 +1,6 @@
 [
   {
     "company": "Together AI",
-    "title": "Research Intern, Model Shaping (Summer 2027)",
-    "source": "Greenhouse:Together AI",
-    "timestamp": "2026-09-18T15:45:18.020932+00:00"
-  },
-  {
-    "company": "Together AI",
     "title": "Research Intern, Model Shaping (Winter 2027)",
     "source": "Greenhouse:Together AI",
     "timestamp": "2026-09-18T15:45:18.020932+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Ratings Analytical Intern",
     "source": "Workday:S&P Global",
     "timestamp": "2026-10-20T17:30:21.869441+00:00"
+  },
+  {
+    "company": "Nvidia",
+    "title": "Order Management Intern - Summer 2027",
+    "source": "Workday:Nvidia",
+    "timestamp": "2026-10-20T18:05:14.587928+00:00"
   }
 ]
