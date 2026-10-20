@@ -1,11 +1,5 @@
 [
   {
-    "company": "Retell AI",
-    "title": "Product Design Intern",
-    "source": "Ashby:Retell AI",
-    "timestamp": "2026-09-18T04:45:14.668593+00:00"
-  },
-  {
     "company": "Micron",
     "title": "TSE KEG Intern Engineer",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Ground Systems Engineering Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-10-19T23:55:13.754415+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "ASIC Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-10-20T01:35:13.878491+00:00"
   }
 ]
