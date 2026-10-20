@@ -1,11 +1,5 @@
 [
   {
-    "company": "Robinhood",
-    "title": "Offensive Security Intern (Summer 2027)",
-    "source": "Greenhouse:Robinhood",
-    "timestamp": "2026-09-18T19:25:13.605234+00:00"
-  },
-  {
     "company": "1X",
     "title": "Internship - CNC Machine Park",
     "source": "Ashby:1X",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Design Engineer, Pathfinding",
     "source": "Workday:Micron",
     "timestamp": "2026-10-20T22:45:14.493502+00:00"
+  },
+  {
+    "company": "CrowdStrike",
+    "title": "Professional Services Pathfinder Intern - Summer 2027 (Arlington, VA)",
+    "source": "Workday:CrowdStrike",
+    "timestamp": "2026-10-20T23:30:20.007390+00:00"
   }
 ]
