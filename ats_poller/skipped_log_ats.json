@@ -1,12 +1,6 @@
 [
   {
     "company": "Micron",
-    "title": "TSE KEG Intern Engineer",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-18T14:45:15.491545+00:00"
-  },
-  {
-    "company": "Micron",
     "title": "Intern - ASIC Digital Design",
     "source": "Workday:Micron",
     "timestamp": "2026-09-18T15:20:19.261475+00:00"
@@ -2998,5 +2992,11 @@
     "title": "ASIC Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-10-20T01:35:13.878491+00:00"
+  },
+  {
+    "company": "Cigna",
+    "title": "Business Analytics Intern",
+    "source": "Workday:Cigna",
+    "timestamp": "2026-10-20T13:20:15.947403+00:00"
   }
 ]
