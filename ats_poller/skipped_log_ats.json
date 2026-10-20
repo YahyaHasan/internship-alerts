@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Category Supplier Management",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-18T18:15:18.063053+00:00"
-  },
-  {
     "company": "Together AI",
     "title": "Research Intern, Frontier Agents (Summer 2027)",
     "source": "Greenhouse:Together AI",
@@ -2998,5 +2992,11 @@
     "title": "2027 Intern - Security Engineer",
     "source": "Workday:Adobe",
     "timestamp": "2026-10-20T19:20:17.878145+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Presale Systems Engineer - Summer 2027 Internship",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-10-20T20:20:16.470168+00:00"
   }
 ]
