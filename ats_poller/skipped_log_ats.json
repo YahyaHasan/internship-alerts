@@ -1,17 +1,5 @@
 [
   {
-    "company": "Together AI",
-    "title": "Research Intern, Model Shaping (Winter 2027)",
-    "source": "Greenhouse:Together AI",
-    "timestamp": "2026-09-18T15:45:18.020932+00:00"
-  },
-  {
-    "company": "Together AI",
-    "title": "Research Intern, Frontier Agents (Winter 2027)",
-    "source": "Greenhouse:Together AI",
-    "timestamp": "2026-09-18T15:50:19.979395+00:00"
-  },
-  {
     "company": "Biogen",
     "title": "2027 Intern, Information Technology",
     "source": "Workday:Biogen",
@@ -2998,5 +2986,17 @@
     "title": "Order Management Intern - Summer 2027",
     "source": "Workday:Nvidia",
     "timestamp": "2026-10-20T18:05:14.587928+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - SSD Firmware",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-20T19:05:14.509681+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - SSD Firmware",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-20T19:05:14.509681+00:00"
   }
 ]
