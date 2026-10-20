@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - ASIC Digital Design",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-18T15:20:19.261475+00:00"
-  },
-  {
     "company": "Together AI",
     "title": "Research Intern, Inference (Summer 2027)",
     "source": "Greenhouse:Together AI",
@@ -2998,5 +2992,11 @@
     "title": "Business Analytics Intern",
     "source": "Workday:Cigna",
     "timestamp": "2026-10-20T13:20:15.947403+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "GE Vernova Nuclear - Field Services Internship Spring 2027",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-10-20T16:00:22.125990+00:00"
   }
 ]
