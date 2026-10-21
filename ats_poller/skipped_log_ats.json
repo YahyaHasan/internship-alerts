@@ -1,12 +1,6 @@
 [
   {
     "company": "Illinois Tool Works",
-    "title": "Technical Writing Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-09-18T20:05:14.830049+00:00"
-  },
-  {
-    "company": "Illinois Tool Works",
     "title": "Welding Engineering Intern",
     "source": "Workday:Illinois Tool Works",
     "timestamp": "2026-09-18T20:05:14.830049+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Applied Research Intern, Integrated Sensing and Communications (ISAC)-NVIDIA Aerial - Summer 2027",
     "source": "Workday:Nvidia",
     "timestamp": "2026-10-21T06:05:14.527476+00:00"
+  },
+  {
+    "company": "Duke Energy",
+    "title": "Nuclear Cybersecurity 2027 Summer Internship",
+    "source": "Workday:Duke Energy",
+    "timestamp": "2026-10-21T13:40:17.163347+00:00"
   }
 ]
