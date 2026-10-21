@@ -1,11 +1,5 @@
 [
   {
-    "company": "1X",
-    "title": "Internship - CNC Machine Park",
-    "source": "Ashby:1X",
-    "timestamp": "2026-09-18T19:25:13.605234+00:00"
-  },
-  {
     "company": "Illinois Tool Works",
     "title": "Technical Writing Intern",
     "source": "Workday:Illinois Tool Works",
@@ -2998,5 +2992,11 @@
     "title": "Professional Services Pathfinder Intern - Summer 2027 (Arlington, VA)",
     "source": "Workday:CrowdStrike",
     "timestamp": "2026-10-20T23:30:20.007390+00:00"
+  },
+  {
+    "company": "Nvidia",
+    "title": "Applied Research Intern, Integrated Sensing and Communications (ISAC)-NVIDIA Aerial - Summer 2027",
+    "source": "Workday:Nvidia",
+    "timestamp": "2026-10-21T06:05:14.527476+00:00"
   }
 ]
