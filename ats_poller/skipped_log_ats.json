@@ -1,11 +1,5 @@
 [
   {
-    "company": "Base Power",
-    "title": "Growth Intern",
-    "source": "Ashby:Base Power",
-    "timestamp": "2026-09-18T22:55:12.259291+00:00"
-  },
-  {
     "company": "E-Space",
     "title": "Technical Intern: Equipment Commissioning Support (Korean/English)",
     "source": "Lever:E-Space",
@@ -2998,5 +2992,11 @@
     "title": "Waster & Groundwater Programs Summer Engineering Internship 2027",
     "source": "Workday:Duke Energy",
     "timestamp": "2026-10-21T13:55:13.863994+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - SMS Pathfinding Engineering",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-21T17:00:21.890599+00:00"
   }
 ]
