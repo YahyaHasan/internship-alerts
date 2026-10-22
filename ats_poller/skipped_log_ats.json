@@ -1,18 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center -  Towson, MD",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T13:50:20.154817+00:00"
-  },
-  {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center -   Washington, DC",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T13:50:20.154817+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Schaumburg, IL",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T13:55:18.404535+00:00"
@@ -2998,5 +2986,17 @@
     "title": "2027 Corporate Affairs Development Program Intern (Undergraduate)",
     "source": "SmartRecruiters:AbbVie",
     "timestamp": "2026-10-22T14:55:15.133711+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Presale Systems Engineer - Summer 2027 Internship",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-10-22T15:30:20.097263+00:00"
+  },
+  {
+    "company": "InfiniteQuant",
+    "title": "Quantitative Researcher - Internship - Summer 2027",
+    "source": "SmartRecruiters:InfiniteQuant",
+    "timestamp": "2026-10-22T15:30:20.097263+00:00"
   }
 ]
