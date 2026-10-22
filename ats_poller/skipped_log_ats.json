@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Philadelphia, PA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T13:45:18.679951+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center -  Bethesda, MD",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T13:50:20.154817+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - Surface Lab",
     "source": "Workday:Micron",
     "timestamp": "2026-10-21T22:55:14.681716+00:00"
+  },
+  {
+    "company": "Applied Materials",
+    "title": "Internship Program Manager - B4",
+    "source": "Workday:Applied Materials",
+    "timestamp": "2026-10-22T07:00:22.264363+00:00"
   }
 ]
