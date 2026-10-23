@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Dunwoody, GA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T14:30:20.857669+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - The Woodlands, TX",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:30:20.857669+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Global Technician - Intern",
     "source": "Workday:Becton Dickinson",
     "timestamp": "2026-10-23T19:50:20.020648+00:00"
+  },
+  {
+    "company": "AES",
+    "title": "Generation Support Engineer Intern (Summer 2027)",
+    "source": "Workday:AES",
+    "timestamp": "2026-10-23T20:10:15.292732+00:00"
   }
 ]
