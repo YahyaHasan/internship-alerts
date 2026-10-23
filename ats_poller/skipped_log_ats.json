@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Alpharetta, GA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T14:30:20.857669+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Greensboro, NC",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:30:20.857669+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Product Development Engineering Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-10-23T16:25:17.407430+00:00"
+  },
+  {
+    "company": "Merck",
+    "title": "2027 Future Talent Program - Data, AI, and Genome Sciences - Intern",
+    "source": "Workday:Merck",
+    "timestamp": "2026-10-23T18:10:15.873958+00:00"
   }
 ]
