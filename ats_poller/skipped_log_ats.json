@@ -1,11 +1,5 @@
 [
   {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - Highland Park, IL",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T14:00:27.672137+00:00"
-  },
-  {
     "company": "Sezzle",
     "title": "Product Data Intern ",
     "source": "Greenhouse:Sezzle",
@@ -2998,5 +2992,11 @@
     "title": "Intern \u2013 Business Process Analyst",
     "source": "Workday:Micron",
     "timestamp": "2026-10-23T00:15:17.391087+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Product Development Engineering Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-10-23T16:05:22.137883+00:00"
   }
 ]
