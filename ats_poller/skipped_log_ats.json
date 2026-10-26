@@ -1,18 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Scottsdale, AZ",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T14:55:15.157049+00:00"
-  },
-  {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - Cleveland West, OH",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T14:55:15.157049+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Louisville, KY",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:55:15.157049+00:00"
@@ -2998,5 +2986,17 @@
     "title": "Presales Systems Engineering - Summer 2027 Internship",
     "source": "Workday:Motorola Solutions",
     "timestamp": "2026-10-26T16:35:18.459025+00:00"
+  },
+  {
+    "company": "Together AI",
+    "title": "Technical Writer Intern, Developer Experience (Summer 2027)",
+    "source": "Greenhouse:Together AI",
+    "timestamp": "2026-10-26T18:35:14.179304+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Presales Engineering Intern- Summer 2027 Internship",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-10-26T18:35:14.179304+00:00"
   }
 ]
