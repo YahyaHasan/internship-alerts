@@ -1,18 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Cranberry Township, PA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T14:55:15.157049+00:00"
-  },
-  {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - Cleveland East, OH",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T14:55:15.157049+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Scottsdale, AZ",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:55:15.157049+00:00"
@@ -2998,5 +2986,17 @@
     "title": "Autonomy Engineer Intern, Autonomy Infrastructure, Systems and Tools, 2027 (HQ)",
     "source": "Ashby:Skydio",
     "timestamp": "2026-10-26T16:20:18.822167+00:00"
+  },
+  {
+    "company": "Rockwell Automation",
+    "title": "Intern, Cybersecurity",
+    "source": "Workday:Rockwell Automation",
+    "timestamp": "2026-10-26T16:35:18.459025+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Presales Systems Engineering - Summer 2027 Internship",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-10-26T16:35:18.459025+00:00"
   }
 ]
