@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Raleigh, NC",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T14:30:20.857669+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Lexington, KY",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:50:21.743317+00:00"
@@ -2998,5 +2992,11 @@
     "title": "State Street - Markets Rising Junior Summer Internship 2027",
     "source": "Workday:State Street",
     "timestamp": "2026-10-26T04:35:15.493846+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "COEE Presales System Engineer (2027 Internship)",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-10-26T13:55:14.314488+00:00"
   }
 ]
