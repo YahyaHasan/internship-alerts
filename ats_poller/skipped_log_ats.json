@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Indianapolis, IN",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T14:50:21.743317+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Alexandria, VA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T14:50:21.743317+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Product Manager Intern, ShopX(Rewards)",
     "source": "Greenhouse:Sezzle",
     "timestamp": "2026-10-26T14:55:13.578799+00:00"
+  },
+  {
+    "company": "Marvell",
+    "title": "Signal and Power Integrity Intern, MS - Summer 2027",
+    "source": "Workday:Marvell",
+    "timestamp": "2026-10-26T16:00:22.685289+00:00"
   }
 ]
