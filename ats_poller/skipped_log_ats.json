@@ -1,12 +1,6 @@
 [
   {
     "company": "Marvell",
-    "title": "Digital IC Design Intern, MS - Summer 2027",
-    "source": "Workday:Marvell",
-    "timestamp": "2026-09-21T16:20:17.060966+00:00"
-  },
-  {
-    "company": "Marvell",
     "title": "Digital IC Design Intern, BS - Summer 2027",
     "source": "Workday:Marvell",
     "timestamp": "2026-09-21T16:20:17.060966+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Undergrad Intern \u2013 R&D Knowledge Management (Summer 2027)",
     "source": "Workday:Amgen",
     "timestamp": "2026-10-27T21:10:15.815509+00:00"
+  },
+  {
+    "company": "Mercor",
+    "title": "Research Engineer Intern - Environments, Data and Post-Training",
+    "source": "Ashby:Mercor",
+    "timestamp": "2026-10-27T23:25:13.834887+00:00"
   }
 ]
