@@ -1,18 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - San Antonio, TX",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T15:55:17.147163+00:00"
-  },
-  {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center \u2013 Burlingame, CA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T15:55:17.147163+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Sacramento, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T16:05:17.651066+00:00"
@@ -2998,5 +2986,17 @@
     "title": "GE Vernova Power Conversion Engineering Intern/Co-op \u2013 Fall 2027",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-10-27T14:05:14.795421+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Global Regulatory Sciences Biopharmaceutical Sector Internship Summer 2027",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-10-27T14:30:24.320668+00:00"
+  },
+  {
+    "company": "AbbVie",
+    "title": "2027 Corporate Affairs Development Program Intern (Undergraduate)",
+    "source": "SmartRecruiters:AbbVie",
+    "timestamp": "2026-10-27T14:30:24.320668+00:00"
   }
 ]
