@@ -1,24 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Pasadena, CA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T15:40:21.965056+00:00"
-  },
-  {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center \u2013 San Francisco, CA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T15:50:21.660278+00:00"
-  },
-  {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - Chandler, AZ",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T15:55:17.147163+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center \u2013 Palo Alto, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T15:55:17.147163+00:00"
@@ -2998,5 +2980,23 @@
     "title": "Autologous and Autoimmune Product Sciences Summer Intern",
     "source": "Workday:Bristol-Myers Squibb",
     "timestamp": "2026-10-27T13:20:17.771117+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern: Product Test Development Engineer",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-27T13:30:21.256998+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern: Product Test Development Engineer",
+    "source": "Workday:Micron",
+    "timestamp": "2026-10-27T13:30:21.256998+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Cell Therapy Analytical Development Intern",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-10-27T13:30:21.256998+00:00"
   }
 ]
