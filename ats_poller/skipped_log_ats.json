@@ -1,11 +1,5 @@
 [
   {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - Santa Monica, CA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T16:15:17.580030+00:00"
-  },
-  {
     "company": "Marvell",
     "title": "Digital IC Design Intern, MS - Summer 2027",
     "source": "Workday:Marvell",
@@ -2998,5 +2992,11 @@
     "title": "Experience Team \u2013 Associate Product Design Internships \u2013 Summer 2027",
     "source": "SmartRecruiters:ServiceNow",
     "timestamp": "2026-10-27T19:10:16.678624+00:00"
+  },
+  {
+    "company": "Amgen",
+    "title": "Undergrad Intern \u2013 R&D Knowledge Management (Summer 2027)",
+    "source": "Workday:Amgen",
+    "timestamp": "2026-10-27T21:10:15.815509+00:00"
   }
 ]
