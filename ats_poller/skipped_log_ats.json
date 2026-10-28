@@ -1,12 +1,6 @@
 [
   {
     "company": "Rocket Lab",
-    "title": "Thermal Engineering Intern Spring 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-21T16:45:18.411321+00:00"
-  },
-  {
-    "company": "Rocket Lab",
     "title": "Thermal Engineering Intern Summer 2027",
     "source": "Greenhouse:Rocket Lab",
     "timestamp": "2026-09-21T16:45:18.411321+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Research Engineer Intern - Environments, Data and Post-Training",
     "source": "Ashby:Mercor",
     "timestamp": "2026-10-28T08:50:18.126900+00:00"
+  },
+  {
+    "company": "Boston Dynamics",
+    "title": "Atlas VLA Research Intern",
+    "source": "Workday:Boston Dynamics",
+    "timestamp": "2026-10-28T14:25:16.064585+00:00"
   }
 ]
