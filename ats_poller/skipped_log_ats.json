@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Del Mar, CA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T17:00:24.249368+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - San Diego, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T17:00:24.249368+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Supplier Engineer Intern- Bachelor's (Chandler, AZ)",
     "source": "Workday:Applied Materials",
     "timestamp": "2026-10-28T20:30:19.442905+00:00"
+  },
+  {
+    "company": "Analog Devices",
+    "title": "Project / Program Management (Eng) Intern",
+    "source": "Workday:Analog Devices",
+    "timestamp": "2026-10-28T20:40:17.878612+00:00"
   }
 ]
