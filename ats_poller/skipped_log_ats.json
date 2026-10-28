@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - San Diego, CA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T17:00:24.249368+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Mission Viejo, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T17:00:24.249368+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Project / Program Management (Eng) Intern",
     "source": "Workday:Analog Devices",
     "timestamp": "2026-10-28T20:40:17.878612+00:00"
+  },
+  {
+    "company": "Shield AI",
+    "title": "Summer 2027 - Product Support Engineering Intern #6470 & #6442",
+    "source": "Lever:Shield AI",
+    "timestamp": "2026-10-28T22:25:13.873851+00:00"
   }
 ]
