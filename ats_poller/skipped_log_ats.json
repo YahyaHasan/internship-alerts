@@ -1,11 +1,5 @@
 [
   {
-    "company": "Rocket Lab",
-    "title": "Thermal Engineering Intern Summer 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-09-21T16:45:18.411321+00:00"
-  },
-  {
     "company": "Fidelity",
     "title": "Intern, Investor Center - Cherry Creek, CO",
     "source": "Workday:Fidelity",
@@ -2998,5 +2992,11 @@
     "title": "Atlas VLA Research Intern",
     "source": "Workday:Boston Dynamics",
     "timestamp": "2026-10-28T14:25:16.064585+00:00"
+  },
+  {
+    "company": "CrowdStrike",
+    "title": "Overwatch Intern - Research - Summer 2027",
+    "source": "Workday:CrowdStrike",
+    "timestamp": "2026-10-28T16:10:19.147798+00:00"
   }
 ]
