@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Vancouver, WA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T17:10:17.844057+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Boise, ID",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T17:10:17.844057+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Product Manager Intern (2027) - London, UK",
     "source": "Greenhouse:Cloudflare",
     "timestamp": "2026-10-29T15:45:17.785604+00:00"
+  },
+  {
+    "company": "Base Power",
+    "title": "Power Systems Engineering Intern",
+    "source": "Ashby:Base Power",
+    "timestamp": "2026-10-29T15:50:16.662905+00:00"
   }
 ]
