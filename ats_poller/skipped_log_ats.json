@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Design Engineer, HBM",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-21T18:20:19.253937+00:00"
-  },
-  {
     "company": "Fidelity",
     "title": "Intern, Investor Center -  Bethesda, MD",
     "source": "Workday:Fidelity",
@@ -2998,5 +2992,11 @@
     "title": "Product Marketing- Agentic Analytics Intern (Spring 2027)",
     "source": "Ashby:Snowflake",
     "timestamp": "2026-10-30T15:50:14.998766+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Program Manager Intern - Summer 2027",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-10-30T17:35:13.423708+00:00"
   }
 ]
