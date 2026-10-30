@@ -1,11 +1,5 @@
 [
   {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - Memphis, TN",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T18:25:16.992317+00:00"
-  },
-  {
     "company": "Waymo",
     "title": "2027 Summer Intern, BS/MS, Global Supply Management (GSM)",
     "source": "Greenhouse:Waymo",
@@ -2998,5 +2992,11 @@
     "title": "Molding Reliability Engineering Intern",
     "source": "Workday:Becton Dickinson",
     "timestamp": "2026-10-30T19:05:20.493123+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "2027 Summer Intern \u2013 Research and Development - Power Electronics & Energy Conversion Systems",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-10-30T20:30:19.445809+00:00"
   }
 ]
