@@ -1,11 +1,5 @@
 [
   {
-    "company": "Waymo",
-    "title": "2027 Summer Intern, BS/MS, Global Supply Management (GSM)",
-    "source": "Greenhouse:Waymo",
-    "timestamp": "2026-09-21T18:45:19.851959+00:00"
-  },
-  {
     "company": "Fidelity",
     "title": "Intern, Investor Center - Seal Beach, CA",
     "source": "Workday:Fidelity",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern \u2013 Research and Development - Power Electronics & Energy Conversion Systems",
     "source": "Workday:General Motors",
     "timestamp": "2026-10-30T20:30:19.445809+00:00"
+  },
+  {
+    "company": "Sierra",
+    "title": "Research Intern",
+    "source": "Ashby:Sierra",
+    "timestamp": "2026-10-31T04:35:15.747821+00:00"
   }
 ]
