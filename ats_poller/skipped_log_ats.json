@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Fort Worth, TX",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T19:50:17.896911+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Katy, TX",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T19:50:17.896911+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern- YE Physical Failure Analysis Engineer",
     "source": "Workday:Micron",
     "timestamp": "2026-11-02T20:00:22.710305+00:00"
+  },
+  {
+    "company": "Cadence",
+    "title": "CST Intern - Data Center GTM Intern",
+    "source": "Workday:Cadence",
+    "timestamp": "2026-11-02T20:05:14.514543+00:00"
   }
 ]
