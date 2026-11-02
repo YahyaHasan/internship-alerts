@@ -1,18 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Century City, CA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T18:50:18.137338+00:00"
-  },
-  {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - Birmingham, AL",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T18:50:18.137338+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Franklin, TN",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T18:50:18.137338+00:00"
@@ -2998,5 +2986,17 @@
     "title": "R&D Intern",
     "source": "Workday:Becton Dickinson",
     "timestamp": "2026-11-02T16:05:15.730345+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Equipment Engineer",
+    "source": "Workday:Micron",
+    "timestamp": "2026-11-02T16:25:14.932158+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Neuroscience Intern",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-02T16:25:14.932158+00:00"
   }
 ]
