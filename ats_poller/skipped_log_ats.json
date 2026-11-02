@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Katy, TX",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T19:50:17.896911+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Sugar Land, TX",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T19:50:17.896911+00:00"
@@ -2998,5 +2992,11 @@
     "title": "CST Intern - Data Center GTM Intern",
     "source": "Workday:Cadence",
     "timestamp": "2026-11-02T20:05:14.514543+00:00"
+  },
+  {
+    "company": "Shield AI",
+    "title": "Summer 2027 Intern - Embedded Firmware - 5810",
+    "source": "Lever:Shield AI",
+    "timestamp": "2026-11-02T23:15:16.287477+00:00"
   }
 ]
