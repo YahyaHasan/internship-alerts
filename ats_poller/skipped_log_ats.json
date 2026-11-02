@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Irvine, CA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T18:50:18.137338+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Century City, CA",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T18:50:18.137338+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Oncology Discovery Research Intern",
     "source": "Workday:Bristol-Myers Squibb",
     "timestamp": "2026-11-02T15:45:18.762289+00:00"
+  },
+  {
+    "company": "Becton Dickinson",
+    "title": "R&D Intern",
+    "source": "Workday:Becton Dickinson",
+    "timestamp": "2026-11-02T16:05:15.730345+00:00"
   }
 ]
