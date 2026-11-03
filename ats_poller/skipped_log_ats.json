@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern - Digital Product: Embedded and Systems Engineering",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-21T20:30:24.305008+00:00"
-  },
-  {
     "company": "Otis Worldwide",
     "title": "Communications & Visual Storytelling Intern (Part-Time)",
     "source": "Workday:Otis Worldwide",
@@ -2998,5 +2992,11 @@
     "title": "GE Vernova Power Conversion & Storage Engineering Intern/Co-Op - Summer 2027-2",
     "source": "Workday:GE Vernova",
     "timestamp": "2026-11-03T13:35:14.100088+00:00"
+  },
+  {
+    "company": "Formlabs",
+    "title": "Print Production Intern (Winter/Spring 2027)",
+    "source": "Greenhouse:Formlabs",
+    "timestamp": "2026-11-03T14:50:17.809439+00:00"
   }
 ]
