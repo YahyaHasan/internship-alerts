@@ -1,12 +1,6 @@
 [
   {
     "company": "Fidelity",
-    "title": "Intern, Investor Center - Dallas, TX",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T19:55:17.648676+00:00"
-  },
-  {
-    "company": "Fidelity",
     "title": "Intern, Investor Center - Irving, TX",
     "source": "Workday:Fidelity",
     "timestamp": "2026-09-21T19:55:17.648676+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - System Engineer, HBM",
     "source": "Workday:Micron",
     "timestamp": "2026-11-03T01:20:17.802583+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Supply Management Analyst",
+    "source": "Workday:Micron",
+    "timestamp": "2026-11-03T01:55:14.616438+00:00"
   }
 ]
