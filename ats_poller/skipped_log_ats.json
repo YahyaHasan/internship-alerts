@@ -1,11 +1,5 @@
 [
   {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - Biltmore, AZ",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-21T21:00:22.644557+00:00"
-  },
-  {
     "company": "3M",
     "title": "Internship - Spring 2027 / Fall 2027 Packaging Solutions Co-op",
     "source": "Workday:3M",
@@ -2998,5 +2992,11 @@
     "title": "Accredo Product  - Summer Intern",
     "source": "Workday:Cigna",
     "timestamp": "2026-11-03T16:20:18.613916+00:00"
+  },
+  {
+    "company": "Otis Worldwide",
+    "title": "Material Engineering Intern",
+    "source": "Workday:Otis Worldwide",
+    "timestamp": "2026-11-03T18:15:24.381457+00:00"
   }
 ]
