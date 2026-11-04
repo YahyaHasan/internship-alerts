@@ -1,11 +1,5 @@
 [
   {
-    "company": "Marvell",
-    "title": "Test Engineering Intern, BS - Summer 2027",
-    "source": "Workday:Marvell",
-    "timestamp": "2026-09-21T22:25:16.344533+00:00"
-  },
-  {
     "company": "Bot Auto",
     "title": "Intern, IT Specialist",
     "source": "Greenhouse:Bot Auto",
@@ -2998,5 +2992,11 @@
     "title": "IT Internship (Techstop Support)",
     "source": "Workday:Cadence",
     "timestamp": "2026-11-04T02:55:13.307521+00:00"
+  },
+  {
+    "company": "Pinterest",
+    "title": "Content Enablement Intern 2027 (USA)",
+    "source": "Greenhouse:Pinterest",
+    "timestamp": "2026-11-04T15:55:12.649902+00:00"
   }
 ]
