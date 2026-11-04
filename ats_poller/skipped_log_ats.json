@@ -1,12 +1,6 @@
 [
   {
     "company": "Astranis",
-    "title": "Assembly, Integration, and Test Intern (Summer 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-21T23:35:18.445732+00:00"
-  },
-  {
-    "company": "Astranis",
     "title": "Assembly, Integration, and Test Intern (Winter 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-21T23:35:18.445732+00:00"
@@ -2998,5 +2992,11 @@
     "title": "2027 Intern - Media & Editorial Generalist",
     "source": "Workday:Adobe",
     "timestamp": "2026-11-04T16:20:16.330553+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Applications Engineering Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-11-04T18:15:17.720163+00:00"
   }
 ]
