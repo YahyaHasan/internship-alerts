@@ -1,11 +1,5 @@
 [
   {
-    "company": "Illinois Tool Works",
-    "title": "Engineering Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-09-22T05:35:12.965874+00:00"
-  },
-  {
     "company": "AES",
     "title": "Transmission Engineering Intern - (Summer 2027)",
     "source": "Workday:AES",
@@ -2998,5 +2992,11 @@
     "title": "Global Discovery Chemistry Intern",
     "source": "Workday:Bristol-Myers Squibb",
     "timestamp": "2026-11-04T20:25:16.520468+00:00"
+  },
+  {
+    "company": "Adobe",
+    "title": "2027 Intern - Brand Creative",
+    "source": "Workday:Adobe",
+    "timestamp": "2026-11-04T20:50:15.257967+00:00"
   }
 ]
