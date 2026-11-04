@@ -1,11 +1,5 @@
 [
   {
-    "company": "Astranis",
-    "title": "Assembly, Integration, and Test Intern (Winter 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-21T23:35:18.445732+00:00"
-  },
-  {
     "company": "Illinois Tool Works",
     "title": "Engineering Intern",
     "source": "Workday:Illinois Tool Works",
@@ -2998,5 +2992,11 @@
     "title": "Applications Engineering Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-11-04T18:15:17.720163+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Global Discovery Chemistry Intern",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-04T20:25:16.520468+00:00"
   }
 ]
