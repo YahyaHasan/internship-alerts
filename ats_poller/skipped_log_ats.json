@@ -1,11 +1,5 @@
 [
   {
-    "company": "AES",
-    "title": "Transmission Engineering Intern - (Summer 2027)",
-    "source": "Workday:AES",
-    "timestamp": "2026-09-22T11:35:14.539691+00:00"
-  },
-  {
     "company": "Fidelity",
     "title": "Intern, Investor Center - Farmington Hills, MI",
     "source": "Workday:Fidelity",
@@ -2998,5 +2992,11 @@
     "title": "2027 Intern - Brand Creative",
     "source": "Workday:Adobe",
     "timestamp": "2026-11-04T20:50:15.257967+00:00"
+  },
+  {
+    "company": "Nvidia",
+    "title": "VLSI Timing Methodology Intern - Summer 2027",
+    "source": "Workday:Nvidia",
+    "timestamp": "2026-11-05T00:30:22.452576+00:00"
   }
 ]
