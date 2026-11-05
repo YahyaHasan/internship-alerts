@@ -1,11 +1,5 @@
 [
   {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - South Hills, PA",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-22T14:45:19.079793+00:00"
-  },
-  {
     "company": "Stryker",
     "title": "Data Engineering Intern",
     "source": "Workday:Stryker",
@@ -2998,5 +2992,11 @@
     "title": "2027 Wholesale Client Coverage & Credit Summer Intern (Internship)",
     "source": "Workday:Truist Financial",
     "timestamp": "2026-11-05T20:15:15.767946+00:00"
+  },
+  {
+    "company": "General Matter",
+    "title": "Summer 2027 Internship - Field Engineer",
+    "source": "Greenhouse:General Matter",
+    "timestamp": "2026-11-05T21:00:22.352826+00:00"
   }
 ]
