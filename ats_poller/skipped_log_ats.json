@@ -1,11 +1,5 @@
 [
   {
-    "company": "Stryker",
-    "title": "Data Engineering Intern",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-22T14:55:16.184795+00:00"
-  },
-  {
     "company": "Hermeus",
     "title": "Build Reliability Engineering Intern - Spring/Summer 2027",
     "source": "Lever:Hermeus",
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Internship - Field Engineer",
     "source": "Greenhouse:General Matter",
     "timestamp": "2026-11-05T21:00:22.352826+00:00"
+  },
+  {
+    "company": "Rockwell Automation",
+    "title": "Intern, Engineering (Independent Cart Technology)",
+    "source": "Workday:Rockwell Automation",
+    "timestamp": "2026-11-05T23:05:14.756668+00:00"
   }
 ]
