@@ -1,11 +1,5 @@
 [
   {
-    "company": "Hermeus",
-    "title": "Build Reliability Engineering Intern - Spring/Summer 2027",
-    "source": "Lever:Hermeus",
-    "timestamp": "2026-09-22T15:25:21.096341+00:00"
-  },
-  {
     "company": "Fidelity",
     "title": "Intern, Investor Center - Torrance, CA",
     "source": "Workday:Fidelity",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Engineering (Independent Cart Technology)",
     "source": "Workday:Rockwell Automation",
     "timestamp": "2026-11-05T23:05:14.756668+00:00"
+  },
+  {
+    "company": "Zoox",
+    "title": "Information Technology & Applications Intern [Summer 2027]",
+    "source": "Lever:Zoox",
+    "timestamp": "2026-11-05T23:40:15.103075+00:00"
   }
 ]
