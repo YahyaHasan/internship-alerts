@@ -1,11 +1,5 @@
 [
   {
-    "company": "DV Trading",
-    "title": "Security Engineer Intern - Summer 2027",
-    "source": "Greenhouse:DV Trading",
-    "timestamp": "2026-09-22T13:55:15.652122+00:00"
-  },
-  {
     "company": "Stryker",
     "title": "Summer 2027 Internship - Advanced Support Tools - Indiana",
     "source": "Workday:Stryker",
@@ -2998,5 +2992,11 @@
     "title": "Structural Engineering Intern",
     "source": "Workday:Illinois Tool Works",
     "timestamp": "2026-11-05T17:55:16.167457+00:00"
+  },
+  {
+    "company": "Amgen",
+    "title": "Undergraduate Intern-R&D -Oncology Research (Summer 2027)",
+    "source": "Workday:Amgen",
+    "timestamp": "2026-11-05T18:05:13.013354+00:00"
   }
 ]
