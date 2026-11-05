@@ -1,11 +1,5 @@
 [
   {
-    "company": "Stryker",
-    "title": "Summer 2027 Internship - Advanced Support Tools - Indiana",
-    "source": "Workday:Stryker",
-    "timestamp": "2026-09-22T14:05:18.950851+00:00"
-  },
-  {
     "company": "Fidelity",
     "title": "Intern, Investor Center - Ashburn, VA",
     "source": "Workday:Fidelity",
@@ -2998,5 +2992,11 @@
     "title": "Undergraduate Intern-R&D -Oncology Research (Summer 2027)",
     "source": "Workday:Amgen",
     "timestamp": "2026-11-05T18:05:13.013354+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "UO FE Summer Internship 2027",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-11-05T18:25:14.926482+00:00"
   }
 ]
