@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Design Engineer, HIG HBM",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-23T03:40:17.756225+00:00"
-  },
-  {
     "company": "Astranis",
     "title": "Reliability Test Intern (Summer 2027)",
     "source": "Greenhouse:Astranis",
@@ -2998,5 +2992,11 @@
     "title": "Structural Engineering Intern",
     "source": "Workday:Illinois Tool Works",
     "timestamp": "2026-11-06T15:15:15.131015+00:00"
+  },
+  {
+    "company": "S&P Global",
+    "title": "Summer Intern, Business Content Design & Production",
+    "source": "Workday:S&P Global",
+    "timestamp": "2026-11-06T15:30:19.155192+00:00"
   }
 ]
