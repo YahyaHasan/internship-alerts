@@ -1,17 +1,5 @@
 [
   {
-    "company": "Base Power",
-    "title": "Organic Social Content Intern",
-    "source": "Ashby:Base Power",
-    "timestamp": "2026-09-23T16:45:17.144726+00:00"
-  },
-  {
-    "company": "S&P Global",
-    "title": "Ratings Analytical Intern - Americas",
-    "source": "Workday:S&P Global",
-    "timestamp": "2026-09-23T16:50:18.707152+00:00"
-  },
-  {
     "company": "F5",
     "title": "Technical Program Manager 1 - Former Intern",
     "source": "Workday:F5",
@@ -2998,5 +2986,17 @@
     "title": "Intern - Corporate Development",
     "source": "Workday:Micron",
     "timestamp": "2026-11-06T19:55:14.650134+00:00"
+  },
+  {
+    "company": "Samsung",
+    "title": "Business Intelligence & Data Analytics Intern",
+    "source": "Workday:Samsung",
+    "timestamp": "2026-11-06T20:40:16.173370+00:00"
+  },
+  {
+    "company": "Samsung",
+    "title": "Samsung Care AI Data Analytic Intern",
+    "source": "Workday:Samsung",
+    "timestamp": "2026-11-06T20:40:16.173370+00:00"
   }
 ]
