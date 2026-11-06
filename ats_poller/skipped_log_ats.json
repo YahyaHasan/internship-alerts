@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Category Supplier Management",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-23T17:45:21.697311+00:00"
-  },
-  {
     "company": "Otis Worldwide",
     "title": "Digital Technology Project Management Office Intern",
     "source": "Workday:Otis Worldwide",
@@ -2998,5 +2992,11 @@
     "title": "Professional Services Pathfinder Intern - Red Team - Summer 2027",
     "source": "Workday:CrowdStrike",
     "timestamp": "2026-11-06T20:50:14.775744+00:00"
+  },
+  {
+    "company": "Adobe",
+    "title": "2027 Intern \u2014 Employee Communications",
+    "source": "Workday:Adobe",
+    "timestamp": "2026-11-06T21:20:15.911613+00:00"
   }
 ]
