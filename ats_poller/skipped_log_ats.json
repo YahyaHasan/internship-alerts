@@ -1,11 +1,5 @@
 [
   {
-    "company": "Nvidia",
-    "title": "Product Design Intern, AI Infrastructure - Summer 2027",
-    "source": "Workday:Nvidia",
-    "timestamp": "2026-09-22T20:50:19.435405+00:00"
-  },
-  {
     "company": "Motorola Solutions",
     "title": "Business Systems Analyst Internship Summer 2027",
     "source": "Workday:Motorola Solutions",
@@ -2998,5 +2992,11 @@
     "title": "Infrastructure Engineering & Projects Intern",
     "source": "Ashby:Etched",
     "timestamp": "2026-11-06T01:35:12.839058+00:00"
+  },
+  {
+    "company": "ASM International",
+    "title": "Intern, Process Engineering",
+    "source": "Greenhouse:ASM International",
+    "timestamp": "2026-11-06T03:45:14.269980+00:00"
   }
 ]
