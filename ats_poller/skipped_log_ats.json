@@ -1,11 +1,5 @@
 [
   {
-    "company": "Motorola Solutions",
-    "title": "Business Systems Analyst Internship Summer 2027",
-    "source": "Workday:Motorola Solutions",
-    "timestamp": "2026-09-22T22:25:15.166404+00:00"
-  },
-  {
     "company": "Astranis",
     "title": "Guidance, Navigation, and Control Intern (Summer 2027)",
     "source": "Greenhouse:Astranis",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Process Engineering",
     "source": "Greenhouse:ASM International",
     "timestamp": "2026-11-06T03:45:14.269980+00:00"
+  },
+  {
+    "company": "ASM International",
+    "title": "Intern, Field Service Engineer",
+    "source": "Greenhouse:ASM International",
+    "timestamp": "2026-11-06T03:50:15.431038+00:00"
   }
 ]
