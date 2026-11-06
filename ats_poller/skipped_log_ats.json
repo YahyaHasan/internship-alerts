@@ -1,12 +1,6 @@
 [
   {
     "company": "Astranis",
-    "title": "Reliability Test Intern (Winter 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-23T04:00:24.554671+00:00"
-  },
-  {
-    "company": "Astranis",
     "title": "Antenna Intern (Summer 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-23T04:10:16.606773+00:00"
@@ -2998,5 +2992,11 @@
     "title": "AI Product Operator Intern",
     "source": "Ashby:Niural",
     "timestamp": "2026-11-06T17:00:24.501060+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Software Presales Enablement Intern - Summer Internship 2027",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-11-06T17:45:15.017065+00:00"
   }
 ]
