@@ -1,11 +1,5 @@
 [
   {
-    "company": "Astranis",
-    "title": "Power Electronics Intern (Winter 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-23T03:30:22.231448+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - Design Engineer, HIG HBM",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Translational Sciences undergrad intern (Summer 2027)",
     "source": "Workday:Amgen",
     "timestamp": "2026-11-06T13:15:14.826306+00:00"
+  },
+  {
+    "company": "Illinois Tool Works",
+    "title": "Structural Engineering Intern",
+    "source": "Workday:Illinois Tool Works",
+    "timestamp": "2026-11-06T15:15:15.131015+00:00"
   }
 ]
