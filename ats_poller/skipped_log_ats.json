@@ -1,11 +1,5 @@
 [
   {
-    "company": "Merck",
-    "title": "2027 Future Talent Program -  Bioprocess Technology Solutions (BTS) - Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-22T18:05:15.987472+00:00"
-  },
-  {
     "company": "Nvidia",
     "title": "Product Design Intern, AI Infrastructure - Summer 2027",
     "source": "Workday:Nvidia",
@@ -2998,5 +2992,11 @@
     "title": "Research and Engineering Intern, Agentic Systems Intelligence \u2013 Summer 2027",
     "source": "Workday:Nvidia",
     "timestamp": "2026-11-06T01:20:15.559318+00:00"
+  },
+  {
+    "company": "Etched",
+    "title": "Infrastructure Engineering & Projects Intern",
+    "source": "Ashby:Etched",
+    "timestamp": "2026-11-06T01:35:12.839058+00:00"
   }
 ]
