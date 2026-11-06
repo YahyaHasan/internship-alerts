@@ -1,11 +1,5 @@
 [
   {
-    "company": "F5",
-    "title": "Technical Program Manager 1 - Former Intern",
-    "source": "Workday:F5",
-    "timestamp": "2026-09-23T17:35:18.426225+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - Category Supplier Management",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Samsung Care AI Data Analytic Intern",
     "source": "Workday:Samsung",
     "timestamp": "2026-11-06T20:40:16.173370+00:00"
+  },
+  {
+    "company": "CrowdStrike",
+    "title": "Professional Services Pathfinder Intern - Red Team - Summer 2027",
+    "source": "Workday:CrowdStrike",
+    "timestamp": "2026-11-06T20:50:14.775744+00:00"
   }
 ]
