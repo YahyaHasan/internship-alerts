@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern \u2013 Lean Material Strategies / Warehouse Management Systems",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-09-23T18:50:19.970264+00:00"
-  },
-  {
     "company": "HPE",
     "title": "VLSI Engineer Intern",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Advanced Process Control (R2R)",
     "source": "Workday:Micron",
     "timestamp": "2026-11-06T23:40:15.259005+00:00"
+  },
+  {
+    "company": "Zoox",
+    "title": "Process Improvement Intern [2027]",
+    "source": "Lever:Zoox",
+    "timestamp": "2026-11-07T00:25:13.586062+00:00"
   }
 ]
