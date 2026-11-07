@@ -1,12 +1,6 @@
 [
   {
     "company": "HPE",
-    "title": "VLSI Engineer Intern",
-    "source": "Workday:HPE",
-    "timestamp": "2026-09-23T19:30:22.479735+00:00"
-  },
-  {
-    "company": "HPE",
     "title": "Optical Engineering Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-09-23T20:00:26.812015+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Process Improvement Intern [2027]",
     "source": "Lever:Zoox",
     "timestamp": "2026-11-07T00:25:13.586062+00:00"
+  },
+  {
+    "company": "Shield AI",
+    "title": "2027 Summer Intern - Supplier Development Engineer - 6463",
+    "source": "Lever:Shield AI",
+    "timestamp": "2026-11-07T01:00:25.362232+00:00"
   }
 ]
