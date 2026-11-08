@@ -1,11 +1,5 @@
 [
   {
-    "company": "HPE",
-    "title": "Optical Engineering Intern",
-    "source": "Workday:HPE",
-    "timestamp": "2026-09-23T20:00:26.812015+00:00"
-  },
-  {
     "company": "Mastercard Campus",
     "title": "Project Management Intern, Summer 2027 \u2013 St. Louis, MO, US",
     "source": "Workday:Mastercard Campus",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern - Supplier Development Engineer - 6463",
     "source": "Lever:Shield AI",
     "timestamp": "2026-11-07T01:00:25.362232+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "2027 Summer Internship: Law & Leadership Program",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-08T16:40:15.425352+00:00"
   }
 ]
