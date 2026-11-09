@@ -1,12 +1,6 @@
 [
   {
     "company": "Astranis",
-    "title": "Technical Project Management Intern (Summer 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-24T03:25:14.316615+00:00"
-  },
-  {
-    "company": "Astranis",
     "title": "Technical Project Management Intern (Winter 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-24T03:25:14.316615+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Packaging Engineering Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-11-09T18:40:17.194569+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - HIG HBM DTPCO",
+    "source": "Workday:Micron",
+    "timestamp": "2026-11-09T18:55:13.998989+00:00"
   }
 ]
