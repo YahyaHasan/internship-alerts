@@ -1,11 +1,5 @@
 [
   {
-    "company": "Astranis",
-    "title": "FPGA Intern (Winter 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-23T23:05:13.877717+00:00"
-  },
-  {
     "company": "Graphcore",
     "title": "Systems Engineering Intern",
     "source": "Greenhouse:Graphcore",
@@ -2998,5 +2992,11 @@
     "title": "NPI Engineering Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-11-09T17:40:17.113515+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Product Yield Analysis and Analytics (Research)",
+    "source": "Workday:Micron",
+    "timestamp": "2026-11-09T18:20:15.308436+00:00"
   }
 ]
