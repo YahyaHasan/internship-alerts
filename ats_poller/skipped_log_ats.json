@@ -1,11 +1,5 @@
 [
   {
-    "company": "Intel",
-    "title": "Technology Research 2D Transistor Engineer Intern",
-    "source": "Workday:Intel",
-    "timestamp": "2026-09-23T22:40:18.114479+00:00"
-  },
-  {
     "company": "Astranis",
     "title": "Software Defined Radio Hardware Intern (Summer 2027)",
     "source": "Greenhouse:Astranis",
@@ -2998,5 +2992,11 @@
     "title": "eCom Fulfillment Final Mile Intern",
     "source": "Workday:Samsung",
     "timestamp": "2026-11-09T03:55:11.947851+00:00"
+  },
+  {
+    "company": "Samsung",
+    "title": "ePro Business & Data Analyst Intern",
+    "source": "Workday:Samsung",
+    "timestamp": "2026-11-09T04:15:16.050610+00:00"
   }
 ]
