@@ -1,11 +1,5 @@
 [
   {
-    "company": "Fidelity",
-    "title": "Intern, Investor Center - Dayton, OH",
-    "source": "Workday:Fidelity",
-    "timestamp": "2026-09-24T15:25:15.785509+00:00"
-  },
-  {
     "company": "Wabtec",
     "title": "Corporate Communications Intern",
     "source": "SmartRecruiters:Wabtec",
@@ -2998,5 +2992,11 @@
     "title": "Systems Engineering Intern - Summer 2027",
     "source": "Ashby:Skydio",
     "timestamp": "2026-11-09T19:55:14.280278+00:00"
+  },
+  {
+    "company": "Duolingo",
+    "title": "Product Designer, Thrive Intern",
+    "source": "Greenhouse:Duolingo",
+    "timestamp": "2026-11-09T20:00:22.677856+00:00"
   }
 ]
