@@ -1,11 +1,5 @@
 [
   {
-    "company": "Astranis",
-    "title": "Technical Project Management Intern (Winter 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-24T03:25:14.316615+00:00"
-  },
-  {
     "company": "RRS Group",
     "title": "Associate IT Systems Administrator Intern - 2027",
     "source": "SmartRecruiters:RRS Group",
@@ -2998,5 +2992,11 @@
     "title": "Intern - HIG HBM DTPCO",
     "source": "Workday:Micron",
     "timestamp": "2026-11-09T18:55:13.998989+00:00"
+  },
+  {
+    "company": "GE Vernova",
+    "title": "GE Vernova Pivot to Value (P2V) Value Engineering Internship 2027",
+    "source": "Workday:GE Vernova",
+    "timestamp": "2026-11-09T19:20:16.018845+00:00"
   }
 ]
