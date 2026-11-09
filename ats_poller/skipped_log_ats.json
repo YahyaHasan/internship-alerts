@@ -1,12 +1,6 @@
 [
   {
     "company": "Astranis",
-    "title": "Software Defined Radio Hardware Intern (Winter 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-23T22:55:12.949162+00:00"
-  },
-  {
-    "company": "Astranis",
     "title": "FPGA Intern (Summer 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-23T23:05:13.877717+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Summer Intern - VD eCommerce (Direct Value Proposition & Partnerships)",
     "source": "Workday:Samsung",
     "timestamp": "2026-11-09T04:25:12.352652+00:00"
+  },
+  {
+    "company": "S&P Global",
+    "title": "Summer Intern, WSO Specialized Account Services",
+    "source": "Workday:S&P Global",
+    "timestamp": "2026-11-09T16:05:13.478525+00:00"
   }
 ]
