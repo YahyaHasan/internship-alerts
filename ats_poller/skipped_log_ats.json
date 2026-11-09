@@ -1,11 +1,5 @@
 [
   {
-    "company": "Illinois Tool Works",
-    "title": "Industrial Engineering Co-Op Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-09-24T14:35:16.925513+00:00"
-  },
-  {
     "company": "Fidelity",
     "title": "Intern, Investor Center - Dayton, OH",
     "source": "Workday:Fidelity",
@@ -2998,5 +2992,11 @@
     "title": "Advanced Algorithm Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-11-09T19:40:17.391412+00:00"
+  },
+  {
+    "company": "Skydio",
+    "title": "Systems Engineering Intern - Summer 2027",
+    "source": "Ashby:Skydio",
+    "timestamp": "2026-11-09T19:55:14.280278+00:00"
   }
 ]
