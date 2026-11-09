@@ -1,12 +1,6 @@
 [
   {
     "company": "Astranis",
-    "title": "Software Defined Radio Hardware Intern (Summer 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-23T22:55:12.949162+00:00"
-  },
-  {
-    "company": "Astranis",
     "title": "Software Defined Radio Hardware Intern (Winter 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-23T22:55:12.949162+00:00"
@@ -2998,5 +2992,11 @@
     "title": "ePro Business & Data Analyst Intern",
     "source": "Workday:Samsung",
     "timestamp": "2026-11-09T04:15:16.050610+00:00"
+  },
+  {
+    "company": "Samsung",
+    "title": "Summer Intern - VD eCommerce (Direct Value Proposition & Partnerships)",
+    "source": "Workday:Samsung",
+    "timestamp": "2026-11-09T04:25:12.352652+00:00"
   }
 ]
