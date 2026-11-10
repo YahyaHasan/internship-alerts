@@ -1,11 +1,5 @@
 [
   {
-    "company": "Travelers",
-    "title": "Claim Professional Development Program Internship (CPDP Intern)",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-25T14:50:20.075540+00:00"
-  },
-  {
     "company": "Micron",
     "title": "DOW SkillsBridge Intern \u2013 Semiconductor Equipment Technician",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Mechatronics Engineering Intern",
     "source": "Workday:Analog Devices",
     "timestamp": "2026-11-10T19:30:17.611044+00:00"
+  },
+  {
+    "company": "Samsung",
+    "title": "5G Network Intelligence and Automation Intern",
+    "source": "Workday:Samsung",
+    "timestamp": "2026-11-10T20:15:19.893863+00:00"
   }
 ]
