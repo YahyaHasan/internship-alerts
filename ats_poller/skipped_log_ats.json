@@ -1,11 +1,5 @@
 [
   {
-    "company": "AbbVie",
-    "title": "2027 Business Technology Solutions Intern - Cloud Engineering (Undergraduate)",
-    "source": "SmartRecruiters:AbbVie",
-    "timestamp": "2026-09-25T17:35:15.964449+00:00"
-  },
-  {
     "company": "Travelers",
     "title": "Claim Professional Development Program Internship (CPDP Intern)",
     "source": "Workday:Travelers",
@@ -2998,5 +2992,11 @@
     "title": "Performance Engineering Intern, Platform Performance and Power -  Spring 2027",
     "source": "Workday:Nvidia",
     "timestamp": "2026-11-10T22:45:15.287626+00:00"
+  },
+  {
+    "company": "Riot Games",
+    "title": "Concept Art Intern, Teamfight Tactics - Summer 2027",
+    "source": "Greenhouse:Riot Games",
+    "timestamp": "2026-11-10T23:05:13.877862+00:00"
   }
 ]
