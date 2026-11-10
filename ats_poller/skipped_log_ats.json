@@ -1,11 +1,5 @@
 [
   {
-    "company": "Travelers",
-    "title": "Claim Professional Development Program Internship (CPDP Intern)",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-24T17:50:18.581892+00:00"
-  },
-  {
     "company": "Motorola Solutions",
     "title": "Systems Integration Engineering Intern (Summer 2027)",
     "source": "Workday:Motorola Solutions",
@@ -2998,5 +2992,11 @@
     "title": "Advanced Algorithms Research Intern",
     "source": "Workday:Analog Devices",
     "timestamp": "2026-11-09T20:40:16.027985+00:00"
+  },
+  {
+    "company": "Pinterest",
+    "title": "Product Design Intern (USA)",
+    "source": "Greenhouse:Pinterest",
+    "timestamp": "2026-11-10T01:00:22.803287+00:00"
   }
 ]
