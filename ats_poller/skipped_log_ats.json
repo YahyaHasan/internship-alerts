@@ -1,12 +1,6 @@
 [
   {
     "company": "Astranis",
-    "title": "Harness Design Engineer Intern (Summer 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-24T21:30:19.707299+00:00"
-  },
-  {
-    "company": "Astranis",
     "title": "Harness Design Engineer Intern (Winter 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-24T21:30:19.707299+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - Metrology Applications",
     "source": "Workday:Micron",
     "timestamp": "2026-11-10T14:35:14.316465+00:00"
+  },
+  {
+    "company": "S&P Global",
+    "title": "Summer Intern, WSO Private Debt",
+    "source": "Workday:S&P Global",
+    "timestamp": "2026-11-10T14:55:18.956476+00:00"
   }
 ]
