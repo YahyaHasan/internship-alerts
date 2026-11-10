@@ -1,17 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "DOW SkillsBridge Intern \u2013 Semiconductor Equipment Technician",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-25T14:55:16.998938+00:00"
-  },
-  {
-    "company": "Meshy",
-    "title": "GTM Intern",
-    "source": "Ashby:Meshy",
-    "timestamp": "2026-09-25T14:55:16.998938+00:00"
-  },
-  {
     "company": "AbbVie",
     "title": "2027 Business Technology Solutions Intern - Cybersecurity (Undergraduate)",
     "source": "SmartRecruiters:AbbVie",
@@ -2998,5 +2986,17 @@
     "title": "5G Network Intelligence and Automation Intern",
     "source": "Workday:Samsung",
     "timestamp": "2026-11-10T20:15:19.893863+00:00"
+  },
+  {
+    "company": "Dryft",
+    "title": "Talent & Growth Intern - Germany",
+    "source": "Ashby:Dryft",
+    "timestamp": "2026-11-10T22:15:16.487983+00:00"
+  },
+  {
+    "company": "Dryft",
+    "title": "Founders Associate Intern - Germany",
+    "source": "Ashby:Dryft",
+    "timestamp": "2026-11-10T22:15:16.487983+00:00"
   }
 ]
