@@ -1,17 +1,5 @@
 [
   {
-    "company": "Travelers",
-    "title": "Claim Professional Development Program Internship (CPDP Intern)",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-25T17:40:17.242355+00:00"
-  },
-  {
-    "company": "Mach Industries",
-    "title": "Summer 2027 Engineering Internship, Aerospace",
-    "source": "Greenhouse:Mach Industries",
-    "timestamp": "2026-09-25T18:15:19.853336+00:00"
-  },
-  {
     "company": "Gilead Sciences",
     "title": "Intern - Research - Drug Metabolism - AI",
     "source": "Workday:Gilead Sciences",
@@ -2998,5 +2986,17 @@
     "title": "Concept Art Intern, Teamfight Tactics - Summer 2027",
     "source": "Greenhouse:Riot Games",
     "timestamp": "2026-11-10T23:05:13.877862+00:00"
+  },
+  {
+    "company": "Riot Games",
+    "title": "Animation Art Intern - Summer 2027",
+    "source": "Greenhouse:Riot Games",
+    "timestamp": "2026-11-10T23:35:14.944749+00:00"
+  },
+  {
+    "company": "Riot Games",
+    "title": "Motion Graphics Art Intern - Summer 2027",
+    "source": "Greenhouse:Riot Games",
+    "timestamp": "2026-11-10T23:35:14.944749+00:00"
   }
 ]
