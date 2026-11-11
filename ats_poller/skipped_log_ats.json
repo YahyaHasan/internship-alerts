@@ -1,11 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "Aero New Units Commercial Internship 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-27T20:55:13.983815+00:00"
-  },
-  {
     "company": "Motorola Solutions",
     "title": "Presales Systems Engineer - 2027 Internship",
     "source": "Workday:Motorola Solutions",
@@ -2998,5 +2992,11 @@
     "title": "Social Media Manager Intern - Summer 2027",
     "source": "Greenhouse:Riot Games",
     "timestamp": "2026-11-11T03:00:19.596853+00:00"
+  },
+  {
+    "company": "Riot Games",
+    "title": "Data Engineering Intern - Summer 2027",
+    "source": "Greenhouse:Riot Games",
+    "timestamp": "2026-11-11T03:05:13.496749+00:00"
   }
 ]
