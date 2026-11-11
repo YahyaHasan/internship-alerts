@@ -1,17 +1,5 @@
 [
   {
-    "company": "Gilead Sciences",
-    "title": "Intern - Research - Drug Metabolism - AI",
-    "source": "Workday:Gilead Sciences",
-    "timestamp": "2026-09-25T21:35:15.345002+00:00"
-  },
-  {
-    "company": "Gilead Sciences",
-    "title": "Intern -\u00a0Research\u00a0-\u00a0Discovery Sciences and Technologies - AI",
-    "source": "Workday:Gilead Sciences",
-    "timestamp": "2026-09-25T23:15:16.538611+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "Aero New Units Commercial Internship 2027",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2986,17 @@
     "title": "Motion Graphics Art Intern - Summer 2027",
     "source": "Greenhouse:Riot Games",
     "timestamp": "2026-11-10T23:35:14.944749+00:00"
+  },
+  {
+    "company": "Riot Games",
+    "title": "Community Manager Intern - Summer 2027",
+    "source": "Greenhouse:Riot Games",
+    "timestamp": "2026-11-11T03:00:19.596853+00:00"
+  },
+  {
+    "company": "Riot Games",
+    "title": "Social Media Manager Intern - Summer 2027",
+    "source": "Greenhouse:Riot Games",
+    "timestamp": "2026-11-11T03:00:19.596853+00:00"
   }
 ]
