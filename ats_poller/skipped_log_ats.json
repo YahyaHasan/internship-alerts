@@ -1,11 +1,5 @@
 [
   {
-    "company": "Travelers",
-    "title": "Bond & Specialty Insurance Underwriting Professional Development Program (BSI UPDP) Internship",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-28T19:05:16.920968+00:00"
-  },
-  {
     "company": "Otis Worldwide",
     "title": "Cybersecurity Ops & Intelligence Intern",
     "source": "Workday:Otis Worldwide",
@@ -2998,5 +2992,11 @@
     "title": "Technical Game Design Intern, League of Legends and Teamfight Tactics - Summer 2027",
     "source": "Greenhouse:Riot Games",
     "timestamp": "2026-11-11T19:55:16.918762+00:00"
+  },
+  {
+    "company": "Airbnb",
+    "title": "Advanced Analytics Intern",
+    "source": "Greenhouse:Airbnb",
+    "timestamp": "2026-11-11T21:40:17.441576+00:00"
   }
 ]
