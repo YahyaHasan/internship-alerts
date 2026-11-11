@@ -1,11 +1,5 @@
 [
   {
-    "company": "Motorola Solutions",
-    "title": "Presales Systems Engineer - 2027 Internship",
-    "source": "Workday:Motorola Solutions",
-    "timestamp": "2026-09-28T15:25:15.220371+00:00"
-  },
-  {
     "company": "Mastercard Campus",
     "title": "Corporate Functions Intern, Summer 2027 - United States",
     "source": "Workday:Mastercard Campus",
@@ -2998,5 +2992,11 @@
     "title": "Data Engineering Intern - Summer 2027",
     "source": "Greenhouse:Riot Games",
     "timestamp": "2026-11-11T03:05:13.496749+00:00"
+  },
+  {
+    "company": "Riot Games",
+    "title": "Rendering Technical Art Intern (Lighting), League of Legends - Summer 2027",
+    "source": "Greenhouse:Riot Games",
+    "timestamp": "2026-11-11T19:10:15.970810+00:00"
   }
 ]
