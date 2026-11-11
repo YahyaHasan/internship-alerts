@@ -1,11 +1,5 @@
 [
   {
-    "company": "Otis Worldwide",
-    "title": "Cybersecurity Ops & Intelligence Intern",
-    "source": "Workday:Otis Worldwide",
-    "timestamp": "2026-09-28T19:10:18.220355+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern \u2013 Memory Systems Architecture & AI",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Advanced Analytics Intern",
     "source": "Greenhouse:Airbnb",
     "timestamp": "2026-11-11T21:40:17.441576+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Data & Quantitative Sciences Intern-Summer 2027",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-11T22:50:16.919744+00:00"
   }
 ]
