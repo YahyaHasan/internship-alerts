@@ -1,11 +1,5 @@
 [
   {
-    "company": "Mastercard Campus",
-    "title": "Corporate Functions Intern, Summer 2027 - United States",
-    "source": "Workday:Mastercard Campus",
-    "timestamp": "2026-09-28T15:35:15.956823+00:00"
-  },
-  {
     "company": "Human Computer Lab",
     "title": "Chief of Staff Intern",
     "source": "Ashby:Human Computer Lab",
@@ -2998,5 +2992,11 @@
     "title": "Rendering Technical Art Intern (Lighting), League of Legends - Summer 2027",
     "source": "Greenhouse:Riot Games",
     "timestamp": "2026-11-11T19:10:15.970810+00:00"
+  },
+  {
+    "company": "Riot Games",
+    "title": "Rendering Technical Art Intern, League of Legends - Summer 2027",
+    "source": "Greenhouse:Riot Games",
+    "timestamp": "2026-11-11T19:20:16.355920+00:00"
   }
 ]
