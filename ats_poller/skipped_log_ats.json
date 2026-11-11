@@ -1,11 +1,5 @@
 [
   {
-    "company": "Human Computer Lab",
-    "title": "Chief of Staff Intern",
-    "source": "Ashby:Human Computer Lab",
-    "timestamp": "2026-09-28T15:55:15.300955+00:00"
-  },
-  {
     "company": "Duke Energy",
     "title": "Information Technology Internship Summer 2027 (Grice)",
     "source": "Workday:Duke Energy",
@@ -2998,5 +2992,11 @@
     "title": "Rendering Technical Art Intern, League of Legends - Summer 2027",
     "source": "Greenhouse:Riot Games",
     "timestamp": "2026-11-11T19:20:16.355920+00:00"
+  },
+  {
+    "company": "Riot Games",
+    "title": "Insights Analyst Intern, League of Legends - Summer 2027",
+    "source": "Greenhouse:Riot Games",
+    "timestamp": "2026-11-11T19:50:15.101132+00:00"
   }
 ]
