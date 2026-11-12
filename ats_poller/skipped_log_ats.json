@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern -  HBM Design Development Technical Leadership (DDTL)",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-28T20:45:16.776802+00:00"
-  },
-  {
     "company": "Lyft",
     "title": "Applied Scientist Intern (Summer 2027)",
     "source": "Greenhouse:Lyft",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern - Solution Systems Engineer (6537, 6540, 6541)",
     "source": "Lever:Shield AI",
     "timestamp": "2026-11-12T21:15:17.075004+00:00"
+  },
+  {
+    "company": "ServiceNow",
+    "title": "Product Security Intern",
+    "source": "SmartRecruiters:ServiceNow",
+    "timestamp": "2026-11-12T21:35:14.526692+00:00"
   }
 ]
