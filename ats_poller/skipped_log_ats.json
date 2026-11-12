@@ -1,11 +1,5 @@
 [
   {
-    "company": "Western Digital",
-    "title": "Winter 2027 Intern/Co-op Development Engineer ",
-    "source": "SmartRecruiters:Western Digital",
-    "timestamp": "2026-09-28T19:50:17.756255+00:00"
-  },
-  {
     "company": "Illinois Tool Works",
     "title": "Summer 2027 Technical Writing Intern",
     "source": "Workday:Illinois Tool Works",
@@ -2998,5 +2992,11 @@
     "title": "Assoc Detection Engineering Intern ",
     "source": "SmartRecruiters:ServiceNow",
     "timestamp": "2026-11-12T02:05:14.577659+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Physical Failure Analysis Technician - 6 Month Intern 2027",
+    "source": "Workday:Micron",
+    "timestamp": "2026-11-12T14:20:18.129772+00:00"
   }
 ]
