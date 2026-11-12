@@ -1,17 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern \u2013 Memory Systems Architecture & AI",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-28T19:25:17.301368+00:00"
-  },
-  {
-    "company": "GE Vernova",
-    "title": "Culture & Inclusion Intern",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-28T19:30:22.103563+00:00"
-  },
-  {
     "company": "Waymo",
     "title": "2027 Summer Intern, BS, Depot Automation",
     "source": "Greenhouse:Waymo",
@@ -2998,5 +2986,17 @@
     "title": "Data & Quantitative Sciences Intern-Summer 2027",
     "source": "Workday:Bristol-Myers Squibb",
     "timestamp": "2026-11-11T22:50:16.919744+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "HPE Labs - Systems Architecture Lab Research Associate Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-11-12T01:25:14.131863+00:00"
+  },
+  {
+    "company": "HPE",
+    "title": "Large-Scale Integrated Photonics Lab Research Associate Intern",
+    "source": "Workday:HPE",
+    "timestamp": "2026-11-12T01:25:14.131863+00:00"
   }
 ]
