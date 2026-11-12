@@ -1,11 +1,5 @@
 [
   {
-    "company": "Illinois Tool Works",
-    "title": "Summer 2027 Technical Writing Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-09-28T20:05:13.992647+00:00"
-  },
-  {
     "company": "Micron",
     "title": "Intern - Signal Integrity",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "Physical Failure Analysis Technician - 6 Month Intern 2027",
     "source": "Workday:Micron",
     "timestamp": "2026-11-12T14:20:18.129772+00:00"
+  },
+  {
+    "company": "Adobe",
+    "title": "2027 Intern - Communications",
+    "source": "Workday:Adobe",
+    "timestamp": "2026-11-12T16:30:21.201036+00:00"
   }
 ]
