@@ -1,11 +1,5 @@
 [
   {
-    "company": "Travelers",
-    "title": "Bond & Specialty Insurance Underwriting Professional Development Program (BSI UPDP Intern)",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-09-28T19:35:16.405887+00:00"
-  },
-  {
     "company": "Marvell",
     "title": "Architecture Intern, MS - Summer 2027",
     "source": "Workday:Marvell",
@@ -2998,5 +2992,11 @@
     "title": "Assoc Information Security Engineer Intern",
     "source": "SmartRecruiters:ServiceNow",
     "timestamp": "2026-11-12T01:55:14.080944+00:00"
+  },
+  {
+    "company": "ServiceNow",
+    "title": "Assoc Security Engineering & Automation Intern ",
+    "source": "SmartRecruiters:ServiceNow",
+    "timestamp": "2026-11-12T02:00:19.035491+00:00"
   }
 ]
