@@ -1,12 +1,6 @@
 [
   {
     "company": "Micron",
-    "title": "Intern - Signal Integrity",
-    "source": "Workday:Micron",
-    "timestamp": "2026-09-28T20:40:16.380239+00:00"
-  },
-  {
-    "company": "Micron",
     "title": "Intern -  HBM Design Development Technical Leadership (DDTL)",
     "source": "Workday:Micron",
     "timestamp": "2026-09-28T20:45:16.776802+00:00"
@@ -2998,5 +2992,11 @@
     "title": "2027 Intern - Communications",
     "source": "Workday:Adobe",
     "timestamp": "2026-11-12T16:30:21.201036+00:00"
+  },
+  {
+    "company": "Shield AI",
+    "title": "2027 Summer Intern - Solution Systems Engineer (6537, 6540, 6541)",
+    "source": "Lever:Shield AI",
+    "timestamp": "2026-11-12T21:15:17.075004+00:00"
   }
 ]
