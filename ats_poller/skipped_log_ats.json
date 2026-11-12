@@ -1,11 +1,5 @@
 [
   {
-    "company": "Marvell",
-    "title": "Architecture Intern, MS - Summer 2027",
-    "source": "Workday:Marvell",
-    "timestamp": "2026-09-28T19:40:18.478637+00:00"
-  },
-  {
     "company": "Western Digital",
     "title": "Winter 2027 Intern/Co-op Development Engineer ",
     "source": "SmartRecruiters:Western Digital",
@@ -2998,5 +2992,11 @@
     "title": "Assoc Security Engineering & Automation Intern ",
     "source": "SmartRecruiters:ServiceNow",
     "timestamp": "2026-11-12T02:00:19.035491+00:00"
+  },
+  {
+    "company": "ServiceNow",
+    "title": "Assoc Detection Engineering Intern ",
+    "source": "SmartRecruiters:ServiceNow",
+    "timestamp": "2026-11-12T02:05:14.577659+00:00"
   }
 ]
