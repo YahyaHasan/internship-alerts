@@ -1,12 +1,6 @@
 [
   {
     "company": "HPE",
-    "title": "GMC Customer Advocacy & Engagement Intern",
-    "source": "Workday:HPE",
-    "timestamp": "2026-09-29T01:45:24.446843+00:00"
-  },
-  {
-    "company": "HPE",
     "title": "GMC Global Communications Intern",
     "source": "Workday:HPE",
     "timestamp": "2026-09-29T02:55:25.070402+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Vehicle Maintenance Technician Internship - 2027 (McMillian)",
     "source": "Workday:Duke Energy",
     "timestamp": "2026-11-13T15:15:16.170177+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Enterprise SSD Architecture",
+    "source": "Workday:Micron",
+    "timestamp": "2026-11-13T16:40:19.414502+00:00"
   }
 ]
