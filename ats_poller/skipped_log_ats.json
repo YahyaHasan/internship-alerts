@@ -1,11 +1,5 @@
 [
   {
-    "company": "Nuro",
-    "title": "Social Media Intern",
-    "source": "Greenhouse:Nuro",
-    "timestamp": "2026-09-29T19:15:27.145789+00:00"
-  },
-  {
     "company": "Motorola Solutions",
     "title": "Jr Product Owner - 2027 Summer Internship (Chicago Hybrid)",
     "source": "Workday:Motorola Solutions",
@@ -2998,5 +2992,11 @@
     "title": "Security Engineering & Automation Intern ",
     "source": "SmartRecruiters:ServiceNow",
     "timestamp": "2026-11-13T17:55:14.472771+00:00"
+  },
+  {
+    "company": "ServiceNow",
+    "title": "Information Security Analyst Intern",
+    "source": "SmartRecruiters:ServiceNow",
+    "timestamp": "2026-11-13T18:15:15.411553+00:00"
   }
 ]
