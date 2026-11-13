@@ -1,11 +1,5 @@
 [
   {
-    "company": "Duke Energy",
-    "title": "Construction Management Summer Internship 2027 (OH)",
-    "source": "Workday:Duke Energy",
-    "timestamp": "2026-09-29T14:25:18.679592+00:00"
-  },
-  {
     "company": "Nuro",
     "title": "Social Media Intern",
     "source": "Greenhouse:Nuro",
@@ -2998,5 +2992,11 @@
     "title": "Healthcare Analytics Summer Intern - Start Date: May 24, 2027",
     "source": "Workday:Cigna",
     "timestamp": "2026-11-13T17:50:21.913118+00:00"
+  },
+  {
+    "company": "ServiceNow",
+    "title": "Security Engineering & Automation Intern ",
+    "source": "SmartRecruiters:ServiceNow",
+    "timestamp": "2026-11-13T17:55:14.472771+00:00"
   }
 ]
