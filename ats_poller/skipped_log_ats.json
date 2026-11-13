@@ -1,11 +1,5 @@
 [
   {
-    "company": "Motorola Solutions",
-    "title": "Jr Product Owner - 2027 Summer Internship (Chicago Hybrid)",
-    "source": "Workday:Motorola Solutions",
-    "timestamp": "2026-09-29T19:45:16.399516+00:00"
-  },
-  {
     "company": "Rockwell Automation",
     "title": "Intern, Customer Success Professional",
     "source": "Workday:Rockwell Automation",
@@ -2998,5 +2992,11 @@
     "title": "Information Security Analyst Intern",
     "source": "SmartRecruiters:ServiceNow",
     "timestamp": "2026-11-13T18:15:15.411553+00:00"
+  },
+  {
+    "company": "CrowdStrike",
+    "title": "Insider Risk Engineering Intern - Summer 2027",
+    "source": "Workday:CrowdStrike",
+    "timestamp": "2026-11-13T19:05:13.944920+00:00"
   }
 ]
