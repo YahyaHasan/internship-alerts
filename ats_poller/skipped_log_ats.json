@@ -1,11 +1,5 @@
 [
   {
-    "company": "GE Vernova",
-    "title": "GE Vernova GridOS  Project Engineer - Co-Op/Intern - January 2027-June 2027",
-    "source": "Workday:GE Vernova",
-    "timestamp": "2026-09-29T12:50:18.555286+00:00"
-  },
-  {
     "company": "Duke Energy",
     "title": "Construction Management Summer Internship 2027 (OH)",
     "source": "Workday:Duke Energy",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern - Automotive Technician",
     "source": "Workday:General Motors",
     "timestamp": "2026-11-13T17:30:29.122236+00:00"
+  },
+  {
+    "company": "Cigna",
+    "title": "Healthcare Analytics Summer Intern - Start Date: May 24, 2027",
+    "source": "Workday:Cigna",
+    "timestamp": "2026-11-13T17:50:21.913118+00:00"
   }
 ]
