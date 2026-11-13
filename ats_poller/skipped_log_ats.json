@@ -1,11 +1,5 @@
 [
   {
-    "company": "HPE",
-    "title": "GMC Global Communications Intern",
-    "source": "Workday:HPE",
-    "timestamp": "2026-09-29T02:55:25.070402+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova GridOS  Project Engineer - Co-Op/Intern - January 2027-June 2027",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "Intern - Enterprise SSD Architecture",
     "source": "Workday:Micron",
     "timestamp": "2026-11-13T16:40:19.414502+00:00"
+  },
+  {
+    "company": "General Motors",
+    "title": "2027 Summer Intern - Automotive Technician",
+    "source": "Workday:General Motors",
+    "timestamp": "2026-11-13T17:30:29.122236+00:00"
   }
 ]
