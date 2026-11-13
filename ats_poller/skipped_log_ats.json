@@ -1,11 +1,5 @@
 [
   {
-    "company": "Merck",
-    "title": "2027 Future Talent Program - Value & Implementation - Outcomes Research Intern",
-    "source": "Workday:Merck",
-    "timestamp": "2026-09-28T22:10:19.318701+00:00"
-  },
-  {
     "company": "HPE",
     "title": "GMC Customer Advocacy & Engagement Intern",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "2027 Summer Intern - Human Machine Teaming - 6532",
     "source": "Lever:Shield AI",
     "timestamp": "2026-11-13T07:50:14.233140+00:00"
+  },
+  {
+    "company": "Duke Energy",
+    "title": "Vehicle Maintenance Technician Internship - 2027 (McMillian)",
+    "source": "Workday:Duke Energy",
+    "timestamp": "2026-11-13T15:15:16.170177+00:00"
   }
 ]
