@@ -1,11 +1,5 @@
 [
   {
-    "company": "Gilead Sciences",
-    "title": "Intern - Research - Medicinal Chemistry/ Structural Biology & Chemistry - AI",
-    "source": "Workday:Gilead Sciences",
-    "timestamp": "2026-09-30T05:20:17.993394+00:00"
-  },
-  {
     "company": "Speak",
     "title": "Social Media Intern - China",
     "source": "Ashby:Speak",
@@ -2998,5 +2992,11 @@
     "title": "Data & Quantitative Sciences Statistical Programming Intern - Summer 2027",
     "source": "Workday:Bristol-Myers Squibb",
     "timestamp": "2026-11-13T21:10:14.644890+00:00"
+  },
+  {
+    "company": "ServiceNow",
+    "title": "AI Identity Intern",
+    "source": "SmartRecruiters:ServiceNow",
+    "timestamp": "2026-11-13T23:35:17.037307+00:00"
   }
 ]
