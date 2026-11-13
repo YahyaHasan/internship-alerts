@@ -1,11 +1,5 @@
 [
   {
-    "company": "Heron Power",
-    "title": "Intern, Compliance Engineering - Spring 2027",
-    "source": "Ashby:Heron Power",
-    "timestamp": "2026-09-29T21:55:16.843855+00:00"
-  },
-  {
     "company": "Gilead Sciences",
     "title": "Intern - Research - Medicinal Chemistry/ Structural Biology & Chemistry - AI",
     "source": "Workday:Gilead Sciences",
@@ -2998,5 +2992,11 @@
     "title": "2027 SARC/ACL R&D Internship Program \u2013 Multiple Engineering Teams",
     "source": "Workday:Samsung",
     "timestamp": "2026-11-13T19:35:16.239993+00:00"
+  },
+  {
+    "company": "Eurofins",
+    "title": "Biochemistry Intern",
+    "source": "SmartRecruiters:Eurofins",
+    "timestamp": "2026-11-13T20:15:34.920215+00:00"
   }
 ]
