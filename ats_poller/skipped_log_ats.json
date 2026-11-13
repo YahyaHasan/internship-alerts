@@ -1,11 +1,5 @@
 [
   {
-    "company": "Lyft",
-    "title": "Applied Scientist Intern (Summer 2027)",
-    "source": "Greenhouse:Lyft",
-    "timestamp": "2026-09-28T21:45:18.757681+00:00"
-  },
-  {
     "company": "Merck",
     "title": "2027 Future Talent Program - Value & Implementation - Outcomes Research Intern",
     "source": "Workday:Merck",
@@ -2998,5 +2992,11 @@
     "title": "Product Security Intern",
     "source": "SmartRecruiters:ServiceNow",
     "timestamp": "2026-11-12T21:35:14.526692+00:00"
+  },
+  {
+    "company": "Shield AI",
+    "title": "2027 Summer Intern - Human Machine Teaming - 6532",
+    "source": "Lever:Shield AI",
+    "timestamp": "2026-11-13T07:50:14.233140+00:00"
   }
 ]
