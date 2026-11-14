@@ -1,12 +1,6 @@
 [
   {
     "company": "Graphcore",
-    "title": "Digital Twin Engineering Intern",
-    "source": "Greenhouse:Graphcore",
-    "timestamp": "2026-09-30T08:45:18.215047+00:00"
-  },
-  {
-    "company": "Graphcore",
     "title": "Knowledge Management and Training Project Intern",
     "source": "Greenhouse:Graphcore",
     "timestamp": "2026-09-30T08:50:17.292624+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Feature Integration Intern [Summer 2027]",
     "source": "Lever:Zoox",
     "timestamp": "2026-11-14T02:40:15.682554+00:00"
+  },
+  {
+    "company": "Zoox",
+    "title": "Industrial Design Intern [Summer 2027]",
+    "source": "Lever:Zoox",
+    "timestamp": "2026-11-14T02:50:14.891159+00:00"
   }
 ]
