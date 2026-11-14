@@ -1,11 +1,5 @@
 [
   {
-    "company": "Speak",
-    "title": "Social Media Intern - China",
-    "source": "Ashby:Speak",
-    "timestamp": "2026-09-30T05:45:17.459815+00:00"
-  },
-  {
     "company": "Graphcore",
     "title": "Digital Twin Engineering Intern",
     "source": "Greenhouse:Graphcore",
@@ -2998,5 +2992,11 @@
     "title": "AI Identity Intern",
     "source": "SmartRecruiters:ServiceNow",
     "timestamp": "2026-11-13T23:35:17.037307+00:00"
+  },
+  {
+    "company": "Zoox",
+    "title": "Feature Integration Intern [Summer 2027]",
+    "source": "Lever:Zoox",
+    "timestamp": "2026-11-14T02:40:15.682554+00:00"
   }
 ]
