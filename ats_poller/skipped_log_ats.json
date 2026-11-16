@@ -1,11 +1,5 @@
 [
   {
-    "company": "Graphcore",
-    "title": "Knowledge Management and Training Project Intern",
-    "source": "Greenhouse:Graphcore",
-    "timestamp": "2026-09-30T08:50:17.292624+00:00"
-  },
-  {
     "company": "KLA",
     "title": "Optical Engineer Intern",
     "source": "Workday:KLA",
@@ -2998,5 +2992,11 @@
     "title": "Industrial Design Intern [Summer 2027]",
     "source": "Lever:Zoox",
     "timestamp": "2026-11-14T02:50:14.891159+00:00"
+  },
+  {
+    "company": "Zoox",
+    "title": "Service Designer Intern [Summer 2027]",
+    "source": "Lever:Zoox",
+    "timestamp": "2026-11-16T18:00:21.553510+00:00"
   }
 ]
