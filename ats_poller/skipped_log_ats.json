@@ -1,12 +1,6 @@
 [
   {
     "company": "KLA",
-    "title": "Optical Engineer Intern",
-    "source": "Workday:KLA",
-    "timestamp": "2026-09-30T14:10:21.605516+00:00"
-  },
-  {
-    "company": "KLA",
     "title": "Product Development Engineering Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-09-30T14:20:18.125474+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Service Designer Intern [Summer 2027]",
     "source": "Lever:Zoox",
     "timestamp": "2026-11-16T18:00:21.553510+00:00"
+  },
+  {
+    "company": "ServiceNow",
+    "title": "Associate Forward Deployed Solution Engineer Intern (Bachelors Summer 2027)",
+    "source": "SmartRecruiters:ServiceNow",
+    "timestamp": "2026-11-16T23:40:23.480841+00:00"
   }
 ]
