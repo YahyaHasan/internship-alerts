@@ -1,12 +1,6 @@
 [
   {
     "company": "KLA",
-    "title": "Product Development Engineering Intern",
-    "source": "Workday:KLA",
-    "timestamp": "2026-09-30T14:20:18.125474+00:00"
-  },
-  {
-    "company": "KLA",
     "title": "Product Development Engineer Intern",
     "source": "Workday:KLA",
     "timestamp": "2026-09-30T14:30:24.112269+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Associate Forward Deployed Solution Engineer Intern (Bachelors Summer 2027)",
     "source": "SmartRecruiters:ServiceNow",
     "timestamp": "2026-11-16T23:40:23.480841+00:00"
+  },
+  {
+    "company": "Zoox",
+    "title": "UX Designer Intern [Summer 2027]",
+    "source": "Lever:Zoox",
+    "timestamp": "2026-11-17T02:15:15.065636+00:00"
   }
 ]
