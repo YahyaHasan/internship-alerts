@@ -1,11 +1,5 @@
 [
   {
-    "company": "Wabtec",
-    "title": "Controls Engineering Intern",
-    "source": "SmartRecruiters:Wabtec",
-    "timestamp": "2026-09-30T17:05:17.030330+00:00"
-  },
-  {
     "company": "GE Vernova",
     "title": "GE Vernova Internship \u2013 2027 Project Management Office",
     "source": "Workday:GE Vernova",
@@ -2998,5 +2992,11 @@
     "title": "2027 SARC/ACL R&D Internship Program \u2013 Multiple Engineering Teams",
     "source": "Workday:Samsung",
     "timestamp": "2026-11-17T08:45:18.444556+00:00"
+  },
+  {
+    "company": "Cloudflare",
+    "title": "People Team Intern, EMEA Employment Compliance & Manager Enablement (Spring 2027)",
+    "source": "Greenhouse:Cloudflare",
+    "timestamp": "2026-11-17T11:50:15.335873+00:00"
   }
 ]
