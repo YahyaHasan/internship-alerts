@@ -1,17 +1,5 @@
 [
   {
-    "company": "KLA",
-    "title": "Product Development Engineer Intern",
-    "source": "Workday:KLA",
-    "timestamp": "2026-09-30T14:30:24.112269+00:00"
-  },
-  {
-    "company": "KLA",
-    "title": "Product Development Engineer Intern",
-    "source": "Workday:KLA",
-    "timestamp": "2026-09-30T14:30:24.112269+00:00"
-  },
-  {
     "company": "Heron Power",
     "title": "Intern, Electronics Design Engineer, Spring 2027",
     "source": "Ashby:Heron Power",
@@ -2998,5 +2986,17 @@
     "title": "UX Designer Intern [Summer 2027]",
     "source": "Lever:Zoox",
     "timestamp": "2026-11-17T02:15:15.065636+00:00"
+  },
+  {
+    "company": "Fiserv",
+    "title": "2027 Technology Internship Program - Cybersecurity (Columbus, OH)",
+    "source": "Workday:Fiserv",
+    "timestamp": "2026-11-17T03:35:14.723944+00:00"
+  },
+  {
+    "company": "Fiserv",
+    "title": "2027 Technology Internship Program - Cybersecurity (Berkeley Heights, NJ)",
+    "source": "Workday:Fiserv",
+    "timestamp": "2026-11-17T03:35:14.723944+00:00"
   }
 ]
