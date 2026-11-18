@@ -1,11 +1,5 @@
 [
   {
-    "company": "KLA",
-    "title": "Mechatronics/Systems Engineering Internship",
-    "source": "Workday:KLA",
-    "timestamp": "2026-09-30T20:00:22.450598+00:00"
-  },
-  {
     "company": "Hermeus",
     "title": "Loads & Dynamics Engineering Intern - Summer 2027",
     "source": "Lever:Hermeus",
@@ -2998,5 +2992,11 @@
     "title": "Video Content Creator Intern (Summer 2027)",
     "source": "Greenhouse:Formlabs",
     "timestamp": "2026-11-18T22:05:14.459088+00:00"
+  },
+  {
+    "company": "Rockwell Automation",
+    "title": "Intern, Capabilities and Innovation (LCS)",
+    "source": "Workday:Rockwell Automation",
+    "timestamp": "2026-11-18T22:20:15.484566+00:00"
   }
 ]
