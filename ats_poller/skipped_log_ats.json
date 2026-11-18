@@ -1,11 +1,5 @@
 [
   {
-    "company": "Motorola Solutions",
-    "title": "Presales Systems Engineer - 2027 Internship",
-    "source": "Workday:Motorola Solutions",
-    "timestamp": "2026-09-30T19:25:13.868649+00:00"
-  },
-  {
     "company": "KLA",
     "title": "Mechatronics Engineering Internship",
     "source": "Workday:KLA",
@@ -2998,5 +2992,11 @@
     "title": "External Affairs Intern",
     "source": "Workday:Merck",
     "timestamp": "2026-11-18T06:25:11.979098+00:00"
+  },
+  {
+    "company": "Micron",
+    "title": "Intern - Design Engineer, HBM",
+    "source": "Workday:Micron",
+    "timestamp": "2026-11-18T21:55:14.898373+00:00"
   }
 ]
