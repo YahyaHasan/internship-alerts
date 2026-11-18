@@ -1,12 +1,6 @@
 [
   {
     "company": "KLA",
-    "title": "Mechatronics Engineering Internship",
-    "source": "Workday:KLA",
-    "timestamp": "2026-09-30T20:00:22.450598+00:00"
-  },
-  {
-    "company": "KLA",
     "title": "Mechatronics/Systems Engineering Internship",
     "source": "Workday:KLA",
     "timestamp": "2026-09-30T20:00:22.450598+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern - Design Engineer, HBM",
     "source": "Workday:Micron",
     "timestamp": "2026-11-18T21:55:14.898373+00:00"
+  },
+  {
+    "company": "Formlabs",
+    "title": "Video Content Creator Intern (Summer 2027)",
+    "source": "Greenhouse:Formlabs",
+    "timestamp": "2026-11-18T22:05:14.459088+00:00"
   }
 ]
