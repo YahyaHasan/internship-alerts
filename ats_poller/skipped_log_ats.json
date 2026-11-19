@@ -1,11 +1,5 @@
 [
   {
-    "company": "Travelers",
-    "title": "Bond & Specialty Insurance Underwriting Professional Development Program (BSI UPDP) Internship",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-10-01T01:45:17.030494+00:00"
-  },
-  {
     "company": "General Motors",
     "title": "Summer 2027 Intern - Computational Design Intern",
     "source": "Workday:General Motors",
@@ -2998,5 +2992,11 @@
     "title": "Process Improvement Intern [Summer 2027]",
     "source": "Lever:Zoox",
     "timestamp": "2026-11-19T17:25:16.961586+00:00"
+  },
+  {
+    "company": "Adobe",
+    "title": "2027 Intern - Video Production",
+    "source": "Workday:Adobe",
+    "timestamp": "2026-11-19T18:35:13.504541+00:00"
   }
 ]
