@@ -1,12 +1,6 @@
 [
   {
     "company": "Varda Space",
-    "title": "Vehicle Integration & Test Internship - Summer 2027",
-    "source": "Greenhouse:Varda Space",
-    "timestamp": "2026-10-01T06:00:23.944813+00:00"
-  },
-  {
-    "company": "Varda Space",
     "title": "Formulation Science Internship - Summer 2027",
     "source": "Greenhouse:Varda Space",
     "timestamp": "2026-10-01T06:05:14.693039+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern, Simulation & Virtualization Engineer, Summer 2027",
     "source": "Greenhouse:Lucid Motors",
     "timestamp": "2026-11-19T23:00:25.587577+00:00"
+  },
+  {
+    "company": "Rocket Lab",
+    "title": "Total Rewards Intern Summer 2027",
+    "source": "Greenhouse:Rocket Lab",
+    "timestamp": "2026-11-19T23:45:14.971236+00:00"
   }
 ]
