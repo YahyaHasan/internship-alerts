@@ -1,23 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern - Program Management",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-10-01T04:35:12.817737+00:00"
-  },
-  {
-    "company": "Varda Space",
-    "title": "Thermal Engineering Internship - Summer 2027",
-    "source": "Greenhouse:Varda Space",
-    "timestamp": "2026-10-01T05:55:16.146059+00:00"
-  },
-  {
-    "company": "Varda Space",
-    "title": "Guidance, Navigation & Controls (GNC) Internship - Summer 2027",
-    "source": "Greenhouse:Varda Space",
-    "timestamp": "2026-10-01T06:00:23.944813+00:00"
-  },
-  {
     "company": "Varda Space",
     "title": "Mechanisms & Payload Internship - Summer 2027",
     "source": "Greenhouse:Varda Space",
@@ -2998,5 +2980,23 @@
     "title": "Laboratory Technician, Intern",
     "source": "SmartRecruiters:Eurofins",
     "timestamp": "2026-11-19T19:30:31.357459+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Summer 2027 Intern, Cell Therapy Research (Discovery & Engineering)",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-19T19:40:15.340630+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Summer 2027 Intern, Nucleic Acid & Delivery Research",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-19T19:40:15.340630+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Summer 2027 Intern, Engineered Cell Therapy Discovery",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-19T19:40:15.340630+00:00"
   }
 ]
