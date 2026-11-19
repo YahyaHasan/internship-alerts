@@ -1,12 +1,6 @@
 [
   {
     "company": "Astranis",
-    "title": "Automation & Controls Engineering Intern (Winter 2027)",
-    "source": "Greenhouse:Astranis",
-    "timestamp": "2026-09-30T22:50:16.354787+00:00"
-  },
-  {
-    "company": "Astranis",
     "title": "Radiation Effects Engineer Intern (Winter 2027)",
     "source": "Greenhouse:Astranis",
     "timestamp": "2026-09-30T23:20:15.886081+00:00"
@@ -2998,5 +2992,11 @@
     "title": "Intern R&D Virtuoso",
     "source": "Workday:Cadence",
     "timestamp": "2026-11-19T06:00:20.331168+00:00"
+  },
+  {
+    "company": "MongoDB",
+    "title": "2027 - AI and People Transformation Intern, NYC",
+    "source": "Greenhouse:MongoDB",
+    "timestamp": "2026-11-19T14:05:23.951226+00:00"
   }
 ]
