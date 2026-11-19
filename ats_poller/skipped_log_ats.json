@@ -1,11 +1,5 @@
 [
   {
-    "company": "Rockwell Automation",
-    "title": "Intern, Digital Client",
-    "source": "Workday:Rockwell Automation",
-    "timestamp": "2026-09-30T21:45:16.664255+00:00"
-  },
-  {
     "company": "Astranis",
     "title": "Automation & Controls Engineering Intern (Summer 2027)",
     "source": "Greenhouse:Astranis",
@@ -2998,5 +2992,11 @@
     "title": "Undergrad Intern - Change Readiness and Organization Effectiveness (Summer 2027)",
     "source": "Workday:Amgen",
     "timestamp": "2026-11-19T02:00:19.244611+00:00"
+  },
+  {
+    "company": "Etched",
+    "title": "Production Intern",
+    "source": "Ashby:Etched",
+    "timestamp": "2026-11-19T03:10:15.098350+00:00"
   }
 ]
