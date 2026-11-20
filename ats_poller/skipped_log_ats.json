@@ -1,11 +1,5 @@
 [
   {
-    "company": "Duke Energy",
-    "title": "PGO Cybersecurity Summer 2027 Internship",
-    "source": "Workday:Duke Energy",
-    "timestamp": "2026-10-01T13:40:18.919865+00:00"
-  },
-  {
     "company": "Sezzle",
     "title": "Compliance Intern ",
     "source": "Greenhouse:Sezzle",
@@ -2998,5 +2992,11 @@
     "title": "Intern, ADAS Systems, Summer 2027",
     "source": "Greenhouse:Lucid Motors",
     "timestamp": "2026-11-20T00:40:14.808273+00:00"
+  },
+  {
+    "company": "Lucid Motors",
+    "title": "Product Security Engineering Intern, Summer 2027",
+    "source": "Greenhouse:Lucid Motors",
+    "timestamp": "2026-11-20T01:15:14.312454+00:00"
   }
 ]
