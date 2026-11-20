@@ -1,17 +1,5 @@
 [
   {
-    "company": "Stripe",
-    "title": "Data Analyst, Intern",
-    "source": "Greenhouse:Stripe",
-    "timestamp": "2026-10-01T15:10:23.291171+00:00"
-  },
-  {
-    "company": "Stripe",
-    "title": "Data Analyst, Intern",
-    "source": "Greenhouse:Stripe",
-    "timestamp": "2026-10-01T15:10:23.291171+00:00"
-  },
-  {
     "company": "Illinois Tool Works",
     "title": "Industrial Engineering Co-Op Intern",
     "source": "Workday:Illinois Tool Works",
@@ -2998,5 +2986,17 @@
     "title": "Summer Intern, Fixed Income Pricing",
     "source": "Workday:S&P Global",
     "timestamp": "2026-11-20T02:25:12.654438+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Global Customer Data Management Intern (2027 Internship)",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-11-20T14:35:12.514046+00:00"
+  },
+  {
+    "company": "Motorola Solutions",
+    "title": "Summer 2027 Internship - RFIC Design Engineer",
+    "source": "Workday:Motorola Solutions",
+    "timestamp": "2026-11-20T14:35:12.514046+00:00"
   }
 ]
