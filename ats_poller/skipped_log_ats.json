@@ -1,11 +1,5 @@
 [
   {
-    "company": "Varda Space",
-    "title": "Cybersecurity Internship - Summer 2027",
-    "source": "Greenhouse:Varda Space",
-    "timestamp": "2026-10-01T06:10:17.065576+00:00"
-  },
-  {
     "company": "Duke Energy",
     "title": "PGO Cybersecurity Summer 2027 Internship",
     "source": "Workday:Duke Energy",
@@ -2998,5 +2992,11 @@
     "title": "2027 (Summer) API & Automation Intern",
     "source": "Greenhouse:Formlabs",
     "timestamp": "2026-11-20T00:35:21.654041+00:00"
+  },
+  {
+    "company": "Lucid Motors",
+    "title": "Intern, ADAS Systems, Summer 2027",
+    "source": "Greenhouse:Lucid Motors",
+    "timestamp": "2026-11-20T00:40:14.808273+00:00"
   }
 ]
