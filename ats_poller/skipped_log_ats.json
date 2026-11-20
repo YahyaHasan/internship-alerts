@@ -1,11 +1,5 @@
 [
   {
-    "company": "Illinois Tool Works",
-    "title": "Industrial Engineering Co-Op Intern",
-    "source": "Workday:Illinois Tool Works",
-    "timestamp": "2026-10-01T15:40:19.974913+00:00"
-  },
-  {
     "company": "CrowdStrike",
     "title": "Professional Services Explorer Intern - Summer 2027 (Arlington, VA)",
     "source": "Workday:CrowdStrike",
@@ -2998,5 +2992,11 @@
     "title": "Summer 2027 Internship - RFIC Design Engineer",
     "source": "Workday:Motorola Solutions",
     "timestamp": "2026-11-20T14:35:12.514046+00:00"
+  },
+  {
+    "company": "Gusto",
+    "title": "Gusto Insights Intern",
+    "source": "Greenhouse:Gusto",
+    "timestamp": "2026-11-20T18:20:15.643731+00:00"
   }
 ]
