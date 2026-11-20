@@ -1,11 +1,5 @@
 [
   {
-    "company": "Sezzle",
-    "title": "Compliance Intern ",
-    "source": "Greenhouse:Sezzle",
-    "timestamp": "2026-10-01T14:30:22.422841+00:00"
-  },
-  {
     "company": "Stripe",
     "title": "Data Analyst, Intern",
     "source": "Greenhouse:Stripe",
@@ -2998,5 +2992,11 @@
     "title": "Product Security Engineering Intern, Summer 2027",
     "source": "Greenhouse:Lucid Motors",
     "timestamp": "2026-11-20T01:15:14.312454+00:00"
+  },
+  {
+    "company": "S&P Global",
+    "title": "Summer Intern, Fixed Income Pricing",
+    "source": "Workday:S&P Global",
+    "timestamp": "2026-11-20T02:25:12.654438+00:00"
   }
 ]
