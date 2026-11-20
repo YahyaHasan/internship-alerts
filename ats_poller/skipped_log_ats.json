@@ -1,11 +1,5 @@
 [
   {
-    "company": "Varda Space",
-    "title": "Aerodynamics & Analysis Engineering Internship - Summer 2027",
-    "source": "Greenhouse:Varda Space",
-    "timestamp": "2026-10-01T16:30:22.845687+00:00"
-  },
-  {
     "company": "Pinterest",
     "title": "UX Engineering Intern (San Francisco)",
     "source": "Greenhouse:Pinterest",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Vehicle Motion Controls Engineer, Summer 2027",
     "source": "Greenhouse:Lucid Motors",
     "timestamp": "2026-11-20T20:00:20.367997+00:00"
+  },
+  {
+    "company": "Lucid Motors",
+    "title": "Power Electronics Control Engineer Intern, Summer 2027   ",
+    "source": "Greenhouse:Lucid Motors",
+    "timestamp": "2026-11-20T20:15:14.702646+00:00"
   }
 ]
