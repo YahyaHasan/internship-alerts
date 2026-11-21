@@ -1,11 +1,5 @@
 [
   {
-    "company": "Pinterest",
-    "title": "UX Quantitative Research Intern (USA)  *Remote",
-    "source": "Greenhouse:Pinterest",
-    "timestamp": "2026-10-01T17:05:15.710354+00:00"
-  },
-  {
     "company": "NXP Semiconductors",
     "title": "Photolithography Equipment Intern - Summer 2027",
     "source": "Workday:NXP Semiconductors",
@@ -2998,5 +2992,11 @@
     "title": "Intern, ADAS Platform Tools, Summer 2027",
     "source": "Greenhouse:Lucid Motors",
     "timestamp": "2026-11-21T01:15:15.450867+00:00"
+  },
+  {
+    "company": "Lucid Motors",
+    "title": "Intern, Exterior Design, Sumer 2027",
+    "source": "Greenhouse:Lucid Motors",
+    "timestamp": "2026-11-21T01:45:16.427294+00:00"
   }
 ]
