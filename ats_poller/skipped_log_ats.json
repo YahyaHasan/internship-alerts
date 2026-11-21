@@ -1,11 +1,5 @@
 [
   {
-    "company": "NXP Semiconductors",
-    "title": "Photolithography Equipment Intern - Summer 2027",
-    "source": "Workday:NXP Semiconductors",
-    "timestamp": "2026-10-01T18:00:31.587209+00:00"
-  },
-  {
     "company": "Cigna",
     "title": "Product Analytics Summer Intern - Start Date: May 24, 2027",
     "source": "Workday:Cigna",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Exterior Design, Sumer 2027",
     "source": "Greenhouse:Lucid Motors",
     "timestamp": "2026-11-21T01:45:16.427294+00:00"
+  },
+  {
+    "company": "Etched",
+    "title": "SI/PI Intern",
+    "source": "Ashby:Etched",
+    "timestamp": "2026-11-21T03:25:16.200793+00:00"
   }
 ]
