@@ -1,29 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Compute System Compatibility Engineer",
-    "source": "Workday:Micron",
-    "timestamp": "2026-10-01T20:25:16.649047+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Photolithography Process",
-    "source": "Workday:Micron",
-    "timestamp": "2026-10-01T21:25:15.877358+00:00"
-  },
-  {
-    "company": "Squarepoint Capital",
-    "title": "Equities Analyst Summer Internship Program",
-    "source": "Greenhouse:Squarepoint Capital",
-    "timestamp": "2026-10-02T04:00:23.031715+00:00"
-  },
-  {
-    "company": "Vanguard",
-    "title": "College to Corporate IT Internship-Risk & Security Engineer (PA)",
-    "source": "Workday:Vanguard",
-    "timestamp": "2026-10-02T14:35:18.130232+00:00"
-  },
-  {
     "company": "Vanguard",
     "title": "College to Corporate IT Internship-Risk & Security-Engineer (NC)",
     "source": "Workday:Vanguard",
@@ -2998,5 +2974,29 @@
     "title": "Product Engineering Intern - Falcon Guardian",
     "source": "Workday:CrowdStrike",
     "timestamp": "2026-11-22T01:35:14.390658+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Firmware Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-11-22T18:20:16.325731+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "PROLITH Applications Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-11-22T18:20:16.325731+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Product Development Engineer Intern",
+    "source": "Workday:KLA",
+    "timestamp": "2026-11-22T18:20:16.325731+00:00"
+  },
+  {
+    "company": "KLA",
+    "title": "Internship: Physics Modeling and Simulations",
+    "source": "Workday:KLA",
+    "timestamp": "2026-11-22T18:20:16.325731+00:00"
   }
 ]
