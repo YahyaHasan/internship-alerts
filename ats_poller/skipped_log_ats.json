@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "2027 Summer Intern - Systems/Calibration Engineer, ADAS Drive",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-10-02T15:25:14.611678+00:00"
-  },
-  {
     "company": "Duke Energy",
     "title": "RRE Engineering Internship & Co-op Program - Summer 2027",
     "source": "Workday:Duke Energy",
@@ -2998,5 +2992,11 @@
     "title": "2027 Internship, Spring - Academy Scout",
     "source": "SmartRecruiters:Red Bull",
     "timestamp": "2026-11-23T04:45:15.614817+00:00"
+  },
+  {
+    "company": "Red Bull",
+    "title": "2027 Internship, Spring - RBII Team Analysis",
+    "source": "SmartRecruiters:Red Bull",
+    "timestamp": "2026-11-23T04:50:15.109250+00:00"
   }
 ]
