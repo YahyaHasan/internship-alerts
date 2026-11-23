@@ -1,11 +1,5 @@
 [
   {
-    "company": "Vanguard",
-    "title": "College to Corporate IT Internship-Risk & Security-Engineer (NC)",
-    "source": "Workday:Vanguard",
-    "timestamp": "2026-10-02T14:35:18.130232+00:00"
-  },
-  {
     "company": "General Motors",
     "title": "2027 Summer Intern - Systems/Calibration Engineer, ADAS Drive",
     "source": "Workday:General Motors",
@@ -2998,5 +2992,11 @@
     "title": "Internship: Physics Modeling and Simulations",
     "source": "Workday:KLA",
     "timestamp": "2026-11-22T18:20:16.325731+00:00"
+  },
+  {
+    "company": "Red Bull",
+    "title": "2027 Internship, Spring - Academy Scout",
+    "source": "SmartRecruiters:Red Bull",
+    "timestamp": "2026-11-23T04:45:15.614817+00:00"
   }
 ]
