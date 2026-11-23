@@ -1,11 +1,5 @@
 [
   {
-    "company": "Travelers",
-    "title": "Bond & Specialty Insurance Underwriting Professional Development Program (BSI UPDP) Internship",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-10-02T20:05:20.601222+00:00"
-  },
-  {
     "company": "Waymo",
     "title": "2027 Summer Intern, Perception - Perception Data Foundations",
     "source": "Greenhouse:Waymo",
@@ -2998,5 +2992,11 @@
     "title": "Digital Electronics Engineering Intern (3-6 months)",
     "source": "Workday:Cadence",
     "timestamp": "2026-11-23T17:55:14.708343+00:00"
+  },
+  {
+    "company": "Red Bull",
+    "title": "2027 Internship, Spring - Graphic Design",
+    "source": "SmartRecruiters:Red Bull",
+    "timestamp": "2026-11-23T18:30:20.411582+00:00"
   }
 ]
