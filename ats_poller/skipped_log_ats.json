@@ -1,12 +1,6 @@
 [
   {
     "company": "Duke Energy",
-    "title": "RRE Engineering Internship & Co-op Program - Summer 2027",
-    "source": "Workday:Duke Energy",
-    "timestamp": "2026-10-02T16:45:19.554745+00:00"
-  },
-  {
-    "company": "Duke Energy",
     "title": "UX Design Internship \u2013 Summer 2027",
     "source": "Workday:Duke Energy",
     "timestamp": "2026-10-02T16:55:16.983654+00:00"
@@ -2998,5 +2992,11 @@
     "title": "2027 Internship, Spring - RBII Team Analysis",
     "source": "SmartRecruiters:Red Bull",
     "timestamp": "2026-11-23T04:50:15.109250+00:00"
+  },
+  {
+    "company": "Red Bull",
+    "title": "2027 Internship, Spring - Corporate Partnerships",
+    "source": "SmartRecruiters:Red Bull",
+    "timestamp": "2026-11-23T05:00:20.398449+00:00"
   }
 ]
