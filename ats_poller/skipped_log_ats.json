@@ -1,11 +1,5 @@
 [
   {
-    "company": "Waymo",
-    "title": "2027 Summer Intern, Perception - Perception Data Foundations",
-    "source": "Greenhouse:Waymo",
-    "timestamp": "2026-10-02T21:25:14.778104+00:00"
-  },
-  {
     "company": "Dryft",
     "title": "Founder\u2019s Associate Intern",
     "source": "Ashby:Dryft",
@@ -2998,5 +2992,11 @@
     "title": "2027 Internship, Spring - Graphic Design",
     "source": "SmartRecruiters:Red Bull",
     "timestamp": "2026-11-23T18:30:20.411582+00:00"
+  },
+  {
+    "company": "Nuro",
+    "title": "Technical Program Manager, Systems Intern",
+    "source": "Greenhouse:Nuro",
+    "timestamp": "2026-11-23T21:55:14.004551+00:00"
   }
 ]
