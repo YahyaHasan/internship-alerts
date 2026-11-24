@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Memory Design Engineer, HBM",
-    "source": "Workday:Micron",
-    "timestamp": "2026-10-05T00:35:14.281031+00:00"
-  },
-  {
     "company": "HPE",
     "title": "VLSI Design Verification Internship",
     "source": "Workday:HPE",
@@ -2998,5 +2992,11 @@
     "title": "Intern, Engineering",
     "source": "Workday:Qualys",
     "timestamp": "2026-11-24T09:50:17.321867+00:00"
+  },
+  {
+    "company": "3M",
+    "title": "Internship - 2027 Undergraduate Logistics Analyst Intern",
+    "source": "Workday:3M",
+    "timestamp": "2026-11-24T11:25:14.310961+00:00"
   }
 ]
