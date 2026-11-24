@@ -1,11 +1,5 @@
 [
   {
-    "company": "HPE",
-    "title": "People Care HR AI Agent - Process Improvement Project Management Intern",
-    "source": "Workday:HPE",
-    "timestamp": "2026-10-05T02:35:15.682163+00:00"
-  },
-  {
     "company": "Wabtec",
     "title": "Corporate Communications Intern",
     "source": "SmartRecruiters:Wabtec",
@@ -2998,5 +2992,11 @@
     "title": "Test & Evaluation Intern 2027 - 12 Month Placement",
     "source": "Workday:Boeing",
     "timestamp": "2026-11-24T15:10:18.272880+00:00"
+  },
+  {
+    "company": "Red Bull",
+    "title": "2027 Internship, Spring - Academy Strength & Conditioning",
+    "source": "SmartRecruiters:Red Bull",
+    "timestamp": "2026-11-24T16:10:29.016741+00:00"
   }
 ]
