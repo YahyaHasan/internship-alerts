@@ -1,18 +1,6 @@
 [
   {
     "company": "Micron",
-    "title": "TSE R&D Equipment Project Manager (Intern)",
-    "source": "Workday:Micron",
-    "timestamp": "2026-10-05T14:20:25.725064+00:00"
-  },
-  {
-    "company": "Motorola Solutions",
-    "title": "Prototype Engineer Intern - Summer 2027",
-    "source": "Workday:Motorola Solutions",
-    "timestamp": "2026-10-05T14:20:25.725064+00:00"
-  },
-  {
-    "company": "Micron",
     "title": "Intern - SSD Architecture Modeling",
     "source": "Workday:Micron",
     "timestamp": "2026-10-05T15:35:16.078891+00:00"
@@ -2998,5 +2986,17 @@
     "title": "Internship for Office Management",
     "source": "Lever:Xsolla",
     "timestamp": "2026-11-25T01:50:16.901379+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Oncology Discovery BioSciences Intern",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-25T03:15:13.823848+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Technology Rotational Development Program Intern-Summer 2027",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-25T03:15:13.823848+00:00"
   }
 ]
