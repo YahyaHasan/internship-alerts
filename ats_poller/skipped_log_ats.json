@@ -1,23 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Next-Generation HBM Architecture",
-    "source": "Workday:Micron",
-    "timestamp": "2026-10-05T16:10:18.492908+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Next Gen HBM Platform Arch",
-    "source": "Workday:Micron",
-    "timestamp": "2026-10-05T16:15:22.470696+00:00"
-  },
-  {
-    "company": "Rocket Lab",
-    "title": "RF Engineering Intern Summer 2027",
-    "source": "Greenhouse:Rocket Lab",
-    "timestamp": "2026-10-05T16:30:21.130014+00:00"
-  },
-  {
     "company": "Rockwell Automation",
     "title": "Intern, Application Engineer",
     "source": "Workday:Rockwell Automation",
@@ -2998,5 +2980,23 @@
     "title": "2027 Wholesale Analyst Programs: Client Coverage & Credit and Enterprise Payments (Intern Conversion)",
     "source": "Workday:Truist Financial",
     "timestamp": "2026-11-25T12:20:16.313310+00:00"
+  },
+  {
+    "company": "Cadence",
+    "title": "Embedded Systems Verification Engineer Intern",
+    "source": "Workday:Cadence",
+    "timestamp": "2026-11-25T12:45:15.357225+00:00"
+  },
+  {
+    "company": "Cadence",
+    "title": "Internship: Integration of License Management and Associated Metrics into Securyzr Server",
+    "source": "Workday:Cadence",
+    "timestamp": "2026-11-25T12:45:15.357225+00:00"
+  },
+  {
+    "company": "Cadence",
+    "title": "FPGA Design Engineer Intern",
+    "source": "Workday:Cadence",
+    "timestamp": "2026-11-25T12:45:15.357225+00:00"
   }
 ]
