@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Motors",
-    "title": "Summer 2027 Intern - Industrial Design",
-    "source": "Workday:General Motors",
-    "timestamp": "2026-10-05T14:05:18.967121+00:00"
-  },
-  {
     "company": "Micron",
     "title": "TSE R&D Equipment Project Manager (Intern)",
     "source": "Workday:Micron",
@@ -2998,5 +2992,11 @@
     "title": "2027 Internship, Spring - Academy Strength & Conditioning",
     "source": "SmartRecruiters:Red Bull",
     "timestamp": "2026-11-24T16:25:15.259976+00:00"
+  },
+  {
+    "company": "Xsolla",
+    "title": "Internship for Office Management",
+    "source": "Lever:Xsolla",
+    "timestamp": "2026-11-25T01:50:16.901379+00:00"
   }
 ]
