@@ -1,11 +1,5 @@
 [
   {
-    "company": "General Matter",
-    "title": "Summer 2027 Internship - Information Technology",
-    "source": "Greenhouse:General Matter",
-    "timestamp": "2026-10-05T21:14:59.875711+00:00"
-  },
-  {
     "company": "General Motors",
     "title": "Summer 2027 Intern - Project Management (Creative Design)",
     "source": "Workday:General Motors",
@@ -2998,5 +2992,11 @@
     "title": "Risk Advisory - eDiscovery Intern",
     "source": "Greenhouse:AlixPartners",
     "timestamp": "2026-11-26T13:50:17.741497+00:00"
+  },
+  {
+    "company": "Lucid Motors",
+    "title": "Network Analytics & Reporting Intern",
+    "source": "Greenhouse:Lucid Motors",
+    "timestamp": "2026-11-26T14:45:17.503112+00:00"
   }
 ]
