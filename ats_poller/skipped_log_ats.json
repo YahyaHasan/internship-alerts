@@ -1,11 +1,5 @@
 [
   {
-    "company": "Micron",
-    "title": "Intern - Engineer, HIG HBM DTPCO",
-    "source": "Workday:Micron",
-    "timestamp": "2026-10-05T17:30:34.782056+00:00"
-  },
-  {
     "company": "Adobe",
     "title": "2027 Intern - Applied and Research Scientist/Engineer",
     "source": "Workday:Adobe",
@@ -2998,5 +2992,11 @@
     "title": "Security Engineer Intern",
     "source": "Greenhouse:Coinbase",
     "timestamp": "2026-11-25T20:25:13.763061+00:00"
+  },
+  {
+    "company": "Lucid Motors",
+    "title": "Logistics Operation Intern",
+    "source": "Greenhouse:Lucid Motors",
+    "timestamp": "2026-11-26T12:45:17.085646+00:00"
   }
 ]
