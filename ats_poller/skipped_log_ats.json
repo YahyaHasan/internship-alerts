@@ -1,11 +1,5 @@
 [
   {
-    "company": "Heron Power",
-    "title": "Intern, Graphic Design ",
-    "source": "Ashby:Heron Power",
-    "timestamp": "2026-10-05T21:40:18.088136+00:00"
-  },
-  {
     "company": "Illinois Tool Works",
     "title": "Tech Transter Intern",
     "source": "Workday:Illinois Tool Works",
@@ -2998,5 +2992,11 @@
     "title": "Business Analyst Intern",
     "source": "Greenhouse:Lucid Motors",
     "timestamp": "2026-11-26T15:30:19.340206+00:00"
+  },
+  {
+    "company": "Lucid Motors",
+    "title": "Instructional Designer Intern",
+    "source": "Greenhouse:Lucid Motors",
+    "timestamp": "2026-11-26T17:20:17.222871+00:00"
   }
 ]
