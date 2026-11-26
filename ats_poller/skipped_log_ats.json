@@ -1,35 +1,5 @@
 [
   {
-    "company": "Adobe",
-    "title": "2027 Intern - Applied and Research Scientist/Engineer",
-    "source": "Workday:Adobe",
-    "timestamp": "2026-10-05T17:50:18.761333+00:00"
-  },
-  {
-    "company": "Cloudflare",
-    "title": "People Analytics Data Engineering Intern",
-    "source": "Greenhouse:Cloudflare",
-    "timestamp": "2026-10-05T17:55:17.397990+00:00"
-  },
-  {
-    "company": "Travelers",
-    "title": "Claim Professional Development Program (CPDP) Internship",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-10-05T18:15:20.838612+00:00"
-  },
-  {
-    "company": "Travelers",
-    "title": "Claim Professional Development Program (CPDP) Internship",
-    "source": "Workday:Travelers",
-    "timestamp": "2026-10-05T18:25:17.156680+00:00"
-  },
-  {
-    "company": "Micron",
-    "title": "Intern - Design Architecture, HBM",
-    "source": "Workday:Micron",
-    "timestamp": "2026-10-05T18:40:22.811175+00:00"
-  },
-  {
     "company": "Duolingo",
     "title": "Illustrator, Intern",
     "source": "Greenhouse:Duolingo",
@@ -2998,5 +2968,35 @@
     "title": "Logistics Operation Intern",
     "source": "Greenhouse:Lucid Motors",
     "timestamp": "2026-11-26T12:45:17.085646+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Purification Automation Intern",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-26T13:45:15.772559+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Discovery Chemistry Undergraduate Internship",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-26T13:45:15.772559+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Undergraduate Summer Intern \u2013 Discovery Biotherapeutics (Phage Display and Functional Sciences)",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-26T13:45:15.772559+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Undergraduate Summer Intern \u2013 Structural Biology and ADC Bioanalysis",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-26T13:45:15.772559+00:00"
+  },
+  {
+    "company": "Bristol-Myers Squibb",
+    "title": "Undergraduate Summer Intern \u2013 Protein Engineering and Structural Biology",
+    "source": "Workday:Bristol-Myers Squibb",
+    "timestamp": "2026-11-26T13:45:15.772559+00:00"
   }
 ]
